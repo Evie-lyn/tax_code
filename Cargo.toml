@@ -2,5 +2,8 @@
 name = "tax_code"
 version = "0.1.0"
 edition = "2024"
+description = "A code for the California income tax of 2025"
+license = "MIT OR Apache-2.0"
+repository = "https://github.com/Evie-lyn/tax_code"
 
 [dependencies]
