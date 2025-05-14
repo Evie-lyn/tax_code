@@ -1,134 +1,141 @@
+//only works for 2025 California Income Tax
 pub fn cali_income_tax(income: f64, filing_status: &str) -> f64 {
     match filing_status.to_lowercase().as_str() {
         "single" | "married filing separately" => cali_single_tax(income),
         "married filing jointly" | "qualifying surviving spouse" => cali_joint_tax(income),
         "head of household" => cali_headhouse_tax(income),
         _ => {
-            eprintln!("Warning: Invalid filing status '{}'. Please enter 'single, 'married filing seperately', 'head of household', 'married filing jointly', or 'qualifying surviving spouse'.", filing_status);
+            eprintln!("Warning: Invalid filing status '{}'. Please use 'single, 'married filing seperately', 'head of household', 'married filing jointly', or 'qualifying surviving spouse'.", filing_status);
             cali_single_tax(income)
         }
     }
 }
 
+//Brackets for 'single' or 'married filing separately' filers
 fn cali_single_tax(mut income: f64) -> f64 {
     let mut tax = 0.0;
 
     if income > 721314.0 {
-        tax += (income - 721314.0) * 0.123;
+        tax += (income - 721314.0) * 0.123; // 12.3% bracket
         income = 721314.0;
     }
     if income > 432787.0 {
-        tax += (income - 432787.0) * 0.113;
+        tax += (income - 432787.0) * 0.113; // 11.3% bracket
         income = 432787.0;
     }
     if income > 360659.0 {
-        tax += (income - 360659.0) * 0.103;
+        tax += (income - 360659.0) * 0.103; // 10.3% bracket
         income = 360659.0;
     }
     if income > 70606.0 {
-        tax += (income - 70606.0) * 0.093;
+        tax += (income - 70606.0) * 0.093; // 9.3% bracket
         income = 70606.0;
     }
     if income > 55866.0 {
-        tax += (income - 55866.0) * 0.08;
+        tax += (income - 55866.0) * 0.08; // 8.0% bracket
         income = 55866.0;
     }
     if income > 40245.0 {
-        tax += (income - 40245.0) * 0.06;
+        tax += (income - 40245.0) * 0.06; // 6.0% bracket
         income = 40245.0;
     }
     if income > 25499.0 {
-        tax += (income - 25499.0) * 0.04;
+        tax += (income - 25499.0) * 0.04; // 4.0% bracket
         income = 25499.0;
     }
     if income > 10756.0 {
-        tax += (income - 10756.0) * 0.02;
+        tax += (income - 10756.0) * 0.02; // 2.0% bracket
         income = 10756.0;
     }
-    tax +=income * 0.01;
+    tax +=income * 0.01; // 1.0% bracket
 
     tax
 }
 
+// Brackets for 'married filing jointly' or 'qualifying surviving spouse'
 fn cali_joint_tax(mut income: f64) -> f64 {
     let mut tax = 0.0;
 
     if income > 1442628.0 {
-        tax += (income - 1442628.0) * 0.123;
+        tax += (income - 1442628.0) * 0.123; // 12.3% bracket
         income = 1442628.0;
     }
     if income > 865574.0 {
-        tax += (income - 865574.0) * 0.113;
+        tax += (income - 865574.0) * 0.113; // 11.3% bracket
         income = 865574.0;
     }
     if income > 721318.0 {
-        tax += (income - 721318.0) * 0.103;
+        tax += (income - 721318.0) * 0.103; // 10.3% bracket
         income = 721318.0;
     }
     if income > 141212.0 {
-        tax += (income - 141212.0) * 0.093;
+        tax += (income - 141212.0) * 0.093; // 9.3% bracket
         income = 141212.0;
     }
     if income > 111732.0 {
-        tax += (income - 111732.0) * 0.08;
+        tax += (income - 111732.0) * 0.08; // 8.0% bracket
         income = 111732.0;
     }
     if income > 80490.0 {
-        tax += (income - 80490.0) * 0.06;
+        tax += (income - 80490.0) * 0.06; // 6.0% bracket
         income = 80490.0;
     }
     if income > 50998.0 {
-        tax += (income - 50998.0) * 0.04;
+        tax += (income - 50998.0) * 0.04; // 4.0% bracket
         income = 50998.0;
     }
     if income > 21512.0 {
-        tax += (income - 21512.0) * 0.02;
+        tax += (income - 21512.0) * 0.02; // 2.0% bracket
         income = 21512.0;
     }
-    tax += income * 0.01;
+    tax += income * 0.01; // 1.0% bracket
 
     tax
 }
 
+//Brackets used for 'head of household'
 fn cali_headhouse_tax(mut income: f64) -> f64 {
     let mut tax = 0.0;
 
     if income > 980988.0 {
-        tax += (income - 980988.0) * 0.123;
+        tax += (income - 980988.0) * 0.123; // 12.3% bracket
         income = 980988.0;
     }
     if income > 588594.0 {
-        tax += (income - 588594.0) * 0.113;
+        tax += (income - 588594.0) * 0.113; // 11.3% bracket
         income = 588594.0;
     }
     if income > 490494.0 {
-        tax += (income - 490494.0) * 0.103;
+        tax += (income - 490494.0) * 0.103; // 10.3% bracket
         income = 490494.0;
     }
     if income > 96108.0 {
-        tax += (income - 96108.0) * 0.093;
+        tax += (income - 96108.0) * 0.093; // 9.3% bracket
         income = 96108.0;
     }
     if income > 81365.0 {
-        tax += (income - 81365.0) * 0.08;
+        tax += (income - 81365.0) * 0.08; // 8.0% bracket
         income = 81365.0;
     }
     if income > 65745.0 {
-        tax += (income - 65745.0) * 0.06;
+        tax += (income - 65745.0) * 0.06; // 6.0% bracket
         income = 65745.0;
     }
     if income > 51001.0 {
-        tax += (income - 51001.0) * 0.04;
+        tax += (income - 51001.0) * 0.04; // 4.0% bracket
         income = 51001.0;
     }
     if income > 21528.0 {
-        tax += (income - 21528.0) * 0.02;
+        tax += (income - 21528.0) * 0.02; // 2.0% bracket
         income = 21528.0;
     }
-    tax += income * 0.01;
+    tax += income * 0.01; // 1.0% bracket
 
     tax
 }
+
+//Testing section for different incomes
+//Type cargo test
 
 #[cfg(test)]
 mod tests {
