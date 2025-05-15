@@ -1,9 +1,10 @@
 [package]
 name = "tax_code"
-version = "0.1.0"
-edition = "2024"
-description = "A code for the California income tax of 2025"
+version = "0.1.1"
+edition = "2025"
+description = "A code for calculating 2025 income tax"
 license = "MIT OR Apache-2.0"
-repository = "https://github.com/Evie-lyn/tax_code"
+repository = "https://github.com/Evie-lyn/tax_code/tree/master"
+readme = README.md
 
 [dependencies]
