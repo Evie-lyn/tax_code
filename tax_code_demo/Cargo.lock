@@ -154,8 +154,6 @@ dependencies = [
 [[package]]
 name = "tax_code"
 version = "0.1.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "4f080a35c3dbfd4b9aad7faff1dc0a903d08fffeff2e3f7a46e5b5a454453940"
 
 [[package]]
 name = "tax_code_demo"
