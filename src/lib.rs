@@ -14,7 +14,6 @@ pub enum FilingStatus {
     HeadOfHousehold,
 }
 
-
 //For get_tax_brackets fn
 macro_rules! generate_get_tax_brackets {
     (
@@ -119,7 +118,12 @@ generate_get_tax_brackets!(
 );
 
 //calculates Income Tax based on income and filing status
-pub fn calculate_income_tax(state: &str, income: f64, filing_status: FilingStatus, year: i32,) -> f64 {
+pub fn calculate_income_tax(
+    state: &str,
+    income: f64,
+    filing_status: FilingStatus,
+    year: i32,
+) -> f64 {
     let brackets = get_tax_brackets(state, year, filing_status);
     TaxBrackets::new(brackets).taxes(income)
 }
