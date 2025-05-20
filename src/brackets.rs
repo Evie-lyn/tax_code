@@ -7,7 +7,7 @@ macro_rules! no_income_tax {
 
 pub struct Bracket(pub f64, pub f64); //(upper boundary, tax rate)
 
-//Alabama Brackets for 2024 (All filing statuses use same brackets)
+//Alabama Brackets for 2024
 pub fn al_single_tax_2024() -> Vec<Bracket> {
     vec![
 	Bracket(500.0, 0.02),
