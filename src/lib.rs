@@ -67,7 +67,61 @@ macro_rules! generate_get_tax_brackets {
 }
 
 generate_get_tax_brackets!(
-    "ca" => {
+
+    "al" => { //Alabama
+        2024 => {
+            FilingStatus::Single => brackets::al_single_tax_2024,
+            FilingStatus::MarriedFilingSeparately => brackets::al_single_tax_2024,
+            FilingStatus::MarriedFilingJointly => brackets::al_joint_tax_2024,
+            FilingStatus::QualifyingSurvivingSpouse => brackets::al_joint_tax_2024,
+            FilingStatus::HeadOfHousehold => brackets::al_headhouse_tax_2024,
+        },
+    },
+    "ak" => { //Alaska
+        2024 => {
+            FilingStatus::Single => brackets::ak_single_tax,
+            FilingStatus::MarriedFilingSeparately => brackets::ak_single_tax,
+            FilingStatus::MarriedFilingJointly => brackets::ak_single_tax,
+            FilingStatus::QualifyingSurvivingSpouse => brackets::ak_single_tax,
+            FilingStatus::HeadOfHousehold => brackets::ak_single_tax,
+        },
+        2025 => {
+            FilingStatus::Single => brackets::ak_single_tax,
+            FilingStatus::MarriedFilingSeparately => brackets::ak_single_tax,
+            FilingStatus::MarriedFilingJointly => brackets::ak_single_tax,
+            FilingStatus::QualifyingSurvivingSpouse => brackets::ak_single_tax,
+            FilingStatus::HeadOfHousehold => brackets::ak_single_tax,
+        },
+    },
+
+    "az" => { //Arizona
+        2024 => {
+            FilingStatus::Single => brackets::az_single_tax,
+            FilingStatus::MarriedFilingSeparately => brackets::az_single_tax,
+            FilingStatus::MarriedFilingJointly => brackets::az_single_tax,
+            FilingStatus::QualifyingSurvivingSpouse => brackets::az_single_tax,
+            FilingStatus::HeadOfHousehold => brackets::az_single_tax,
+        },
+        2025 => {
+            FilingStatus::Single => brackets::az_single_tax,
+            FilingStatus::MarriedFilingSeparately => brackets::az_single_tax,
+            FilingStatus::MarriedFilingJointly => brackets::az_single_tax,
+            FilingStatus::QualifyingSurvivingSpouse => brackets::az_single_tax,
+            FilingStatus::HeadOfHousehold => brackets::az_single_tax,
+        },
+    },
+
+    "ar" => { //Arkansas
+        2024 => {
+            FilingStatus::Single => brackets::ar_single_tax_2024,
+            FilingStatus::MarriedFilingSeparately => brackets::ar_single_tax_2024,
+            FilingStatus::MarriedFilingJointly => brackets::ar_single_tax_2024,
+            FilingStatus::QualifyingSurvivingSpouse => brackets::ar_single_tax_2024,
+            FilingStatus::HeadOfHousehold => brackets::ar_single_tax_2024,
+        },
+    },
+
+    "ca" => { //California
         2024 => {
             FilingStatus::Single => brackets::ca_single_tax_2024,
             FilingStatus::MarriedFilingSeparately => brackets::ca_single_tax_2024,
@@ -83,7 +137,93 @@ generate_get_tax_brackets!(
             FilingStatus::HeadOfHousehold => brackets::ca_headhouse_tax_2025,
         },
     },
-    "tx" => {
+
+    "co" => { //Colorado
+        2024 => {
+            FilingStatus::Single => brackets::co_single_tax_2024,
+            FilingStatus::MarriedFilingSeparately => brackets::co_single_tax_2024,
+            FilingStatus::MarriedFilingJointly => brackets::co_single_tax_2024,
+            FilingStatus::QualifyingSurvivingSpouse => brackets::co_single_tax_2024,
+            FilingStatus::HeadOfHousehold => brackets::co_single_tax_2024,
+        },
+        2025 => {
+            FilingStatus::Single => brackets::co_single_tax_2025,
+            FilingStatus::MarriedFilingSeparately => brackets::co_single_tax_2025,
+            FilingStatus::MarriedFilingJointly => brackets::co_single_tax_2025,
+            FilingStatus::QualifyingSurvivingSpouse => brackets::co_single_tax_2025,
+            FilingStatus::HeadOfHousehold => brackets::co_single_tax_2025,
+        },
+    },
+
+    "ct" => { //Connecticut
+        2024 => {
+            FilingStatus::Single => brackets::ct_single_tax_2024,
+            FilingStatus::MarriedFilingSeparately => brackets::ct_single_tax_2024,
+            FilingStatus::MarriedFilingJointly => brackets::ct_joint_tax_2024,
+            FilingStatus::QualifyingSurvivingSpouse => brackets::ct_joint_tax_2024,
+            FilingStatus::HeadOfHousehold => brackets::ct_headhouse_tax_2024,
+        },
+        2025 => {
+            FilingStatus::Single => brackets::ct_single_tax_2025,
+            FilingStatus::MarriedFilingSeparately => brackets::ct_single_tax_2025,
+            FilingStatus::MarriedFilingJointly => brackets::ct_joint_tax_2025,
+            FilingStatus::QualifyingSurvivingSpouse => brackets::ct_joint_tax_2025,
+            FilingStatus::HeadOfHousehold => brackets::ct_headhouse_tax_2025,
+        },
+    },
+
+    "de" => { //Delaware
+        2024 => {
+            FilingStatus::Single => brackets::de_single_tax_2024,
+            FilingStatus::MarriedFilingSeparately => brackets::de_single_tax_2024,
+            FilingStatus::MarriedFilingJointly => brackets::de_single_tax_2024,
+            FilingStatus::QualifyingSurvivingSpouse => brackets::de_single_tax_2024,
+            FilingStatus::HeadOfHousehold => brackets::de_single_tax_2024,
+        },
+        2025 => {
+            FilingStatus::Single => brackets::de_single_tax_2025,
+            FilingStatus::MarriedFilingSeparately => brackets::de_single_tax_2025,
+            FilingStatus::MarriedFilingJointly => brackets::de_single_tax_2025,
+            FilingStatus::QualifyingSurvivingSpouse => brackets::de_single_tax_2025,
+            FilingStatus::HeadOfHousehold => brackets::de_single_tax_2025,
+        },
+    },
+
+    "fl" => { //Florida
+        2024 => {
+            FilingStatus::Single => brackets::fl_single_tax,
+            FilingStatus::MarriedFilingSeparately => brackets::fl_single_tax,
+            FilingStatus::MarriedFilingJointly => brackets::fl_single_tax,
+            FilingStatus::QualifyingSurvivingSpouse => brackets::fl_single_tax,
+            FilingStatus::HeadOfHousehold => brackets::fl_single_tax,
+        },
+        2025 => {
+            FilingStatus::Single => brackets::fl_single_tax,
+            FilingStatus::MarriedFilingSeparately => brackets::fl_single_tax,
+            FilingStatus::MarriedFilingJointly => brackets::fl_single_tax,
+            FilingStatus::QualifyingSurvivingSpouse => brackets::fl_single_tax,
+            FilingStatus::HeadOfHousehold => brackets::fl_single_tax,
+        },
+    },
+
+    "ga" => { //Georgia
+        2024 => {
+            FilingStatus::Single => brackets::ga_single_tax_2024,
+            FilingStatus::MarriedFilingSeparately => brackets::ga_single_tax_2024,
+            FilingStatus::MarriedFilingJointly => brackets::ga_single_tax_2024,
+            FilingStatus::QualifyingSurvivingSpouse => brackets::ga_single_tax_2024,
+            FilingStatus::HeadOfHousehold => brackets::ga_single_tax_2024,
+        },
+        2025 => {
+            FilingStatus::Single => brackets::ga_single_tax_2025,
+            FilingStatus::MarriedFilingSeparately => brackets::ga_single_tax_2025,
+            FilingStatus::MarriedFilingJointly => brackets::ga_single_tax_2025,
+            FilingStatus::QualifyingSurvivingSpouse => brackets::ga_single_tax_2025,
+            FilingStatus::HeadOfHousehold => brackets::ga_single_tax_2025,
+        },
+    },
+
+    "tx" => { //Texas
         2024 => {
             FilingStatus::Single => brackets::tx_single_tax,
             FilingStatus::MarriedFilingSeparately => brackets::tx_single_tax,
@@ -99,7 +239,7 @@ generate_get_tax_brackets!(
             FilingStatus::HeadOfHousehold => brackets::tx_single_tax,
         },
     },
-    "tn" => {
+    "tn" => { //Tennesse
         2024 => {
             FilingStatus::Single => brackets::tn_single_tax,
             FilingStatus::MarriedFilingSeparately => brackets::tn_single_tax,
