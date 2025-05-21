@@ -87,5 +87,147 @@
             "QualifyingSurvivingSpouse": 12000.0,
             "HeadOfHousehold": 12000.0
         }
+    },
+
+    "HI": {
+        "2024": {
+            "Single": 4400.0,
+            "MarriedFilingSeparately": 4400.0,
+            "MarriedFilingJointly": 8800.0,
+            "QualifyingSurvivingSpouse": 8800.0,
+            "HeadOfHousehold": 6424.0
+        },
+        "2025": {
+            "Single": 4400.0,
+            "MarriedFilingSeparately": 4400.0,
+            "MarriedFilingJointly": 8800.0,
+            "QualifyingSurvivingSpouse": 8800.0,
+            "HeadOfHousehold": 6424.0
+        }
+    },
+
+    "ID": {
+        "2024": {
+            "Single": 14600.0,
+            "MarriedFilingSeparately": 14600.0,
+            "MarriedFilingJointly": 29200.0,
+            "QualifyingSurvivingSpouse": 29200.0,
+            "HeadOfHousehold": 21900.0
+        },
+        "2025": {
+            "Single": 15000.0,
+            "MarriedFilingSeparately": 15000.0,
+            "MarriedFilingJointly": 30000.0,
+            "QualifyingSurvivingSpouse": 30000.0,
+            "HeadOfHousehold": 22500.0
+        }
+    },
+
+    "IL": {
+        "2024": {
+            "Single": 0.0,
+            "MarriedFilingSeparately": 0.0,
+            "MarriedFilingJointly": 0.0,
+            "QualifyingSurvivingSpouse": 0.0,
+            "HeadOfHousehold": 0.0
+        }
+    },
+
+    "IN": {
+        "2024": {
+            "Single": 0.0,
+            "MarriedFilingSeparately": 0.0,
+            "MarriedFilingJointly": 0.0,
+            "QualifyingSurvivingSpouse": 0.0,
+            "HeadOfHousehold": 0.0
+        }
+    },
+
+    "IA": {
+        "2024": {
+            "Single": 14600.0,
+            "MarriedFilingSeparately": 14600.0,
+            "MarriedFilingJointly": 29200.0,
+            "QualifyingSurvivingSpouse": 29200.0,
+            "HeadOfHousehold": 21900.0
+        },
+        "2025": {
+            "Single": 15000.0,
+            "MarriedFilingSeparately": 15000.0,
+            "MarriedFilingJointly": 30000.0,
+            "QualifyingSurvivingSpouse": 30000.0,
+            "HeadOfHousehold": 22500.0
+        }
+    },
+
+    "KS": {
+        "2024": {
+            "Single": 3605.0,
+            "MarriedFilingSeparately": 4120.0,
+            "MarriedFilingJointly": 8240.0,
+            "QualifyingSurvivingSpouse": 8240.0,
+            "HeadOfHousehold": 6180.0
+        }
+    },
+
+    "KY": {
+        "2024": {
+            "Single": 3160.0,
+            "MarriedFilingSeparately": 3160.0,
+            "MarriedFilingJointly": 3160.0,
+            "QualifyingSurvivingSpouse": 3160.0,
+            "HeadOfHousehold": 3160.0
+        },
+        "2025": {
+            "Single": 3270.0,
+            "MarriedFilingSeparately": 3270.0,
+            "MarriedFilingJointly": 3270.0,
+            "QualifyingSurvivingSpouse": 3270.0,
+            "HeadOfHousehold": 3270.0
+        }
+    },
+
+    "LA": {
+        "2024": {
+            "Single": 4500.0,
+            "MarriedFilingSeparately": 4500.0,
+            "MarriedFilingJointly": 9000.0,
+            "QualifyingSurvivingSpouse": 9000.0,
+            "HeadOfHousehold": 9000.0
+        },
+        "2025": {
+            "Single": 12500.0,
+            "MarriedFilingSeparately": 12500.0,
+            "MarriedFilingJointly": 25000.0,
+            "QualifyingSurvivingSpouse": 25000.0,
+            "HeadOfHousehold": 25000.0
+        }
+    },
+
+    "ME": {
+        "2024": {
+            "Single": 14600.0,
+            "MarriedFilingSeparately": 14600.0,
+            "MarriedFilingJointly": 29200.0,
+            "QualifyingSurvivingSpouse": 29200.0,
+            "HeadOfHousehold": 21900.0
+        },
+        "2025": {
+            "Single": 15000.0,
+            "MarriedFilingSeparately": 15000.0,
+            "MarriedFilingJointly": 30000.0,
+            "QualifyingSurvivingSpouse": 30000.0,
+            "HeadOfHousehold": 22500.0
+        }
+    },
+
+    "MD": {
+        "2024": {
+            "Single": 2700.0,
+            "MarriedFilingSeparately": 2700.0,
+            "MarriedFilingJointly": 5450.0,
+            "QualifyingSurvivingSpouse": 5450.0,
+            "HeadOfHousehold": 5450.0
+        }
     }
 }
