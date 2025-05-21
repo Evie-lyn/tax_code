@@ -1,6 +1,7 @@
 #[macro_use]
 mod brackets;
 mod tax_bracket;
+mod deductions;
 
 use crate::brackets::Bracket;
 use tax_bracket::TaxBrackets;
@@ -96,18 +97,18 @@ generate_get_tax_brackets!(
 
     "az" => { //Arizona
         2024 => {
-            FilingStatus::Single => brackets::az_single_tax,
-            FilingStatus::MarriedFilingSeparately => brackets::az_single_tax,
-            FilingStatus::MarriedFilingJointly => brackets::az_single_tax,
-            FilingStatus::QualifyingSurvivingSpouse => brackets::az_single_tax,
-            FilingStatus::HeadOfHousehold => brackets::az_single_tax,
+            FilingStatus::Single => brackets::az_single_tax_2024,
+            FilingStatus::MarriedFilingSeparately => brackets::az_single_tax_2024,
+            FilingStatus::MarriedFilingJointly => brackets::az_single_tax_2024,
+            FilingStatus::QualifyingSurvivingSpouse => brackets::az_single_tax_2024,
+            FilingStatus::HeadOfHousehold => brackets::az_single_tax_2024,
         },
         2025 => {
-            FilingStatus::Single => brackets::az_single_tax,
-            FilingStatus::MarriedFilingSeparately => brackets::az_single_tax,
-            FilingStatus::MarriedFilingJointly => brackets::az_single_tax,
-            FilingStatus::QualifyingSurvivingSpouse => brackets::az_single_tax,
-            FilingStatus::HeadOfHousehold => brackets::az_single_tax,
+            FilingStatus::Single => brackets::az_single_tax_2025,
+            FilingStatus::MarriedFilingSeparately => brackets::az_single_tax_2025,
+            FilingStatus::MarriedFilingJointly => brackets::az_single_tax_2025,
+            FilingStatus::QualifyingSurvivingSpouse => brackets::az_single_tax_2025,
+            FilingStatus::HeadOfHousehold => brackets::az_single_tax_2025,
         },
     },
 
@@ -118,6 +119,13 @@ generate_get_tax_brackets!(
             FilingStatus::MarriedFilingJointly => brackets::ar_single_tax_2024,
             FilingStatus::QualifyingSurvivingSpouse => brackets::ar_single_tax_2024,
             FilingStatus::HeadOfHousehold => brackets::ar_single_tax_2024,
+        },
+        2025 => {
+            FilingStatus::Single => brackets::ar_single_tax_2025,
+            FilingStatus::MarriedFilingSeparately => brackets::ar_single_tax_2025,
+            FilingStatus::MarriedFilingJointly => brackets::ar_single_tax_2025,
+            FilingStatus::QualifyingSurvivingSpouse => brackets::ar_single_tax_2025,
+            FilingStatus::HeadOfHousehold => brackets::ar_single_tax_2025,
         },
     },
 
@@ -223,6 +231,162 @@ generate_get_tax_brackets!(
         },
     },
 
+    "hi" => { //Hawaii
+        2024 => {
+            FilingStatus::Single => brackets::hi_single_tax_2024,
+            FilingStatus::MarriedFilingSeparately => brackets::hi_single_tax_2024,
+            FilingStatus::MarriedFilingJointly => brackets::hi_joint_tax_2024,
+            FilingStatus::QualifyingSurvivingSpouse => brackets::hi_joint_tax_2024,
+            FilingStatus::HeadOfHousehold => brackets::hi_headhouse_tax_2024,
+        },
+        2025 => {
+            FilingStatus::Single => brackets::hi_single_tax_2025,
+            FilingStatus::MarriedFilingSeparately => brackets::hi_single_tax_2025,
+            FilingStatus::MarriedFilingJointly => brackets::hi_joint_tax_2025,
+            FilingStatus::QualifyingSurvivingSpouse => brackets::hi_joint_tax_2025,
+            FilingStatus::HeadOfHousehold => brackets::hi_headhouse_tax_2025,
+        },
+    },
+
+    "id" => { //Idaho
+        2024 => {
+            FilingStatus::Single => brackets::id_single_tax_2024,
+            FilingStatus::MarriedFilingSeparately => brackets::id_single_tax_2024,
+            FilingStatus::MarriedFilingJointly => brackets::id_joint_tax_2024,
+            FilingStatus::QualifyingSurvivingSpouse => brackets::id_joint_tax_2024,
+            FilingStatus::HeadOfHousehold => brackets::id_headhouse_tax_2024,
+        },
+    },
+
+    "il" => { //Illinois
+        2024 => {
+            FilingStatus::Single => brackets::il_single_tax_2024,
+            FilingStatus::MarriedFilingSeparately => brackets::il_single_tax_2024,
+            FilingStatus::MarriedFilingJointly => brackets::il_single_tax_2024,
+            FilingStatus::QualifyingSurvivingSpouse => brackets::il_single_tax_2024,
+            FilingStatus::HeadOfHousehold => brackets::il_single_tax_2024,
+        },
+        2025 => {
+            FilingStatus::Single => brackets::il_single_tax_2025,
+            FilingStatus::MarriedFilingSeparately => brackets::il_single_tax_2025,
+            FilingStatus::MarriedFilingJointly => brackets::il_single_tax_2025,
+            FilingStatus::QualifyingSurvivingSpouse => brackets::il_single_tax_2025,
+            FilingStatus::HeadOfHousehold => brackets::il_single_tax_2025,
+        },
+    },
+
+    "in" => { //Indiana
+        2024 => {
+            FilingStatus::Single => brackets::in_single_tax_2024,
+            FilingStatus::MarriedFilingSeparately => brackets::in_single_tax_2024,
+            FilingStatus::MarriedFilingJointly => brackets::in_single_tax_2024,
+            FilingStatus::QualifyingSurvivingSpouse => brackets::in_single_tax_2024,
+            FilingStatus::HeadOfHousehold => brackets::in_single_tax_2024,
+        },
+        2025 => {
+            FilingStatus::Single => brackets::in_single_tax_2025,
+            FilingStatus::MarriedFilingSeparately => brackets::in_single_tax_2025,
+            FilingStatus::MarriedFilingJointly => brackets::in_single_tax_2025,
+            FilingStatus::QualifyingSurvivingSpouse => brackets::in_single_tax_2025,
+            FilingStatus::HeadOfHousehold => brackets::in_single_tax_2025,
+        },
+    },
+
+    "ia" => { //Iowa
+        2024 => {
+            FilingStatus::Single => brackets::ia_single_tax_2024,
+            FilingStatus::MarriedFilingSeparately => brackets::ia_single_tax_2024,
+            FilingStatus::MarriedFilingJointly => brackets::ia_joint_tax_2024,
+            FilingStatus::QualifyingSurvivingSpouse => brackets::ia_joint_tax_2024,
+            FilingStatus::HeadOfHousehold => brackets::ia_headhouse_tax_2024,
+        },
+        2025 => {
+            FilingStatus::Single => brackets::ia_single_tax_2025,
+            FilingStatus::MarriedFilingSeparately => brackets::ia_single_tax_2025,
+            FilingStatus::MarriedFilingJointly => brackets::ia_single_tax_2025,
+            FilingStatus::QualifyingSurvivingSpouse => brackets::ia_single_tax_2025,
+            FilingStatus::HeadOfHousehold => brackets::ia_single_tax_2025,
+        },
+    },
+
+    "ks" => { //Kansas
+        2024 => {
+            FilingStatus::Single => brackets::ks_single_tax_2024,
+            FilingStatus::MarriedFilingSeparately => brackets::ks_single_tax_2024,
+            FilingStatus::MarriedFilingJointly => brackets::ks_joint_tax_2024,
+            FilingStatus::QualifyingSurvivingSpouse => brackets::ks_joint_tax_2024,
+            FilingStatus::HeadOfHousehold => brackets::ks_headhouse_tax_2024,
+        },
+    },
+
+    "ky" => { //Kentucky
+        2024 => {
+            FilingStatus::Single => brackets::ky_single_tax_2024,
+            FilingStatus::MarriedFilingSeparately => brackets::ky_single_tax_2024,
+            FilingStatus::MarriedFilingJointly => brackets::ky_single_tax_2024,
+            FilingStatus::QualifyingSurvivingSpouse => brackets::ky_single_tax_2024,
+            FilingStatus::HeadOfHousehold => brackets::ky_single_tax_2024,
+        },
+        2025 => {
+            FilingStatus::Single => brackets::ky_single_tax_2025,
+            FilingStatus::MarriedFilingSeparately => brackets::ky_single_tax_2025,
+            FilingStatus::MarriedFilingJointly => brackets::ky_single_tax_2025,
+            FilingStatus::QualifyingSurvivingSpouse => brackets::ky_single_tax_2025,
+            FilingStatus::HeadOfHousehold => brackets::ky_single_tax_2025,
+        },
+    },
+
+    "la" => { //Louisiana
+        2024 => {
+            FilingStatus::Single => brackets::la_single_tax_2024,
+            FilingStatus::MarriedFilingSeparately => brackets::la_single_tax_2024,
+            FilingStatus::MarriedFilingJointly => brackets::la_joint_tax_2024,
+            FilingStatus::QualifyingSurvivingSpouse => brackets::la_joint_tax_2024,
+            FilingStatus::HeadOfHousehold => brackets::la_headhouse_tax_2024,
+        },
+        2025 => {
+            FilingStatus::Single => brackets::la_single_tax_2025,
+            FilingStatus::MarriedFilingSeparately => brackets::la_single_tax_2025,
+            FilingStatus::MarriedFilingJointly => brackets::la_single_tax_2025,
+            FilingStatus::QualifyingSurvivingSpouse => brackets::la_single_tax_2025,
+            FilingStatus::HeadOfHousehold => brackets::la_single_tax_2025,
+        },
+    },
+
+    "me" => { //Maine
+        2024 => {
+            FilingStatus::Single => brackets::me_single_tax_2024,
+            FilingStatus::MarriedFilingSeparately => brackets::me_single_tax_2024,
+            FilingStatus::MarriedFilingJointly => brackets::me_joint_tax_2024,
+            FilingStatus::QualifyingSurvivingSpouse => brackets::me_joint_tax_2024,
+            FilingStatus::HeadOfHousehold => brackets::me_headhouse_tax_2024,
+        },
+        2025 => {
+            FilingStatus::Single => brackets::me_single_tax_2025,
+            FilingStatus::MarriedFilingSeparately => brackets::me_single_tax_2025,
+            FilingStatus::MarriedFilingJointly => brackets::me_joint_tax_2025,
+            FilingStatus::QualifyingSurvivingSpouse => brackets::me_joint_tax_2025,
+            FilingStatus::HeadOfHousehold => brackets::me_headhouse_tax_2025,
+        },
+    },
+
+    "md" => { //Maryland
+        2024 => {
+            FilingStatus::Single => brackets::md_single_tax_2024,
+            FilingStatus::MarriedFilingSeparately => brackets::md_single_tax_2024,
+            FilingStatus::MarriedFilingJointly => brackets::md_joint_tax_2024,
+            FilingStatus::QualifyingSurvivingSpouse => brackets::md_joint_tax_2024,
+            FilingStatus::HeadOfHousehold => brackets::md_headhouse_tax_2024,
+        },
+        2025 => {
+            FilingStatus::Single => brackets::md_single_tax_2025,
+            FilingStatus::MarriedFilingSeparately => brackets::md_single_tax_2025,
+            FilingStatus::MarriedFilingJointly => brackets::md_joint_tax_2025,
+            FilingStatus::QualifyingSurvivingSpouse => brackets::md_joint_tax_2025,
+            FilingStatus::HeadOfHousehold => brackets::md_headhouse_tax_2025,
+        },
+    },
+
     "tx" => { //Texas
         2024 => {
             FilingStatus::Single => brackets::tx_single_tax,
@@ -257,6 +421,287 @@ generate_get_tax_brackets!(
     },
 );
 
+/// For deductions
+macro_rules! generate_get_deductions {
+    (
+        $($state:literal => {
+            $(
+                $year:literal => {
+                    $($status:path => $func:path,)*
+                },
+            )*
+        },)*
+    ) => {
+        pub fn get_deductions (state: &str, year: i32, filing_status: FilingStatus) -> deductions::Deduction {
+            let state_lower = state.to_lowercase();
+            match state_lower.as_str() {
+                $(
+                    $state => match year {
+                        $(
+                            $year => {
+                                match filing_status {
+                                    $($status => $func(&filing_status),)*
+                                }
+                            }
+                        )*
+                        _ => {
+                            eprintln! ("Year {} not supported for {}. Defaulting to latest supported year's Single deduction.", year, $state);
+
+                            $(
+                                $(
+                                    match $year {
+                                        $year => {
+                                            return $func(&FilingStatus::Single);
+                                        }
+                                        _ => {}
+                                    }
+                                )*
+                            )*
+                            unreachable!("Latest year's Single filing status deduction should be defined");
+                        }
+                    },
+                )*
+                _=>{
+                    eprintln! ("Error: State '{}' is not currently supported for deductions. Defaulting to 0 deduction.", state);
+                    deductions::Deduction { standard_deduction: 0.0 }
+                }
+            }
+        }
+    };
+}
+
+generate_get_deductions!(
+    "ak" => { // Alaska
+        2024 => {
+            FilingStatus::Single => deductions::ak_standard_deduction,
+            FilingStatus::MarriedFilingSeparately => deductions::ak_standard_deduction,
+            FilingStatus::MarriedFilingJointly => deductions::ak_standard_deduction,
+            FilingStatus::QualifyingSurvivingSpouse => deductions::ak_standard_deduction,
+            FilingStatus::HeadOfHousehold => deductions::ak_standard_deduction,
+        },
+        2025 => {
+            FilingStatus::Single => deductions::ak_standard_deduction,
+            FilingStatus::MarriedFilingSeparately => deductions::ak_standard_deduction,
+            FilingStatus::MarriedFilingJointly => deductions::ak_standard_deduction,
+            FilingStatus::QualifyingSurvivingSpouse => deductions::ak_standard_deduction,
+            FilingStatus::HeadOfHousehold => deductions::ak_standard_deduction,
+        },
+    },
+
+    "az" => { // Arizona
+        2024 => {
+            FilingStatus::Single => deductions::az_standard_deduction_2024,
+            FilingStatus::MarriedFilingSeparately => deductions::az_standard_deduction_2024,
+            FilingStatus::MarriedFilingJointly => deductions::az_standard_deduction_2024,
+            FilingStatus::QualifyingSurvivingSpouse => deductions::az_standard_deduction_2024,
+            FilingStatus::HeadOfHousehold => deductions::az_standard_deduction_2024,
+        },
+    },
+
+    "ar" => { // Arkansas
+        2024 => {
+            FilingStatus::Single => deductions::ar_standard_deduction_2024,
+            FilingStatus::MarriedFilingSeparately => deductions::ar_standard_deduction_2024,
+            FilingStatus::MarriedFilingJointly => deductions::ar_standard_deduction_2024,
+            FilingStatus::QualifyingSurvivingSpouse => deductions::ar_standard_deduction_2024,
+            FilingStatus::HeadOfHousehold => deductions::ar_standard_deduction_2024,
+        },
+    },
+    
+    "ca" => { // California
+        2024 => {
+            FilingStatus::Single => deductions::ca_standard_deduction_2024,
+            FilingStatus::MarriedFilingSeparately => deductions::ca_standard_deduction_2024,
+            FilingStatus::MarriedFilingJointly => deductions::ca_standard_deduction_2024,
+            FilingStatus::QualifyingSurvivingSpouse => deductions::ca_standard_deduction_2024,
+            FilingStatus::HeadOfHousehold => deductions::ca_standard_deduction_2024,
+        },
+    },
+
+    "co" => { // Colorado
+        2024 => {
+            FilingStatus::Single => deductions::co_standard_deduction,
+            FilingStatus::MarriedFilingSeparately => deductions::co_standard_deduction,
+            FilingStatus::MarriedFilingJointly => deductions::co_standard_deduction,
+            FilingStatus::QualifyingSurvivingSpouse => deductions::co_standard_deduction,
+            FilingStatus::HeadOfHousehold => deductions::co_standard_deduction,
+        },
+        2025 => {
+            FilingStatus::Single => deductions::co_standard_deduction,
+            FilingStatus::MarriedFilingSeparately => deductions::co_standard_deduction,
+            FilingStatus::MarriedFilingJointly => deductions::co_standard_deduction,
+            FilingStatus::QualifyingSurvivingSpouse => deductions::co_standard_deduction,
+            FilingStatus::HeadOfHousehold => deductions::co_standard_deduction,
+        },
+    },
+
+    "ct" => { // Connecticut
+        2024 => {
+            FilingStatus::Single => deductions::ct_standard_deduction,
+            FilingStatus::MarriedFilingSeparately => deductions::ct_standard_deduction,
+            FilingStatus::MarriedFilingJointly => deductions::ct_standard_deduction,
+            FilingStatus::QualifyingSurvivingSpouse => deductions::ct_standard_deduction,
+            FilingStatus::HeadOfHousehold => deductions::ct_standard_deduction,
+        },
+        2025 => {
+            FilingStatus::Single => deductions::ct_standard_deduction,
+            FilingStatus::MarriedFilingSeparately => deductions::ct_standard_deduction,
+            FilingStatus::MarriedFilingJointly => deductions::ct_standard_deduction,
+            FilingStatus::QualifyingSurvivingSpouse => deductions::ct_standard_deduction,
+            FilingStatus::HeadOfHousehold => deductions::ct_standard_deduction,
+        },
+    },
+
+    "de" => { // Delaware
+        2024 => {
+            FilingStatus::Single => deductions::de_standard_deduction_2024,
+            FilingStatus::MarriedFilingSeparately => deductions::de_standard_deduction_2024,
+            FilingStatus::MarriedFilingJointly => deductions::de_standard_deduction_2024,
+            FilingStatus::QualifyingSurvivingSpouse => deductions::de_standard_deduction_2024,
+            FilingStatus::HeadOfHousehold => deductions::de_standard_deduction_2024,
+        },
+    },
+
+    "fl" => { // Florida
+        2024 => {
+            FilingStatus::Single => deductions::fl_standard_deduction,
+            FilingStatus::MarriedFilingSeparately => deductions::fl_standard_deduction,
+            FilingStatus::MarriedFilingJointly => deductions::fl_standard_deduction,
+            FilingStatus::QualifyingSurvivingSpouse => deductions::fl_standard_deduction,
+            FilingStatus::HeadOfHousehold => deductions::fl_standard_deduction,
+        },
+        2025 => {
+            FilingStatus::Single => deductions::fl_standard_deduction,
+            FilingStatus::MarriedFilingSeparately => deductions::fl_standard_deduction,
+            FilingStatus::MarriedFilingJointly => deductions::fl_standard_deduction,
+            FilingStatus::QualifyingSurvivingSpouse => deductions::fl_standard_deduction,
+            FilingStatus::HeadOfHousehold => deductions::fl_standard_deduction,
+        },
+    },
+
+    "ga" => { // Georggia
+        2024 => {
+            FilingStatus::Single => deductions::ga_standard_deduction_2024,
+            FilingStatus::MarriedFilingSeparately => deductions::ga_standard_deduction_2024,
+            FilingStatus::MarriedFilingJointly => deductions::ga_standard_deduction_2024,
+            FilingStatus::QualifyingSurvivingSpouse => deductions::ga_standard_deduction_2024,
+            FilingStatus::HeadOfHousehold => deductions::ga_standard_deduction_2024,
+        },
+    },
+
+    "hi" => { // Hawaii
+        2024 => {
+            FilingStatus::Single => deductions::hi_standard_deduction_2024,
+            FilingStatus::MarriedFilingSeparately => deductions::hi_standard_deduction_2024,
+            FilingStatus::MarriedFilingJointly => deductions::hi_standard_deduction_2024,
+            FilingStatus::QualifyingSurvivingSpouse => deductions::hi_standard_deduction_2024,
+            FilingStatus::HeadOfHousehold => deductions::hi_standard_deduction_2024,
+        },
+        2025 => {
+            FilingStatus::Single => deductions::hi_standard_deduction_2025,
+            FilingStatus::MarriedFilingSeparately => deductions::hi_standard_deduction_2025,
+            FilingStatus::MarriedFilingJointly => deductions::hi_standard_deduction_2025,
+            FilingStatus::QualifyingSurvivingSpouse => deductions::hi_standard_deduction_2025,
+            FilingStatus::HeadOfHousehold => deductions::hi_standard_deduction_2025,
+        },
+    },
+
+    "id" => { // Idaho
+        2024 => {
+            FilingStatus::Single => deductions::id_standard_deduction_2024,
+            FilingStatus::MarriedFilingSeparately => deductions::id_standard_deduction_2024,
+            FilingStatus::MarriedFilingJointly => deductions::id_standard_deduction_2024,
+            FilingStatus::QualifyingSurvivingSpouse => deductions::id_standard_deduction_2024,
+            FilingStatus::HeadOfHousehold => deductions::id_standard_deduction_2024,
+        },
+        2025 => {
+            FilingStatus::Single => deductions::id_standard_deduction_2025,
+            FilingStatus::MarriedFilingSeparately => deductions::id_standard_deduction_2025,
+            FilingStatus::MarriedFilingJointly => deductions::id_standard_deduction_2025,
+            FilingStatus::QualifyingSurvivingSpouse => deductions::id_standard_deduction_2025,
+            FilingStatus::HeadOfHousehold => deductions::id_standard_deduction_2025,
+        },
+    },
+
+    "il" => { // Illinois
+        2024 => {
+            FilingStatus::Single => deductions::il_standard_deduction,
+            FilingStatus::MarriedFilingSeparately => deductions::il_standard_deduction,
+            FilingStatus::MarriedFilingJointly => deductions::il_standard_deduction,
+            FilingStatus::QualifyingSurvivingSpouse => deductions::il_standard_deduction,
+            FilingStatus::HeadOfHousehold => deductions::il_standard_deduction,
+        },
+        2025 => {
+            FilingStatus::Single => deductions::il_standard_deduction,
+            FilingStatus::MarriedFilingSeparately => deductions::il_standard_deduction,
+            FilingStatus::MarriedFilingJointly => deductions::il_standard_deduction,
+            FilingStatus::QualifyingSurvivingSpouse => deductions::il_standard_deduction,
+            FilingStatus::HeadOfHousehold => deductions::il_standard_deduction,
+        },
+    },
+
+    "in" => { // Indiana
+        2024 => {
+            FilingStatus::Single => deductions::in_standard_deduction,
+            FilingStatus::MarriedFilingSeparately => deductions::in_standard_deduction,
+            FilingStatus::MarriedFilingJointly => deductions::in_standard_deduction,
+            FilingStatus::QualifyingSurvivingSpouse => deductions::in_standard_deduction,
+            FilingStatus::HeadOfHousehold => deductions::in_standard_deduction,
+        },
+        2025 => {
+            FilingStatus::Single => deductions::in_standard_deduction,
+            FilingStatus::MarriedFilingSeparately => deductions::in_standard_deduction,
+            FilingStatus::MarriedFilingJointly => deductions::in_standard_deduction,
+            FilingStatus::QualifyingSurvivingSpouse => deductions::in_standard_deduction,
+            FilingStatus::HeadOfHousehold => deductions::in_standard_deduction,
+        },
+    },
+
+    "ia" => { // Iowa
+        2024 => {
+            FilingStatus::Single => deductions::ia_standard_deduction_2024,
+            FilingStatus::MarriedFilingSeparately => deductions::ia_standard_deduction_2024,
+            FilingStatus::MarriedFilingJointly => deductions::ia_standard_deduction_2024,
+            FilingStatus::QualifyingSurvivingSpouse => deductions::ia_standard_deduction_2024,
+            FilingStatus::HeadOfHousehold => deductions::ia_standard_deduction_2024,
+        },
+        2025 => {
+            FilingStatus::Single => deductions::ia_standard_deduction_2025,
+            FilingStatus::MarriedFilingSeparately => deductions::ia_standard_deduction_2025,
+            FilingStatus::MarriedFilingJointly => deductions::ia_standard_deduction_2025,
+            FilingStatus::QualifyingSurvivingSpouse => deductions::ia_standard_deduction_2025,
+            FilingStatus::HeadOfHousehold => deductions::ia_standard_deduction_2025,
+        },
+    },
+
+    "ks" => { // Kansas
+        2024 => {
+            FilingStatus::Single => deductions::ks_standard_deduction_2024,
+            FilingStatus::MarriedFilingSeparately => deductions::ks_standard_deduction_2024,
+            FilingStatus::MarriedFilingJointly => deductions::ks_standard_deduction_2024,
+            FilingStatus::QualifyingSurvivingSpouse => deductions::ks_standard_deduction_2024,
+            FilingStatus::HeadOfHousehold => deductions::ks_standard_deduction_2024,
+        },
+    },
+
+    "ky" => { // Kentucky
+        2024 => {
+            FilingStatus::Single => deductions::ky_standard_deduction_2024,
+            FilingStatus::MarriedFilingSeparately => deductions::ky_standard_deduction_2024,
+            FilingStatus::MarriedFilingJointly => deductions::ky_standard_deduction_2024,
+            FilingStatus::QualifyingSurvivingSpouse => deductions::ky_standard_deduction_2024,
+            FilingStatus::HeadOfHousehold => deductions::ky_standard_deduction_2024,
+        },
+        2025 => {
+            FilingStatus::Single => deductions::ky_standard_deduction_2025,
+            FilingStatus::MarriedFilingSeparately => deductions::ky_standard_deduction_2025,
+            FilingStatus::MarriedFilingJointly => deductions::ky_standard_deduction_2025,
+            FilingStatus::QualifyingSurvivingSpouse => deductions::ky_standard_deduction_2025,
+            FilingStatus::HeadOfHousehold => deductions::ky_standard_deduction_2025,
+        },
+    },
+);
+
 //calculates Income Tax based on income and filing status
 pub fn calculate_income_tax(
     state: &str,
@@ -264,6 +709,9 @@ pub fn calculate_income_tax(
     filing_status: FilingStatus,
     year: i32,
 ) -> f64 {
-    let brackets = get_tax_brackets(state, year, filing_status);
-    TaxBrackets::new(brackets).taxes(income)
+    let deduction_amount = crate::get_deductions (state, year, filing_status).standard_deduction;
+    let taxable_income = (income - deduction_amount).max (0.0);
+
+    let brackets = crate::get_tax_brackets(state, year, filing_status);
+    TaxBrackets::new(brackets).taxes(taxable_income)
 }
