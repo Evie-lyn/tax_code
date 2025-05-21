@@ -177,3 +177,54 @@ pub fn ky_standard_deduction_2025 (filing_status: &crate::FilingStatus) -> Deduc
         crate::FilingStatus::HeadOfHousehold => Deduction { standard_deduction: 3270.0 }, 
     }
 }
+
+//Louisiana
+pub fn la_standard_deduction_2024 (filing_status: &crate::FilingStatus) -> Deduction{
+    match filing_status {
+        crate::FilingStatus::Single => Deduction { standard_deduction: 4500.0 }, 
+        crate::FilingStatus::MarriedFilingSeparately => Deduction { standard_deduction: 4500.0 }, 
+        crate::FilingStatus::MarriedFilingJointly => Deduction { standard_deduction: 9000.0 },
+        crate::FilingStatus::QualifyingSurvivingSpouse => Deduction { standard_deduction: 9000.0 },
+        crate::FilingStatus::HeadOfHousehold => Deduction { standard_deduction: 9000.0 }, 
+    }
+}
+pub fn la_standard_deduction_2025 (filing_status: &crate::FilingStatus) -> Deduction{
+    match filing_status {
+        crate::FilingStatus::Single => Deduction { standard_deduction: 12500.0 }, 
+        crate::FilingStatus::MarriedFilingSeparately => Deduction { standard_deduction: 12500.0 }, 
+        crate::FilingStatus::MarriedFilingJointly => Deduction { standard_deduction: 25000.0 },
+        crate::FilingStatus::QualifyingSurvivingSpouse => Deduction { standard_deduction: 25000.0 },
+        crate::FilingStatus::HeadOfHousehold => Deduction { standard_deduction: 25000.0 }, 
+    }
+}
+
+//Maine
+pub fn me_standard_deduction_2024 (filing_status: &crate::FilingStatus) -> Deduction{
+    match filing_status {
+        crate::FilingStatus::Single => Deduction { standard_deduction: 14600.0 }, 
+        crate::FilingStatus::MarriedFilingSeparately => Deduction { standard_deduction: 14600.0 }, 
+        crate::FilingStatus::MarriedFilingJointly => Deduction { standard_deduction: 29200.0 },
+        crate::FilingStatus::QualifyingSurvivingSpouse => Deduction { standard_deduction: 29200.0 },
+        crate::FilingStatus::HeadOfHousehold => Deduction { standard_deduction: 21900.0 }, 
+    }
+}
+pub fn me_standard_deduction_2025 (filing_status: &crate::FilingStatus) -> Deduction{
+    match filing_status {
+        crate::FilingStatus::Single => Deduction { standard_deduction: 15000.0 }, 
+        crate::FilingStatus::MarriedFilingSeparately => Deduction { standard_deduction: 15000.0 }, 
+        crate::FilingStatus::MarriedFilingJointly => Deduction { standard_deduction: 30000.0 },
+        crate::FilingStatus::QualifyingSurvivingSpouse => Deduction { standard_deduction: 30000.0 },
+        crate::FilingStatus::HeadOfHousehold => Deduction { standard_deduction: 22500.0 }, 
+    }
+}
+
+//Maryland
+pub fn md_standard_deduction_2024 (filing_status: &crate::FilingStatus) -> Deduction{
+    match filing_status {
+        crate::FilingStatus::Single => Deduction { standard_deduction: 2700.0 }, 
+        crate::FilingStatus::MarriedFilingSeparately => Deduction { standard_deduction: 2700.0 }, 
+        crate::FilingStatus::MarriedFilingJointly => Deduction { standard_deduction: 5450.0 },
+        crate::FilingStatus::QualifyingSurvivingSpouse => Deduction { standard_deduction: 5450.0 },
+        crate::FilingStatus::HeadOfHousehold => Deduction { standard_deduction: 5450.0 }, 
+    }
+}

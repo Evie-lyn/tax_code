@@ -700,6 +700,50 @@ generate_get_deductions!(
             FilingStatus::HeadOfHousehold => deductions::ky_standard_deduction_2025,
         },
     },
+
+    "la" => { // Louisiana
+        2024 => {
+            FilingStatus::Single => deductions::la_standard_deduction_2024,
+            FilingStatus::MarriedFilingSeparately => deductions::la_standard_deduction_2024,
+            FilingStatus::MarriedFilingJointly => deductions::la_standard_deduction_2024,
+            FilingStatus::QualifyingSurvivingSpouse => deductions::la_standard_deduction_2024,
+            FilingStatus::HeadOfHousehold => deductions::la_standard_deduction_2024,
+        },
+        2025 => {
+            FilingStatus::Single => deductions::la_standard_deduction_2025,
+            FilingStatus::MarriedFilingSeparately => deductions::la_standard_deduction_2025,
+            FilingStatus::MarriedFilingJointly => deductions::la_standard_deduction_2025,
+            FilingStatus::QualifyingSurvivingSpouse => deductions::la_standard_deduction_2025,
+            FilingStatus::HeadOfHousehold => deductions::la_standard_deduction_2025,
+        },
+    },
+
+    "me" => { // Maine
+        2024 => {
+            FilingStatus::Single => deductions::me_standard_deduction_2024,
+            FilingStatus::MarriedFilingSeparately => deductions::me_standard_deduction_2024,
+            FilingStatus::MarriedFilingJointly => deductions::me_standard_deduction_2024,
+            FilingStatus::QualifyingSurvivingSpouse => deductions::me_standard_deduction_2024,
+            FilingStatus::HeadOfHousehold => deductions::me_standard_deduction_2024,
+        },
+        2025 => {
+            FilingStatus::Single => deductions::me_standard_deduction_2025,
+            FilingStatus::MarriedFilingSeparately => deductions::me_standard_deduction_2025,
+            FilingStatus::MarriedFilingJointly => deductions::me_standard_deduction_2025,
+            FilingStatus::QualifyingSurvivingSpouse => deductions::me_standard_deduction_2025,
+            FilingStatus::HeadOfHousehold => deductions::me_standard_deduction_2025,
+        },
+    },
+
+    "md" => { // Maryland
+        2024 => {
+            FilingStatus::Single => deductions::md_standard_deduction_2024,
+            FilingStatus::MarriedFilingSeparately => deductions::md_standard_deduction_2024,
+            FilingStatus::MarriedFilingJointly => deductions::md_standard_deduction_2024,
+            FilingStatus::QualifyingSurvivingSpouse => deductions::md_standard_deduction_2024,
+            FilingStatus::HeadOfHousehold => deductions::md_standard_deduction_2024,
+        },
+    },
 );
 
 //calculates Income Tax based on income and filing status
