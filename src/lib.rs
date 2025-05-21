@@ -2,6 +2,7 @@
 mod brackets;
 mod tax_bracket;
 mod deductions;
+mod income_based_deduction;
 
 use crate::brackets::Bracket;
 use tax_bracket::TaxBrackets;
@@ -40,10 +41,10 @@ macro_rules! generate_get_tax_brackets {
                         )*
                         _ => {
                             eprintln! ("Year {} not supported for {}. Defaulting to the latest supported year's Single bracket.", year, $state);
-                            // Directly call the function associated with Single for the latest year
+                        
                             $(
                                 $(
-                                    match $year { // Use a dummy match on year to trigger the inner loop once
+                                    match $year { 
                                         $year => {
                                             match FilingStatus::Single {
                                                 $status => return $func(),
@@ -387,6 +388,84 @@ generate_get_tax_brackets!(
         },
     },
 
+    "ma" => { //Massachusetts
+        2024 => {
+            FilingStatus::Single => brackets::ma_single_tax_2024,
+            FilingStatus::MarriedFilingSeparately => brackets::ma_single_tax_2024,
+            FilingStatus::MarriedFilingJointly => brackets::ma_single_tax_2024,
+            FilingStatus::QualifyingSurvivingSpouse => brackets::ma_single_tax_2024,
+            FilingStatus::HeadOfHousehold => brackets::ma_single_tax_2024,
+        },
+        2025 => {
+            FilingStatus::Single => brackets::ma_single_tax_2025,
+            FilingStatus::MarriedFilingSeparately => brackets::ma_single_tax_2025,
+            FilingStatus::MarriedFilingJointly => brackets::ma_single_tax_2025,
+            FilingStatus::QualifyingSurvivingSpouse => brackets::ma_single_tax_2025,
+            FilingStatus::HeadOfHousehold => brackets::ma_single_tax_2025,
+        },
+    },
+
+    "mi" => { //Michigan
+        2024 => {
+            FilingStatus::Single => brackets::mi_single_tax_2024,
+            FilingStatus::MarriedFilingSeparately => brackets::mi_single_tax_2024,
+            FilingStatus::MarriedFilingJointly => brackets::mi_single_tax_2024,
+            FilingStatus::QualifyingSurvivingSpouse => brackets::mi_single_tax_2024,
+            FilingStatus::HeadOfHousehold => brackets::mi_single_tax_2024,
+        },
+        2025 => {
+            FilingStatus::Single => brackets::mi_single_tax_2025,
+            FilingStatus::MarriedFilingSeparately => brackets::mi_single_tax_2025,
+            FilingStatus::MarriedFilingJointly => brackets::mi_single_tax_2025,
+            FilingStatus::QualifyingSurvivingSpouse => brackets::mi_single_tax_2025,
+            FilingStatus::HeadOfHousehold => brackets::mi_single_tax_2025,
+        },
+    },
+
+    "mn" => { //Minnesota
+        2024 => {
+            FilingStatus::Single => brackets::mn_single_tax_2024,
+            FilingStatus::MarriedFilingSeparately => brackets::mn_separate_tax_2024,
+            FilingStatus::MarriedFilingJointly => brackets::mn_joint_tax_2024,
+            FilingStatus::QualifyingSurvivingSpouse => brackets::mn_joint_tax_2024,
+            FilingStatus::HeadOfHousehold => brackets::mn_headhouse_tax_2024,
+        },
+        2025 => {
+            FilingStatus::Single => brackets::mn_single_tax_2025,
+            FilingStatus::MarriedFilingSeparately => brackets::mn_separate_tax_2025,
+            FilingStatus::MarriedFilingJointly => brackets::mn_joint_tax_2025,
+            FilingStatus::QualifyingSurvivingSpouse => brackets::mn_joint_tax_2025,
+            FilingStatus::HeadOfHousehold => brackets::mn_headhouse_tax_2025,
+        },
+    },
+
+    "ms" => { //Mississippi
+        2024 => {
+            FilingStatus::Single => brackets::ms_single_tax_2024,
+            FilingStatus::MarriedFilingSeparately => brackets::ms_single_tax_2024,
+            FilingStatus::MarriedFilingJointly => brackets::ms_single_tax_2024,
+            FilingStatus::QualifyingSurvivingSpouse => brackets::ms_single_tax_2024,
+            FilingStatus::HeadOfHousehold => brackets::ms_single_tax_2024,
+        },
+        2025 => {
+            FilingStatus::Single => brackets::ms_single_tax_2025,
+            FilingStatus::MarriedFilingSeparately => brackets::ms_single_tax_2025,
+            FilingStatus::MarriedFilingJointly => brackets::ms_single_tax_2025,
+            FilingStatus::QualifyingSurvivingSpouse => brackets::ms_single_tax_2025,
+            FilingStatus::HeadOfHousehold => brackets::ms_single_tax_2025,
+        },
+    },
+
+    "mo" => { //Missouri (tax same across filing status)
+        2024 => {
+            FilingStatus::Single => brackets::mo_single_tax_2024,
+            FilingStatus::MarriedFilingSeparately => brackets::mo_single_tax_2024,
+            FilingStatus::MarriedFilingJointly => brackets::mo_single_tax_2024,
+            FilingStatus::QualifyingSurvivingSpouse => brackets::mo_single_tax_2024,
+            FilingStatus::HeadOfHousehold => brackets::mo_single_tax_2024,
+        },
+    },
+
     "tx" => { //Texas
         2024 => {
             FilingStatus::Single => brackets::tx_single_tax,
@@ -403,6 +482,7 @@ generate_get_tax_brackets!(
             FilingStatus::HeadOfHousehold => brackets::tx_single_tax,
         },
     },
+
     "tn" => { //Tennesse
         2024 => {
             FilingStatus::Single => brackets::tn_single_tax,
@@ -432,7 +512,7 @@ macro_rules! generate_get_deductions {
             )*
         },)*
     ) => {
-        pub fn get_deductions (state: &str, year: i32, filing_status: FilingStatus) -> deductions::Deduction {
+        pub fn get_deductions (state: &str, year: i32, filing_status: FilingStatus, income: f64) -> deductions::Deduction {
             let state_lower = state.to_lowercase();
             match state_lower.as_str() {
                 $(
@@ -440,7 +520,7 @@ macro_rules! generate_get_deductions {
                         $(
                             $year => {
                                 match filing_status {
-                                    $($status => $func(&filing_status),)*
+                                    $($status => $func(income, &filing_status),)*
                                 }
                             }
                         )*
@@ -451,7 +531,7 @@ macro_rules! generate_get_deductions {
                                 $(
                                     match $year {
                                         $year => {
-                                            return $func(&FilingStatus::Single);
+                                            return $func(income, &FilingStatus::Single);
                                         }
                                         _ => {}
                                     }
@@ -471,6 +551,15 @@ macro_rules! generate_get_deductions {
 }
 
 generate_get_deductions!(
+    "al" => { // Alabama
+        2024 => {
+            FilingStatus::Single => income_based_deduction::al_standard_deduction_2024,
+            FilingStatus::MarriedFilingSeparately => income_based_deduction::al_standard_deduction_2024,
+            FilingStatus::MarriedFilingJointly => income_based_deduction::al_standard_deduction_2024,
+            FilingStatus::QualifyingSurvivingSpouse => income_based_deduction::al_standard_deduction_2024,
+            FilingStatus::HeadOfHousehold => income_based_deduction::al_standard_deduction_2024,
+        },
+    },
     "ak" => { // Alaska
         2024 => {
             FilingStatus::Single => deductions::ak_standard_deduction,
@@ -744,6 +833,70 @@ generate_get_deductions!(
             FilingStatus::HeadOfHousehold => deductions::md_standard_deduction_2024,
         },
     },
+
+    "md" => { // Massachusetts
+        2024 => {
+            FilingStatus::Single => deductions::ma_standard_deduction,
+            FilingStatus::MarriedFilingSeparately => deductions::ma_standard_deduction,
+            FilingStatus::MarriedFilingJointly => deductions::ma_standard_deduction,
+            FilingStatus::QualifyingSurvivingSpouse => deductions::ma_standard_deduction,
+            FilingStatus::HeadOfHousehold => deductions::ma_standard_deduction,
+        },
+    },
+
+    "mi" => { // Michigan
+        2024 => {
+            FilingStatus::Single => deductions::mi_standard_deduction,
+            FilingStatus::MarriedFilingSeparately => deductions::mi_standard_deduction,
+            FilingStatus::MarriedFilingJointly => deductions::mi_standard_deduction,
+            FilingStatus::QualifyingSurvivingSpouse => deductions::mi_standard_deduction,
+            FilingStatus::HeadOfHousehold => deductions::mi_standard_deduction,
+        },
+    },
+
+    "mn" => { // Minnesota
+        2024 => {
+            FilingStatus::Single => deductions::mn_standard_deduction_2024,
+            FilingStatus::MarriedFilingSeparately => deductions::mn_standard_deduction_2024,
+            FilingStatus::MarriedFilingJointly => deductions::mn_standard_deduction_2024,
+            FilingStatus::QualifyingSurvivingSpouse => deductions::mn_standard_deduction_2024,
+            FilingStatus::HeadOfHousehold => deductions::mn_standard_deduction_2024,
+        },
+        2025 => {
+            FilingStatus::Single => deductions::mn_standard_deduction_2025,
+            FilingStatus::MarriedFilingSeparately => deductions::mn_standard_deduction_2025,
+            FilingStatus::MarriedFilingJointly => deductions::mn_standard_deduction_2025,
+            FilingStatus::QualifyingSurvivingSpouse => deductions::mn_standard_deduction_2025,
+            FilingStatus::HeadOfHousehold => deductions::mn_standard_deduction_2025,
+        },
+    },
+
+    "ms" => { // Mississippi
+        2024 => {
+            FilingStatus::Single => deductions::ms_standard_deduction_2024,
+            FilingStatus::MarriedFilingSeparately => deductions::ms_standard_deduction_2024,
+            FilingStatus::MarriedFilingJointly => deductions::ms_standard_deduction_2024,
+            FilingStatus::QualifyingSurvivingSpouse => deductions::ms_standard_deduction_2024,
+            FilingStatus::HeadOfHousehold => deductions::ms_standard_deduction_2024,
+        },
+        2025 => {
+            FilingStatus::Single => deductions::ms_standard_deduction_2025,
+            FilingStatus::MarriedFilingSeparately => deductions::ms_standard_deduction_2025,
+            FilingStatus::MarriedFilingJointly => deductions::ms_standard_deduction_2025,
+            FilingStatus::QualifyingSurvivingSpouse => deductions::ms_standard_deduction_2025,
+            FilingStatus::HeadOfHousehold => deductions::ms_standard_deduction_2025,
+        },
+    },
+
+    "mo" => { // Missouri
+        2024 => {
+            FilingStatus::Single => deductions::mo_standard_deduction_2024,
+            FilingStatus::MarriedFilingSeparately => deductions::mo_standard_deduction_2024,
+            FilingStatus::MarriedFilingJointly => deductions::mo_standard_deduction_2024,
+            FilingStatus::QualifyingSurvivingSpouse => deductions::mo_standard_deduction_2024,
+            FilingStatus::HeadOfHousehold => deductions::mo_standard_deduction_2024,
+        },
+    },
 );
 
 //calculates Income Tax based on income and filing status
@@ -753,7 +906,7 @@ pub fn calculate_income_tax(
     filing_status: FilingStatus,
     year: i32,
 ) -> f64 {
-    let deduction_amount = crate::get_deductions (state, year, filing_status).standard_deduction;
+    let deduction_amount = crate::get_deductions (state, year, filing_status, income).standard_deduction;
     let taxable_income = (income - deduction_amount).max (0.0);
 
     let brackets = crate::get_tax_brackets(state, year, filing_status);

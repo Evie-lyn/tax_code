@@ -676,6 +676,140 @@ pub fn md_headhouse_tax_2025() -> Vec<Bracket> {
     ]
 }
 
+//Massachusetts Brackets for 2024 (Flat tax)
+pub fn ma_single_tax_2024() -> Vec<Bracket> {
+    vec![
+	Bracket(1053750.0, 0.05),
+	Bracket(f64::INFINITY, 0.09),
+    ]
+}
+
+//Massachusetts Brackets for 2025 (Flat tax)
+pub fn ma_single_tax_2025() -> Vec<Bracket> {
+    vec![
+	Bracket(1083150.0, 0.05),
+	Bracket(f64::INFINITY, 0.09),
+    ]
+}
+
+//Michigan Brackets for 2024 (Flat tax)
+pub fn mi_single_tax_2024() -> Vec<Bracket> {
+    vec![
+	Bracket(f64::INFINITY, 0.0425),
+    ]
+}
+
+//Michigan Brackets for 2025 (Flat tax)
+pub fn mi_single_tax_2025() -> Vec<Bracket> {
+    vec![
+	Bracket(f64::INFINITY, 0.0425),
+    ]
+}
+
+//Minnesota Brackets for 2024
+pub fn mn_single_tax_2024() -> Vec<Bracket> {
+    vec![
+	Bracket(31690.0, 0.0535),
+	Bracket(104090.0, 0.068),
+    Bracket(193240.0, 0.0785),
+	Bracket(f64::INFINITY, 0.0985),
+    ]
+}
+
+pub fn mn_separate_tax_2024() -> Vec<Bracket> {
+    vec![
+	Bracket(23165.0, 0.0535),
+	Bracket(92020.0, 0.068),
+    Bracket(160725.0, 0.0785),
+	Bracket(f64::INFINITY, 0.0985),
+    ]
+}
+
+pub fn mn_joint_tax_2024() -> Vec<Bracket> {
+    vec![
+	Bracket(46330.0, 0.0535),
+	Bracket(184040.0, 0.068),
+    Bracket(321450.0, 0.0785),
+	Bracket(f64::INFINITY, 0.0985),
+    ]
+}
+
+pub fn mn_headhouse_tax_2024() -> Vec<Bracket> {
+    vec![
+	Bracket(39010.0, 0.0535),
+	Bracket(156760.0, 0.068),
+    Bracket(256880.0, 0.0785),
+	Bracket(f64::INFINITY, 0.0985),
+    ]
+}
+
+//Minnesota Brackets for 2025
+pub fn mn_single_tax_2025() -> Vec<Bracket> {
+    vec![
+        Bracket(32570.0, 0.0535),
+        Bracket(106990.0, 0.068),
+        Bracket(198630.0, 0.0785),
+        Bracket(f64::INFINITY, 0.0985),
+    ]
+}
+
+pub fn mn_separate_tax_2025() -> Vec<Bracket> {
+    vec![
+        Bracket(23810.0, 0.0535),
+        Bracket(94590.0, 0.068),
+        Bracket(165205.0, 0.0785),
+        Bracket(f64::INFINITY, 0.0985),
+    ]
+}
+
+pub fn mn_joint_tax_2025() -> Vec<Bracket> {
+    vec![
+        Bracket(47620.0, 0.0535),
+        Bracket(189180.0, 0.068),
+        Bracket(330410.0, 0.0785),
+        Bracket(f64::INFINITY, 0.0985),
+    ]
+}
+
+pub fn mn_headhouse_tax_2025() -> Vec<Bracket> {
+    vec![
+        Bracket(40100.0, 0.0535),
+        Bracket(161130.0, 0.068),
+        Bracket(264050.0, 0.0785),
+        Bracket(f64::INFINITY, 0.0985),
+    ]
+}
+
+//Mississippi Brackets for 2024 (Flat tax)
+pub fn ms_single_tax_2024() -> Vec<Bracket> {
+    vec![
+	Bracket(10000.0, 0.0),
+	Bracket(f64::INFINITY, 0.047),
+    ]
+}
+
+//Mississippi Brackets for 2025 (Flat tax)
+pub fn ms_single_tax_2025() -> Vec<Bracket> {
+    vec![
+	Bracket(10000.0, 0.0),
+	Bracket(f64::INFINITY, 0.044),
+    ]
+}
+
+//Missouri Brackets for 2024
+pub fn mo_single_tax_2024() -> Vec<Bracket> {
+    vec![
+	Bracket(1273.0, 0.0),
+	Bracket(2546.0, 0.02),
+    Bracket(3819.0, 0.025),
+    Bracket(5092.0, 0.03),
+    Bracket(6365.0, 0.035),
+    Bracket(7638.0, 0.04),
+    Bracket(8911.0, 0.045),
+	Bracket(f64::INFINITY, 0.048),
+    ]
+}
+
 //Texas Brackets (No state income tax)
 pub fn tx_single_tax() -> Vec<Bracket> {
     no_income_tax!()
