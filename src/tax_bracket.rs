@@ -1,10 +1,10 @@
-use crate::brackets::Bracket;
+
+use crate::Bracket; 
 pub struct TaxBrackets {
     brackets: Vec<Bracket>,
 }
 
 impl TaxBrackets {
-    //panics if income limits in brackets are not monotonically increasing
     pub fn new(brackets: Vec<Bracket>) -> Self {
         for i in 1..brackets.len() {
             if brackets[i].0 <= brackets[i - 1].0 {
@@ -42,8 +42,8 @@ impl TaxBrackets {
 
 #[cfg(test)]
 mod tests {
-    use super::*;
-    use crate::brackets::Bracket;
+    use super::*; // Import items from the current module
+    use crate::Bracket; // Import Bracket from the crate root for tests as well
 
     #[test]
     fn test_monotonic_increase() {

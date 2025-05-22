@@ -64,7 +64,7 @@ pub fn al_standard_deduction_2024(income: f64, filing_status: &FilingStatus) -> 
         FilingStatus::HeadOfHousehold => "HeadOfHousehold",
     };
 
-    
+    //For Alabama Standard Deduction
     if let Some(state_data) = data.states.get("AL") {
         if let Some(year_data) = state_data.get("2024") { 
             if let Some(step_bracket) = year_data.get(filing_status_str) {
