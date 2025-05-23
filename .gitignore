@@ -1,1 +1,3 @@
 /target
+/tax_code_demo/target/
+src/generated_tax_data.rs
