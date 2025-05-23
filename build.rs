@@ -16,7 +16,7 @@ type JsonTaxData = HashMap<String, HashMap<String, HashMap<String, Vec<JsonBrack
 fn main() -> Result<(), Box<dyn std::error::Error>> {
     let cargo_manifest_dir = env::var("CARGO_MANIFEST_DIR")?;
 
-    let json_input_path = Path::new(&cargo_manifest_dir).join("Bracket.json");
+    let json_input_path = Path::new(&cargo_manifest_dir).join("src").join("Bracket.json");
 
     let generated_output_path = Path::new(&cargo_manifest_dir).join("src").join("generated_tax_data.rs");
 
