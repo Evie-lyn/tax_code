@@ -1,5 +1,5 @@
 use crate::FilingStatus;
-use crate::deductions::Deduction;
+use crate::Deduction;
 use serde::{Deserialize, Serialize}; 
 use std::collections::HashMap; 
 use std::fs; 
@@ -64,12 +64,12 @@ pub fn al_standard_deduction_2024(income: f64, filing_status: &FilingStatus) -> 
         FilingStatus::HeadOfHousehold => "HeadOfHousehold",
     };
 
-    //For Alabama Standard Deduction
+    // For Alabama Standard Deduction
     if let Some(state_data) = data.states.get("AL") {
-        if let Some(year_data) = state_data.get("2024") { 
+        if let Some(year_data) = state_data.get("2024") {
             if let Some(step_bracket) = year_data.get(filing_status_str) {
-                
-                match filing_status {
+
+                return match filing_status { 
                     FilingStatus::Single => {
                         if income <= 25999.0 {
                             Deduction { standard_deduction: 3000.0 }
@@ -106,19 +106,21 @@ pub fn al_standard_deduction_2024(income: f64, filing_status: &FilingStatus) -> 
                             Deduction { standard_deduction: calculate_step_deduction(income, step_bracket) }
                         }
                     },
-                }
+                }; 
             } else {
                 eprintln!("Error: StepBracket data not found for filing status {} in AL 2024.", filing_status_str);
-                Deduction { standard_deduction: 0.0 } 
+                return Deduction { standard_deduction: 0.0 }; 
             }
         } else {
             eprintln!("Error: Year 2024 data not found for AL in step_deduction.json.");
-            Deduction { standard_deduction: 0.0 } 
+            return Deduction { standard_deduction: 0.0 }; 
         }
     } else {
         eprintln!("Error: State AL data not found in step_deduction.json.");
-        Deduction { standard_deduction: 0.0 } 
+        return Deduction { standard_deduction: 0.0 }; 
     }
+
+   
 }
 
 #[cfg(test)]

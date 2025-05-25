@@ -1628,6 +1628,230 @@
         }
     },
 
+    "NM": {
+        "2024": {
+           "Single": [
+                {"upper_bound": 5500, "rate": 0.017},
+                {"upper_bound": 11000, "rate": 0.032},
+                {"upper_bound": 16000, "rate": 0.047},
+                {"upper_bound": 210000, "rate": 0.049},
+                {"upper_bound": null, "rate": 0.059}
+            ],
+            "MarriedFilingSeparately": [
+                {"upper_bound": 4000, "rate": 0.017},
+                {"upper_bound": 8000, "rate": 0.032},
+                {"upper_bound": 12000, "rate": 0.047},
+                {"upper_bound": 157500, "rate": 0.049},
+                {"upper_bound": null, "rate": 0.059}
+            ],
+            "MarriedFilingJointly": [
+                {"upper_bound": 8000, "rate": 0.017},
+                {"upper_bound": 16000, "rate": 0.032},
+                {"upper_bound": 24000, "rate": 0.047},
+                {"upper_bound": 315000, "rate": 0.049},
+                {"upper_bound": null, "rate": 0.059}
+            ],
+            "QualifyingSurvivingSpouse": [
+                {"upper_bound": 8000, "rate": 0.017},
+                {"upper_bound": 16000, "rate": 0.032},
+                {"upper_bound": 24000, "rate": 0.047},
+                {"upper_bound": 315000, "rate": 0.049},
+                {"upper_bound": null, "rate": 0.059}
+            ],
+            "HeadOfHousehold": [
+                {"upper_bound": 8000, "rate": 0.017},
+                {"upper_bound": 16000, "rate": 0.032},
+                {"upper_bound": 24000, "rate": 0.047},
+                {"upper_bound": 315000, "rate": 0.049},
+                {"upper_bound": null, "rate": 0.059}
+            ]
+        }
+    },
+
+    "NY": {
+        "2024": {
+           "Single": [
+                {"upper_bound": 8500, "rate": 0.04},
+                {"upper_bound": 11700, "rate": 0.045},
+                {"upper_bound": 13900, "rate": 0.0525},
+                {"upper_bound": 80650, "rate": 0.055},
+                {"upper_bound": 215400, "rate": 0.06},
+                {"upper_bound": 1077550, "rate": 0.0685},
+                {"upper_bound": 5000000, "rate": 0.0965},
+                {"upper_bound": 25000000, "rate": 0.0103},
+                {"upper_bound": null, "rate": 0.0109}
+            ],
+            "MarriedFilingSeparately": [
+                {"upper_bound": 8500, "rate": 0.04},
+                {"upper_bound": 11700, "rate": 0.045},
+                {"upper_bound": 13900, "rate": 0.0525},
+                {"upper_bound": 80650, "rate": 0.055},
+                {"upper_bound": 215400, "rate": 0.06},
+                {"upper_bound": 1077550, "rate": 0.0685},
+                {"upper_bound": 5000000, "rate": 0.0965},
+                {"upper_bound": 25000000, "rate": 0.0103},
+                {"upper_bound": null, "rate": 0.0109}
+            ],
+            "MarriedFilingJointly": [
+                {"upper_bound": 17150, "rate": 0.04},
+                {"upper_bound": 23600, "rate": 0.045},
+                {"upper_bound": 27900, "rate": 0.0525},
+                {"upper_bound": 161550, "rate": 0.055},
+                {"upper_bound": 323200, "rate": 0.06},
+                {"upper_bound": 2155350, "rate": 0.0685},
+                {"upper_bound": 5000000, "rate": 0.0965},
+                {"upper_bound": 25000000, "rate": 0.0103},
+                {"upper_bound": null, "rate": 0.0109}
+            ],
+            "QualifyingSurvivingSpouse": [
+                {"upper_bound": 17150, "rate": 0.04},
+                {"upper_bound": 23600, "rate": 0.045},
+                {"upper_bound": 27900, "rate": 0.0525},
+                {"upper_bound": 161550, "rate": 0.055},
+                {"upper_bound": 323200, "rate": 0.06},
+                {"upper_bound": 2155350, "rate": 0.0685},
+                {"upper_bound": 5000000, "rate": 0.0965},
+                {"upper_bound": 25000000, "rate": 0.0103},
+                {"upper_bound": null, "rate": 0.0109}
+            ],
+            "HeadOfHousehold": [
+                {"upper_bound": 12800, "rate": 0.04},
+                {"upper_bound": 17650, "rate": 0.045},
+                {"upper_bound": 20900, "rate": 0.0525},
+                {"upper_bound": 107650, "rate": 0.055},
+                {"upper_bound": 269300, "rate": 0.06},
+                {"upper_bound": 1616450, "rate": 0.0685},
+                {"upper_bound": 5000000, "rate": 0.0965},
+                {"upper_bound": 25000000, "rate": 0.0103},
+                {"upper_bound": null, "rate": 0.0109}
+            ]
+        }
+    },
+
+    "NC": {
+        "2024": {
+            "Single": [
+                {"upper_bound": null, "rate": 0.045}
+            ],
+            "MarriedFilingSeparately": [
+                {"upper_bound": null, "rate": 0.045}
+            ],
+            "MarriedFilingJointly": [
+                {"upper_bound": null, "rate": 0.045}
+            ],
+            "QualifyingSurvivingSpouse": [
+                {"upper_bound": null, "rate": 0.045}
+            ],
+            "HeadOfHousehold": [
+                {"upper_bound": null, "rate": 0.045}
+            ]
+        },
+        "2025": {
+            "Single": [
+                {"upper_bound": null, "rate": 0.0425}
+            ],
+            "MarriedFilingSeparately": [
+                {"upper_bound": null, "rate": 0.0425}
+            ],
+            "MarriedFilingJointly": [
+                {"upper_bound": null, "rate": 0.0425}
+            ],
+            "QualifyingSurvivingSpouse": [
+                {"upper_bound": null, "rate": 0.0425}
+            ],
+            "HeadOfHousehold": [
+                {"upper_bound": null, "rate": 0.0425}
+            ]
+        }
+    },
+
+    "ND": {
+        "2024": {
+           "Single": [
+                {"upper_bound": 47150, "rate": 0.0},
+                {"upper_bound": 238200, "rate": 0.0195},
+                {"upper_bound": null, "rate": 0.025}
+            ],
+            "MarriedFilingSeparately": [
+                {"upper_bound": 39375, "rate": 0.0},
+                {"upper_bound": 144975, "rate": 0.0195},
+                {"upper_bound": null, "rate": 0.025}
+            ],
+            "MarriedFilingJointly": [
+                {"upper_bound": 78775, "rate": 0.0},
+                {"upper_bound": 289975, "rate": 0.0195},
+                {"upper_bound": null, "rate": 0.025}
+            ],
+            "QualifyingSurvivingSpouse": [
+                {"upper_bound": 78775, "rate": 0.0},
+                {"upper_bound": 289975, "rate": 0.0195},
+                {"upper_bound": null, "rate": 0.025}
+            ],
+            "HeadOfHousehold": [
+                {"upper_bound": 63175, "rate": 0.0},
+                {"upper_bound": 264100, "rate": 0.0195},
+                {"upper_bound": null, "rate": 0.025}
+            ]
+        },
+        "2025": {
+            "Single": [
+                {"upper_bound": 48475, "rate": 0.0},
+                {"upper_bound": 244825, "rate": 0.0195},
+                {"upper_bound": null, "rate": 0.025}
+             ],
+             "MarriedFilingSeparately": [
+                {"upper_bound": 40475, "rate": 0.0},
+                {"upper_bound": 149025, "rate": 0.0195},
+                {"upper_bound": null, "rate": 0.025}
+             ],
+             "MarriedFilingJointly": [
+                {"upper_bound": 80975, "rate": 0.0},
+                {"upper_bound": 298075, "rate": 0.0195},
+                {"upper_bound": null, "rate": 0.025}
+             ],
+             "QualifyingSurvivingSpouse": [
+                {"upper_bound": 80975, "rate": 0.0},
+                {"upper_bound": 298075, "rate": 0.0195},
+                {"upper_bound": null, "rate": 0.025}
+             ],
+             "HeadOfHousehold": [
+                {"upper_bound": 64950, "rate": 0.0},
+                {"upper_bound": 271450, "rate": 0.0195},
+                {"upper_bound": null, "rate": 0.025}
+             ]
+         }
+    },
+
+    "OH": {
+        "2024": {
+           "Single": [
+                {"upper_bound": 26050, "rate": 0.0},
+                {"upper_bound": 100000, "rate": 0.0275},
+                {"upper_bound": null, "rate": 0.035}
+            ],
+            "MarriedFilingSeparately": [
+                {"upper_bound": 26050, "rate": 0.0},
+                {"upper_bound": 100000, "rate": 0.0275},
+                {"upper_bound": null, "rate": 0.035}
+            ],
+            "MarriedFilingJointly": [
+                {"upper_bound": 26050, "rate": 0.0},
+                {"upper_bound": 100000, "rate": 0.0275},
+                {"upper_bound": null, "rate": 0.035}
+            ],
+            "QualifyingSurvivingSpouse": [
+                {"upper_bound": 26050, "rate": 0.0},
+                {"upper_bound": 100000, "rate": 0.0275},
+                {"upper_bound": null, "rate": 0.035}
+            ],
+            "HeadOfHousehold": [
+                {"upper_bound": 26050, "rate": 0.0},
+                {"upper_bound": 100000, "rate": 0.0275},
+                {"upper_bound": null, "rate": 0.035}
+            ]
+        }
+    },
+
     "TX": {
         "2024": {
             "Single": [
