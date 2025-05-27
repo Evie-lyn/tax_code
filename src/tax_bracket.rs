@@ -1,5 +1,4 @@
-
-use crate::Bracket; 
+use crate::brackets::Bracket;
 pub struct TaxBrackets {
     brackets: Vec<Bracket>,
 }
@@ -15,6 +14,7 @@ impl TaxBrackets {
     }
 
     pub fn taxes(&self, income: f64) -> f64 {
+
         let mut tax = 0.0;
         let mut previous_income = 0.0;
 
@@ -43,7 +43,7 @@ impl TaxBrackets {
 #[cfg(test)]
 mod tests {
     use super::*; // Import items from the current module
-    use crate::Bracket; // Import Bracket from the crate root for tests as well
+    use crate::brackets::Bracket; // Import Bracket from the crate root for tests as well
 
     #[test]
     fn test_monotonic_increase() {
