@@ -8,593 +8,21 @@ use crate::brackets::Bracket;
 pub fn get_tax_brackets(state: &str, year: i32, filing_status: &FilingStatus) -> Vec<Bracket> {
     let state_lower = state.to_lowercase();
     match state_lower.as_str() {
-        "id" => match year {
-            2024 => match filing_status {
-                FilingStatus::QualifyingSurvivingSpouse => vec![
-                    Bracket(9346.0, 0.0000),
-                    Bracket(f64::INFINITY, 0.0570),
-                ],
-                FilingStatus::HeadOfHousehold => vec![
-                    Bracket(9346.0, 0.0000),
-                    Bracket(f64::INFINITY, 0.0570),
-                ],
-                FilingStatus::Single => vec![
-                    Bracket(4673.0, 0.0000),
-                    Bracket(f64::INFINITY, 0.0570),
-                ],
-                FilingStatus::MarriedFilingSeparately => vec![
-                    Bracket(4673.0, 0.0000),
-                    Bracket(f64::INFINITY, 0.0570),
-                ],
-                FilingStatus::MarriedFilingJointly => vec![
-                    Bracket(9346.0, 0.0000),
-                    Bracket(f64::INFINITY, 0.0570),
-                ],
-            },
-            _ => {
-                eprintln!("Year {} not supported for id. Defaulting to 2024 Single bracket.", year);
-                vec![
-                    Bracket(4673.0, 0.0),
-                    Bracket(f64::INFINITY, 0.1),
-                ]
-            }
-        },
-        "ct" => match year {
-            2024 => match filing_status {
-                FilingStatus::MarriedFilingJointly => vec![
-                    Bracket(20000.0, 0.0200),
-                    Bracket(100000.0, 0.0450),
-                    Bracket(200000.0, 0.0550),
-                    Bracket(400000.0, 0.0600),
-                    Bracket(500000.0, 0.0650),
-                    Bracket(1000000.0, 0.0690),
-                    Bracket(f64::INFINITY, 0.0699),
-                ],
-                FilingStatus::HeadOfHousehold => vec![
-                    Bracket(16000.0, 0.0200),
-                    Bracket(80000.0, 0.0450),
-                    Bracket(160000.0, 0.0550),
-                    Bracket(320000.0, 0.0600),
-                    Bracket(400000.0, 0.0650),
-                    Bracket(800000.0, 0.0690),
-                    Bracket(f64::INFINITY, 0.0699),
-                ],
-                FilingStatus::MarriedFilingSeparately => vec![
-                    Bracket(10000.0, 0.0200),
-                    Bracket(50000.0, 0.0450),
-                    Bracket(100000.0, 0.0550),
-                    Bracket(200000.0, 0.0600),
-                    Bracket(250000.0, 0.0650),
-                    Bracket(500000.0, 0.0690),
-                    Bracket(f64::INFINITY, 0.0699),
-                ],
-                FilingStatus::Single => vec![
-                    Bracket(10000.0, 0.0200),
-                    Bracket(50000.0, 0.0450),
-                    Bracket(100000.0, 0.0550),
-                    Bracket(200000.0, 0.0600),
-                    Bracket(250000.0, 0.0650),
-                    Bracket(500000.0, 0.0690),
-                    Bracket(f64::INFINITY, 0.0699),
-                ],
-                FilingStatus::QualifyingSurvivingSpouse => vec![
-                    Bracket(20000.0, 0.0200),
-                    Bracket(100000.0, 0.0450),
-                    Bracket(200000.0, 0.0550),
-                    Bracket(400000.0, 0.0600),
-                    Bracket(500000.0, 0.0650),
-                    Bracket(1000000.0, 0.0690),
-                    Bracket(f64::INFINITY, 0.0699),
-                ],
-            },
-            2025 => match filing_status {
-                FilingStatus::MarriedFilingSeparately => vec![
-                    Bracket(10000.0, 0.0200),
-                    Bracket(50000.0, 0.0450),
-                    Bracket(100000.0, 0.0550),
-                    Bracket(200000.0, 0.0600),
-                    Bracket(250000.0, 0.0650),
-                    Bracket(500000.0, 0.0690),
-                    Bracket(f64::INFINITY, 0.0699),
-                ],
-                FilingStatus::QualifyingSurvivingSpouse => vec![
-                    Bracket(20000.0, 0.0200),
-                    Bracket(100000.0, 0.0450),
-                    Bracket(200000.0, 0.0550),
-                    Bracket(400000.0, 0.0600),
-                    Bracket(500000.0, 0.0650),
-                    Bracket(1000000.0, 0.0690),
-                    Bracket(f64::INFINITY, 0.0699),
-                ],
-                FilingStatus::MarriedFilingJointly => vec![
-                    Bracket(20000.0, 0.0200),
-                    Bracket(100000.0, 0.0450),
-                    Bracket(200000.0, 0.0550),
-                    Bracket(400000.0, 0.0600),
-                    Bracket(500000.0, 0.0650),
-                    Bracket(1000000.0, 0.0690),
-                    Bracket(f64::INFINITY, 0.0699),
-                ],
-                FilingStatus::HeadOfHousehold => vec![
-                    Bracket(16000.0, 0.0200),
-                    Bracket(80000.0, 0.0450),
-                    Bracket(160000.0, 0.0550),
-                    Bracket(320000.0, 0.0600),
-                    Bracket(400000.0, 0.0650),
-                    Bracket(800000.0, 0.0690),
-                    Bracket(f64::INFINITY, 0.0699),
-                ],
-                FilingStatus::Single => vec![
-                    Bracket(10000.0, 0.0200),
-                    Bracket(50000.0, 0.0450),
-                    Bracket(100000.0, 0.0550),
-                    Bracket(200000.0, 0.0600),
-                    Bracket(250000.0, 0.0650),
-                    Bracket(500000.0, 0.0690),
-                    Bracket(f64::INFINITY, 0.0699),
-                ],
-            },
-            _ => {
-                eprintln!("Year {} not supported for ct. Defaulting to 2025 Single bracket.", year);
-                vec![
-                    Bracket(10000.0, 0.0),
-                    Bracket(50000.0, 0.0),
-                    Bracket(100000.0, 0.1),
-                    Bracket(200000.0, 0.1),
-                    Bracket(250000.0, 0.1),
-                    Bracket(500000.0, 0.1),
-                    Bracket(f64::INFINITY, 0.1),
-                ]
-            }
-        },
-        "fl" => match year {
-            2024 => match filing_status {
-                FilingStatus::MarriedFilingJointly => vec![
-                    Bracket(f64::INFINITY, 0.0000),
-                ],
-                FilingStatus::HeadOfHousehold => vec![
-                    Bracket(f64::INFINITY, 0.0000),
-                ],
-                FilingStatus::QualifyingSurvivingSpouse => vec![
-                    Bracket(f64::INFINITY, 0.0000),
-                ],
-                FilingStatus::Single => vec![
-                    Bracket(f64::INFINITY, 0.0000),
-                ],
-                FilingStatus::MarriedFilingSeparately => vec![
-                    Bracket(f64::INFINITY, 0.0000),
-                ],
-            },
-            2025 => match filing_status {
-                FilingStatus::HeadOfHousehold => vec![
-                    Bracket(f64::INFINITY, 0.0000),
-                ],
-                FilingStatus::Single => vec![
-                    Bracket(f64::INFINITY, 0.0000),
-                ],
-                FilingStatus::MarriedFilingSeparately => vec![
-                    Bracket(f64::INFINITY, 0.0000),
-                ],
-                FilingStatus::MarriedFilingJointly => vec![
-                    Bracket(f64::INFINITY, 0.0000),
-                ],
-                FilingStatus::QualifyingSurvivingSpouse => vec![
-                    Bracket(f64::INFINITY, 0.0000),
-                ],
-            },
-            _ => {
-                eprintln!("Year {} not supported for fl. Defaulting to 2025 Single bracket.", year);
-                vec![
-                    Bracket(f64::INFINITY, 0.0),
-                ]
-            }
-        },
-        "la" => match year {
-            2025 => match filing_status {
-                FilingStatus::QualifyingSurvivingSpouse => vec![
-                    Bracket(f64::INFINITY, 0.0300),
-                ],
-                FilingStatus::MarriedFilingJointly => vec![
-                    Bracket(f64::INFINITY, 0.0300),
-                ],
-                FilingStatus::MarriedFilingSeparately => vec![
-                    Bracket(f64::INFINITY, 0.0300),
-                ],
-                FilingStatus::Single => vec![
-                    Bracket(f64::INFINITY, 0.0300),
-                ],
-                FilingStatus::HeadOfHousehold => vec![
-                    Bracket(f64::INFINITY, 0.0300),
-                ],
-            },
-            2024 => match filing_status {
-                FilingStatus::QualifyingSurvivingSpouse => vec![
-                    Bracket(25000.0, 0.0185),
-                    Bracket(100000.0, 0.0350),
-                    Bracket(f64::INFINITY, 0.0425),
-                ],
-                FilingStatus::MarriedFilingJointly => vec![
-                    Bracket(25000.0, 0.0185),
-                    Bracket(100000.0, 0.0350),
-                    Bracket(f64::INFINITY, 0.0425),
-                ],
-                FilingStatus::HeadOfHousehold => vec![
-                    Bracket(12500.0, 0.0185),
-                    Bracket(50000.0, 0.0350),
-                    Bracket(f64::INFINITY, 0.0425),
-                ],
-                FilingStatus::Single => vec![
-                    Bracket(12500.0, 0.0185),
-                    Bracket(50000.0, 0.0350),
-                    Bracket(f64::INFINITY, 0.0425),
-                ],
-                FilingStatus::MarriedFilingSeparately => vec![
-                    Bracket(12500.0, 0.0185),
-                    Bracket(50000.0, 0.0350),
-                    Bracket(f64::INFINITY, 0.0425),
-                ],
-            },
-            _ => {
-                eprintln!("Year {} not supported for la. Defaulting to 2025 Single bracket.", year);
-                vec![
-                    Bracket(f64::INFINITY, 0.0),
-                ]
-            }
-        },
-        "nm" => match year {
-            2024 => match filing_status {
-                FilingStatus::QualifyingSurvivingSpouse => vec![
-                    Bracket(8000.0, 0.0170),
-                    Bracket(16000.0, 0.0320),
-                    Bracket(24000.0, 0.0470),
-                    Bracket(315000.0, 0.0490),
-                    Bracket(f64::INFINITY, 0.0590),
-                ],
-                FilingStatus::Single => vec![
-                    Bracket(5500.0, 0.0170),
-                    Bracket(11000.0, 0.0320),
-                    Bracket(16000.0, 0.0470),
-                    Bracket(210000.0, 0.0490),
-                    Bracket(f64::INFINITY, 0.0590),
-                ],
-                FilingStatus::MarriedFilingJointly => vec![
-                    Bracket(8000.0, 0.0170),
-                    Bracket(16000.0, 0.0320),
-                    Bracket(24000.0, 0.0470),
-                    Bracket(315000.0, 0.0490),
-                    Bracket(f64::INFINITY, 0.0590),
-                ],
-                FilingStatus::MarriedFilingSeparately => vec![
-                    Bracket(4000.0, 0.0170),
-                    Bracket(8000.0, 0.0320),
-                    Bracket(12000.0, 0.0470),
-                    Bracket(157500.0, 0.0490),
-                    Bracket(f64::INFINITY, 0.0590),
-                ],
-                FilingStatus::HeadOfHousehold => vec![
-                    Bracket(8000.0, 0.0170),
-                    Bracket(16000.0, 0.0320),
-                    Bracket(24000.0, 0.0470),
-                    Bracket(315000.0, 0.0490),
-                    Bracket(f64::INFINITY, 0.0590),
-                ],
-            },
-            _ => {
-                eprintln!("Year {} not supported for nm. Defaulting to 2024 Single bracket.", year);
-                vec![
-                    Bracket(5500.0, 0.0),
-                    Bracket(11000.0, 0.0),
-                    Bracket(16000.0, 0.0),
-                    Bracket(210000.0, 0.0),
-                    Bracket(f64::INFINITY, 0.1),
-                ]
-            }
-        },
-        "mo" => match year {
-            2024 => match filing_status {
-                FilingStatus::QualifyingSurvivingSpouse => vec![
-                    Bracket(1273.0, 0.0000),
-                    Bracket(2546.0, 0.0200),
-                    Bracket(3819.0, 0.0250),
-                    Bracket(5092.0, 0.0300),
-                    Bracket(6365.0, 0.0350),
-                    Bracket(7638.0, 0.0400),
-                    Bracket(8911.0, 0.0450),
-                    Bracket(f64::INFINITY, 0.0480),
-                ],
-                FilingStatus::HeadOfHousehold => vec![
-                    Bracket(1273.0, 0.0000),
-                    Bracket(2546.0, 0.0200),
-                    Bracket(3819.0, 0.0250),
-                    Bracket(5092.0, 0.0300),
-                    Bracket(6365.0, 0.0350),
-                    Bracket(7638.0, 0.0400),
-                    Bracket(8911.0, 0.0450),
-                    Bracket(f64::INFINITY, 0.0480),
-                ],
-                FilingStatus::MarriedFilingJointly => vec![
-                    Bracket(1273.0, 0.0000),
-                    Bracket(2546.0, 0.0200),
-                    Bracket(3819.0, 0.0250),
-                    Bracket(5092.0, 0.0300),
-                    Bracket(6365.0, 0.0350),
-                    Bracket(7638.0, 0.0400),
-                    Bracket(8911.0, 0.0450),
-                    Bracket(f64::INFINITY, 0.0480),
-                ],
-                FilingStatus::Single => vec![
-                    Bracket(1273.0, 0.0000),
-                    Bracket(2546.0, 0.0200),
-                    Bracket(3819.0, 0.0250),
-                    Bracket(5092.0, 0.0300),
-                    Bracket(6365.0, 0.0350),
-                    Bracket(7638.0, 0.0400),
-                    Bracket(8911.0, 0.0450),
-                    Bracket(f64::INFINITY, 0.0480),
-                ],
-                FilingStatus::MarriedFilingSeparately => vec![
-                    Bracket(1273.0, 0.0000),
-                    Bracket(2546.0, 0.0200),
-                    Bracket(3819.0, 0.0250),
-                    Bracket(5092.0, 0.0300),
-                    Bracket(6365.0, 0.0350),
-                    Bracket(7638.0, 0.0400),
-                    Bracket(8911.0, 0.0450),
-                    Bracket(f64::INFINITY, 0.0480),
-                ],
-            },
-            _ => {
-                eprintln!("Year {} not supported for mo. Defaulting to 2024 Single bracket.", year);
-                vec![
-                    Bracket(1273.0, 0.0),
-                    Bracket(2546.0, 0.0),
-                    Bracket(3819.0, 0.0),
-                    Bracket(5092.0, 0.0),
-                    Bracket(6365.0, 0.0),
-                    Bracket(7638.0, 0.0),
-                    Bracket(8911.0, 0.0),
-                    Bracket(f64::INFINITY, 0.0),
-                ]
-            }
-        },
-        "in" => match year {
-            2024 => match filing_status {
-                FilingStatus::QualifyingSurvivingSpouse => vec![
-                    Bracket(f64::INFINITY, 0.0310),
-                ],
-                FilingStatus::HeadOfHousehold => vec![
-                    Bracket(f64::INFINITY, 0.0310),
-                ],
-                FilingStatus::MarriedFilingSeparately => vec![
-                    Bracket(f64::INFINITY, 0.0310),
-                ],
-                FilingStatus::Single => vec![
-                    Bracket(f64::INFINITY, 0.0310),
-                ],
-                FilingStatus::MarriedFilingJointly => vec![
-                    Bracket(f64::INFINITY, 0.0310),
-                ],
-            },
-            2025 => match filing_status {
-                FilingStatus::MarriedFilingSeparately => vec![
-                    Bracket(f64::INFINITY, 0.0300),
-                ],
-                FilingStatus::HeadOfHousehold => vec![
-                    Bracket(f64::INFINITY, 0.0300),
-                ],
-                FilingStatus::Single => vec![
-                    Bracket(f64::INFINITY, 0.0300),
-                ],
-                FilingStatus::MarriedFilingJointly => vec![
-                    Bracket(f64::INFINITY, 0.0300),
-                ],
-                FilingStatus::QualifyingSurvivingSpouse => vec![
-                    Bracket(f64::INFINITY, 0.0300),
-                ],
-            },
-            _ => {
-                eprintln!("Year {} not supported for in. Defaulting to 2025 Single bracket.", year);
-                vec![
-                    Bracket(f64::INFINITY, 0.0),
-                ]
-            }
-        },
-        "nv" => match year {
-            2024 => match filing_status {
-                FilingStatus::QualifyingSurvivingSpouse => vec![
-                    Bracket(f64::INFINITY, 0.0000),
-                ],
-                FilingStatus::HeadOfHousehold => vec![
-                    Bracket(f64::INFINITY, 0.0000),
-                ],
-                FilingStatus::Single => vec![
-                    Bracket(f64::INFINITY, 0.0000),
-                ],
-                FilingStatus::MarriedFilingSeparately => vec![
-                    Bracket(f64::INFINITY, 0.0000),
-                ],
-                FilingStatus::MarriedFilingJointly => vec![
-                    Bracket(f64::INFINITY, 0.0000),
-                ],
-            },
-            2025 => match filing_status {
-                FilingStatus::QualifyingSurvivingSpouse => vec![
-                    Bracket(f64::INFINITY, 0.0000),
-                ],
-                FilingStatus::Single => vec![
-                    Bracket(f64::INFINITY, 0.0000),
-                ],
-                FilingStatus::HeadOfHousehold => vec![
-                    Bracket(f64::INFINITY, 0.0000),
-                ],
-                FilingStatus::MarriedFilingSeparately => vec![
-                    Bracket(f64::INFINITY, 0.0000),
-                ],
-                FilingStatus::MarriedFilingJointly => vec![
-                    Bracket(f64::INFINITY, 0.0000),
-                ],
-            },
-            _ => {
-                eprintln!("Year {} not supported for nv. Defaulting to 2025 Single bracket.", year);
-                vec![
-                    Bracket(f64::INFINITY, 0.0),
-                ]
-            }
-        },
-        "mn" => match year {
-            2025 => match filing_status {
-                FilingStatus::Single => vec![
-                    Bracket(32570.0, 0.0535),
-                    Bracket(106990.0, 0.0680),
-                    Bracket(198630.0, 0.0785),
-                    Bracket(f64::INFINITY, 0.0985),
-                ],
-                FilingStatus::QualifyingSurvivingSpouse => vec![
-                    Bracket(47620.0, 0.0535),
-                    Bracket(189180.0, 0.0680),
-                    Bracket(330410.0, 0.0785),
-                    Bracket(f64::INFINITY, 0.0985),
-                ],
-                FilingStatus::MarriedFilingSeparately => vec![
-                    Bracket(23810.0, 0.0535),
-                    Bracket(94590.0, 0.0680),
-                    Bracket(165205.0, 0.0785),
-                    Bracket(f64::INFINITY, 0.0985),
-                ],
-                FilingStatus::MarriedFilingJointly => vec![
-                    Bracket(47620.0, 0.0535),
-                    Bracket(189180.0, 0.0680),
-                    Bracket(330410.0, 0.0785),
-                    Bracket(f64::INFINITY, 0.0985),
-                ],
-                FilingStatus::HeadOfHousehold => vec![
-                    Bracket(40100.0, 0.0535),
-                    Bracket(161130.0, 0.0680),
-                    Bracket(264050.0, 0.0785),
-                    Bracket(f64::INFINITY, 0.0985),
-                ],
-            },
-            2024 => match filing_status {
-                FilingStatus::MarriedFilingSeparately => vec![
-                    Bracket(23165.0, 0.0535),
-                    Bracket(92020.0, 0.0680),
-                    Bracket(160725.0, 0.0785),
-                    Bracket(f64::INFINITY, 0.0985),
-                ],
-                FilingStatus::Single => vec![
-                    Bracket(31690.0, 0.0535),
-                    Bracket(104090.0, 0.0680),
-                    Bracket(193240.0, 0.0785),
-                    Bracket(f64::INFINITY, 0.0985),
-                ],
-                FilingStatus::MarriedFilingJointly => vec![
-                    Bracket(46330.0, 0.0535),
-                    Bracket(184040.0, 0.0680),
-                    Bracket(321450.0, 0.0785),
-                    Bracket(f64::INFINITY, 0.0985),
-                ],
-                FilingStatus::QualifyingSurvivingSpouse => vec![
-                    Bracket(46330.0, 0.0535),
-                    Bracket(184040.0, 0.0680),
-                    Bracket(321450.0, 0.0785),
-                    Bracket(f64::INFINITY, 0.0985),
-                ],
-                FilingStatus::HeadOfHousehold => vec![
-                    Bracket(39010.0, 0.0535),
-                    Bracket(156760.0, 0.0680),
-                    Bracket(256880.0, 0.0785),
-                    Bracket(f64::INFINITY, 0.0985),
-                ],
-            },
-            _ => {
-                eprintln!("Year {} not supported for mn. Defaulting to 2025 Single bracket.", year);
-                vec![
-                    Bracket(32570.0, 0.1),
-                    Bracket(106990.0, 0.1),
-                    Bracket(198630.0, 0.1),
-                    Bracket(f64::INFINITY, 0.1),
-                ]
-            }
-        },
-        "nd" => match year {
-            2025 => match filing_status {
-                FilingStatus::MarriedFilingSeparately => vec![
-                    Bracket(40475.0, 0.0000),
-                    Bracket(149025.0, 0.0195),
-                    Bracket(f64::INFINITY, 0.0250),
-                ],
-                FilingStatus::HeadOfHousehold => vec![
-                    Bracket(64950.0, 0.0000),
-                    Bracket(271450.0, 0.0195),
-                    Bracket(f64::INFINITY, 0.0250),
-                ],
-                FilingStatus::Single => vec![
-                    Bracket(48475.0, 0.0000),
-                    Bracket(244825.0, 0.0195),
-                    Bracket(f64::INFINITY, 0.0250),
-                ],
-                FilingStatus::MarriedFilingJointly => vec![
-                    Bracket(80975.0, 0.0000),
-                    Bracket(298075.0, 0.0195),
-                    Bracket(f64::INFINITY, 0.0250),
-                ],
-                FilingStatus::QualifyingSurvivingSpouse => vec![
-                    Bracket(80975.0, 0.0000),
-                    Bracket(298075.0, 0.0195),
-                    Bracket(f64::INFINITY, 0.0250),
-                ],
-            },
-            2024 => match filing_status {
-                FilingStatus::HeadOfHousehold => vec![
-                    Bracket(63175.0, 0.0000),
-                    Bracket(264100.0, 0.0195),
-                    Bracket(f64::INFINITY, 0.0250),
-                ],
-                FilingStatus::MarriedFilingJointly => vec![
-                    Bracket(78775.0, 0.0000),
-                    Bracket(289975.0, 0.0195),
-                    Bracket(f64::INFINITY, 0.0250),
-                ],
-                FilingStatus::Single => vec![
-                    Bracket(47150.0, 0.0000),
-                    Bracket(238200.0, 0.0195),
-                    Bracket(f64::INFINITY, 0.0250),
-                ],
-                FilingStatus::MarriedFilingSeparately => vec![
-                    Bracket(39375.0, 0.0000),
-                    Bracket(144975.0, 0.0195),
-                    Bracket(f64::INFINITY, 0.0250),
-                ],
-                FilingStatus::QualifyingSurvivingSpouse => vec![
-                    Bracket(78775.0, 0.0000),
-                    Bracket(289975.0, 0.0195),
-                    Bracket(f64::INFINITY, 0.0250),
-                ],
-            },
-            _ => {
-                eprintln!("Year {} not supported for nd. Defaulting to 2025 Single bracket.", year);
-                vec![
-                    Bracket(48475.0, 0.0),
-                    Bracket(244825.0, 0.0),
-                    Bracket(f64::INFINITY, 0.0),
-                ]
-            }
-        },
         "ak" => match year {
             2024 => match filing_status {
+                FilingStatus::HeadOfHousehold => vec![
+                    Bracket(f64::INFINITY, 0.0000),
+                ],
                 FilingStatus::MarriedFilingJointly => vec![
                     Bracket(f64::INFINITY, 0.0000),
                 ],
-                FilingStatus::Single => vec![
-                    Bracket(f64::INFINITY, 0.0000),
-                ],
-                FilingStatus::HeadOfHousehold => vec![
+                FilingStatus::MarriedFilingSeparately => vec![
                     Bracket(f64::INFINITY, 0.0000),
                 ],
                 FilingStatus::QualifyingSurvivingSpouse => vec![
                     Bracket(f64::INFINITY, 0.0000),
                 ],
-                FilingStatus::MarriedFilingSeparately => vec![
+                FilingStatus::Single => vec![
                     Bracket(f64::INFINITY, 0.0000),
                 ],
             },
@@ -602,9 +30,6 @@ pub fn get_tax_brackets(state: &str, year: i32, filing_status: &FilingStatus) ->
                 FilingStatus::HeadOfHousehold => vec![
                     Bracket(f64::INFINITY, 0.0000),
                 ],
-                FilingStatus::Single => vec![
-                    Bracket(f64::INFINITY, 0.0000),
-                ],
                 FilingStatus::MarriedFilingJointly => vec![
                     Bracket(f64::INFINITY, 0.0000),
                 ],
@@ -612,6 +37,9 @@ pub fn get_tax_brackets(state: &str, year: i32, filing_status: &FilingStatus) ->
                     Bracket(f64::INFINITY, 0.0000),
                 ],
                 FilingStatus::QualifyingSurvivingSpouse => vec![
+                    Bracket(f64::INFINITY, 0.0000),
+                ],
+                FilingStatus::Single => vec![
                     Bracket(f64::INFINITY, 0.0000),
                 ],
             },
@@ -622,19 +50,173 @@ pub fn get_tax_brackets(state: &str, year: i32, filing_status: &FilingStatus) ->
                 ]
             }
         },
+        "al" => match year {
+            2024 => match filing_status {
+                FilingStatus::HeadOfHousehold => vec![
+                    Bracket(500.0, 0.0200),
+                    Bracket(3000.0, 0.0400),
+                    Bracket(f64::INFINITY, 0.0500),
+                ],
+                FilingStatus::MarriedFilingJointly => vec![
+                    Bracket(1000.0, 0.0200),
+                    Bracket(6000.0, 0.0400),
+                    Bracket(f64::INFINITY, 0.0500),
+                ],
+                FilingStatus::MarriedFilingSeparately => vec![
+                    Bracket(500.0, 0.0200),
+                    Bracket(3000.0, 0.0400),
+                    Bracket(f64::INFINITY, 0.0500),
+                ],
+                FilingStatus::QualifyingSurvivingSpouse => vec![
+                    Bracket(1000.0, 0.0200),
+                    Bracket(6000.0, 0.0400),
+                    Bracket(f64::INFINITY, 0.0500),
+                ],
+                FilingStatus::Single => vec![
+                    Bracket(500.0, 0.0200),
+                    Bracket(3000.0, 0.0400),
+                    Bracket(f64::INFINITY, 0.0500),
+                ],
+            },
+            _ => {
+                eprintln!("Year {} not supported for al. Defaulting to 2024 Single bracket.", year);
+                vec![
+                    Bracket(500.0, 0.0),
+                    Bracket(3000.0, 0.0),
+                    Bracket(f64::INFINITY, 0.1),
+                ]
+            }
+        },
+        "ar" => match year {
+            2024 => match filing_status {
+                FilingStatus::HeadOfHousehold => vec![
+                    Bracket(5499.0, 0.0000),
+                    Bracket(10899.0, 0.0200),
+                    Bracket(15599.0, 0.0300),
+                    Bracket(25699.0, 0.0340),
+                    Bracket(f64::INFINITY, 0.0390),
+                ],
+                FilingStatus::MarriedFilingJointly => vec![
+                    Bracket(5499.0, 0.0000),
+                    Bracket(10899.0, 0.0200),
+                    Bracket(15599.0, 0.0300),
+                    Bracket(25699.0, 0.0340),
+                    Bracket(f64::INFINITY, 0.0390),
+                ],
+                FilingStatus::MarriedFilingSeparately => vec![
+                    Bracket(5499.0, 0.0000),
+                    Bracket(10899.0, 0.0200),
+                    Bracket(15599.0, 0.0300),
+                    Bracket(25699.0, 0.0340),
+                    Bracket(f64::INFINITY, 0.0390),
+                ],
+                FilingStatus::QualifyingSurvivingSpouse => vec![
+                    Bracket(5499.0, 0.0000),
+                    Bracket(10899.0, 0.0200),
+                    Bracket(15599.0, 0.0300),
+                    Bracket(25699.0, 0.0340),
+                    Bracket(f64::INFINITY, 0.0390),
+                ],
+                FilingStatus::Single => vec![
+                    Bracket(5499.0, 0.0000),
+                    Bracket(10899.0, 0.0200),
+                    Bracket(15599.0, 0.0300),
+                    Bracket(25699.0, 0.0340),
+                    Bracket(f64::INFINITY, 0.0390),
+                ],
+            },
+            2025 => match filing_status {
+                FilingStatus::HeadOfHousehold => vec![
+                    Bracket(5499.0, 0.0000),
+                    Bracket(10899.0, 0.0200),
+                    Bracket(15599.0, 0.0300),
+                    Bracket(25699.0, 0.0340),
+                    Bracket(f64::INFINITY, 0.0390),
+                ],
+                FilingStatus::MarriedFilingJointly => vec![
+                    Bracket(5499.0, 0.0000),
+                    Bracket(10899.0, 0.0200),
+                    Bracket(15599.0, 0.0300),
+                    Bracket(25699.0, 0.0340),
+                    Bracket(f64::INFINITY, 0.0390),
+                ],
+                FilingStatus::MarriedFilingSeparately => vec![
+                    Bracket(5499.0, 0.0000),
+                    Bracket(10899.0, 0.0200),
+                    Bracket(15599.0, 0.0300),
+                    Bracket(25699.0, 0.0340),
+                    Bracket(f64::INFINITY, 0.0390),
+                ],
+                FilingStatus::QualifyingSurvivingSpouse => vec![
+                    Bracket(5499.0, 0.0000),
+                    Bracket(10899.0, 0.0200),
+                    Bracket(15599.0, 0.0300),
+                    Bracket(25699.0, 0.0340),
+                    Bracket(f64::INFINITY, 0.0390),
+                ],
+                FilingStatus::Single => vec![
+                    Bracket(5499.0, 0.0000),
+                    Bracket(10899.0, 0.0200),
+                    Bracket(15599.0, 0.0300),
+                    Bracket(25699.0, 0.0340),
+                    Bracket(f64::INFINITY, 0.0390),
+                ],
+            },
+            _ => {
+                eprintln!("Year {} not supported for ar. Defaulting to 2025 Single bracket.", year);
+                vec![
+                    Bracket(5499.0, 0.0),
+                    Bracket(10899.0, 0.0),
+                    Bracket(15599.0, 0.0),
+                    Bracket(25699.0, 0.0),
+                    Bracket(f64::INFINITY, 0.0),
+                ]
+            }
+        },
+        "az" => match year {
+            2024 => match filing_status {
+                FilingStatus::HeadOfHousehold => vec![
+                    Bracket(f64::INFINITY, 0.0250),
+                ],
+                FilingStatus::MarriedFilingJointly => vec![
+                    Bracket(f64::INFINITY, 0.0250),
+                ],
+                FilingStatus::MarriedFilingSeparately => vec![
+                    Bracket(f64::INFINITY, 0.0250),
+                ],
+                FilingStatus::QualifyingSurvivingSpouse => vec![
+                    Bracket(f64::INFINITY, 0.0250),
+                ],
+                FilingStatus::Single => vec![
+                    Bracket(f64::INFINITY, 0.0250),
+                ],
+            },
+            2025 => match filing_status {
+                FilingStatus::HeadOfHousehold => vec![
+                    Bracket(f64::INFINITY, 0.0250),
+                ],
+                FilingStatus::MarriedFilingJointly => vec![
+                    Bracket(f64::INFINITY, 0.0250),
+                ],
+                FilingStatus::MarriedFilingSeparately => vec![
+                    Bracket(f64::INFINITY, 0.0250),
+                ],
+                FilingStatus::QualifyingSurvivingSpouse => vec![
+                    Bracket(f64::INFINITY, 0.0250),
+                ],
+                FilingStatus::Single => vec![
+                    Bracket(f64::INFINITY, 0.0250),
+                ],
+            },
+            _ => {
+                eprintln!("Year {} not supported for az. Defaulting to 2025 Single bracket.", year);
+                vec![
+                    Bracket(f64::INFINITY, 0.0),
+                ]
+            }
+        },
         "ca" => match year {
             2024 => match filing_status {
-                FilingStatus::MarriedFilingJointly => vec![
-                    Bracket(21512.0, 0.0100),
-                    Bracket(50998.0, 0.0200),
-                    Bracket(80490.0, 0.0400),
-                    Bracket(111732.0, 0.0600),
-                    Bracket(141212.0, 0.0800),
-                    Bracket(721318.0, 0.0930),
-                    Bracket(865574.0, 0.1030),
-                    Bracket(1442628.0, 0.1120),
-                    Bracket(f64::INFINITY, 0.1230),
-                ],
                 FilingStatus::HeadOfHousehold => vec![
                     Bracket(21527.0, 0.0100),
                     Bracket(51000.0, 0.0200),
@@ -646,7 +228,7 @@ pub fn get_tax_brackets(state: &str, year: i32, filing_status: &FilingStatus) ->
                     Bracket(980987.0, 0.1120),
                     Bracket(f64::INFINITY, 0.1230),
                 ],
-                FilingStatus::QualifyingSurvivingSpouse => vec![
+                FilingStatus::MarriedFilingJointly => vec![
                     Bracket(21512.0, 0.0100),
                     Bracket(50998.0, 0.0200),
                     Bracket(80490.0, 0.0400),
@@ -666,6 +248,17 @@ pub fn get_tax_brackets(state: &str, year: i32, filing_status: &FilingStatus) ->
                     Bracket(360659.0, 0.0930),
                     Bracket(432787.0, 0.1030),
                     Bracket(721314.0, 0.1120),
+                    Bracket(f64::INFINITY, 0.1230),
+                ],
+                FilingStatus::QualifyingSurvivingSpouse => vec![
+                    Bracket(21512.0, 0.0100),
+                    Bracket(50998.0, 0.0200),
+                    Bracket(80490.0, 0.0400),
+                    Bracket(111732.0, 0.0600),
+                    Bracket(141212.0, 0.0800),
+                    Bracket(721318.0, 0.0930),
+                    Bracket(865574.0, 0.1030),
+                    Bracket(1442628.0, 0.1120),
                     Bracket(f64::INFINITY, 0.1230),
                 ],
                 FilingStatus::Single => vec![
@@ -695,123 +288,857 @@ pub fn get_tax_brackets(state: &str, year: i32, filing_status: &FilingStatus) ->
                 ]
             }
         },
-        "me" => match year {
+        "co" => match year {
             2024 => match filing_status {
+                FilingStatus::HeadOfHousehold => vec![
+                    Bracket(f64::INFINITY, 0.0425),
+                ],
                 FilingStatus::MarriedFilingJointly => vec![
-                    Bracket(52100.0, 0.0580),
-                    Bracket(123250.0, 0.0675),
-                    Bracket(f64::INFINITY, 0.0715),
+                    Bracket(f64::INFINITY, 0.0425),
                 ],
                 FilingStatus::MarriedFilingSeparately => vec![
-                    Bracket(26050.0, 0.0580),
-                    Bracket(61600.0, 0.0675),
-                    Bracket(f64::INFINITY, 0.0715),
-                ],
-                FilingStatus::Single => vec![
-                    Bracket(26050.0, 0.0580),
-                    Bracket(61600.0, 0.0675),
-                    Bracket(f64::INFINITY, 0.0715),
+                    Bracket(f64::INFINITY, 0.0425),
                 ],
                 FilingStatus::QualifyingSurvivingSpouse => vec![
-                    Bracket(52100.0, 0.0580),
-                    Bracket(123250.0, 0.0675),
-                    Bracket(f64::INFINITY, 0.0715),
+                    Bracket(f64::INFINITY, 0.0425),
                 ],
-                FilingStatus::HeadOfHousehold => vec![
-                    Bracket(39050.0, 0.0580),
-                    Bracket(92450.0, 0.0675),
-                    Bracket(f64::INFINITY, 0.0715),
+                FilingStatus::Single => vec![
+                    Bracket(f64::INFINITY, 0.0425),
                 ],
             },
             2025 => match filing_status {
-                FilingStatus::Single => vec![
-                    Bracket(26800.0, 0.0580),
-                    Bracket(63450.0, 0.0675),
-                    Bracket(f64::INFINITY, 0.0715),
-                ],
-                FilingStatus::QualifyingSurvivingSpouse => vec![
-                    Bracket(53600.0, 0.0580),
-                    Bracket(126900.0, 0.0675),
-                    Bracket(f64::INFINITY, 0.0715),
-                ],
-                FilingStatus::MarriedFilingSeparately => vec![
-                    Bracket(26800.0, 0.0580),
-                    Bracket(63450.0, 0.0675),
-                    Bracket(f64::INFINITY, 0.0715),
+                FilingStatus::HeadOfHousehold => vec![
+                    Bracket(f64::INFINITY, 0.0440),
                 ],
                 FilingStatus::MarriedFilingJointly => vec![
-                    Bracket(53600.0, 0.0580),
-                    Bracket(126900.0, 0.0675),
-                    Bracket(f64::INFINITY, 0.0715),
+                    Bracket(f64::INFINITY, 0.0440),
                 ],
-                FilingStatus::HeadOfHousehold => vec![
-                    Bracket(40200.0, 0.0580),
-                    Bracket(95150.0, 0.0675),
-                    Bracket(f64::INFINITY, 0.0715),
+                FilingStatus::MarriedFilingSeparately => vec![
+                    Bracket(f64::INFINITY, 0.0440),
+                ],
+                FilingStatus::QualifyingSurvivingSpouse => vec![
+                    Bracket(f64::INFINITY, 0.0440),
+                ],
+                FilingStatus::Single => vec![
+                    Bracket(f64::INFINITY, 0.0440),
                 ],
             },
             _ => {
-                eprintln!("Year {} not supported for me. Defaulting to 2025 Single bracket.", year);
+                eprintln!("Year {} not supported for co. Defaulting to 2025 Single bracket.", year);
                 vec![
-                    Bracket(26800.0, 0.1),
-                    Bracket(63450.0, 0.1),
+                    Bracket(f64::INFINITY, 0.0),
+                ]
+            }
+        },
+        "ct" => match year {
+            2024 => match filing_status {
+                FilingStatus::HeadOfHousehold => vec![
+                    Bracket(16000.0, 0.0200),
+                    Bracket(80000.0, 0.0450),
+                    Bracket(160000.0, 0.0550),
+                    Bracket(320000.0, 0.0600),
+                    Bracket(400000.0, 0.0650),
+                    Bracket(800000.0, 0.0690),
+                    Bracket(f64::INFINITY, 0.0699),
+                ],
+                FilingStatus::MarriedFilingJointly => vec![
+                    Bracket(20000.0, 0.0200),
+                    Bracket(100000.0, 0.0450),
+                    Bracket(200000.0, 0.0550),
+                    Bracket(400000.0, 0.0600),
+                    Bracket(500000.0, 0.0650),
+                    Bracket(1000000.0, 0.0690),
+                    Bracket(f64::INFINITY, 0.0699),
+                ],
+                FilingStatus::MarriedFilingSeparately => vec![
+                    Bracket(10000.0, 0.0200),
+                    Bracket(50000.0, 0.0450),
+                    Bracket(100000.0, 0.0550),
+                    Bracket(200000.0, 0.0600),
+                    Bracket(250000.0, 0.0650),
+                    Bracket(500000.0, 0.0690),
+                    Bracket(f64::INFINITY, 0.0699),
+                ],
+                FilingStatus::QualifyingSurvivingSpouse => vec![
+                    Bracket(20000.0, 0.0200),
+                    Bracket(100000.0, 0.0450),
+                    Bracket(200000.0, 0.0550),
+                    Bracket(400000.0, 0.0600),
+                    Bracket(500000.0, 0.0650),
+                    Bracket(1000000.0, 0.0690),
+                    Bracket(f64::INFINITY, 0.0699),
+                ],
+                FilingStatus::Single => vec![
+                    Bracket(10000.0, 0.0200),
+                    Bracket(50000.0, 0.0450),
+                    Bracket(100000.0, 0.0550),
+                    Bracket(200000.0, 0.0600),
+                    Bracket(250000.0, 0.0650),
+                    Bracket(500000.0, 0.0690),
+                    Bracket(f64::INFINITY, 0.0699),
+                ],
+            },
+            2025 => match filing_status {
+                FilingStatus::HeadOfHousehold => vec![
+                    Bracket(16000.0, 0.0200),
+                    Bracket(80000.0, 0.0450),
+                    Bracket(160000.0, 0.0550),
+                    Bracket(320000.0, 0.0600),
+                    Bracket(400000.0, 0.0650),
+                    Bracket(800000.0, 0.0690),
+                    Bracket(f64::INFINITY, 0.0699),
+                ],
+                FilingStatus::MarriedFilingJointly => vec![
+                    Bracket(20000.0, 0.0200),
+                    Bracket(100000.0, 0.0450),
+                    Bracket(200000.0, 0.0550),
+                    Bracket(400000.0, 0.0600),
+                    Bracket(500000.0, 0.0650),
+                    Bracket(1000000.0, 0.0690),
+                    Bracket(f64::INFINITY, 0.0699),
+                ],
+                FilingStatus::MarriedFilingSeparately => vec![
+                    Bracket(10000.0, 0.0200),
+                    Bracket(50000.0, 0.0450),
+                    Bracket(100000.0, 0.0550),
+                    Bracket(200000.0, 0.0600),
+                    Bracket(250000.0, 0.0650),
+                    Bracket(500000.0, 0.0690),
+                    Bracket(f64::INFINITY, 0.0699),
+                ],
+                FilingStatus::QualifyingSurvivingSpouse => vec![
+                    Bracket(20000.0, 0.0200),
+                    Bracket(100000.0, 0.0450),
+                    Bracket(200000.0, 0.0550),
+                    Bracket(400000.0, 0.0600),
+                    Bracket(500000.0, 0.0650),
+                    Bracket(1000000.0, 0.0690),
+                    Bracket(f64::INFINITY, 0.0699),
+                ],
+                FilingStatus::Single => vec![
+                    Bracket(10000.0, 0.0200),
+                    Bracket(50000.0, 0.0450),
+                    Bracket(100000.0, 0.0550),
+                    Bracket(200000.0, 0.0600),
+                    Bracket(250000.0, 0.0650),
+                    Bracket(500000.0, 0.0690),
+                    Bracket(f64::INFINITY, 0.0699),
+                ],
+            },
+            _ => {
+                eprintln!("Year {} not supported for ct. Defaulting to 2025 Single bracket.", year);
+                vec![
+                    Bracket(10000.0, 0.0),
+                    Bracket(50000.0, 0.0),
+                    Bracket(100000.0, 0.1),
+                    Bracket(200000.0, 0.1),
+                    Bracket(250000.0, 0.1),
+                    Bracket(500000.0, 0.1),
+                    Bracket(f64::INFINITY, 0.1),
+                ]
+            }
+        },
+        "de" => match year {
+            2024 => match filing_status {
+                FilingStatus::HeadOfHousehold => vec![
+                    Bracket(2000.0, 0.0000),
+                    Bracket(5000.0, 0.0220),
+                    Bracket(10000.0, 0.0390),
+                    Bracket(20000.0, 0.0480),
+                    Bracket(25000.0, 0.0520),
+                    Bracket(60000.0, 0.0555),
+                    Bracket(f64::INFINITY, 0.0660),
+                ],
+                FilingStatus::MarriedFilingJointly => vec![
+                    Bracket(2000.0, 0.0000),
+                    Bracket(5000.0, 0.0220),
+                    Bracket(10000.0, 0.0390),
+                    Bracket(20000.0, 0.0480),
+                    Bracket(25000.0, 0.0520),
+                    Bracket(60000.0, 0.0555),
+                    Bracket(f64::INFINITY, 0.0660),
+                ],
+                FilingStatus::MarriedFilingSeparately => vec![
+                    Bracket(2000.0, 0.0000),
+                    Bracket(5000.0, 0.0220),
+                    Bracket(10000.0, 0.0390),
+                    Bracket(20000.0, 0.0480),
+                    Bracket(25000.0, 0.0520),
+                    Bracket(60000.0, 0.0555),
+                    Bracket(f64::INFINITY, 0.0660),
+                ],
+                FilingStatus::QualifyingSurvivingSpouse => vec![
+                    Bracket(2000.0, 0.0000),
+                    Bracket(5000.0, 0.0220),
+                    Bracket(10000.0, 0.0390),
+                    Bracket(20000.0, 0.0480),
+                    Bracket(25000.0, 0.0520),
+                    Bracket(60000.0, 0.0555),
+                    Bracket(f64::INFINITY, 0.0660),
+                ],
+                FilingStatus::Single => vec![
+                    Bracket(2000.0, 0.0000),
+                    Bracket(5000.0, 0.0220),
+                    Bracket(10000.0, 0.0390),
+                    Bracket(20000.0, 0.0480),
+                    Bracket(25000.0, 0.0520),
+                    Bracket(60000.0, 0.0555),
+                    Bracket(f64::INFINITY, 0.0660),
+                ],
+            },
+            2025 => match filing_status {
+                FilingStatus::HeadOfHousehold => vec![
+                    Bracket(2000.0, 0.0000),
+                    Bracket(5000.0, 0.0220),
+                    Bracket(10000.0, 0.0390),
+                    Bracket(20000.0, 0.0480),
+                    Bracket(25000.0, 0.0520),
+                    Bracket(60000.0, 0.0555),
+                    Bracket(f64::INFINITY, 0.0660),
+                ],
+                FilingStatus::MarriedFilingJointly => vec![
+                    Bracket(2000.0, 0.0000),
+                    Bracket(5000.0, 0.0220),
+                    Bracket(10000.0, 0.0390),
+                    Bracket(20000.0, 0.0480),
+                    Bracket(25000.0, 0.0520),
+                    Bracket(60000.0, 0.0555),
+                    Bracket(f64::INFINITY, 0.0660),
+                ],
+                FilingStatus::MarriedFilingSeparately => vec![
+                    Bracket(2000.0, 0.0000),
+                    Bracket(5000.0, 0.0220),
+                    Bracket(10000.0, 0.0390),
+                    Bracket(20000.0, 0.0480),
+                    Bracket(25000.0, 0.0520),
+                    Bracket(60000.0, 0.0555),
+                    Bracket(f64::INFINITY, 0.0660),
+                ],
+                FilingStatus::QualifyingSurvivingSpouse => vec![
+                    Bracket(2000.0, 0.0000),
+                    Bracket(5000.0, 0.0220),
+                    Bracket(10000.0, 0.0390),
+                    Bracket(20000.0, 0.0480),
+                    Bracket(25000.0, 0.0520),
+                    Bracket(60000.0, 0.0555),
+                    Bracket(f64::INFINITY, 0.0660),
+                ],
+                FilingStatus::Single => vec![
+                    Bracket(2000.0, 0.0000),
+                    Bracket(5000.0, 0.0220),
+                    Bracket(10000.0, 0.0390),
+                    Bracket(20000.0, 0.0480),
+                    Bracket(25000.0, 0.0520),
+                    Bracket(60000.0, 0.0555),
+                    Bracket(f64::INFINITY, 0.0660),
+                ],
+            },
+            _ => {
+                eprintln!("Year {} not supported for de. Defaulting to 2025 Single bracket.", year);
+                vec![
+                    Bracket(2000.0, 0.0),
+                    Bracket(5000.0, 0.0),
+                    Bracket(10000.0, 0.0),
+                    Bracket(20000.0, 0.0),
+                    Bracket(25000.0, 0.1),
+                    Bracket(60000.0, 0.1),
+                    Bracket(f64::INFINITY, 0.1),
+                ]
+            }
+        },
+        "fl" => match year {
+            2024 => match filing_status {
+                FilingStatus::HeadOfHousehold => vec![
+                    Bracket(f64::INFINITY, 0.0000),
+                ],
+                FilingStatus::MarriedFilingJointly => vec![
+                    Bracket(f64::INFINITY, 0.0000),
+                ],
+                FilingStatus::MarriedFilingSeparately => vec![
+                    Bracket(f64::INFINITY, 0.0000),
+                ],
+                FilingStatus::QualifyingSurvivingSpouse => vec![
+                    Bracket(f64::INFINITY, 0.0000),
+                ],
+                FilingStatus::Single => vec![
+                    Bracket(f64::INFINITY, 0.0000),
+                ],
+            },
+            2025 => match filing_status {
+                FilingStatus::HeadOfHousehold => vec![
+                    Bracket(f64::INFINITY, 0.0000),
+                ],
+                FilingStatus::MarriedFilingJointly => vec![
+                    Bracket(f64::INFINITY, 0.0000),
+                ],
+                FilingStatus::MarriedFilingSeparately => vec![
+                    Bracket(f64::INFINITY, 0.0000),
+                ],
+                FilingStatus::QualifyingSurvivingSpouse => vec![
+                    Bracket(f64::INFINITY, 0.0000),
+                ],
+                FilingStatus::Single => vec![
+                    Bracket(f64::INFINITY, 0.0000),
+                ],
+            },
+            _ => {
+                eprintln!("Year {} not supported for fl. Defaulting to 2025 Single bracket.", year);
+                vec![
+                    Bracket(f64::INFINITY, 0.0),
+                ]
+            }
+        },
+        "ga" => match year {
+            2024 => match filing_status {
+                FilingStatus::HeadOfHousehold => vec![
+                    Bracket(f64::INFINITY, 0.0539),
+                ],
+                FilingStatus::MarriedFilingJointly => vec![
+                    Bracket(f64::INFINITY, 0.0539),
+                ],
+                FilingStatus::MarriedFilingSeparately => vec![
+                    Bracket(f64::INFINITY, 0.0539),
+                ],
+                FilingStatus::QualifyingSurvivingSpouse => vec![
+                    Bracket(f64::INFINITY, 0.0539),
+                ],
+                FilingStatus::Single => vec![
+                    Bracket(f64::INFINITY, 0.0539),
+                ],
+            },
+            2025 => match filing_status {
+                FilingStatus::HeadOfHousehold => vec![
+                    Bracket(f64::INFINITY, 0.0519),
+                ],
+                FilingStatus::MarriedFilingJointly => vec![
+                    Bracket(f64::INFINITY, 0.0519),
+                ],
+                FilingStatus::MarriedFilingSeparately => vec![
+                    Bracket(f64::INFINITY, 0.0519),
+                ],
+                FilingStatus::QualifyingSurvivingSpouse => vec![
+                    Bracket(f64::INFINITY, 0.0519),
+                ],
+                FilingStatus::Single => vec![
+                    Bracket(f64::INFINITY, 0.0519),
+                ],
+            },
+            _ => {
+                eprintln!("Year {} not supported for ga. Defaulting to 2025 Single bracket.", year);
+                vec![
+                    Bracket(f64::INFINITY, 0.1),
+                ]
+            }
+        },
+        "hi" => match year {
+            2024 => match filing_status {
+                FilingStatus::HeadOfHousehold => vec![
+                    Bracket(3600.0, 0.0140),
+                    Bracket(7200.0, 0.0320),
+                    Bracket(14400.0, 0.0550),
+                    Bracket(21600.0, 0.0640),
+                    Bracket(28800.0, 0.0680),
+                    Bracket(36000.0, 0.0720),
+                    Bracket(54000.0, 0.0760),
+                    Bracket(72000.0, 0.0790),
+                    Bracket(225000.0, 0.0825),
+                    Bracket(262500.0, 0.0900),
+                    Bracket(300000.0, 0.1000),
+                    Bracket(f64::INFINITY, 0.1100),
+                ],
+                FilingStatus::MarriedFilingJointly => vec![
+                    Bracket(4800.0, 0.0140),
+                    Bracket(9600.0, 0.0320),
+                    Bracket(19200.0, 0.0550),
+                    Bracket(28800.0, 0.0640),
+                    Bracket(38400.0, 0.0680),
+                    Bracket(48000.0, 0.0720),
+                    Bracket(72000.0, 0.0760),
+                    Bracket(96000.0, 0.0790),
+                    Bracket(300000.0, 0.0825),
+                    Bracket(350000.0, 0.0900),
+                    Bracket(400000.0, 0.1000),
+                    Bracket(f64::INFINITY, 0.1100),
+                ],
+                FilingStatus::MarriedFilingSeparately => vec![
+                    Bracket(2400.0, 0.0140),
+                    Bracket(4800.0, 0.0320),
+                    Bracket(9600.0, 0.0550),
+                    Bracket(14400.0, 0.0640),
+                    Bracket(19200.0, 0.0680),
+                    Bracket(24000.0, 0.0720),
+                    Bracket(36000.0, 0.0760),
+                    Bracket(48000.0, 0.0790),
+                    Bracket(150000.0, 0.0825),
+                    Bracket(175000.0, 0.0900),
+                    Bracket(200000.0, 0.1000),
+                    Bracket(f64::INFINITY, 0.1100),
+                ],
+                FilingStatus::QualifyingSurvivingSpouse => vec![
+                    Bracket(4800.0, 0.0140),
+                    Bracket(9600.0, 0.0320),
+                    Bracket(19200.0, 0.0550),
+                    Bracket(28800.0, 0.0640),
+                    Bracket(38400.0, 0.0680),
+                    Bracket(48000.0, 0.0720),
+                    Bracket(72000.0, 0.0760),
+                    Bracket(96000.0, 0.0790),
+                    Bracket(300000.0, 0.0825),
+                    Bracket(350000.0, 0.0900),
+                    Bracket(400000.0, 0.1000),
+                    Bracket(f64::INFINITY, 0.1100),
+                ],
+                FilingStatus::Single => vec![
+                    Bracket(2400.0, 0.0140),
+                    Bracket(4800.0, 0.0320),
+                    Bracket(9600.0, 0.0550),
+                    Bracket(14400.0, 0.0640),
+                    Bracket(19200.0, 0.0680),
+                    Bracket(24000.0, 0.0720),
+                    Bracket(36000.0, 0.0760),
+                    Bracket(48000.0, 0.0790),
+                    Bracket(150000.0, 0.0825),
+                    Bracket(175000.0, 0.0900),
+                    Bracket(200000.0, 0.1000),
+                    Bracket(f64::INFINITY, 0.1100),
+                ],
+            },
+            2025 => match filing_status {
+                FilingStatus::HeadOfHousehold => vec![
+                    Bracket(14400.0, 0.0140),
+                    Bracket(21600.0, 0.0320),
+                    Bracket(28800.0, 0.0550),
+                    Bracket(36000.0, 0.0640),
+                    Bracket(54000.0, 0.0680),
+                    Bracket(72000.0, 0.0720),
+                    Bracket(187500.0, 0.0760),
+                    Bracket(262500.0, 0.0790),
+                    Bracket(337600.0, 0.0825),
+                    Bracket(412500.0, 0.0900),
+                    Bracket(487500.0, 0.1000),
+                    Bracket(f64::INFINITY, 0.1100),
+                ],
+                FilingStatus::MarriedFilingJointly => vec![
+                    Bracket(19200.0, 0.0140),
+                    Bracket(28800.0, 0.0320),
+                    Bracket(38400.0, 0.0550),
+                    Bracket(48000.0, 0.0640),
+                    Bracket(72000.0, 0.0680),
+                    Bracket(96000.0, 0.0720),
+                    Bracket(250000.0, 0.0760),
+                    Bracket(350000.0, 0.0790),
+                    Bracket(450000.0, 0.0825),
+                    Bracket(550000.0, 0.0900),
+                    Bracket(650000.0, 0.1000),
+                    Bracket(f64::INFINITY, 0.1100),
+                ],
+                FilingStatus::MarriedFilingSeparately => vec![
+                    Bracket(9600.0, 0.0140),
+                    Bracket(14400.0, 0.0320),
+                    Bracket(19200.0, 0.0550),
+                    Bracket(24000.0, 0.0640),
+                    Bracket(36000.0, 0.0680),
+                    Bracket(48000.0, 0.0720),
+                    Bracket(125000.0, 0.0760),
+                    Bracket(175000.0, 0.0790),
+                    Bracket(225000.0, 0.0825),
+                    Bracket(275000.0, 0.0900),
+                    Bracket(325000.0, 0.1000),
+                    Bracket(f64::INFINITY, 0.1100),
+                ],
+                FilingStatus::QualifyingSurvivingSpouse => vec![
+                    Bracket(19200.0, 0.0140),
+                    Bracket(28800.0, 0.0320),
+                    Bracket(38400.0, 0.0550),
+                    Bracket(48000.0, 0.0640),
+                    Bracket(72000.0, 0.0680),
+                    Bracket(96000.0, 0.0720),
+                    Bracket(250000.0, 0.0760),
+                    Bracket(350000.0, 0.0790),
+                    Bracket(450000.0, 0.0825),
+                    Bracket(550000.0, 0.0900),
+                    Bracket(650000.0, 0.1000),
+                    Bracket(f64::INFINITY, 0.1100),
+                ],
+                FilingStatus::Single => vec![
+                    Bracket(9600.0, 0.0140),
+                    Bracket(14400.0, 0.0320),
+                    Bracket(19200.0, 0.0550),
+                    Bracket(24000.0, 0.0640),
+                    Bracket(36000.0, 0.0680),
+                    Bracket(48000.0, 0.0720),
+                    Bracket(125000.0, 0.0760),
+                    Bracket(175000.0, 0.0790),
+                    Bracket(225000.0, 0.0825),
+                    Bracket(275000.0, 0.0900),
+                    Bracket(325000.0, 0.1000),
+                    Bracket(f64::INFINITY, 0.1100),
+                ],
+            },
+            _ => {
+                eprintln!("Year {} not supported for hi. Defaulting to 2025 Single bracket.", year);
+                vec![
+                    Bracket(9600.0, 0.0),
+                    Bracket(14400.0, 0.0),
+                    Bracket(19200.0, 0.1),
+                    Bracket(24000.0, 0.1),
+                    Bracket(36000.0, 0.1),
+                    Bracket(48000.0, 0.1),
+                    Bracket(125000.0, 0.1),
+                    Bracket(175000.0, 0.1),
+                    Bracket(225000.0, 0.1),
+                    Bracket(275000.0, 0.1),
+                    Bracket(325000.0, 0.1),
+                    Bracket(f64::INFINITY, 0.1),
+                ]
+            }
+        },
+        "ia" => match year {
+            2024 => match filing_status {
+                FilingStatus::HeadOfHousehold => vec![
+                    Bracket(6210.0, 0.0440),
+                    Bracket(31050.0, 0.0482),
+                    Bracket(f64::INFINITY, 0.0570),
+                ],
+                FilingStatus::MarriedFilingJointly => vec![
+                    Bracket(12420.0, 0.0440),
+                    Bracket(62100.0, 0.0482),
+                    Bracket(f64::INFINITY, 0.0570),
+                ],
+                FilingStatus::MarriedFilingSeparately => vec![
+                    Bracket(6210.0, 0.0440),
+                    Bracket(31050.0, 0.0482),
+                    Bracket(f64::INFINITY, 0.0570),
+                ],
+                FilingStatus::QualifyingSurvivingSpouse => vec![
+                    Bracket(12420.0, 0.0440),
+                    Bracket(62100.0, 0.0482),
+                    Bracket(f64::INFINITY, 0.0570),
+                ],
+                FilingStatus::Single => vec![
+                    Bracket(6210.0, 0.0440),
+                    Bracket(31050.0, 0.0482),
+                    Bracket(f64::INFINITY, 0.0570),
+                ],
+            },
+            2025 => match filing_status {
+                FilingStatus::HeadOfHousehold => vec![
+                    Bracket(f64::INFINITY, 0.0380),
+                ],
+                FilingStatus::MarriedFilingJointly => vec![
+                    Bracket(f64::INFINITY, 0.0380),
+                ],
+                FilingStatus::MarriedFilingSeparately => vec![
+                    Bracket(f64::INFINITY, 0.0380),
+                ],
+                FilingStatus::QualifyingSurvivingSpouse => vec![
+                    Bracket(f64::INFINITY, 0.0380),
+                ],
+                FilingStatus::Single => vec![
+                    Bracket(f64::INFINITY, 0.0380),
+                ],
+            },
+            _ => {
+                eprintln!("Year {} not supported for ia. Defaulting to 2025 Single bracket.", year);
+                vec![
+                    Bracket(f64::INFINITY, 0.0),
+                ]
+            }
+        },
+        "id" => match year {
+            2024 => match filing_status {
+                FilingStatus::HeadOfHousehold => vec![
+                    Bracket(9346.0, 0.0000),
+                    Bracket(f64::INFINITY, 0.0570),
+                ],
+                FilingStatus::MarriedFilingJointly => vec![
+                    Bracket(9346.0, 0.0000),
+                    Bracket(f64::INFINITY, 0.0570),
+                ],
+                FilingStatus::MarriedFilingSeparately => vec![
+                    Bracket(4673.0, 0.0000),
+                    Bracket(f64::INFINITY, 0.0570),
+                ],
+                FilingStatus::QualifyingSurvivingSpouse => vec![
+                    Bracket(9346.0, 0.0000),
+                    Bracket(f64::INFINITY, 0.0570),
+                ],
+                FilingStatus::Single => vec![
+                    Bracket(4673.0, 0.0000),
+                    Bracket(f64::INFINITY, 0.0570),
+                ],
+            },
+            _ => {
+                eprintln!("Year {} not supported for id. Defaulting to 2024 Single bracket.", year);
+                vec![
+                    Bracket(4673.0, 0.0),
+                    Bracket(f64::INFINITY, 0.1),
+                ]
+            }
+        },
+        "il" => match year {
+            2024 => match filing_status {
+                FilingStatus::HeadOfHousehold => vec![
+                    Bracket(f64::INFINITY, 0.0495),
+                ],
+                FilingStatus::MarriedFilingJointly => vec![
+                    Bracket(f64::INFINITY, 0.0495),
+                ],
+                FilingStatus::MarriedFilingSeparately => vec![
+                    Bracket(f64::INFINITY, 0.0495),
+                ],
+                FilingStatus::QualifyingSurvivingSpouse => vec![
+                    Bracket(f64::INFINITY, 0.0495),
+                ],
+                FilingStatus::Single => vec![
+                    Bracket(f64::INFINITY, 0.0495),
+                ],
+            },
+            2025 => match filing_status {
+                FilingStatus::HeadOfHousehold => vec![
+                    Bracket(f64::INFINITY, 0.0495),
+                ],
+                FilingStatus::MarriedFilingJointly => vec![
+                    Bracket(f64::INFINITY, 0.0495),
+                ],
+                FilingStatus::MarriedFilingSeparately => vec![
+                    Bracket(f64::INFINITY, 0.0495),
+                ],
+                FilingStatus::QualifyingSurvivingSpouse => vec![
+                    Bracket(f64::INFINITY, 0.0495),
+                ],
+                FilingStatus::Single => vec![
+                    Bracket(f64::INFINITY, 0.0495),
+                ],
+            },
+            _ => {
+                eprintln!("Year {} not supported for il. Defaulting to 2025 Single bracket.", year);
+                vec![
+                    Bracket(f64::INFINITY, 0.0),
+                ]
+            }
+        },
+        "in" => match year {
+            2024 => match filing_status {
+                FilingStatus::HeadOfHousehold => vec![
+                    Bracket(f64::INFINITY, 0.0310),
+                ],
+                FilingStatus::MarriedFilingJointly => vec![
+                    Bracket(f64::INFINITY, 0.0310),
+                ],
+                FilingStatus::MarriedFilingSeparately => vec![
+                    Bracket(f64::INFINITY, 0.0310),
+                ],
+                FilingStatus::QualifyingSurvivingSpouse => vec![
+                    Bracket(f64::INFINITY, 0.0310),
+                ],
+                FilingStatus::Single => vec![
+                    Bracket(f64::INFINITY, 0.0310),
+                ],
+            },
+            2025 => match filing_status {
+                FilingStatus::HeadOfHousehold => vec![
+                    Bracket(f64::INFINITY, 0.0300),
+                ],
+                FilingStatus::MarriedFilingJointly => vec![
+                    Bracket(f64::INFINITY, 0.0300),
+                ],
+                FilingStatus::MarriedFilingSeparately => vec![
+                    Bracket(f64::INFINITY, 0.0300),
+                ],
+                FilingStatus::QualifyingSurvivingSpouse => vec![
+                    Bracket(f64::INFINITY, 0.0300),
+                ],
+                FilingStatus::Single => vec![
+                    Bracket(f64::INFINITY, 0.0300),
+                ],
+            },
+            _ => {
+                eprintln!("Year {} not supported for in. Defaulting to 2025 Single bracket.", year);
+                vec![
+                    Bracket(f64::INFINITY, 0.0),
+                ]
+            }
+        },
+        "ks" => match year {
+            2024 => match filing_status {
+                FilingStatus::HeadOfHousehold => vec![
+                    Bracket(23000.0, 0.0520),
+                    Bracket(f64::INFINITY, 0.0558),
+                ],
+                FilingStatus::MarriedFilingJointly => vec![
+                    Bracket(46000.0, 0.0520),
+                    Bracket(f64::INFINITY, 0.0558),
+                ],
+                FilingStatus::MarriedFilingSeparately => vec![
+                    Bracket(23000.0, 0.0520),
+                    Bracket(f64::INFINITY, 0.0558),
+                ],
+                FilingStatus::QualifyingSurvivingSpouse => vec![
+                    Bracket(46000.0, 0.0520),
+                    Bracket(f64::INFINITY, 0.0558),
+                ],
+                FilingStatus::Single => vec![
+                    Bracket(23000.0, 0.0520),
+                    Bracket(f64::INFINITY, 0.0558),
+                ],
+            },
+            _ => {
+                eprintln!("Year {} not supported for ks. Defaulting to 2024 Single bracket.", year);
+                vec![
+                    Bracket(23000.0, 0.1),
+                    Bracket(f64::INFINITY, 0.1),
+                ]
+            }
+        },
+        "ky" => match year {
+            2024 => match filing_status {
+                FilingStatus::HeadOfHousehold => vec![
+                    Bracket(f64::INFINITY, 0.4000),
+                ],
+                FilingStatus::MarriedFilingJointly => vec![
+                    Bracket(f64::INFINITY, 0.0400),
+                ],
+                FilingStatus::MarriedFilingSeparately => vec![
+                    Bracket(f64::INFINITY, 0.0400),
+                ],
+                FilingStatus::QualifyingSurvivingSpouse => vec![
+                    Bracket(f64::INFINITY, 0.0400),
+                ],
+                FilingStatus::Single => vec![
+                    Bracket(f64::INFINITY, 0.0400),
+                ],
+            },
+            2025 => match filing_status {
+                FilingStatus::HeadOfHousehold => vec![
+                    Bracket(f64::INFINITY, 0.0400),
+                ],
+                FilingStatus::MarriedFilingJointly => vec![
+                    Bracket(f64::INFINITY, 0.0400),
+                ],
+                FilingStatus::MarriedFilingSeparately => vec![
+                    Bracket(f64::INFINITY, 0.0400),
+                ],
+                FilingStatus::QualifyingSurvivingSpouse => vec![
+                    Bracket(f64::INFINITY, 0.0400),
+                ],
+                FilingStatus::Single => vec![
+                    Bracket(f64::INFINITY, 0.0400),
+                ],
+            },
+            _ => {
+                eprintln!("Year {} not supported for ky. Defaulting to 2025 Single bracket.", year);
+                vec![
+                    Bracket(f64::INFINITY, 0.0),
+                ]
+            }
+        },
+        "la" => match year {
+            2024 => match filing_status {
+                FilingStatus::HeadOfHousehold => vec![
+                    Bracket(12500.0, 0.0185),
+                    Bracket(50000.0, 0.0350),
+                    Bracket(f64::INFINITY, 0.0425),
+                ],
+                FilingStatus::MarriedFilingJointly => vec![
+                    Bracket(25000.0, 0.0185),
+                    Bracket(100000.0, 0.0350),
+                    Bracket(f64::INFINITY, 0.0425),
+                ],
+                FilingStatus::MarriedFilingSeparately => vec![
+                    Bracket(12500.0, 0.0185),
+                    Bracket(50000.0, 0.0350),
+                    Bracket(f64::INFINITY, 0.0425),
+                ],
+                FilingStatus::QualifyingSurvivingSpouse => vec![
+                    Bracket(25000.0, 0.0185),
+                    Bracket(100000.0, 0.0350),
+                    Bracket(f64::INFINITY, 0.0425),
+                ],
+                FilingStatus::Single => vec![
+                    Bracket(12500.0, 0.0185),
+                    Bracket(50000.0, 0.0350),
+                    Bracket(f64::INFINITY, 0.0425),
+                ],
+            },
+            2025 => match filing_status {
+                FilingStatus::HeadOfHousehold => vec![
+                    Bracket(f64::INFINITY, 0.0300),
+                ],
+                FilingStatus::MarriedFilingJointly => vec![
+                    Bracket(f64::INFINITY, 0.0300),
+                ],
+                FilingStatus::MarriedFilingSeparately => vec![
+                    Bracket(f64::INFINITY, 0.0300),
+                ],
+                FilingStatus::QualifyingSurvivingSpouse => vec![
+                    Bracket(f64::INFINITY, 0.0300),
+                ],
+                FilingStatus::Single => vec![
+                    Bracket(f64::INFINITY, 0.0300),
+                ],
+            },
+            _ => {
+                eprintln!("Year {} not supported for la. Defaulting to 2025 Single bracket.", year);
+                vec![
+                    Bracket(f64::INFINITY, 0.0),
+                ]
+            }
+        },
+        "ma" => match year {
+            2024 => match filing_status {
+                FilingStatus::HeadOfHousehold => vec![
+                    Bracket(1053750.0, 0.0500),
+                    Bracket(f64::INFINITY, 0.0900),
+                ],
+                FilingStatus::MarriedFilingJointly => vec![
+                    Bracket(1053750.0, 0.0500),
+                    Bracket(f64::INFINITY, 0.0900),
+                ],
+                FilingStatus::MarriedFilingSeparately => vec![
+                    Bracket(1053750.0, 0.0500),
+                    Bracket(f64::INFINITY, 0.0900),
+                ],
+                FilingStatus::QualifyingSurvivingSpouse => vec![
+                    Bracket(1053750.0, 0.0500),
+                    Bracket(f64::INFINITY, 0.0900),
+                ],
+                FilingStatus::Single => vec![
+                    Bracket(1053750.0, 0.0500),
+                    Bracket(f64::INFINITY, 0.0900),
+                ],
+            },
+            2025 => match filing_status {
+                FilingStatus::HeadOfHousehold => vec![
+                    Bracket(1083150.0, 0.0500),
+                    Bracket(f64::INFINITY, 0.0900),
+                ],
+                FilingStatus::MarriedFilingJointly => vec![
+                    Bracket(1083150.0, 0.0500),
+                    Bracket(f64::INFINITY, 0.0900),
+                ],
+                FilingStatus::MarriedFilingSeparately => vec![
+                    Bracket(1083150.0, 0.0500),
+                    Bracket(f64::INFINITY, 0.0900),
+                ],
+                FilingStatus::QualifyingSurvivingSpouse => vec![
+                    Bracket(1083150.0, 0.0500),
+                    Bracket(f64::INFINITY, 0.0900),
+                ],
+                FilingStatus::Single => vec![
+                    Bracket(1083150.0, 0.0500),
+                    Bracket(f64::INFINITY, 0.0900),
+                ],
+            },
+            _ => {
+                eprintln!("Year {} not supported for ma. Defaulting to 2025 Single bracket.", year);
+                vec![
+                    Bracket(1083150.0, 0.1),
                     Bracket(f64::INFINITY, 0.1),
                 ]
             }
         },
         "md" => match year {
-            2025 => match filing_status {
-                FilingStatus::QualifyingSurvivingSpouse => vec![
-                    Bracket(1000.0, 0.0200),
-                    Bracket(2000.0, 0.0300),
-                    Bracket(3000.0, 0.0400),
-                    Bracket(150000.0, 0.0475),
-                    Bracket(175000.0, 0.0500),
-                    Bracket(225000.0, 0.0525),
-                    Bracket(300000.0, 0.0550),
-                    Bracket(f64::INFINITY, 0.0575),
-                ],
-                FilingStatus::HeadOfHousehold => vec![
-                    Bracket(1000.0, 0.0200),
-                    Bracket(2000.0, 0.0300),
-                    Bracket(3000.0, 0.0400),
-                    Bracket(150000.0, 0.0475),
-                    Bracket(175000.0, 0.0500),
-                    Bracket(225000.0, 0.0525),
-                    Bracket(300000.0, 0.0550),
-                    Bracket(f64::INFINITY, 0.0575),
-                ],
-                FilingStatus::Single => vec![
-                    Bracket(1000.0, 0.0200),
-                    Bracket(2000.0, 0.0300),
-                    Bracket(3000.0, 0.0400),
-                    Bracket(100000.0, 0.0475),
-                    Bracket(125000.0, 0.0500),
-                    Bracket(150000.0, 0.0525),
-                    Bracket(250000.0, 0.0550),
-                    Bracket(f64::INFINITY, 0.0575),
-                ],
-                FilingStatus::MarriedFilingJointly => vec![
-                    Bracket(1000.0, 0.0200),
-                    Bracket(2000.0, 0.0300),
-                    Bracket(3000.0, 0.0400),
-                    Bracket(150000.0, 0.0475),
-                    Bracket(175000.0, 0.0500),
-                    Bracket(225000.0, 0.0525),
-                    Bracket(300000.0, 0.0550),
-                    Bracket(f64::INFINITY, 0.0575),
-                ],
-                FilingStatus::MarriedFilingSeparately => vec![
-                    Bracket(1000.0, 0.0200),
-                    Bracket(2000.0, 0.0300),
-                    Bracket(3000.0, 0.0400),
-                    Bracket(100000.0, 0.0475),
-                    Bracket(125000.0, 0.0500),
-                    Bracket(150000.0, 0.0525),
-                    Bracket(250000.0, 0.0550),
-                    Bracket(f64::INFINITY, 0.0575),
-                ],
-            },
             2024 => match filing_status {
                 FilingStatus::HeadOfHousehold => vec![
                     Bracket(1000.0, 0.0200),
@@ -823,17 +1150,7 @@ pub fn get_tax_brackets(state: &str, year: i32, filing_status: &FilingStatus) ->
                     Bracket(300000.0, 0.0550),
                     Bracket(f64::INFINITY, 0.0575),
                 ],
-                FilingStatus::Single => vec![
-                    Bracket(1000.0, 0.0200),
-                    Bracket(2000.0, 0.0300),
-                    Bracket(3000.0, 0.0400),
-                    Bracket(100000.0, 0.0475),
-                    Bracket(125000.0, 0.0500),
-                    Bracket(150000.0, 0.0525),
-                    Bracket(250000.0, 0.0550),
-                    Bracket(f64::INFINITY, 0.0575),
-                ],
-                FilingStatus::QualifyingSurvivingSpouse => vec![
+                FilingStatus::MarriedFilingJointly => vec![
                     Bracket(1000.0, 0.0200),
                     Bracket(2000.0, 0.0300),
                     Bracket(3000.0, 0.0400),
@@ -853,6 +1170,38 @@ pub fn get_tax_brackets(state: &str, year: i32, filing_status: &FilingStatus) ->
                     Bracket(250000.0, 0.0550),
                     Bracket(f64::INFINITY, 0.0575),
                 ],
+                FilingStatus::QualifyingSurvivingSpouse => vec![
+                    Bracket(1000.0, 0.0200),
+                    Bracket(2000.0, 0.0300),
+                    Bracket(3000.0, 0.0400),
+                    Bracket(150000.0, 0.0475),
+                    Bracket(175000.0, 0.0500),
+                    Bracket(225000.0, 0.0525),
+                    Bracket(300000.0, 0.0550),
+                    Bracket(f64::INFINITY, 0.0575),
+                ],
+                FilingStatus::Single => vec![
+                    Bracket(1000.0, 0.0200),
+                    Bracket(2000.0, 0.0300),
+                    Bracket(3000.0, 0.0400),
+                    Bracket(100000.0, 0.0475),
+                    Bracket(125000.0, 0.0500),
+                    Bracket(150000.0, 0.0525),
+                    Bracket(250000.0, 0.0550),
+                    Bracket(f64::INFINITY, 0.0575),
+                ],
+            },
+            2025 => match filing_status {
+                FilingStatus::HeadOfHousehold => vec![
+                    Bracket(1000.0, 0.0200),
+                    Bracket(2000.0, 0.0300),
+                    Bracket(3000.0, 0.0400),
+                    Bracket(150000.0, 0.0475),
+                    Bracket(175000.0, 0.0500),
+                    Bracket(225000.0, 0.0525),
+                    Bracket(300000.0, 0.0550),
+                    Bracket(f64::INFINITY, 0.0575),
+                ],
                 FilingStatus::MarriedFilingJointly => vec![
                     Bracket(1000.0, 0.0200),
                     Bracket(2000.0, 0.0300),
@@ -861,6 +1210,36 @@ pub fn get_tax_brackets(state: &str, year: i32, filing_status: &FilingStatus) ->
                     Bracket(175000.0, 0.0500),
                     Bracket(225000.0, 0.0525),
                     Bracket(300000.0, 0.0550),
+                    Bracket(f64::INFINITY, 0.0575),
+                ],
+                FilingStatus::MarriedFilingSeparately => vec![
+                    Bracket(1000.0, 0.0200),
+                    Bracket(2000.0, 0.0300),
+                    Bracket(3000.0, 0.0400),
+                    Bracket(100000.0, 0.0475),
+                    Bracket(125000.0, 0.0500),
+                    Bracket(150000.0, 0.0525),
+                    Bracket(250000.0, 0.0550),
+                    Bracket(f64::INFINITY, 0.0575),
+                ],
+                FilingStatus::QualifyingSurvivingSpouse => vec![
+                    Bracket(1000.0, 0.0200),
+                    Bracket(2000.0, 0.0300),
+                    Bracket(3000.0, 0.0400),
+                    Bracket(150000.0, 0.0475),
+                    Bracket(175000.0, 0.0500),
+                    Bracket(225000.0, 0.0525),
+                    Bracket(300000.0, 0.0550),
+                    Bracket(f64::INFINITY, 0.0575),
+                ],
+                FilingStatus::Single => vec![
+                    Bracket(1000.0, 0.0200),
+                    Bracket(2000.0, 0.0300),
+                    Bracket(3000.0, 0.0400),
+                    Bracket(100000.0, 0.0475),
+                    Bracket(125000.0, 0.0500),
+                    Bracket(150000.0, 0.0525),
+                    Bracket(250000.0, 0.0550),
                     Bracket(f64::INFINITY, 0.0575),
                 ],
             },
@@ -878,92 +1257,257 @@ pub fn get_tax_brackets(state: &str, year: i32, filing_status: &FilingStatus) ->
                 ]
             }
         },
-        "or" => match year {
+        "me" => match year {
             2024 => match filing_status {
-                FilingStatus::MarriedFilingSeparately => vec![
-                    Bracket(50000.0, 0.0000),
-                    Bracket(125000.0, 0.0875),
-                    Bracket(f64::INFINITY, 0.0990),
-                ],
-                FilingStatus::QualifyingSurvivingSpouse => vec![
-                    Bracket(50000.0, 0.0000),
-                    Bracket(250000.0, 0.0875),
-                    Bracket(f64::INFINITY, 0.0990),
-                ],
-                FilingStatus::Single => vec![
-                    Bracket(50000.0, 0.0000),
-                    Bracket(125000.0, 0.0875),
-                    Bracket(f64::INFINITY, 0.0990),
-                ],
                 FilingStatus::HeadOfHousehold => vec![
-                    Bracket(50000.0, 0.0000),
-                    Bracket(250000.0, 0.0875),
-                    Bracket(f64::INFINITY, 0.0990),
+                    Bracket(39050.0, 0.0580),
+                    Bracket(92450.0, 0.0675),
+                    Bracket(f64::INFINITY, 0.0715),
                 ],
                 FilingStatus::MarriedFilingJointly => vec![
-                    Bracket(50000.0, 0.0000),
-                    Bracket(250000.0, 0.0875),
-                    Bracket(f64::INFINITY, 0.0990),
+                    Bracket(52100.0, 0.0580),
+                    Bracket(123250.0, 0.0675),
+                    Bracket(f64::INFINITY, 0.0715),
+                ],
+                FilingStatus::MarriedFilingSeparately => vec![
+                    Bracket(26050.0, 0.0580),
+                    Bracket(61600.0, 0.0675),
+                    Bracket(f64::INFINITY, 0.0715),
+                ],
+                FilingStatus::QualifyingSurvivingSpouse => vec![
+                    Bracket(52100.0, 0.0580),
+                    Bracket(123250.0, 0.0675),
+                    Bracket(f64::INFINITY, 0.0715),
+                ],
+                FilingStatus::Single => vec![
+                    Bracket(26050.0, 0.0580),
+                    Bracket(61600.0, 0.0675),
+                    Bracket(f64::INFINITY, 0.0715),
+                ],
+            },
+            2025 => match filing_status {
+                FilingStatus::HeadOfHousehold => vec![
+                    Bracket(40200.0, 0.0580),
+                    Bracket(95150.0, 0.0675),
+                    Bracket(f64::INFINITY, 0.0715),
+                ],
+                FilingStatus::MarriedFilingJointly => vec![
+                    Bracket(53600.0, 0.0580),
+                    Bracket(126900.0, 0.0675),
+                    Bracket(f64::INFINITY, 0.0715),
+                ],
+                FilingStatus::MarriedFilingSeparately => vec![
+                    Bracket(26800.0, 0.0580),
+                    Bracket(63450.0, 0.0675),
+                    Bracket(f64::INFINITY, 0.0715),
+                ],
+                FilingStatus::QualifyingSurvivingSpouse => vec![
+                    Bracket(53600.0, 0.0580),
+                    Bracket(126900.0, 0.0675),
+                    Bracket(f64::INFINITY, 0.0715),
+                ],
+                FilingStatus::Single => vec![
+                    Bracket(26800.0, 0.0580),
+                    Bracket(63450.0, 0.0675),
+                    Bracket(f64::INFINITY, 0.0715),
                 ],
             },
             _ => {
-                eprintln!("Year {} not supported for or. Defaulting to 2024 Single bracket.", year);
+                eprintln!("Year {} not supported for me. Defaulting to 2025 Single bracket.", year);
                 vec![
-                    Bracket(50000.0, 0.0),
-                    Bracket(125000.0, 0.1),
+                    Bracket(26800.0, 0.1),
+                    Bracket(63450.0, 0.1),
                     Bracket(f64::INFINITY, 0.1),
                 ]
             }
         },
-        "il" => match year {
+        "mi" => match year {
             2024 => match filing_status {
+                FilingStatus::HeadOfHousehold => vec![
+                    Bracket(f64::INFINITY, 0.0425),
+                ],
                 FilingStatus::MarriedFilingJointly => vec![
-                    Bracket(f64::INFINITY, 0.0495),
+                    Bracket(f64::INFINITY, 0.0425),
                 ],
                 FilingStatus::MarriedFilingSeparately => vec![
-                    Bracket(f64::INFINITY, 0.0495),
-                ],
-                FilingStatus::HeadOfHousehold => vec![
-                    Bracket(f64::INFINITY, 0.0495),
-                ],
-                FilingStatus::Single => vec![
-                    Bracket(f64::INFINITY, 0.0495),
+                    Bracket(f64::INFINITY, 0.0425),
                 ],
                 FilingStatus::QualifyingSurvivingSpouse => vec![
-                    Bracket(f64::INFINITY, 0.0495),
+                    Bracket(f64::INFINITY, 0.0425),
+                ],
+                FilingStatus::Single => vec![
+                    Bracket(f64::INFINITY, 0.0425),
                 ],
             },
             2025 => match filing_status {
-                FilingStatus::MarriedFilingSeparately => vec![
-                    Bracket(f64::INFINITY, 0.0495),
+                FilingStatus::HeadOfHousehold => vec![
+                    Bracket(f64::INFINITY, 0.0425),
                 ],
                 FilingStatus::MarriedFilingJointly => vec![
-                    Bracket(f64::INFINITY, 0.0495),
+                    Bracket(f64::INFINITY, 0.0425),
+                ],
+                FilingStatus::MarriedFilingSeparately => vec![
+                    Bracket(f64::INFINITY, 0.0425),
                 ],
                 FilingStatus::QualifyingSurvivingSpouse => vec![
-                    Bracket(f64::INFINITY, 0.0495),
+                    Bracket(f64::INFINITY, 0.0425),
                 ],
                 FilingStatus::Single => vec![
-                    Bracket(f64::INFINITY, 0.0495),
-                ],
-                FilingStatus::HeadOfHousehold => vec![
-                    Bracket(f64::INFINITY, 0.0495),
+                    Bracket(f64::INFINITY, 0.0425),
                 ],
             },
             _ => {
-                eprintln!("Year {} not supported for il. Defaulting to 2025 Single bracket.", year);
+                eprintln!("Year {} not supported for mi. Defaulting to 2025 Single bracket.", year);
                 vec![
+                    Bracket(f64::INFINITY, 0.0),
+                ]
+            }
+        },
+        "mn" => match year {
+            2024 => match filing_status {
+                FilingStatus::HeadOfHousehold => vec![
+                    Bracket(39010.0, 0.0535),
+                    Bracket(156760.0, 0.0680),
+                    Bracket(256880.0, 0.0785),
+                    Bracket(f64::INFINITY, 0.0985),
+                ],
+                FilingStatus::MarriedFilingJointly => vec![
+                    Bracket(46330.0, 0.0535),
+                    Bracket(184040.0, 0.0680),
+                    Bracket(321450.0, 0.0785),
+                    Bracket(f64::INFINITY, 0.0985),
+                ],
+                FilingStatus::MarriedFilingSeparately => vec![
+                    Bracket(23165.0, 0.0535),
+                    Bracket(92020.0, 0.0680),
+                    Bracket(160725.0, 0.0785),
+                    Bracket(f64::INFINITY, 0.0985),
+                ],
+                FilingStatus::QualifyingSurvivingSpouse => vec![
+                    Bracket(46330.0, 0.0535),
+                    Bracket(184040.0, 0.0680),
+                    Bracket(321450.0, 0.0785),
+                    Bracket(f64::INFINITY, 0.0985),
+                ],
+                FilingStatus::Single => vec![
+                    Bracket(31690.0, 0.0535),
+                    Bracket(104090.0, 0.0680),
+                    Bracket(193240.0, 0.0785),
+                    Bracket(f64::INFINITY, 0.0985),
+                ],
+            },
+            2025 => match filing_status {
+                FilingStatus::HeadOfHousehold => vec![
+                    Bracket(40100.0, 0.0535),
+                    Bracket(161130.0, 0.0680),
+                    Bracket(264050.0, 0.0785),
+                    Bracket(f64::INFINITY, 0.0985),
+                ],
+                FilingStatus::MarriedFilingJointly => vec![
+                    Bracket(47620.0, 0.0535),
+                    Bracket(189180.0, 0.0680),
+                    Bracket(330410.0, 0.0785),
+                    Bracket(f64::INFINITY, 0.0985),
+                ],
+                FilingStatus::MarriedFilingSeparately => vec![
+                    Bracket(23810.0, 0.0535),
+                    Bracket(94590.0, 0.0680),
+                    Bracket(165205.0, 0.0785),
+                    Bracket(f64::INFINITY, 0.0985),
+                ],
+                FilingStatus::QualifyingSurvivingSpouse => vec![
+                    Bracket(47620.0, 0.0535),
+                    Bracket(189180.0, 0.0680),
+                    Bracket(330410.0, 0.0785),
+                    Bracket(f64::INFINITY, 0.0985),
+                ],
+                FilingStatus::Single => vec![
+                    Bracket(32570.0, 0.0535),
+                    Bracket(106990.0, 0.0680),
+                    Bracket(198630.0, 0.0785),
+                    Bracket(f64::INFINITY, 0.0985),
+                ],
+            },
+            _ => {
+                eprintln!("Year {} not supported for mn. Defaulting to 2025 Single bracket.", year);
+                vec![
+                    Bracket(32570.0, 0.1),
+                    Bracket(106990.0, 0.1),
+                    Bracket(198630.0, 0.1),
+                    Bracket(f64::INFINITY, 0.1),
+                ]
+            }
+        },
+        "mo" => match year {
+            2024 => match filing_status {
+                FilingStatus::HeadOfHousehold => vec![
+                    Bracket(1273.0, 0.0000),
+                    Bracket(2546.0, 0.0200),
+                    Bracket(3819.0, 0.0250),
+                    Bracket(5092.0, 0.0300),
+                    Bracket(6365.0, 0.0350),
+                    Bracket(7638.0, 0.0400),
+                    Bracket(8911.0, 0.0450),
+                    Bracket(f64::INFINITY, 0.0480),
+                ],
+                FilingStatus::MarriedFilingJointly => vec![
+                    Bracket(1273.0, 0.0000),
+                    Bracket(2546.0, 0.0200),
+                    Bracket(3819.0, 0.0250),
+                    Bracket(5092.0, 0.0300),
+                    Bracket(6365.0, 0.0350),
+                    Bracket(7638.0, 0.0400),
+                    Bracket(8911.0, 0.0450),
+                    Bracket(f64::INFINITY, 0.0480),
+                ],
+                FilingStatus::MarriedFilingSeparately => vec![
+                    Bracket(1273.0, 0.0000),
+                    Bracket(2546.0, 0.0200),
+                    Bracket(3819.0, 0.0250),
+                    Bracket(5092.0, 0.0300),
+                    Bracket(6365.0, 0.0350),
+                    Bracket(7638.0, 0.0400),
+                    Bracket(8911.0, 0.0450),
+                    Bracket(f64::INFINITY, 0.0480),
+                ],
+                FilingStatus::QualifyingSurvivingSpouse => vec![
+                    Bracket(1273.0, 0.0000),
+                    Bracket(2546.0, 0.0200),
+                    Bracket(3819.0, 0.0250),
+                    Bracket(5092.0, 0.0300),
+                    Bracket(6365.0, 0.0350),
+                    Bracket(7638.0, 0.0400),
+                    Bracket(8911.0, 0.0450),
+                    Bracket(f64::INFINITY, 0.0480),
+                ],
+                FilingStatus::Single => vec![
+                    Bracket(1273.0, 0.0000),
+                    Bracket(2546.0, 0.0200),
+                    Bracket(3819.0, 0.0250),
+                    Bracket(5092.0, 0.0300),
+                    Bracket(6365.0, 0.0350),
+                    Bracket(7638.0, 0.0400),
+                    Bracket(8911.0, 0.0450),
+                    Bracket(f64::INFINITY, 0.0480),
+                ],
+            },
+            _ => {
+                eprintln!("Year {} not supported for mo. Defaulting to 2024 Single bracket.", year);
+                vec![
+                    Bracket(1273.0, 0.0),
+                    Bracket(2546.0, 0.0),
+                    Bracket(3819.0, 0.0),
+                    Bracket(5092.0, 0.0),
+                    Bracket(6365.0, 0.0),
+                    Bracket(7638.0, 0.0),
+                    Bracket(8911.0, 0.0),
                     Bracket(f64::INFINITY, 0.0),
                 ]
             }
         },
         "ms" => match year {
             2024 => match filing_status {
-                FilingStatus::Single => vec![
-                    Bracket(10000.0, 0.0000),
-                    Bracket(f64::INFINITY, 0.0470),
-                ],
-                FilingStatus::MarriedFilingSeparately => vec![
+                FilingStatus::HeadOfHousehold => vec![
                     Bracket(10000.0, 0.0000),
                     Bracket(f64::INFINITY, 0.0470),
                 ],
@@ -971,11 +1515,15 @@ pub fn get_tax_brackets(state: &str, year: i32, filing_status: &FilingStatus) ->
                     Bracket(10000.0, 0.0000),
                     Bracket(f64::INFINITY, 0.0470),
                 ],
+                FilingStatus::MarriedFilingSeparately => vec![
+                    Bracket(10000.0, 0.0000),
+                    Bracket(f64::INFINITY, 0.0470),
+                ],
                 FilingStatus::QualifyingSurvivingSpouse => vec![
                     Bracket(10000.0, 0.0000),
                     Bracket(f64::INFINITY, 0.0470),
                 ],
-                FilingStatus::HeadOfHousehold => vec![
+                FilingStatus::Single => vec![
                     Bracket(10000.0, 0.0000),
                     Bracket(f64::INFINITY, 0.0470),
                 ],
@@ -985,10 +1533,6 @@ pub fn get_tax_brackets(state: &str, year: i32, filing_status: &FilingStatus) ->
                     Bracket(10000.0, 0.0000),
                     Bracket(f64::INFINITY, 0.0440),
                 ],
-                FilingStatus::Single => vec![
-                    Bracket(10000.0, 0.0000),
-                    Bracket(f64::INFINITY, 0.0440),
-                ],
                 FilingStatus::MarriedFilingJointly => vec![
                     Bracket(10000.0, 0.0000),
                     Bracket(f64::INFINITY, 0.0440),
@@ -998,6 +1542,10 @@ pub fn get_tax_brackets(state: &str, year: i32, filing_status: &FilingStatus) ->
                     Bracket(f64::INFINITY, 0.0440),
                 ],
                 FilingStatus::QualifyingSurvivingSpouse => vec![
+                    Bracket(10000.0, 0.0000),
+                    Bracket(f64::INFINITY, 0.0440),
+                ],
+                FilingStatus::Single => vec![
                     Bracket(10000.0, 0.0000),
                     Bracket(f64::INFINITY, 0.0440),
                 ],
@@ -1010,7 +1558,176 @@ pub fn get_tax_brackets(state: &str, year: i32, filing_status: &FilingStatus) ->
                 ]
             }
         },
+        "mt" => match year {
+            2024 => match filing_status {
+                FilingStatus::HeadOfHousehold => vec![
+                    Bracket(30750.0, 0.0470),
+                    Bracket(f64::INFINITY, 0.0590),
+                ],
+                FilingStatus::MarriedFilingJointly => vec![
+                    Bracket(41000.0, 0.0470),
+                    Bracket(f64::INFINITY, 0.0590),
+                ],
+                FilingStatus::MarriedFilingSeparately => vec![
+                    Bracket(20500.0, 0.0470),
+                    Bracket(f64::INFINITY, 0.0590),
+                ],
+                FilingStatus::QualifyingSurvivingSpouse => vec![
+                    Bracket(41000.0, 0.0470),
+                    Bracket(f64::INFINITY, 0.0590),
+                ],
+                FilingStatus::Single => vec![
+                    Bracket(20500.0, 0.0470),
+                    Bracket(f64::INFINITY, 0.0590),
+                ],
+            },
+            _ => {
+                eprintln!("Year {} not supported for mt. Defaulting to 2024 Single bracket.", year);
+                vec![
+                    Bracket(20500.0, 0.0),
+                    Bracket(f64::INFINITY, 0.1),
+                ]
+            }
+        },
+        "nc" => match year {
+            2024 => match filing_status {
+                FilingStatus::HeadOfHousehold => vec![
+                    Bracket(f64::INFINITY, 0.0450),
+                ],
+                FilingStatus::MarriedFilingJointly => vec![
+                    Bracket(f64::INFINITY, 0.0450),
+                ],
+                FilingStatus::MarriedFilingSeparately => vec![
+                    Bracket(f64::INFINITY, 0.0450),
+                ],
+                FilingStatus::QualifyingSurvivingSpouse => vec![
+                    Bracket(f64::INFINITY, 0.0450),
+                ],
+                FilingStatus::Single => vec![
+                    Bracket(f64::INFINITY, 0.0450),
+                ],
+            },
+            2025 => match filing_status {
+                FilingStatus::HeadOfHousehold => vec![
+                    Bracket(f64::INFINITY, 0.0425),
+                ],
+                FilingStatus::MarriedFilingJointly => vec![
+                    Bracket(f64::INFINITY, 0.0425),
+                ],
+                FilingStatus::MarriedFilingSeparately => vec![
+                    Bracket(f64::INFINITY, 0.0425),
+                ],
+                FilingStatus::QualifyingSurvivingSpouse => vec![
+                    Bracket(f64::INFINITY, 0.0425),
+                ],
+                FilingStatus::Single => vec![
+                    Bracket(f64::INFINITY, 0.0425),
+                ],
+            },
+            _ => {
+                eprintln!("Year {} not supported for nc. Defaulting to 2025 Single bracket.", year);
+                vec![
+                    Bracket(f64::INFINITY, 0.0),
+                ]
+            }
+        },
+        "nd" => match year {
+            2024 => match filing_status {
+                FilingStatus::HeadOfHousehold => vec![
+                    Bracket(63175.0, 0.0000),
+                    Bracket(264100.0, 0.0195),
+                    Bracket(f64::INFINITY, 0.0250),
+                ],
+                FilingStatus::MarriedFilingJointly => vec![
+                    Bracket(78775.0, 0.0000),
+                    Bracket(289975.0, 0.0195),
+                    Bracket(f64::INFINITY, 0.0250),
+                ],
+                FilingStatus::MarriedFilingSeparately => vec![
+                    Bracket(39375.0, 0.0000),
+                    Bracket(144975.0, 0.0195),
+                    Bracket(f64::INFINITY, 0.0250),
+                ],
+                FilingStatus::QualifyingSurvivingSpouse => vec![
+                    Bracket(78775.0, 0.0000),
+                    Bracket(289975.0, 0.0195),
+                    Bracket(f64::INFINITY, 0.0250),
+                ],
+                FilingStatus::Single => vec![
+                    Bracket(47150.0, 0.0000),
+                    Bracket(238200.0, 0.0195),
+                    Bracket(f64::INFINITY, 0.0250),
+                ],
+            },
+            2025 => match filing_status {
+                FilingStatus::HeadOfHousehold => vec![
+                    Bracket(64950.0, 0.0000),
+                    Bracket(271450.0, 0.0195),
+                    Bracket(f64::INFINITY, 0.0250),
+                ],
+                FilingStatus::MarriedFilingJointly => vec![
+                    Bracket(80975.0, 0.0000),
+                    Bracket(298075.0, 0.0195),
+                    Bracket(f64::INFINITY, 0.0250),
+                ],
+                FilingStatus::MarriedFilingSeparately => vec![
+                    Bracket(40475.0, 0.0000),
+                    Bracket(149025.0, 0.0195),
+                    Bracket(f64::INFINITY, 0.0250),
+                ],
+                FilingStatus::QualifyingSurvivingSpouse => vec![
+                    Bracket(80975.0, 0.0000),
+                    Bracket(298075.0, 0.0195),
+                    Bracket(f64::INFINITY, 0.0250),
+                ],
+                FilingStatus::Single => vec![
+                    Bracket(48475.0, 0.0000),
+                    Bracket(244825.0, 0.0195),
+                    Bracket(f64::INFINITY, 0.0250),
+                ],
+            },
+            _ => {
+                eprintln!("Year {} not supported for nd. Defaulting to 2025 Single bracket.", year);
+                vec![
+                    Bracket(48475.0, 0.0),
+                    Bracket(244825.0, 0.0),
+                    Bracket(f64::INFINITY, 0.0),
+                ]
+            }
+        },
         "ne" => match year {
+            2024 => match filing_status {
+                FilingStatus::HeadOfHousehold => vec![
+                    Bracket(5599.0, 0.0246),
+                    Bracket(28799.0, 0.0351),
+                    Bracket(42999.0, 0.0501),
+                    Bracket(f64::INFINITY, 0.0584),
+                ],
+                FilingStatus::MarriedFilingJointly => vec![
+                    Bracket(5999.0, 0.0246),
+                    Bracket(35999.0, 0.0351),
+                    Bracket(57999.0, 0.0501),
+                    Bracket(f64::INFINITY, 0.0584),
+                ],
+                FilingStatus::MarriedFilingSeparately => vec![
+                    Bracket(2999.0, 0.0246),
+                    Bracket(17999.0, 0.0351),
+                    Bracket(28999.0, 0.0501),
+                    Bracket(f64::INFINITY, 0.0584),
+                ],
+                FilingStatus::QualifyingSurvivingSpouse => vec![
+                    Bracket(5999.0, 0.0246),
+                    Bracket(35999.0, 0.0351),
+                    Bracket(57999.0, 0.0501),
+                    Bracket(f64::INFINITY, 0.0584),
+                ],
+                FilingStatus::Single => vec![
+                    Bracket(2999.0, 0.0246),
+                    Bracket(17999.0, 0.0351),
+                    Bracket(28999.0, 0.0501),
+                    Bracket(f64::INFINITY, 0.0584),
+                ],
+            },
             2025 => match filing_status {
                 FilingStatus::HeadOfHousehold => vec![
                     Bracket(5599.0, 0.0246),
@@ -1024,16 +1741,16 @@ pub fn get_tax_brackets(state: &str, year: i32, filing_status: &FilingStatus) ->
                     Bracket(57999.0, 0.0501),
                     Bracket(f64::INFINITY, 0.0520),
                 ],
-                FilingStatus::QualifyingSurvivingSpouse => vec![
-                    Bracket(5999.0, 0.0246),
-                    Bracket(35999.0, 0.0351),
-                    Bracket(57999.0, 0.0501),
-                    Bracket(f64::INFINITY, 0.0520),
-                ],
                 FilingStatus::MarriedFilingSeparately => vec![
                     Bracket(2999.0, 0.0246),
                     Bracket(17999.0, 0.0351),
                     Bracket(28999.0, 0.0501),
+                    Bracket(f64::INFINITY, 0.0520),
+                ],
+                FilingStatus::QualifyingSurvivingSpouse => vec![
+                    Bracket(5999.0, 0.0246),
+                    Bracket(35999.0, 0.0351),
+                    Bracket(57999.0, 0.0501),
                     Bracket(f64::INFINITY, 0.0520),
                 ],
                 FilingStatus::Single => vec![
@@ -1041,38 +1758,6 @@ pub fn get_tax_brackets(state: &str, year: i32, filing_status: &FilingStatus) ->
                     Bracket(17999.0, 0.0351),
                     Bracket(28999.0, 0.0501),
                     Bracket(f64::INFINITY, 0.0520),
-                ],
-            },
-            2024 => match filing_status {
-                FilingStatus::HeadOfHousehold => vec![
-                    Bracket(5599.0, 0.0246),
-                    Bracket(28799.0, 0.0351),
-                    Bracket(42999.0, 0.0501),
-                    Bracket(f64::INFINITY, 0.0584),
-                ],
-                FilingStatus::QualifyingSurvivingSpouse => vec![
-                    Bracket(5999.0, 0.0246),
-                    Bracket(35999.0, 0.0351),
-                    Bracket(57999.0, 0.0501),
-                    Bracket(f64::INFINITY, 0.0584),
-                ],
-                FilingStatus::MarriedFilingSeparately => vec![
-                    Bracket(2999.0, 0.0246),
-                    Bracket(17999.0, 0.0351),
-                    Bracket(28999.0, 0.0501),
-                    Bracket(f64::INFINITY, 0.0584),
-                ],
-                FilingStatus::Single => vec![
-                    Bracket(2999.0, 0.0246),
-                    Bracket(17999.0, 0.0351),
-                    Bracket(28999.0, 0.0501),
-                    Bracket(f64::INFINITY, 0.0584),
-                ],
-                FilingStatus::MarriedFilingJointly => vec![
-                    Bracket(5999.0, 0.0246),
-                    Bracket(35999.0, 0.0351),
-                    Bracket(57999.0, 0.0501),
-                    Bracket(f64::INFINITY, 0.0584),
                 ],
             },
             _ => {
@@ -1085,119 +1770,18 @@ pub fn get_tax_brackets(state: &str, year: i32, filing_status: &FilingStatus) ->
                 ]
             }
         },
-        "ri" => match year {
-            2025 => match filing_status {
-                FilingStatus::QualifyingSurvivingSpouse => vec![
-                    Bracket(79900.0, 0.0375),
-                    Bracket(181650.0, 0.0475),
-                    Bracket(f64::INFINITY, 0.0599),
-                ],
-                FilingStatus::MarriedFilingSeparately => vec![
-                    Bracket(79900.0, 0.0375),
-                    Bracket(181650.0, 0.0475),
-                    Bracket(f64::INFINITY, 0.0599),
-                ],
-                FilingStatus::MarriedFilingJointly => vec![
-                    Bracket(79900.0, 0.0375),
-                    Bracket(181650.0, 0.0475),
-                    Bracket(f64::INFINITY, 0.0599),
-                ],
-                FilingStatus::HeadOfHousehold => vec![
-                    Bracket(79900.0, 0.0375),
-                    Bracket(181650.0, 0.0475),
-                    Bracket(f64::INFINITY, 0.0599),
-                ],
-                FilingStatus::Single => vec![
-                    Bracket(79900.0, 0.0375),
-                    Bracket(181650.0, 0.0475),
-                    Bracket(f64::INFINITY, 0.0599),
-                ],
-            },
+        "nh" => match year {
             2024 => match filing_status {
-                FilingStatus::MarriedFilingSeparately => vec![
-                    Bracket(77450.0, 0.0375),
-                    Bracket(176050.0, 0.0475),
-                    Bracket(f64::INFINITY, 0.0599),
-                ],
-                FilingStatus::HeadOfHousehold => vec![
-                    Bracket(77450.0, 0.0375),
-                    Bracket(176050.0, 0.0475),
-                    Bracket(f64::INFINITY, 0.0599),
-                ],
-                FilingStatus::Single => vec![
-                    Bracket(77450.0, 0.0375),
-                    Bracket(176050.0, 0.0475),
-                    Bracket(f64::INFINITY, 0.0599),
-                ],
-                FilingStatus::MarriedFilingJointly => vec![
-                    Bracket(77450.0, 0.0375),
-                    Bracket(176050.0, 0.0475),
-                    Bracket(f64::INFINITY, 0.0599),
-                ],
-                FilingStatus::QualifyingSurvivingSpouse => vec![
-                    Bracket(77450.0, 0.0375),
-                    Bracket(176050.0, 0.0475),
-                    Bracket(f64::INFINITY, 0.0599),
-                ],
-            },
-            _ => {
-                eprintln!("Year {} not supported for ri. Defaulting to 2025 Single bracket.", year);
-                vec![
-                    Bracket(79900.0, 0.0),
-                    Bracket(181650.0, 0.0),
-                    Bracket(f64::INFINITY, 0.1),
-                ]
-            }
-        },
-        "oh" => match year {
-            2024 => match filing_status {
-                FilingStatus::QualifyingSurvivingSpouse => vec![
-                    Bracket(26050.0, 0.0000),
-                    Bracket(100000.0, 0.0275),
-                    Bracket(f64::INFINITY, 0.0350),
-                ],
-                FilingStatus::MarriedFilingJointly => vec![
-                    Bracket(26050.0, 0.0000),
-                    Bracket(100000.0, 0.0275),
-                    Bracket(f64::INFINITY, 0.0350),
-                ],
-                FilingStatus::HeadOfHousehold => vec![
-                    Bracket(26050.0, 0.0000),
-                    Bracket(100000.0, 0.0275),
-                    Bracket(f64::INFINITY, 0.0350),
-                ],
-                FilingStatus::Single => vec![
-                    Bracket(26050.0, 0.0000),
-                    Bracket(100000.0, 0.0275),
-                    Bracket(f64::INFINITY, 0.0350),
-                ],
-                FilingStatus::MarriedFilingSeparately => vec![
-                    Bracket(26050.0, 0.0000),
-                    Bracket(100000.0, 0.0275),
-                    Bracket(f64::INFINITY, 0.0350),
-                ],
-            },
-            _ => {
-                eprintln!("Year {} not supported for oh. Defaulting to 2024 Single bracket.", year);
-                vec![
-                    Bracket(26050.0, 0.0),
-                    Bracket(100000.0, 0.0),
-                    Bracket(f64::INFINITY, 0.0),
-                ]
-            }
-        },
-        "tx" => match year {
-            2024 => match filing_status {
-                FilingStatus::MarriedFilingSeparately => vec![
-                    Bracket(f64::INFINITY, 0.0000),
-                ],
-                FilingStatus::QualifyingSurvivingSpouse => vec![
-                    Bracket(f64::INFINITY, 0.0000),
-                ],
                 FilingStatus::HeadOfHousehold => vec![
                     Bracket(f64::INFINITY, 0.0000),
                 ],
                 FilingStatus::MarriedFilingJointly => vec![
+                    Bracket(f64::INFINITY, 0.0000),
+                ],
+                FilingStatus::MarriedFilingSeparately => vec![
+                    Bracket(f64::INFINITY, 0.0000),
+                ],
+                FilingStatus::QualifyingSurvivingSpouse => vec![
                     Bracket(f64::INFINITY, 0.0000),
                 ],
                 FilingStatus::Single => vec![
@@ -1205,345 +1789,26 @@ pub fn get_tax_brackets(state: &str, year: i32, filing_status: &FilingStatus) ->
                 ],
             },
             2025 => match filing_status {
-                FilingStatus::Single => vec![
+                FilingStatus::HeadOfHousehold => vec![
                     Bracket(f64::INFINITY, 0.0000),
                 ],
                 FilingStatus::MarriedFilingJointly => vec![
                     Bracket(f64::INFINITY, 0.0000),
                 ],
                 FilingStatus::MarriedFilingSeparately => vec![
-                    Bracket(f64::INFINITY, 0.0000),
-                ],
-                FilingStatus::HeadOfHousehold => vec![
                     Bracket(f64::INFINITY, 0.0000),
                 ],
                 FilingStatus::QualifyingSurvivingSpouse => vec![
                     Bracket(f64::INFINITY, 0.0000),
                 ],
+                FilingStatus::Single => vec![
+                    Bracket(f64::INFINITY, 0.0000),
+                ],
             },
             _ => {
-                eprintln!("Year {} not supported for tx. Defaulting to 2025 Single bracket.", year);
+                eprintln!("Year {} not supported for nh. Defaulting to 2025 Single bracket.", year);
                 vec![
                     Bracket(f64::INFINITY, 0.0),
-                ]
-            }
-        },
-        "ga" => match year {
-            2025 => match filing_status {
-                FilingStatus::Single => vec![
-                    Bracket(f64::INFINITY, 0.0519),
-                ],
-                FilingStatus::QualifyingSurvivingSpouse => vec![
-                    Bracket(f64::INFINITY, 0.0519),
-                ],
-                FilingStatus::HeadOfHousehold => vec![
-                    Bracket(f64::INFINITY, 0.0519),
-                ],
-                FilingStatus::MarriedFilingSeparately => vec![
-                    Bracket(f64::INFINITY, 0.0519),
-                ],
-                FilingStatus::MarriedFilingJointly => vec![
-                    Bracket(f64::INFINITY, 0.0519),
-                ],
-            },
-            2024 => match filing_status {
-                FilingStatus::QualifyingSurvivingSpouse => vec![
-                    Bracket(f64::INFINITY, 0.0539),
-                ],
-                FilingStatus::MarriedFilingSeparately => vec![
-                    Bracket(f64::INFINITY, 0.0539),
-                ],
-                FilingStatus::Single => vec![
-                    Bracket(f64::INFINITY, 0.0539),
-                ],
-                FilingStatus::HeadOfHousehold => vec![
-                    Bracket(f64::INFINITY, 0.0539),
-                ],
-                FilingStatus::MarriedFilingJointly => vec![
-                    Bracket(f64::INFINITY, 0.0539),
-                ],
-            },
-            _ => {
-                eprintln!("Year {} not supported for ga. Defaulting to 2025 Single bracket.", year);
-                vec![
-                    Bracket(f64::INFINITY, 0.1),
-                ]
-            }
-        },
-        "ia" => match year {
-            2025 => match filing_status {
-                FilingStatus::MarriedFilingSeparately => vec![
-                    Bracket(f64::INFINITY, 0.0380),
-                ],
-                FilingStatus::Single => vec![
-                    Bracket(f64::INFINITY, 0.0380),
-                ],
-                FilingStatus::HeadOfHousehold => vec![
-                    Bracket(f64::INFINITY, 0.0380),
-                ],
-                FilingStatus::QualifyingSurvivingSpouse => vec![
-                    Bracket(f64::INFINITY, 0.0380),
-                ],
-                FilingStatus::MarriedFilingJointly => vec![
-                    Bracket(f64::INFINITY, 0.0380),
-                ],
-            },
-            2024 => match filing_status {
-                FilingStatus::MarriedFilingSeparately => vec![
-                    Bracket(6210.0, 0.0440),
-                    Bracket(31050.0, 0.0482),
-                    Bracket(f64::INFINITY, 0.0570),
-                ],
-                FilingStatus::HeadOfHousehold => vec![
-                    Bracket(6210.0, 0.0440),
-                    Bracket(31050.0, 0.0482),
-                    Bracket(f64::INFINITY, 0.0570),
-                ],
-                FilingStatus::QualifyingSurvivingSpouse => vec![
-                    Bracket(12420.0, 0.0440),
-                    Bracket(62100.0, 0.0482),
-                    Bracket(f64::INFINITY, 0.0570),
-                ],
-                FilingStatus::MarriedFilingJointly => vec![
-                    Bracket(12420.0, 0.0440),
-                    Bracket(62100.0, 0.0482),
-                    Bracket(f64::INFINITY, 0.0570),
-                ],
-                FilingStatus::Single => vec![
-                    Bracket(6210.0, 0.0440),
-                    Bracket(31050.0, 0.0482),
-                    Bracket(f64::INFINITY, 0.0570),
-                ],
-            },
-            _ => {
-                eprintln!("Year {} not supported for ia. Defaulting to 2025 Single bracket.", year);
-                vec![
-                    Bracket(f64::INFINITY, 0.0),
-                ]
-            }
-        },
-        "ky" => match year {
-            2024 => match filing_status {
-                FilingStatus::MarriedFilingJointly => vec![
-                    Bracket(f64::INFINITY, 0.0400),
-                ],
-                FilingStatus::Single => vec![
-                    Bracket(f64::INFINITY, 0.0400),
-                ],
-                FilingStatus::QualifyingSurvivingSpouse => vec![
-                    Bracket(f64::INFINITY, 0.0400),
-                ],
-                FilingStatus::HeadOfHousehold => vec![
-                    Bracket(f64::INFINITY, 0.4000),
-                ],
-                FilingStatus::MarriedFilingSeparately => vec![
-                    Bracket(f64::INFINITY, 0.0400),
-                ],
-            },
-            2025 => match filing_status {
-                FilingStatus::HeadOfHousehold => vec![
-                    Bracket(f64::INFINITY, 0.0400),
-                ],
-                FilingStatus::MarriedFilingSeparately => vec![
-                    Bracket(f64::INFINITY, 0.0400),
-                ],
-                FilingStatus::Single => vec![
-                    Bracket(f64::INFINITY, 0.0400),
-                ],
-                FilingStatus::QualifyingSurvivingSpouse => vec![
-                    Bracket(f64::INFINITY, 0.0400),
-                ],
-                FilingStatus::MarriedFilingJointly => vec![
-                    Bracket(f64::INFINITY, 0.0400),
-                ],
-            },
-            _ => {
-                eprintln!("Year {} not supported for ky. Defaulting to 2025 Single bracket.", year);
-                vec![
-                    Bracket(f64::INFINITY, 0.0),
-                ]
-            }
-        },
-        "al" => match year {
-            2024 => match filing_status {
-                FilingStatus::Single => vec![
-                    Bracket(500.0, 0.0200),
-                    Bracket(3000.0, 0.0400),
-                    Bracket(f64::INFINITY, 0.0500),
-                ],
-                FilingStatus::MarriedFilingSeparately => vec![
-                    Bracket(500.0, 0.0200),
-                    Bracket(3000.0, 0.0400),
-                    Bracket(f64::INFINITY, 0.0500),
-                ],
-                FilingStatus::QualifyingSurvivingSpouse => vec![
-                    Bracket(1000.0, 0.0200),
-                    Bracket(6000.0, 0.0400),
-                    Bracket(f64::INFINITY, 0.0500),
-                ],
-                FilingStatus::HeadOfHousehold => vec![
-                    Bracket(500.0, 0.0200),
-                    Bracket(3000.0, 0.0400),
-                    Bracket(f64::INFINITY, 0.0500),
-                ],
-                FilingStatus::MarriedFilingJointly => vec![
-                    Bracket(1000.0, 0.0200),
-                    Bracket(6000.0, 0.0400),
-                    Bracket(f64::INFINITY, 0.0500),
-                ],
-            },
-            _ => {
-                eprintln!("Year {} not supported for al. Defaulting to 2024 Single bracket.", year);
-                vec![
-                    Bracket(500.0, 0.0),
-                    Bracket(3000.0, 0.0),
-                    Bracket(f64::INFINITY, 0.1),
-                ]
-            }
-        },
-        "az" => match year {
-            2024 => match filing_status {
-                FilingStatus::HeadOfHousehold => vec![
-                    Bracket(f64::INFINITY, 0.0250),
-                ],
-                FilingStatus::MarriedFilingSeparately => vec![
-                    Bracket(f64::INFINITY, 0.0250),
-                ],
-                FilingStatus::QualifyingSurvivingSpouse => vec![
-                    Bracket(f64::INFINITY, 0.0250),
-                ],
-                FilingStatus::MarriedFilingJointly => vec![
-                    Bracket(f64::INFINITY, 0.0250),
-                ],
-                FilingStatus::Single => vec![
-                    Bracket(f64::INFINITY, 0.0250),
-                ],
-            },
-            2025 => match filing_status {
-                FilingStatus::MarriedFilingJointly => vec![
-                    Bracket(f64::INFINITY, 0.0250),
-                ],
-                FilingStatus::MarriedFilingSeparately => vec![
-                    Bracket(f64::INFINITY, 0.0250),
-                ],
-                FilingStatus::HeadOfHousehold => vec![
-                    Bracket(f64::INFINITY, 0.0250),
-                ],
-                FilingStatus::QualifyingSurvivingSpouse => vec![
-                    Bracket(f64::INFINITY, 0.0250),
-                ],
-                FilingStatus::Single => vec![
-                    Bracket(f64::INFINITY, 0.0250),
-                ],
-            },
-            _ => {
-                eprintln!("Year {} not supported for az. Defaulting to 2025 Single bracket.", year);
-                vec![
-                    Bracket(f64::INFINITY, 0.0),
-                ]
-            }
-        },
-        "ny" => match year {
-            2024 => match filing_status {
-                FilingStatus::Single => vec![
-                    Bracket(8500.0, 0.0400),
-                    Bracket(11700.0, 0.0450),
-                    Bracket(13900.0, 0.0525),
-                    Bracket(80650.0, 0.0550),
-                    Bracket(215400.0, 0.0600),
-                    Bracket(1077550.0, 0.0685),
-                    Bracket(5000000.0, 0.0965),
-                    Bracket(25000000.0, 0.0103),
-                    Bracket(f64::INFINITY, 0.0109),
-                ],
-                FilingStatus::MarriedFilingSeparately => vec![
-                    Bracket(8500.0, 0.0400),
-                    Bracket(11700.0, 0.0450),
-                    Bracket(13900.0, 0.0525),
-                    Bracket(80650.0, 0.0550),
-                    Bracket(215400.0, 0.0600),
-                    Bracket(1077550.0, 0.0685),
-                    Bracket(5000000.0, 0.0965),
-                    Bracket(25000000.0, 0.0103),
-                    Bracket(f64::INFINITY, 0.0109),
-                ],
-                FilingStatus::MarriedFilingJointly => vec![
-                    Bracket(17150.0, 0.0400),
-                    Bracket(23600.0, 0.0450),
-                    Bracket(27900.0, 0.0525),
-                    Bracket(161550.0, 0.0550),
-                    Bracket(323200.0, 0.0600),
-                    Bracket(2155350.0, 0.0685),
-                    Bracket(5000000.0, 0.0965),
-                    Bracket(25000000.0, 0.0103),
-                    Bracket(f64::INFINITY, 0.0109),
-                ],
-                FilingStatus::HeadOfHousehold => vec![
-                    Bracket(12800.0, 0.0400),
-                    Bracket(17650.0, 0.0450),
-                    Bracket(20900.0, 0.0525),
-                    Bracket(107650.0, 0.0550),
-                    Bracket(269300.0, 0.0600),
-                    Bracket(1616450.0, 0.0685),
-                    Bracket(5000000.0, 0.0965),
-                    Bracket(25000000.0, 0.0103),
-                    Bracket(f64::INFINITY, 0.0109),
-                ],
-                FilingStatus::QualifyingSurvivingSpouse => vec![
-                    Bracket(17150.0, 0.0400),
-                    Bracket(23600.0, 0.0450),
-                    Bracket(27900.0, 0.0525),
-                    Bracket(161550.0, 0.0550),
-                    Bracket(323200.0, 0.0600),
-                    Bracket(2155350.0, 0.0685),
-                    Bracket(5000000.0, 0.0965),
-                    Bracket(25000000.0, 0.0103),
-                    Bracket(f64::INFINITY, 0.0109),
-                ],
-            },
-            _ => {
-                eprintln!("Year {} not supported for ny. Defaulting to 2024 Single bracket.", year);
-                vec![
-                    Bracket(8500.0, 0.0),
-                    Bracket(11700.0, 0.0),
-                    Bracket(13900.0, 0.1),
-                    Bracket(80650.0, 0.1),
-                    Bracket(215400.0, 0.1),
-                    Bracket(1077550.0, 0.1),
-                    Bracket(5000000.0, 0.1),
-                    Bracket(25000000.0, 0.0),
-                    Bracket(f64::INFINITY, 0.0),
-                ]
-            }
-        },
-        "ks" => match year {
-            2024 => match filing_status {
-                FilingStatus::QualifyingSurvivingSpouse => vec![
-                    Bracket(46000.0, 0.0520),
-                    Bracket(f64::INFINITY, 0.0558),
-                ],
-                FilingStatus::MarriedFilingJointly => vec![
-                    Bracket(46000.0, 0.0520),
-                    Bracket(f64::INFINITY, 0.0558),
-                ],
-                FilingStatus::Single => vec![
-                    Bracket(23000.0, 0.0520),
-                    Bracket(f64::INFINITY, 0.0558),
-                ],
-                FilingStatus::MarriedFilingSeparately => vec![
-                    Bracket(23000.0, 0.0520),
-                    Bracket(f64::INFINITY, 0.0558),
-                ],
-                FilingStatus::HeadOfHousehold => vec![
-                    Bracket(23000.0, 0.0520),
-                    Bracket(f64::INFINITY, 0.0558),
-                ],
-            },
-            _ => {
-                eprintln!("Year {} not supported for ks. Defaulting to 2024 Single bracket.", year);
-                vec![
-                    Bracket(23000.0, 0.1),
-                    Bracket(f64::INFINITY, 0.1),
                 ]
             }
         },
@@ -1567,6 +1832,15 @@ pub fn get_tax_brackets(state: &str, year: i32, filing_status: &FilingStatus) ->
                     Bracket(1000000.0, 0.0897),
                     Bracket(f64::INFINITY, 0.1075),
                 ],
+                FilingStatus::MarriedFilingSeparately => vec![
+                    Bracket(20000.0, 0.0140),
+                    Bracket(35000.0, 0.0175),
+                    Bracket(40000.0, 0.0350),
+                    Bracket(75000.0, 0.0553),
+                    Bracket(500000.0, 0.0637),
+                    Bracket(1000000.0, 0.0897),
+                    Bracket(f64::INFINITY, 0.1075),
+                ],
                 FilingStatus::QualifyingSurvivingSpouse => vec![
                     Bracket(20000.0, 0.0140),
                     Bracket(50000.0, 0.0175),
@@ -1577,15 +1851,6 @@ pub fn get_tax_brackets(state: &str, year: i32, filing_status: &FilingStatus) ->
                     Bracket(f64::INFINITY, 0.1075),
                 ],
                 FilingStatus::Single => vec![
-                    Bracket(20000.0, 0.0140),
-                    Bracket(35000.0, 0.0175),
-                    Bracket(40000.0, 0.0350),
-                    Bracket(75000.0, 0.0553),
-                    Bracket(500000.0, 0.0637),
-                    Bracket(1000000.0, 0.0897),
-                    Bracket(f64::INFINITY, 0.1075),
-                ],
-                FilingStatus::MarriedFilingSeparately => vec![
                     Bracket(20000.0, 0.0140),
                     Bracket(35000.0, 0.0175),
                     Bracket(40000.0, 0.0350),
@@ -1596,30 +1861,12 @@ pub fn get_tax_brackets(state: &str, year: i32, filing_status: &FilingStatus) ->
                 ],
             },
             2025 => match filing_status {
-                FilingStatus::QualifyingSurvivingSpouse => vec![
-                    Bracket(20000.0, 0.0140),
-                    Bracket(50000.0, 0.0175),
-                    Bracket(70000.0, 0.0350),
-                    Bracket(80000.0, 0.0553),
-                    Bracket(150000.0, 0.0637),
-                    Bracket(1000000.0, 0.0897),
-                    Bracket(f64::INFINITY, 0.1075),
-                ],
                 FilingStatus::HeadOfHousehold => vec![
                     Bracket(20000.0, 0.0140),
                     Bracket(50000.0, 0.0175),
                     Bracket(70000.0, 0.0350),
                     Bracket(80000.0, 0.0553),
                     Bracket(150000.0, 0.0637),
-                    Bracket(1000000.0, 0.0897),
-                    Bracket(f64::INFINITY, 0.1075),
-                ],
-                FilingStatus::Single => vec![
-                    Bracket(20000.0, 0.0140),
-                    Bracket(35000.0, 0.0175),
-                    Bracket(40000.0, 0.0350),
-                    Bracket(75000.0, 0.0553),
-                    Bracket(500000.0, 0.0637),
                     Bracket(1000000.0, 0.0897),
                     Bracket(f64::INFINITY, 0.1075),
                 ],
@@ -1633,6 +1880,24 @@ pub fn get_tax_brackets(state: &str, year: i32, filing_status: &FilingStatus) ->
                     Bracket(f64::INFINITY, 0.1075),
                 ],
                 FilingStatus::MarriedFilingSeparately => vec![
+                    Bracket(20000.0, 0.0140),
+                    Bracket(35000.0, 0.0175),
+                    Bracket(40000.0, 0.0350),
+                    Bracket(75000.0, 0.0553),
+                    Bracket(500000.0, 0.0637),
+                    Bracket(1000000.0, 0.0897),
+                    Bracket(f64::INFINITY, 0.1075),
+                ],
+                FilingStatus::QualifyingSurvivingSpouse => vec![
+                    Bracket(20000.0, 0.0140),
+                    Bracket(50000.0, 0.0175),
+                    Bracket(70000.0, 0.0350),
+                    Bracket(80000.0, 0.0553),
+                    Bracket(150000.0, 0.0637),
+                    Bracket(1000000.0, 0.0897),
+                    Bracket(f64::INFINITY, 0.1075),
+                ],
+                FilingStatus::Single => vec![
                     Bracket(20000.0, 0.0140),
                     Bracket(35000.0, 0.0175),
                     Bracket(40000.0, 0.0350),
@@ -1655,194 +1920,203 @@ pub fn get_tax_brackets(state: &str, year: i32, filing_status: &FilingStatus) ->
                 ]
             }
         },
-        "de" => match year {
+        "nm" => match year {
             2024 => match filing_status {
                 FilingStatus::HeadOfHousehold => vec![
-                    Bracket(2000.0, 0.0000),
-                    Bracket(5000.0, 0.0220),
-                    Bracket(10000.0, 0.0390),
-                    Bracket(20000.0, 0.0480),
-                    Bracket(25000.0, 0.0520),
-                    Bracket(60000.0, 0.0555),
-                    Bracket(f64::INFINITY, 0.0660),
-                ],
-                FilingStatus::Single => vec![
-                    Bracket(2000.0, 0.0000),
-                    Bracket(5000.0, 0.0220),
-                    Bracket(10000.0, 0.0390),
-                    Bracket(20000.0, 0.0480),
-                    Bracket(25000.0, 0.0520),
-                    Bracket(60000.0, 0.0555),
-                    Bracket(f64::INFINITY, 0.0660),
+                    Bracket(8000.0, 0.0170),
+                    Bracket(16000.0, 0.0320),
+                    Bracket(24000.0, 0.0470),
+                    Bracket(315000.0, 0.0490),
+                    Bracket(f64::INFINITY, 0.0590),
                 ],
                 FilingStatus::MarriedFilingJointly => vec![
-                    Bracket(2000.0, 0.0000),
-                    Bracket(5000.0, 0.0220),
-                    Bracket(10000.0, 0.0390),
-                    Bracket(20000.0, 0.0480),
-                    Bracket(25000.0, 0.0520),
-                    Bracket(60000.0, 0.0555),
-                    Bracket(f64::INFINITY, 0.0660),
+                    Bracket(8000.0, 0.0170),
+                    Bracket(16000.0, 0.0320),
+                    Bracket(24000.0, 0.0470),
+                    Bracket(315000.0, 0.0490),
+                    Bracket(f64::INFINITY, 0.0590),
+                ],
+                FilingStatus::MarriedFilingSeparately => vec![
+                    Bracket(4000.0, 0.0170),
+                    Bracket(8000.0, 0.0320),
+                    Bracket(12000.0, 0.0470),
+                    Bracket(157500.0, 0.0490),
+                    Bracket(f64::INFINITY, 0.0590),
                 ],
                 FilingStatus::QualifyingSurvivingSpouse => vec![
-                    Bracket(2000.0, 0.0000),
-                    Bracket(5000.0, 0.0220),
-                    Bracket(10000.0, 0.0390),
-                    Bracket(20000.0, 0.0480),
-                    Bracket(25000.0, 0.0520),
-                    Bracket(60000.0, 0.0555),
-                    Bracket(f64::INFINITY, 0.0660),
-                ],
-                FilingStatus::MarriedFilingSeparately => vec![
-                    Bracket(2000.0, 0.0000),
-                    Bracket(5000.0, 0.0220),
-                    Bracket(10000.0, 0.0390),
-                    Bracket(20000.0, 0.0480),
-                    Bracket(25000.0, 0.0520),
-                    Bracket(60000.0, 0.0555),
-                    Bracket(f64::INFINITY, 0.0660),
-                ],
-            },
-            2025 => match filing_status {
-                FilingStatus::MarriedFilingJointly => vec![
-                    Bracket(2000.0, 0.0000),
-                    Bracket(5000.0, 0.0220),
-                    Bracket(10000.0, 0.0390),
-                    Bracket(20000.0, 0.0480),
-                    Bracket(25000.0, 0.0520),
-                    Bracket(60000.0, 0.0555),
-                    Bracket(f64::INFINITY, 0.0660),
-                ],
-                FilingStatus::MarriedFilingSeparately => vec![
-                    Bracket(2000.0, 0.0000),
-                    Bracket(5000.0, 0.0220),
-                    Bracket(10000.0, 0.0390),
-                    Bracket(20000.0, 0.0480),
-                    Bracket(25000.0, 0.0520),
-                    Bracket(60000.0, 0.0555),
-                    Bracket(f64::INFINITY, 0.0660),
+                    Bracket(8000.0, 0.0170),
+                    Bracket(16000.0, 0.0320),
+                    Bracket(24000.0, 0.0470),
+                    Bracket(315000.0, 0.0490),
+                    Bracket(f64::INFINITY, 0.0590),
                 ],
                 FilingStatus::Single => vec![
-                    Bracket(2000.0, 0.0000),
-                    Bracket(5000.0, 0.0220),
-                    Bracket(10000.0, 0.0390),
-                    Bracket(20000.0, 0.0480),
-                    Bracket(25000.0, 0.0520),
-                    Bracket(60000.0, 0.0555),
-                    Bracket(f64::INFINITY, 0.0660),
-                ],
-                FilingStatus::QualifyingSurvivingSpouse => vec![
-                    Bracket(2000.0, 0.0000),
-                    Bracket(5000.0, 0.0220),
-                    Bracket(10000.0, 0.0390),
-                    Bracket(20000.0, 0.0480),
-                    Bracket(25000.0, 0.0520),
-                    Bracket(60000.0, 0.0555),
-                    Bracket(f64::INFINITY, 0.0660),
-                ],
-                FilingStatus::HeadOfHousehold => vec![
-                    Bracket(2000.0, 0.0000),
-                    Bracket(5000.0, 0.0220),
-                    Bracket(10000.0, 0.0390),
-                    Bracket(20000.0, 0.0480),
-                    Bracket(25000.0, 0.0520),
-                    Bracket(60000.0, 0.0555),
-                    Bracket(f64::INFINITY, 0.0660),
+                    Bracket(5500.0, 0.0170),
+                    Bracket(11000.0, 0.0320),
+                    Bracket(16000.0, 0.0470),
+                    Bracket(210000.0, 0.0490),
+                    Bracket(f64::INFINITY, 0.0590),
                 ],
             },
             _ => {
-                eprintln!("Year {} not supported for de. Defaulting to 2025 Single bracket.", year);
+                eprintln!("Year {} not supported for nm. Defaulting to 2024 Single bracket.", year);
                 vec![
-                    Bracket(2000.0, 0.0),
-                    Bracket(5000.0, 0.0),
-                    Bracket(10000.0, 0.0),
-                    Bracket(20000.0, 0.0),
-                    Bracket(25000.0, 0.1),
-                    Bracket(60000.0, 0.1),
+                    Bracket(5500.0, 0.0),
+                    Bracket(11000.0, 0.0),
+                    Bracket(16000.0, 0.0),
+                    Bracket(210000.0, 0.0),
                     Bracket(f64::INFINITY, 0.1),
                 ]
             }
         },
-        "mi" => match year {
+        "nv" => match year {
             2024 => match filing_status {
-                FilingStatus::Single => vec![
-                    Bracket(f64::INFINITY, 0.0425),
-                ],
-                FilingStatus::MarriedFilingSeparately => vec![
-                    Bracket(f64::INFINITY, 0.0425),
-                ],
                 FilingStatus::HeadOfHousehold => vec![
-                    Bracket(f64::INFINITY, 0.0425),
+                    Bracket(f64::INFINITY, 0.0000),
                 ],
                 FilingStatus::MarriedFilingJointly => vec![
-                    Bracket(f64::INFINITY, 0.0425),
+                    Bracket(f64::INFINITY, 0.0000),
+                ],
+                FilingStatus::MarriedFilingSeparately => vec![
+                    Bracket(f64::INFINITY, 0.0000),
                 ],
                 FilingStatus::QualifyingSurvivingSpouse => vec![
-                    Bracket(f64::INFINITY, 0.0425),
+                    Bracket(f64::INFINITY, 0.0000),
+                ],
+                FilingStatus::Single => vec![
+                    Bracket(f64::INFINITY, 0.0000),
                 ],
             },
             2025 => match filing_status {
-                FilingStatus::QualifyingSurvivingSpouse => vec![
-                    Bracket(f64::INFINITY, 0.0425),
-                ],
                 FilingStatus::HeadOfHousehold => vec![
-                    Bracket(f64::INFINITY, 0.0425),
+                    Bracket(f64::INFINITY, 0.0000),
                 ],
                 FilingStatus::MarriedFilingJointly => vec![
-                    Bracket(f64::INFINITY, 0.0425),
+                    Bracket(f64::INFINITY, 0.0000),
                 ],
                 FilingStatus::MarriedFilingSeparately => vec![
-                    Bracket(f64::INFINITY, 0.0425),
+                    Bracket(f64::INFINITY, 0.0000),
+                ],
+                FilingStatus::QualifyingSurvivingSpouse => vec![
+                    Bracket(f64::INFINITY, 0.0000),
                 ],
                 FilingStatus::Single => vec![
-                    Bracket(f64::INFINITY, 0.0425),
+                    Bracket(f64::INFINITY, 0.0000),
                 ],
             },
             _ => {
-                eprintln!("Year {} not supported for mi. Defaulting to 2025 Single bracket.", year);
+                eprintln!("Year {} not supported for nv. Defaulting to 2025 Single bracket.", year);
                 vec![
                     Bracket(f64::INFINITY, 0.0),
                 ]
             }
         },
-        "nc" => match year {
-            2025 => match filing_status {
-                FilingStatus::MarriedFilingJointly => vec![
-                    Bracket(f64::INFINITY, 0.0425),
-                ],
-                FilingStatus::Single => vec![
-                    Bracket(f64::INFINITY, 0.0425),
-                ],
-                FilingStatus::QualifyingSurvivingSpouse => vec![
-                    Bracket(f64::INFINITY, 0.0425),
-                ],
-                FilingStatus::MarriedFilingSeparately => vec![
-                    Bracket(f64::INFINITY, 0.0425),
-                ],
-                FilingStatus::HeadOfHousehold => vec![
-                    Bracket(f64::INFINITY, 0.0425),
-                ],
-            },
+        "ny" => match year {
             2024 => match filing_status {
                 FilingStatus::HeadOfHousehold => vec![
-                    Bracket(f64::INFINITY, 0.0450),
-                ],
-                FilingStatus::QualifyingSurvivingSpouse => vec![
-                    Bracket(f64::INFINITY, 0.0450),
-                ],
-                FilingStatus::MarriedFilingSeparately => vec![
-                    Bracket(f64::INFINITY, 0.0450),
-                ],
-                FilingStatus::Single => vec![
-                    Bracket(f64::INFINITY, 0.0450),
+                    Bracket(12800.0, 0.0400),
+                    Bracket(17650.0, 0.0450),
+                    Bracket(20900.0, 0.0525),
+                    Bracket(107650.0, 0.0550),
+                    Bracket(269300.0, 0.0600),
+                    Bracket(1616450.0, 0.0685),
+                    Bracket(5000000.0, 0.0965),
+                    Bracket(25000000.0, 0.0103),
+                    Bracket(f64::INFINITY, 0.0109),
                 ],
                 FilingStatus::MarriedFilingJointly => vec![
-                    Bracket(f64::INFINITY, 0.0450),
+                    Bracket(17150.0, 0.0400),
+                    Bracket(23600.0, 0.0450),
+                    Bracket(27900.0, 0.0525),
+                    Bracket(161550.0, 0.0550),
+                    Bracket(323200.0, 0.0600),
+                    Bracket(2155350.0, 0.0685),
+                    Bracket(5000000.0, 0.0965),
+                    Bracket(25000000.0, 0.0103),
+                    Bracket(f64::INFINITY, 0.0109),
+                ],
+                FilingStatus::MarriedFilingSeparately => vec![
+                    Bracket(8500.0, 0.0400),
+                    Bracket(11700.0, 0.0450),
+                    Bracket(13900.0, 0.0525),
+                    Bracket(80650.0, 0.0550),
+                    Bracket(215400.0, 0.0600),
+                    Bracket(1077550.0, 0.0685),
+                    Bracket(5000000.0, 0.0965),
+                    Bracket(25000000.0, 0.0103),
+                    Bracket(f64::INFINITY, 0.0109),
+                ],
+                FilingStatus::QualifyingSurvivingSpouse => vec![
+                    Bracket(17150.0, 0.0400),
+                    Bracket(23600.0, 0.0450),
+                    Bracket(27900.0, 0.0525),
+                    Bracket(161550.0, 0.0550),
+                    Bracket(323200.0, 0.0600),
+                    Bracket(2155350.0, 0.0685),
+                    Bracket(5000000.0, 0.0965),
+                    Bracket(25000000.0, 0.0103),
+                    Bracket(f64::INFINITY, 0.0109),
+                ],
+                FilingStatus::Single => vec![
+                    Bracket(8500.0, 0.0400),
+                    Bracket(11700.0, 0.0450),
+                    Bracket(13900.0, 0.0525),
+                    Bracket(80650.0, 0.0550),
+                    Bracket(215400.0, 0.0600),
+                    Bracket(1077550.0, 0.0685),
+                    Bracket(5000000.0, 0.0965),
+                    Bracket(25000000.0, 0.0103),
+                    Bracket(f64::INFINITY, 0.0109),
                 ],
             },
             _ => {
-                eprintln!("Year {} not supported for nc. Defaulting to 2025 Single bracket.", year);
+                eprintln!("Year {} not supported for ny. Defaulting to 2024 Single bracket.", year);
                 vec![
+                    Bracket(8500.0, 0.0),
+                    Bracket(11700.0, 0.0),
+                    Bracket(13900.0, 0.1),
+                    Bracket(80650.0, 0.1),
+                    Bracket(215400.0, 0.1),
+                    Bracket(1077550.0, 0.1),
+                    Bracket(5000000.0, 0.1),
+                    Bracket(25000000.0, 0.0),
+                    Bracket(f64::INFINITY, 0.0),
+                ]
+            }
+        },
+        "oh" => match year {
+            2024 => match filing_status {
+                FilingStatus::HeadOfHousehold => vec![
+                    Bracket(26050.0, 0.0000),
+                    Bracket(100000.0, 0.0275),
+                    Bracket(f64::INFINITY, 0.0350),
+                ],
+                FilingStatus::MarriedFilingJointly => vec![
+                    Bracket(26050.0, 0.0000),
+                    Bracket(100000.0, 0.0275),
+                    Bracket(f64::INFINITY, 0.0350),
+                ],
+                FilingStatus::MarriedFilingSeparately => vec![
+                    Bracket(26050.0, 0.0000),
+                    Bracket(100000.0, 0.0275),
+                    Bracket(f64::INFINITY, 0.0350),
+                ],
+                FilingStatus::QualifyingSurvivingSpouse => vec![
+                    Bracket(26050.0, 0.0000),
+                    Bracket(100000.0, 0.0275),
+                    Bracket(f64::INFINITY, 0.0350),
+                ],
+                FilingStatus::Single => vec![
+                    Bracket(26050.0, 0.0000),
+                    Bracket(100000.0, 0.0275),
+                    Bracket(f64::INFINITY, 0.0350),
+                ],
+            },
+            _ => {
+                eprintln!("Year {} not supported for oh. Defaulting to 2024 Single bracket.", year);
+                vec![
+                    Bracket(26050.0, 0.0),
+                    Bracket(100000.0, 0.0),
                     Bracket(f64::INFINITY, 0.0),
                 ]
             }
@@ -1857,7 +2131,7 @@ pub fn get_tax_brackets(state: &str, year: i32, filing_status: &FilingStatus) ->
                     Bracket(14400.0, 0.0375),
                     Bracket(f64::INFINITY, 0.0475),
                 ],
-                FilingStatus::QualifyingSurvivingSpouse => vec![
+                FilingStatus::MarriedFilingJointly => vec![
                     Bracket(2000.0, 0.0025),
                     Bracket(5000.0, 0.0075),
                     Bracket(7500.0, 0.0175),
@@ -1873,20 +2147,20 @@ pub fn get_tax_brackets(state: &str, year: i32, filing_status: &FilingStatus) ->
                     Bracket(7200.0, 0.0375),
                     Bracket(f64::INFINITY, 0.0475),
                 ],
+                FilingStatus::QualifyingSurvivingSpouse => vec![
+                    Bracket(2000.0, 0.0025),
+                    Bracket(5000.0, 0.0075),
+                    Bracket(7500.0, 0.0175),
+                    Bracket(9800.0, 0.0275),
+                    Bracket(14400.0, 0.0375),
+                    Bracket(f64::INFINITY, 0.0475),
+                ],
                 FilingStatus::Single => vec![
                     Bracket(1000.0, 0.0025),
                     Bracket(2500.0, 0.0075),
                     Bracket(3750.0, 0.0175),
                     Bracket(4900.0, 0.0275),
                     Bracket(7200.0, 0.0375),
-                    Bracket(f64::INFINITY, 0.0475),
-                ],
-                FilingStatus::MarriedFilingJointly => vec![
-                    Bracket(2000.0, 0.0025),
-                    Bracket(5000.0, 0.0075),
-                    Bracket(7500.0, 0.0175),
-                    Bracket(9800.0, 0.0275),
-                    Bracket(14400.0, 0.0375),
                     Bracket(f64::INFINITY, 0.0475),
                 ],
             },
@@ -1902,80 +2176,81 @@ pub fn get_tax_brackets(state: &str, year: i32, filing_status: &FilingStatus) ->
                 ]
             }
         },
-        "nh" => match year {
+        "or" => match year {
             2024 => match filing_status {
                 FilingStatus::HeadOfHousehold => vec![
-                    Bracket(f64::INFINITY, 0.0000),
-                ],
-                FilingStatus::QualifyingSurvivingSpouse => vec![
-                    Bracket(f64::INFINITY, 0.0000),
-                ],
-                FilingStatus::Single => vec![
-                    Bracket(f64::INFINITY, 0.0000),
-                ],
-                FilingStatus::MarriedFilingSeparately => vec![
-                    Bracket(f64::INFINITY, 0.0000),
+                    Bracket(8600.0, 0.0475),
+                    Bracket(21500.0, 0.0675),
+                    Bracket(250000.0, 0.0875),
+                    Bracket(f64::INFINITY, 0.0990),
                 ],
                 FilingStatus::MarriedFilingJointly => vec![
-                    Bracket(f64::INFINITY, 0.0000),
-                ],
-            },
-            2025 => match filing_status {
-                FilingStatus::QualifyingSurvivingSpouse => vec![
-                    Bracket(f64::INFINITY, 0.0000),
-                ],
-                FilingStatus::MarriedFilingJointly => vec![
-                    Bracket(f64::INFINITY, 0.0000),
+                    Bracket(8600.0, 0.0475),
+                    Bracket(21500.0, 0.0675),
+                    Bracket(250000.0, 0.0875),
+                    Bracket(f64::INFINITY, 0.0990),
                 ],
                 FilingStatus::MarriedFilingSeparately => vec![
-                    Bracket(f64::INFINITY, 0.0000),
+                    Bracket(4300.0, 0.0475),
+                    Bracket(10750.0, 0.0675),
+                    Bracket(125000.0, 0.0875),
+                    Bracket(f64::INFINITY, 0.0990),
+                ],
+                FilingStatus::QualifyingSurvivingSpouse => vec![
+                    Bracket(8600.0, 0.0475),
+                    Bracket(21500.0, 0.0675),
+                    Bracket(250000.0, 0.0875),
+                    Bracket(f64::INFINITY, 0.0990),
                 ],
                 FilingStatus::Single => vec![
-                    Bracket(f64::INFINITY, 0.0000),
-                ],
-                FilingStatus::HeadOfHousehold => vec![
-                    Bracket(f64::INFINITY, 0.0000),
+                    Bracket(4300.0, 0.0475),
+                    Bracket(10750.0, 0.0675),
+                    Bracket(125000.0, 0.0875),
+                    Bracket(f64::INFINITY, 0.0990),
                 ],
             },
             _ => {
-                eprintln!("Year {} not supported for nh. Defaulting to 2025 Single bracket.", year);
+                eprintln!("Year {} not supported for or. Defaulting to 2024 Single bracket.", year);
                 vec![
-                    Bracket(f64::INFINITY, 0.0),
+                    Bracket(4300.0, 0.0),
+                    Bracket(10750.0, 0.1),
+                    Bracket(125000.0, 0.1),
+                    Bracket(f64::INFINITY, 0.1),
                 ]
             }
         },
         "pa" => match year {
             2024 => match filing_status {
-                FilingStatus::Single => vec![
+                FilingStatus::HeadOfHousehold => vec![
                     Bracket(f64::INFINITY, 0.0307),
                 ],
-                FilingStatus::QualifyingSurvivingSpouse => vec![
+                FilingStatus::MarriedFilingJointly => vec![
                     Bracket(f64::INFINITY, 0.0307),
                 ],
                 FilingStatus::MarriedFilingSeparately => vec![
                     Bracket(f64::INFINITY, 0.0307),
                 ],
-                FilingStatus::HeadOfHousehold => vec![
+                FilingStatus::QualifyingSurvivingSpouse => vec![
                     Bracket(f64::INFINITY, 0.0307),
                 ],
-                FilingStatus::MarriedFilingJointly => vec![
+                FilingStatus::Single => vec![
                     Bracket(f64::INFINITY, 0.0307),
                 ],
             },
             2025 => match filing_status {
+                FilingStatus::HeadOfHousehold => vec![
+                    Bracket(f64::INFINITY, 0.0307),
+                ],
                 FilingStatus::MarriedFilingJointly => vec![
+                    Bracket(f64::INFINITY, 0.0307),
+                ],
+                FilingStatus::MarriedFilingSeparately => vec![
                     Bracket(f64::INFINITY, 0.0307),
                 ],
                 FilingStatus::QualifyingSurvivingSpouse => vec![
                     Bracket(f64::INFINITY, 0.0307),
                 ],
                 FilingStatus::Single => vec![
-                    Bracket(f64::INFINITY, 0.0307),
-                ],
-                FilingStatus::MarriedFilingSeparately => vec![
-                    Bracket(f64::INFINITY, 0.0307),
-                ],
-                FilingStatus::HeadOfHousehold => vec![
                     Bracket(f64::INFINITY, 0.0307),
                 ],
             },
@@ -1986,105 +2261,73 @@ pub fn get_tax_brackets(state: &str, year: i32, filing_status: &FilingStatus) ->
                 ]
             }
         },
-        "ar" => match year {
-            2025 => match filing_status {
-                FilingStatus::MarriedFilingJointly => vec![
-                    Bracket(5499.0, 0.0000),
-                    Bracket(10899.0, 0.0200),
-                    Bracket(15599.0, 0.0300),
-                    Bracket(25699.0, 0.0340),
-                    Bracket(f64::INFINITY, 0.0390),
-                ],
+        "ri" => match year {
+            2024 => match filing_status {
                 FilingStatus::HeadOfHousehold => vec![
-                    Bracket(5499.0, 0.0000),
-                    Bracket(10899.0, 0.0200),
-                    Bracket(15599.0, 0.0300),
-                    Bracket(25699.0, 0.0340),
-                    Bracket(f64::INFINITY, 0.0390),
+                    Bracket(77450.0, 0.0375),
+                    Bracket(176050.0, 0.0475),
+                    Bracket(f64::INFINITY, 0.0599),
                 ],
-                FilingStatus::Single => vec![
-                    Bracket(5499.0, 0.0000),
-                    Bracket(10899.0, 0.0200),
-                    Bracket(15599.0, 0.0300),
-                    Bracket(25699.0, 0.0340),
-                    Bracket(f64::INFINITY, 0.0390),
-                ],
-                FilingStatus::QualifyingSurvivingSpouse => vec![
-                    Bracket(5499.0, 0.0000),
-                    Bracket(10899.0, 0.0200),
-                    Bracket(15599.0, 0.0300),
-                    Bracket(25699.0, 0.0340),
-                    Bracket(f64::INFINITY, 0.0390),
+                FilingStatus::MarriedFilingJointly => vec![
+                    Bracket(77450.0, 0.0375),
+                    Bracket(176050.0, 0.0475),
+                    Bracket(f64::INFINITY, 0.0599),
                 ],
                 FilingStatus::MarriedFilingSeparately => vec![
-                    Bracket(5499.0, 0.0000),
-                    Bracket(10899.0, 0.0200),
-                    Bracket(15599.0, 0.0300),
-                    Bracket(25699.0, 0.0340),
-                    Bracket(f64::INFINITY, 0.0390),
+                    Bracket(77450.0, 0.0375),
+                    Bracket(176050.0, 0.0475),
+                    Bracket(f64::INFINITY, 0.0599),
+                ],
+                FilingStatus::QualifyingSurvivingSpouse => vec![
+                    Bracket(77450.0, 0.0375),
+                    Bracket(176050.0, 0.0475),
+                    Bracket(f64::INFINITY, 0.0599),
+                ],
+                FilingStatus::Single => vec![
+                    Bracket(77450.0, 0.0375),
+                    Bracket(176050.0, 0.0475),
+                    Bracket(f64::INFINITY, 0.0599),
                 ],
             },
-            2024 => match filing_status {
-                FilingStatus::Single => vec![
-                    Bracket(5499.0, 0.0000),
-                    Bracket(10899.0, 0.0200),
-                    Bracket(15599.0, 0.0300),
-                    Bracket(25699.0, 0.0340),
-                    Bracket(f64::INFINITY, 0.0390),
-                ],
-                FilingStatus::MarriedFilingSeparately => vec![
-                    Bracket(5499.0, 0.0000),
-                    Bracket(10899.0, 0.0200),
-                    Bracket(15599.0, 0.0300),
-                    Bracket(25699.0, 0.0340),
-                    Bracket(f64::INFINITY, 0.0390),
+            2025 => match filing_status {
+                FilingStatus::HeadOfHousehold => vec![
+                    Bracket(79900.0, 0.0375),
+                    Bracket(181650.0, 0.0475),
+                    Bracket(f64::INFINITY, 0.0599),
                 ],
                 FilingStatus::MarriedFilingJointly => vec![
-                    Bracket(5499.0, 0.0000),
-                    Bracket(10899.0, 0.0200),
-                    Bracket(15599.0, 0.0300),
-                    Bracket(25699.0, 0.0340),
-                    Bracket(f64::INFINITY, 0.0390),
+                    Bracket(79900.0, 0.0375),
+                    Bracket(181650.0, 0.0475),
+                    Bracket(f64::INFINITY, 0.0599),
+                ],
+                FilingStatus::MarriedFilingSeparately => vec![
+                    Bracket(79900.0, 0.0375),
+                    Bracket(181650.0, 0.0475),
+                    Bracket(f64::INFINITY, 0.0599),
                 ],
                 FilingStatus::QualifyingSurvivingSpouse => vec![
-                    Bracket(5499.0, 0.0000),
-                    Bracket(10899.0, 0.0200),
-                    Bracket(15599.0, 0.0300),
-                    Bracket(25699.0, 0.0340),
-                    Bracket(f64::INFINITY, 0.0390),
+                    Bracket(79900.0, 0.0375),
+                    Bracket(181650.0, 0.0475),
+                    Bracket(f64::INFINITY, 0.0599),
                 ],
-                FilingStatus::HeadOfHousehold => vec![
-                    Bracket(5499.0, 0.0000),
-                    Bracket(10899.0, 0.0200),
-                    Bracket(15599.0, 0.0300),
-                    Bracket(25699.0, 0.0340),
-                    Bracket(f64::INFINITY, 0.0390),
+                FilingStatus::Single => vec![
+                    Bracket(79900.0, 0.0375),
+                    Bracket(181650.0, 0.0475),
+                    Bracket(f64::INFINITY, 0.0599),
                 ],
             },
             _ => {
-                eprintln!("Year {} not supported for ar. Defaulting to 2025 Single bracket.", year);
+                eprintln!("Year {} not supported for ri. Defaulting to 2025 Single bracket.", year);
                 vec![
-                    Bracket(5499.0, 0.0),
-                    Bracket(10899.0, 0.0),
-                    Bracket(15599.0, 0.0),
-                    Bracket(25699.0, 0.0),
-                    Bracket(f64::INFINITY, 0.0),
+                    Bracket(79900.0, 0.0),
+                    Bracket(181650.0, 0.0),
+                    Bracket(f64::INFINITY, 0.1),
                 ]
             }
         },
         "sc" => match year {
             2024 => match filing_status {
-                FilingStatus::MarriedFilingSeparately => vec![
-                    Bracket(3460.0, 0.0000),
-                    Bracket(17330.0, 0.0300),
-                    Bracket(f64::INFINITY, 0.0620),
-                ],
                 FilingStatus::HeadOfHousehold => vec![
-                    Bracket(3460.0, 0.0000),
-                    Bracket(17330.0, 0.0300),
-                    Bracket(f64::INFINITY, 0.0620),
-                ],
-                FilingStatus::Single => vec![
                     Bracket(3460.0, 0.0000),
                     Bracket(17330.0, 0.0300),
                     Bracket(f64::INFINITY, 0.0620),
@@ -2094,7 +2337,17 @@ pub fn get_tax_brackets(state: &str, year: i32, filing_status: &FilingStatus) ->
                     Bracket(17330.0, 0.0300),
                     Bracket(f64::INFINITY, 0.0620),
                 ],
+                FilingStatus::MarriedFilingSeparately => vec![
+                    Bracket(3460.0, 0.0000),
+                    Bracket(17330.0, 0.0300),
+                    Bracket(f64::INFINITY, 0.0620),
+                ],
                 FilingStatus::QualifyingSurvivingSpouse => vec![
+                    Bracket(3460.0, 0.0000),
+                    Bracket(17330.0, 0.0300),
+                    Bracket(f64::INFINITY, 0.0620),
+                ],
+                FilingStatus::Single => vec![
                     Bracket(3460.0, 0.0000),
                     Bracket(17330.0, 0.0300),
                     Bracket(f64::INFINITY, 0.0620),
@@ -2109,243 +2362,80 @@ pub fn get_tax_brackets(state: &str, year: i32, filing_status: &FilingStatus) ->
                 ]
             }
         },
-        "co" => match year {
-            2025 => match filing_status {
-                FilingStatus::Single => vec![
-                    Bracket(f64::INFINITY, 0.0440),
-                ],
-                FilingStatus::QualifyingSurvivingSpouse => vec![
-                    Bracket(f64::INFINITY, 0.0440),
+        "sd" => match year {
+            2024 => match filing_status {
+                FilingStatus::HeadOfHousehold => vec![
+                    Bracket(f64::INFINITY, 0.0000),
                 ],
                 FilingStatus::MarriedFilingJointly => vec![
-                    Bracket(f64::INFINITY, 0.0440),
-                ],
-                FilingStatus::HeadOfHousehold => vec![
-                    Bracket(f64::INFINITY, 0.0440),
+                    Bracket(f64::INFINITY, 0.0000),
                 ],
                 FilingStatus::MarriedFilingSeparately => vec![
-                    Bracket(f64::INFINITY, 0.0440),
+                    Bracket(f64::INFINITY, 0.0000),
+                ],
+                FilingStatus::QualifyingSurvivingSpouse => vec![
+                    Bracket(f64::INFINITY, 0.0000),
+                ],
+                FilingStatus::Single => vec![
+                    Bracket(f64::INFINITY, 0.0000),
                 ],
             },
-            2024 => match filing_status {
-                FilingStatus::Single => vec![
-                    Bracket(f64::INFINITY, 0.0425),
+            2025 => match filing_status {
+                FilingStatus::HeadOfHousehold => vec![
+                    Bracket(f64::INFINITY, 0.0000),
                 ],
                 FilingStatus::MarriedFilingJointly => vec![
-                    Bracket(f64::INFINITY, 0.0425),
+                    Bracket(f64::INFINITY, 0.0000),
                 ],
                 FilingStatus::MarriedFilingSeparately => vec![
-                    Bracket(f64::INFINITY, 0.0425),
+                    Bracket(f64::INFINITY, 0.0000),
                 ],
                 FilingStatus::QualifyingSurvivingSpouse => vec![
-                    Bracket(f64::INFINITY, 0.0425),
+                    Bracket(f64::INFINITY, 0.0000),
                 ],
-                FilingStatus::HeadOfHousehold => vec![
-                    Bracket(f64::INFINITY, 0.0425),
+                FilingStatus::Single => vec![
+                    Bracket(f64::INFINITY, 0.0000),
                 ],
             },
             _ => {
-                eprintln!("Year {} not supported for co. Defaulting to 2025 Single bracket.", year);
+                eprintln!("Year {} not supported for sd. Defaulting to 2025 Single bracket.", year);
                 vec![
                     Bracket(f64::INFINITY, 0.0),
                 ]
             }
         },
-        "hi" => match year {
-            2025 => match filing_status {
-                FilingStatus::MarriedFilingJointly => vec![
-                    Bracket(19200.0, 0.0140),
-                    Bracket(28800.0, 0.0320),
-                    Bracket(38400.0, 0.0550),
-                    Bracket(48000.0, 0.0640),
-                    Bracket(72000.0, 0.0680),
-                    Bracket(96000.0, 0.0720),
-                    Bracket(250000.0, 0.0760),
-                    Bracket(350000.0, 0.0790),
-                    Bracket(450000.0, 0.0825),
-                    Bracket(550000.0, 0.0900),
-                    Bracket(650000.0, 0.1000),
-                    Bracket(f64::INFINITY, 0.1100),
-                ],
-                FilingStatus::Single => vec![
-                    Bracket(9600.0, 0.0140),
-                    Bracket(14400.0, 0.0320),
-                    Bracket(19200.0, 0.0550),
-                    Bracket(24000.0, 0.0640),
-                    Bracket(36000.0, 0.0680),
-                    Bracket(48000.0, 0.0720),
-                    Bracket(125000.0, 0.0760),
-                    Bracket(175000.0, 0.0790),
-                    Bracket(225000.0, 0.0825),
-                    Bracket(275000.0, 0.0900),
-                    Bracket(325000.0, 0.1000),
-                    Bracket(f64::INFINITY, 0.1100),
-                ],
-                FilingStatus::QualifyingSurvivingSpouse => vec![
-                    Bracket(19200.0, 0.0140),
-                    Bracket(28800.0, 0.0320),
-                    Bracket(38400.0, 0.0550),
-                    Bracket(48000.0, 0.0640),
-                    Bracket(72000.0, 0.0680),
-                    Bracket(96000.0, 0.0720),
-                    Bracket(250000.0, 0.0760),
-                    Bracket(350000.0, 0.0790),
-                    Bracket(450000.0, 0.0825),
-                    Bracket(550000.0, 0.0900),
-                    Bracket(650000.0, 0.1000),
-                    Bracket(f64::INFINITY, 0.1100),
-                ],
-                FilingStatus::HeadOfHousehold => vec![
-                    Bracket(14400.0, 0.0140),
-                    Bracket(21600.0, 0.0320),
-                    Bracket(28800.0, 0.0550),
-                    Bracket(36000.0, 0.0640),
-                    Bracket(54000.0, 0.0680),
-                    Bracket(72000.0, 0.0720),
-                    Bracket(187500.0, 0.0760),
-                    Bracket(262500.0, 0.0790),
-                    Bracket(337600.0, 0.0825),
-                    Bracket(412500.0, 0.0900),
-                    Bracket(487500.0, 0.1000),
-                    Bracket(f64::INFINITY, 0.1100),
-                ],
-                FilingStatus::MarriedFilingSeparately => vec![
-                    Bracket(9600.0, 0.0140),
-                    Bracket(14400.0, 0.0320),
-                    Bracket(19200.0, 0.0550),
-                    Bracket(24000.0, 0.0640),
-                    Bracket(36000.0, 0.0680),
-                    Bracket(48000.0, 0.0720),
-                    Bracket(125000.0, 0.0760),
-                    Bracket(175000.0, 0.0790),
-                    Bracket(225000.0, 0.0825),
-                    Bracket(275000.0, 0.0900),
-                    Bracket(325000.0, 0.1000),
-                    Bracket(f64::INFINITY, 0.1100),
-                ],
-            },
-            2024 => match filing_status {
-                FilingStatus::Single => vec![
-                    Bracket(2400.0, 0.0140),
-                    Bracket(4800.0, 0.0320),
-                    Bracket(9600.0, 0.0550),
-                    Bracket(14400.0, 0.0640),
-                    Bracket(19200.0, 0.0680),
-                    Bracket(24000.0, 0.0720),
-                    Bracket(36000.0, 0.0760),
-                    Bracket(48000.0, 0.0790),
-                    Bracket(150000.0, 0.0825),
-                    Bracket(175000.0, 0.0900),
-                    Bracket(200000.0, 0.1000),
-                    Bracket(f64::INFINITY, 0.1100),
-                ],
-                FilingStatus::MarriedFilingSeparately => vec![
-                    Bracket(2400.0, 0.0140),
-                    Bracket(4800.0, 0.0320),
-                    Bracket(9600.0, 0.0550),
-                    Bracket(14400.0, 0.0640),
-                    Bracket(19200.0, 0.0680),
-                    Bracket(24000.0, 0.0720),
-                    Bracket(36000.0, 0.0760),
-                    Bracket(48000.0, 0.0790),
-                    Bracket(150000.0, 0.0825),
-                    Bracket(175000.0, 0.0900),
-                    Bracket(200000.0, 0.1000),
-                    Bracket(f64::INFINITY, 0.1100),
-                ],
-                FilingStatus::MarriedFilingJointly => vec![
-                    Bracket(4800.0, 0.0140),
-                    Bracket(9600.0, 0.0320),
-                    Bracket(19200.0, 0.0550),
-                    Bracket(28800.0, 0.0640),
-                    Bracket(38400.0, 0.0680),
-                    Bracket(48000.0, 0.0720),
-                    Bracket(72000.0, 0.0760),
-                    Bracket(96000.0, 0.0790),
-                    Bracket(300000.0, 0.0825),
-                    Bracket(350000.0, 0.0900),
-                    Bracket(400000.0, 0.1000),
-                    Bracket(f64::INFINITY, 0.1100),
-                ],
-                FilingStatus::HeadOfHousehold => vec![
-                    Bracket(3600.0, 0.0140),
-                    Bracket(7200.0, 0.0320),
-                    Bracket(14400.0, 0.0550),
-                    Bracket(21600.0, 0.0640),
-                    Bracket(28800.0, 0.0680),
-                    Bracket(36000.0, 0.0720),
-                    Bracket(54000.0, 0.0760),
-                    Bracket(72000.0, 0.0790),
-                    Bracket(225000.0, 0.0825),
-                    Bracket(262500.0, 0.0900),
-                    Bracket(300000.0, 0.1000),
-                    Bracket(f64::INFINITY, 0.1100),
-                ],
-                FilingStatus::QualifyingSurvivingSpouse => vec![
-                    Bracket(4800.0, 0.0140),
-                    Bracket(9600.0, 0.0320),
-                    Bracket(19200.0, 0.0550),
-                    Bracket(28800.0, 0.0640),
-                    Bracket(38400.0, 0.0680),
-                    Bracket(48000.0, 0.0720),
-                    Bracket(72000.0, 0.0760),
-                    Bracket(96000.0, 0.0790),
-                    Bracket(300000.0, 0.0825),
-                    Bracket(350000.0, 0.0900),
-                    Bracket(400000.0, 0.1000),
-                    Bracket(f64::INFINITY, 0.1100),
-                ],
-            },
-            _ => {
-                eprintln!("Year {} not supported for hi. Defaulting to 2025 Single bracket.", year);
-                vec![
-                    Bracket(9600.0, 0.0),
-                    Bracket(14400.0, 0.0),
-                    Bracket(19200.0, 0.1),
-                    Bracket(24000.0, 0.1),
-                    Bracket(36000.0, 0.1),
-                    Bracket(48000.0, 0.1),
-                    Bracket(125000.0, 0.1),
-                    Bracket(175000.0, 0.1),
-                    Bracket(225000.0, 0.1),
-                    Bracket(275000.0, 0.1),
-                    Bracket(325000.0, 0.1),
-                    Bracket(f64::INFINITY, 0.1),
-                ]
-            }
-        },
         "tn" => match year {
-            2025 => match filing_status {
-                FilingStatus::MarriedFilingJointly => vec![
-                    Bracket(f64::INFINITY, 0.0000),
-                ],
-                FilingStatus::QualifyingSurvivingSpouse => vec![
-                    Bracket(f64::INFINITY, 0.0000),
-                ],
-                FilingStatus::Single => vec![
-                    Bracket(f64::INFINITY, 0.0000),
-                ],
-                FilingStatus::HeadOfHousehold => vec![
-                    Bracket(f64::INFINITY, 0.0000),
-                ],
-                FilingStatus::MarriedFilingSeparately => vec![
-                    Bracket(f64::INFINITY, 0.0000),
-                ],
-            },
             2024 => match filing_status {
                 FilingStatus::HeadOfHousehold => vec![
                     Bracket(f64::INFINITY, 0.0000),
                 ],
-                FilingStatus::Single => vec![
+                FilingStatus::MarriedFilingJointly => vec![
+                    Bracket(f64::INFINITY, 0.0000),
+                ],
+                FilingStatus::MarriedFilingSeparately => vec![
                     Bracket(f64::INFINITY, 0.0000),
                 ],
                 FilingStatus::QualifyingSurvivingSpouse => vec![
+                    Bracket(f64::INFINITY, 0.0000),
+                ],
+                FilingStatus::Single => vec![
+                    Bracket(f64::INFINITY, 0.0000),
+                ],
+            },
+            2025 => match filing_status {
+                FilingStatus::HeadOfHousehold => vec![
                     Bracket(f64::INFINITY, 0.0000),
                 ],
                 FilingStatus::MarriedFilingJointly => vec![
                     Bracket(f64::INFINITY, 0.0000),
                 ],
                 FilingStatus::MarriedFilingSeparately => vec![
+                    Bracket(f64::INFINITY, 0.0000),
+                ],
+                FilingStatus::QualifyingSurvivingSpouse => vec![
+                    Bracket(f64::INFINITY, 0.0000),
+                ],
+                FilingStatus::Single => vec![
                     Bracket(f64::INFINITY, 0.0000),
                 ],
             },
@@ -2356,86 +2446,129 @@ pub fn get_tax_brackets(state: &str, year: i32, filing_status: &FilingStatus) ->
                 ]
             }
         },
-        "mt" => match year {
+        "tx" => match year {
             2024 => match filing_status {
-                FilingStatus::Single => vec![
-                    Bracket(20500.0, 0.0470),
-                    Bracket(f64::INFINITY, 0.0590),
-                ],
                 FilingStatus::HeadOfHousehold => vec![
-                    Bracket(30750.0, 0.0470),
-                    Bracket(f64::INFINITY, 0.0590),
-                ],
-                FilingStatus::MarriedFilingSeparately => vec![
-                    Bracket(20500.0, 0.0470),
-                    Bracket(f64::INFINITY, 0.0590),
+                    Bracket(f64::INFINITY, 0.0000),
                 ],
                 FilingStatus::MarriedFilingJointly => vec![
-                    Bracket(41000.0, 0.0470),
-                    Bracket(f64::INFINITY, 0.0590),
+                    Bracket(f64::INFINITY, 0.0000),
                 ],
-                FilingStatus::QualifyingSurvivingSpouse => vec![
-                    Bracket(41000.0, 0.0470),
-                    Bracket(f64::INFINITY, 0.0590),
-                ],
-            },
-            _ => {
-                eprintln!("Year {} not supported for mt. Defaulting to 2024 Single bracket.", year);
-                vec![
-                    Bracket(20500.0, 0.0),
-                    Bracket(f64::INFINITY, 0.1),
-                ]
-            }
-        },
-        "ma" => match year {
-            2024 => match filing_status {
                 FilingStatus::MarriedFilingSeparately => vec![
-                    Bracket(1053750.0, 0.0500),
-                    Bracket(f64::INFINITY, 0.0900),
-                ],
-                FilingStatus::MarriedFilingJointly => vec![
-                    Bracket(1053750.0, 0.0500),
-                    Bracket(f64::INFINITY, 0.0900),
+                    Bracket(f64::INFINITY, 0.0000),
                 ],
                 FilingStatus::QualifyingSurvivingSpouse => vec![
-                    Bracket(1053750.0, 0.0500),
-                    Bracket(f64::INFINITY, 0.0900),
-                ],
-                FilingStatus::HeadOfHousehold => vec![
-                    Bracket(1053750.0, 0.0500),
-                    Bracket(f64::INFINITY, 0.0900),
+                    Bracket(f64::INFINITY, 0.0000),
                 ],
                 FilingStatus::Single => vec![
-                    Bracket(1053750.0, 0.0500),
-                    Bracket(f64::INFINITY, 0.0900),
+                    Bracket(f64::INFINITY, 0.0000),
                 ],
             },
             2025 => match filing_status {
+                FilingStatus::HeadOfHousehold => vec![
+                    Bracket(f64::INFINITY, 0.0000),
+                ],
                 FilingStatus::MarriedFilingJointly => vec![
-                    Bracket(1083150.0, 0.0500),
-                    Bracket(f64::INFINITY, 0.0900),
+                    Bracket(f64::INFINITY, 0.0000),
                 ],
                 FilingStatus::MarriedFilingSeparately => vec![
-                    Bracket(1083150.0, 0.0500),
-                    Bracket(f64::INFINITY, 0.0900),
-                ],
-                FilingStatus::Single => vec![
-                    Bracket(1083150.0, 0.0500),
-                    Bracket(f64::INFINITY, 0.0900),
+                    Bracket(f64::INFINITY, 0.0000),
                 ],
                 FilingStatus::QualifyingSurvivingSpouse => vec![
-                    Bracket(1083150.0, 0.0500),
-                    Bracket(f64::INFINITY, 0.0900),
+                    Bracket(f64::INFINITY, 0.0000),
                 ],
-                FilingStatus::HeadOfHousehold => vec![
-                    Bracket(1083150.0, 0.0500),
-                    Bracket(f64::INFINITY, 0.0900),
+                FilingStatus::Single => vec![
+                    Bracket(f64::INFINITY, 0.0000),
                 ],
             },
             _ => {
-                eprintln!("Year {} not supported for ma. Defaulting to 2025 Single bracket.", year);
+                eprintln!("Year {} not supported for tx. Defaulting to 2025 Single bracket.", year);
                 vec![
-                    Bracket(1083150.0, 0.1),
+                    Bracket(f64::INFINITY, 0.0),
+                ]
+            }
+        },
+        "ut" => match year {
+            2024 => match filing_status {
+                FilingStatus::HeadOfHousehold => vec![
+                    Bracket(f64::INFINITY, 0.0455),
+                ],
+                FilingStatus::MarriedFilingJointly => vec![
+                    Bracket(f64::INFINITY, 0.0455),
+                ],
+                FilingStatus::MarriedFilingSeparately => vec![
+                    Bracket(f64::INFINITY, 0.0455),
+                ],
+                FilingStatus::QualifyingSurvivingSpouse => vec![
+                    Bracket(f64::INFINITY, 0.0455),
+                ],
+                FilingStatus::Single => vec![
+                    Bracket(f64::INFINITY, 0.0455),
+                ],
+            },
+            2025 => match filing_status {
+                FilingStatus::HeadOfHousehold => vec![
+                    Bracket(f64::INFINITY, 0.0450),
+                ],
+                FilingStatus::MarriedFilingJointly => vec![
+                    Bracket(f64::INFINITY, 0.0450),
+                ],
+                FilingStatus::MarriedFilingSeparately => vec![
+                    Bracket(f64::INFINITY, 0.0450),
+                ],
+                FilingStatus::QualifyingSurvivingSpouse => vec![
+                    Bracket(f64::INFINITY, 0.0450),
+                ],
+                FilingStatus::Single => vec![
+                    Bracket(f64::INFINITY, 0.0450),
+                ],
+            },
+            _ => {
+                eprintln!("Year {} not supported for ut. Defaulting to 2025 Single bracket.", year);
+                vec![
+                    Bracket(f64::INFINITY, 0.0),
+                ]
+            }
+        },
+        "vt" => match year {
+            2024 => match filing_status {
+                FilingStatus::HeadOfHousehold => vec![
+                    Bracket(75000.0, 0.0335),
+                    Bracket(165700.0, 0.0660),
+                    Bracket(268300.0, 0.0760),
+                    Bracket(f64::INFINITY, 0.0875),
+                ],
+                FilingStatus::MarriedFilingJointly => vec![
+                    Bracket(79950.0, 0.0335),
+                    Bracket(193300.0, 0.0660),
+                    Bracket(294600.0, 0.0760),
+                    Bracket(f64::INFINITY, 0.0875),
+                ],
+                FilingStatus::MarriedFilingSeparately => vec![
+                    Bracket(75000.0, 0.0335),
+                    Bracket(96650.0, 0.0660),
+                    Bracket(147300.0, 0.0760),
+                    Bracket(f64::INFINITY, 0.0875),
+                ],
+                FilingStatus::QualifyingSurvivingSpouse => vec![
+                    Bracket(79950.0, 0.0335),
+                    Bracket(193300.0, 0.0660),
+                    Bracket(294600.0, 0.0760),
+                    Bracket(f64::INFINITY, 0.0875),
+                ],
+                FilingStatus::Single => vec![
+                    Bracket(75000.0, 0.0335),
+                    Bracket(116000.0, 0.0660),
+                    Bracket(242000.0, 0.0760),
+                    Bracket(f64::INFINITY, 0.0875),
+                ],
+            },
+            _ => {
+                eprintln!("Year {} not supported for vt. Defaulting to 2024 Single bracket.", year);
+                vec![
+                    Bracket(75000.0, 0.0),
+                    Bracket(116000.0, 0.1),
+                    Bracket(242000.0, 0.1),
                     Bracket(f64::INFINITY, 0.1),
                 ]
             }

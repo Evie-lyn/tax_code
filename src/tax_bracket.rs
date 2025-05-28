@@ -42,8 +42,8 @@ impl TaxBrackets {
 
 #[cfg(test)]
 mod tests {
-    use super::*; // Import items from the current module
-    use crate::brackets::Bracket; // Import Bracket from the crate root for tests as well
+    use super::*; 
+    use crate::brackets::Bracket; 
 
     #[test]
     fn test_monotonic_increase() {

@@ -1,2127 +1,5738 @@
 {
-    "AL": {
-        "2024": {
-           "Single": [
-                {"upper_bound": 500, "rate": 0.02},
-                {"upper_bound": 3000, "rate": 0.04},
-                {"upper_bound": null, "rate": 0.05}
-            ],
-            "MarriedFilingSeparately": [
-                {"upper_bound": 500, "rate": 0.02},
-                {"upper_bound": 3000, "rate": 0.04},
-                {"upper_bound": null, "rate": 0.05}
-            ],
-            "MarriedFilingJointly": [
-                {"upper_bound": 1000, "rate": 0.02},
-                {"upper_bound": 6000, "rate": 0.04},
-                {"upper_bound": null, "rate": 0.05}
-            ],
-            "QualifyingSurvivingSpouse": [
-                {"upper_bound": 1000, "rate": 0.02},
-                {"upper_bound": 6000, "rate": 0.04},
-                {"upper_bound": null, "rate": 0.05}
-            ],
-            "HeadOfHousehold": [
-                {"upper_bound": 500, "rate": 0.02},
-                {"upper_bound": 3000, "rate": 0.04},
-                {"upper_bound": null, "rate": 0.05}
-            ]
+  "AK": {
+    "2024": {
+      "HeadOfHousehold": [
+        {
+          "rate": 0.0,
+          "upper_bound": null
         }
-    },
-
-    "AK": {
-        "2024": {
-            "Single": [
-                {"upper_bound": null, "rate": 0.0}
-            ],
-            "MarriedFilingSeparately": [
-                {"upper_bound": null, "rate": 0.0}
-            ],
-            "MarriedFilingJointly": [
-                {"upper_bound": null, "rate": 0.0}
-            ],
-            "QualifyingSurvivingSpouse": [
-                {"upper_bound": null, "rate": 0.0}
-            ],
-            "HeadOfHousehold": [
-                {"upper_bound": null, "rate": 0.0}
-            ]
-        },
-        "2025": {
-            "Single": [
-                {"upper_bound": null, "rate": 0.0}
-            ],
-            "MarriedFilingSeparately": [
-                {"upper_bound": null, "rate": 0.0}
-            ],
-            "MarriedFilingJointly": [
-                {"upper_bound": null, "rate": 0.0}
-            ],
-            "QualifyingSurvivingSpouse": [
-                {"upper_bound": null, "rate": 0.0}
-            ],
-            "HeadOfHousehold": [
-                {"upper_bound": null, "rate": 0.0}
-            ]
+      ],
+      "MarriedFilingJointly": [
+        {
+          "rate": 0.0,
+          "upper_bound": null
         }
-    },
-
-    "AZ": {
-        "2024": {
-            "Single": [
-                {"upper_bound": null, "rate": 0.025}
-            ],
-            "MarriedFilingSeparately": [
-                {"upper_bound": null, "rate": 0.025}
-            ],
-            "MarriedFilingJointly": [
-                {"upper_bound": null, "rate": 0.025}
-            ],
-            "QualifyingSurvivingSpouse": [
-                {"upper_bound": null, "rate": 0.025}
-            ],
-            "HeadOfHousehold": [
-                {"upper_bound": null, "rate": 0.025}
-            ]
-        },
-        "2025": {
-            "Single": [
-                {"upper_bound": null, "rate": 0.025}
-            ],
-            "MarriedFilingSeparately": [
-                {"upper_bound": null, "rate": 0.025}
-            ],
-            "MarriedFilingJointly": [
-                {"upper_bound": null, "rate": 0.025}
-            ],
-            "QualifyingSurvivingSpouse": [
-                {"upper_bound": null, "rate": 0.025}
-            ],
-            "HeadOfHousehold": [
-                {"upper_bound": null, "rate": 0.025}
-            ]
+      ],
+      "MarriedFilingSeparately": [
+        {
+          "rate": 0.0,
+          "upper_bound": null
         }
-    },
-
-    "AR": {
-        "2024": {
-           "Single": [
-                {"upper_bound": 5499, "rate": 0.0},
-                {"upper_bound": 10899, "rate": 0.02},
-                {"upper_bound": 15599, "rate": 0.03},
-                {"upper_bound": 25699, "rate": 0.034},
-                {"upper_bound": null, "rate": 0.039}
-            ],
-            "MarriedFilingSeparately": [
-                {"upper_bound": 5499, "rate": 0.0},
-                {"upper_bound": 10899, "rate": 0.02},
-                {"upper_bound": 15599, "rate": 0.03},
-                {"upper_bound": 25699, "rate": 0.034},
-                {"upper_bound": null, "rate": 0.039}
-            ],
-            "MarriedFilingJointly": [
-                {"upper_bound": 5499, "rate": 0.0},
-                {"upper_bound": 10899, "rate": 0.02},
-                {"upper_bound": 15599, "rate": 0.03},
-                {"upper_bound": 25699, "rate": 0.034},
-                {"upper_bound": null, "rate": 0.039}
-            ],
-            "QualifyingSurvivingSpouse": [
-                {"upper_bound": 5499, "rate": 0.0},
-                {"upper_bound": 10899, "rate": 0.02},
-                {"upper_bound": 15599, "rate": 0.03},
-                {"upper_bound": 25699, "rate": 0.034},
-                {"upper_bound": null, "rate": 0.039}
-            ],
-            "HeadOfHousehold": [
-                {"upper_bound": 5499, "rate": 0.0},
-                {"upper_bound": 10899, "rate": 0.02},
-                {"upper_bound": 15599, "rate": 0.03},
-                {"upper_bound": 25699, "rate": 0.034},
-                {"upper_bound": null, "rate": 0.039}
-            ]
-        },
-        "2025": {
-           "Single": [
-                {"upper_bound": 5499, "rate": 0.0},
-                {"upper_bound": 10899, "rate": 0.02},
-                {"upper_bound": 15599, "rate": 0.03},
-                {"upper_bound": 25699, "rate": 0.034},
-                {"upper_bound": null, "rate": 0.039}
-            ],
-            "MarriedFilingSeparately": [
-                {"upper_bound": 5499, "rate": 0.0},
-                {"upper_bound": 10899, "rate": 0.02},
-                {"upper_bound": 15599, "rate": 0.03},
-                {"upper_bound": 25699, "rate": 0.034},
-                {"upper_bound": null, "rate": 0.039}
-            ],
-            "MarriedFilingJointly": [
-                {"upper_bound": 5499, "rate": 0.0},
-                {"upper_bound": 10899, "rate": 0.02},
-                {"upper_bound": 15599, "rate": 0.03},
-                {"upper_bound": 25699, "rate": 0.034},
-                {"upper_bound": null, "rate": 0.039}
-            ],
-            "QualifyingSurvivingSpouse": [
-                {"upper_bound": 5499, "rate": 0.0},
-                {"upper_bound": 10899, "rate": 0.02},
-                {"upper_bound": 15599, "rate": 0.03},
-                {"upper_bound": 25699, "rate": 0.034},
-                {"upper_bound": null, "rate": 0.039}
-            ],
-            "HeadOfHousehold": [
-                {"upper_bound": 5499, "rate": 0.0},
-                {"upper_bound": 10899, "rate": 0.02},
-                {"upper_bound": 15599, "rate": 0.03},
-                {"upper_bound": 25699, "rate": 0.034},
-                {"upper_bound": null, "rate": 0.039}
-            ]
+      ],
+      "QualifyingSurvivingSpouse": [
+        {
+          "rate": 0.0,
+          "upper_bound": null
         }
-    },
-
-    "CA": {
-        "2024": {
-           "Single": [
-                {"upper_bound": 10756, "rate": 0.01},
-                {"upper_bound": 25499, "rate": 0.02},
-                {"upper_bound": 40245, "rate": 0.04},
-                {"upper_bound": 55866, "rate": 0.06},
-                {"upper_bound": 70606, "rate": 0.08},
-                {"upper_bound": 360659, "rate": 0.093},
-                {"upper_bound": 432787, "rate": 0.103},
-                {"upper_bound": 721314, "rate": 0.112},
-                {"upper_bound": null, "rate": 0.123}
-            ],
-            "MarriedFilingSeparately": [
-                {"upper_bound": 10756, "rate": 0.01},
-                {"upper_bound": 25499, "rate": 0.02},
-                {"upper_bound": 40245, "rate": 0.04},
-                {"upper_bound": 55866, "rate": 0.06},
-                {"upper_bound": 70606, "rate": 0.08},
-                {"upper_bound": 360659, "rate": 0.093},
-                {"upper_bound": 432787, "rate": 0.103},
-                {"upper_bound": 721314, "rate": 0.112},
-                {"upper_bound": null, "rate": 0.123}
-            ],
-            "MarriedFilingJointly": [
-                {"upper_bound": 21512, "rate": 0.01},
-                {"upper_bound": 50998, "rate": 0.02},
-                {"upper_bound": 80490, "rate": 0.04},
-                {"upper_bound": 111732, "rate": 0.06},
-                {"upper_bound": 141212, "rate": 0.08},
-                {"upper_bound": 721318, "rate": 0.093},
-                {"upper_bound": 865574, "rate": 0.103},
-                {"upper_bound": 1442628, "rate": 0.112},
-                {"upper_bound": null, "rate": 0.123}
-            ],
-            "QualifyingSurvivingSpouse": [
-                {"upper_bound": 21512, "rate": 0.01},
-                {"upper_bound": 50998, "rate": 0.02},
-                {"upper_bound": 80490, "rate": 0.04},
-                {"upper_bound": 111732, "rate": 0.06},
-                {"upper_bound": 141212, "rate": 0.08},
-                {"upper_bound": 721318, "rate": 0.093},
-                {"upper_bound": 865574, "rate": 0.103},
-                {"upper_bound": 1442628, "rate": 0.112},
-                {"upper_bound": null, "rate": 0.123}
-            ],
-            "HeadOfHousehold": [
-                {"upper_bound": 21527, "rate": 0.01},
-                {"upper_bound": 51000, "rate": 0.02},
-                {"upper_bound": 65744, "rate": 0.04},
-                {"upper_bound": 81364, "rate": 0.06},
-                {"upper_bound": 96107, "rate": 0.08},
-                {"upper_bound": 490493, "rate": 0.093},
-                {"upper_bound": 588593, "rate": 0.103},
-                {"upper_bound": 980987, "rate": 0.112},
-                {"upper_bound": null, "rate": 0.123}
-            ]
+      ],
+      "Single": [
+        {
+          "rate": 0.0,
+          "upper_bound": null
         }
+      ]
     },
-
-    "CO": {
-        "2024": {
-            "Single": [
-                {"upper_bound": null, "rate": 0.0425}
-            ],
-            "MarriedFilingSeparately": [
-                {"upper_bound": null, "rate": 0.0425}
-            ],
-            "MarriedFilingJointly": [
-                {"upper_bound": null, "rate": 0.0425}
-            ],
-            "QualifyingSurvivingSpouse": [
-                {"upper_bound": null, "rate": 0.0425}
-            ],
-            "HeadOfHousehold": [
-                {"upper_bound": null, "rate": 0.0425}
-            ]
-        },
-        "2025": {
-            "Single": [
-                {"upper_bound": null, "rate": 0.044}
-            ],
-            "MarriedFilingSeparately": [
-                {"upper_bound": null, "rate": 0.044}
-            ],
-            "MarriedFilingJointly": [
-                {"upper_bound": null, "rate": 0.044}
-            ],
-            "QualifyingSurvivingSpouse": [
-                {"upper_bound": null, "rate": 0.044}
-            ],
-            "HeadOfHousehold": [
-                {"upper_bound": null, "rate": 0.044}
-            ]
+    "2025": {
+      "HeadOfHousehold": [
+        {
+          "rate": 0.0,
+          "upper_bound": null
         }
-    },
-
-    "CT": {
-        "2024": {
-           "Single": [
-                {"upper_bound": 10000, "rate": 0.02},
-                {"upper_bound": 50000, "rate": 0.045},
-                {"upper_bound": 100000, "rate": 0.055},
-                {"upper_bound": 200000, "rate": 0.06},
-                {"upper_bound": 250000, "rate": 0.065},
-                {"upper_bound": 500000, "rate": 0.069},
-                {"upper_bound": null, "rate": 0.0699}
-            ],
-            "MarriedFilingSeparately": [
-                {"upper_bound": 10000, "rate": 0.02},
-                {"upper_bound": 50000, "rate": 0.045},
-                {"upper_bound": 100000, "rate": 0.055},
-                {"upper_bound": 200000, "rate": 0.06},
-                {"upper_bound": 250000, "rate": 0.065},
-                {"upper_bound": 500000, "rate": 0.069},
-                {"upper_bound": null, "rate": 0.0699}
-            ],
-            "MarriedFilingJointly": [
-                {"upper_bound": 20000, "rate": 0.02},
-                {"upper_bound": 100000, "rate": 0.045},
-                {"upper_bound": 200000, "rate": 0.055},
-                {"upper_bound": 400000, "rate": 0.06},
-                {"upper_bound": 500000, "rate": 0.065},
-                {"upper_bound": 1000000, "rate": 0.069},
-                {"upper_bound": null, "rate": 0.0699}
-            ],
-            "QualifyingSurvivingSpouse": [
-                {"upper_bound": 20000, "rate": 0.02},
-                {"upper_bound": 100000, "rate": 0.045},
-                {"upper_bound": 200000, "rate": 0.055},
-                {"upper_bound": 400000, "rate": 0.06},
-                {"upper_bound": 500000, "rate": 0.065},
-                {"upper_bound": 1000000, "rate": 0.069},
-                {"upper_bound": null, "rate": 0.0699}
-            ],
-            "HeadOfHousehold": [
-                {"upper_bound": 16000, "rate": 0.02},
-                {"upper_bound": 80000, "rate": 0.045},
-                {"upper_bound": 160000, "rate": 0.055},
-                {"upper_bound": 320000, "rate": 0.06},
-                {"upper_bound": 400000, "rate": 0.065},
-                {"upper_bound": 800000, "rate": 0.069},
-                {"upper_bound": null, "rate": 0.0699}
-            ]
-        },
-        "2025": {
-            "Single": [
-                {"upper_bound": 10000, "rate": 0.02},
-                {"upper_bound": 50000, "rate": 0.045},
-                {"upper_bound": 100000, "rate": 0.055},
-                {"upper_bound": 200000, "rate": 0.06},
-                {"upper_bound": 250000, "rate": 0.065},
-                {"upper_bound": 500000, "rate": 0.069},
-                {"upper_bound": null, "rate": 0.0699}
-            ],
-            "MarriedFilingSeparately": [
-                {"upper_bound": 10000, "rate": 0.02},
-                {"upper_bound": 50000, "rate": 0.045},
-                {"upper_bound": 100000, "rate": 0.055},
-                {"upper_bound": 200000, "rate": 0.06},
-                {"upper_bound": 250000, "rate": 0.065},
-                {"upper_bound": 500000, "rate": 0.069},
-                {"upper_bound": null, "rate": 0.0699}
-            ],
-            "MarriedFilingJointly": [
-                {"upper_bound": 20000, "rate": 0.02},
-                {"upper_bound": 100000, "rate": 0.045},
-                {"upper_bound": 200000, "rate": 0.055},
-                {"upper_bound": 400000, "rate": 0.06},
-                {"upper_bound": 500000, "rate": 0.065},
-                {"upper_bound": 1000000, "rate": 0.069},
-                {"upper_bound": null, "rate": 0.0699}
-            ],
-            "QualifyingSurvivingSpouse": [
-                {"upper_bound": 20000, "rate": 0.02},
-                {"upper_bound": 100000, "rate": 0.045},
-                {"upper_bound": 200000, "rate": 0.055},
-                {"upper_bound": 400000, "rate": 0.06},
-                {"upper_bound": 500000, "rate": 0.065},
-                {"upper_bound": 1000000, "rate": 0.069},
-                {"upper_bound": null, "rate": 0.0699}
-            ],
-            "HeadOfHousehold": [
-                {"upper_bound": 16000, "rate": 0.02},
-                {"upper_bound": 80000, "rate": 0.045},
-                {"upper_bound": 160000, "rate": 0.055},
-                {"upper_bound": 320000, "rate": 0.06},
-                {"upper_bound": 400000, "rate": 0.065},
-                {"upper_bound": 800000, "rate": 0.069},
-                {"upper_bound": null, "rate": 0.0699}
-            ]
+      ],
+      "MarriedFilingJointly": [
+        {
+          "rate": 0.0,
+          "upper_bound": null
         }
-    },
-
-    "DE": {
-        "2024": {
-           "Single": [
-                {"upper_bound": 2000, "rate": 0.0},
-                {"upper_bound": 5000, "rate": 0.022},
-                {"upper_bound": 10000, "rate": 0.039},
-                {"upper_bound": 20000, "rate": 0.048},
-                {"upper_bound": 25000, "rate": 0.052},
-                {"upper_bound": 60000, "rate": 0.0555},
-                {"upper_bound": null, "rate": 0.066}
-            ],
-            "MarriedFilingSeparately": [
-                {"upper_bound": 2000, "rate": 0.0},
-                {"upper_bound": 5000, "rate": 0.022},
-                {"upper_bound": 10000, "rate": 0.039},
-                {"upper_bound": 20000, "rate": 0.048},
-                {"upper_bound": 25000, "rate": 0.052},
-                {"upper_bound": 60000, "rate": 0.0555},
-                {"upper_bound": null, "rate": 0.066}
-            ],
-            "MarriedFilingJointly": [
-                {"upper_bound": 2000, "rate": 0.0},
-                {"upper_bound": 5000, "rate": 0.022},
-                {"upper_bound": 10000, "rate": 0.039},
-                {"upper_bound": 20000, "rate": 0.048},
-                {"upper_bound": 25000, "rate": 0.052},
-                {"upper_bound": 60000, "rate": 0.0555},
-                {"upper_bound": null, "rate": 0.066}
-            ],
-            "QualifyingSurvivingSpouse": [
-                {"upper_bound": 2000, "rate": 0.0},
-                {"upper_bound": 5000, "rate": 0.022},
-                {"upper_bound": 10000, "rate": 0.039},
-                {"upper_bound": 20000, "rate": 0.048},
-                {"upper_bound": 25000, "rate": 0.052},
-                {"upper_bound": 60000, "rate": 0.0555},
-                {"upper_bound": null, "rate": 0.066}
-            ],
-            "HeadOfHousehold": [
-                {"upper_bound": 2000, "rate": 0.0},
-                {"upper_bound": 5000, "rate": 0.022},
-                {"upper_bound": 10000, "rate": 0.039},
-                {"upper_bound": 20000, "rate": 0.048},
-                {"upper_bound": 25000, "rate": 0.052},
-                {"upper_bound": 60000, "rate": 0.0555},
-                {"upper_bound": null, "rate": 0.066}
-            ]
-        },
-        "2025": {
-            "Single": [
-                {"upper_bound": 2000, "rate": 0.0},
-                {"upper_bound": 5000, "rate": 0.022},
-                {"upper_bound": 10000, "rate": 0.039},
-                {"upper_bound": 20000, "rate": 0.048},
-                {"upper_bound": 25000, "rate": 0.052},
-                {"upper_bound": 60000, "rate": 0.0555},
-                {"upper_bound": null, "rate": 0.066}
-            ],
-            "MarriedFilingSeparately": [
-                {"upper_bound": 2000, "rate": 0.0},
-                {"upper_bound": 5000, "rate": 0.022},
-                {"upper_bound": 10000, "rate": 0.039},
-                {"upper_bound": 20000, "rate": 0.048},
-                {"upper_bound": 25000, "rate": 0.052},
-                {"upper_bound": 60000, "rate": 0.0555},
-                {"upper_bound": null, "rate": 0.066}
-            ],
-            "MarriedFilingJointly": [
-                {"upper_bound": 2000, "rate": 0.0},
-                {"upper_bound": 5000, "rate": 0.022},
-                {"upper_bound": 10000, "rate": 0.039},
-                {"upper_bound": 20000, "rate": 0.048},
-                {"upper_bound": 25000, "rate": 0.052},
-                {"upper_bound": 60000, "rate": 0.0555},
-                {"upper_bound": null, "rate": 0.066}
-            ],
-            "QualifyingSurvivingSpouse": [
-                {"upper_bound": 2000, "rate": 0.0},
-                {"upper_bound": 5000, "rate": 0.022},
-                {"upper_bound": 10000, "rate": 0.039},
-                {"upper_bound": 20000, "rate": 0.048},
-                {"upper_bound": 25000, "rate": 0.052},
-                {"upper_bound": 60000, "rate": 0.0555},
-                {"upper_bound": null, "rate": 0.066}
-            ],
-            "HeadOfHousehold": [
-                {"upper_bound": 2000, "rate": 0.0},
-                {"upper_bound": 5000, "rate": 0.022},
-                {"upper_bound": 10000, "rate": 0.039},
-                {"upper_bound": 20000, "rate": 0.048},
-                {"upper_bound": 25000, "rate": 0.052},
-                {"upper_bound": 60000, "rate": 0.0555},
-                {"upper_bound": null, "rate": 0.066}
-            ]
+      ],
+      "MarriedFilingSeparately": [
+        {
+          "rate": 0.0,
+          "upper_bound": null
         }
-    },
-
-
-    "FL": {
-        "2024": {
-            "Single": [
-                {"upper_bound": null, "rate": 0.0}
-            ],
-            "MarriedFilingSeparately": [
-                {"upper_bound": null, "rate": 0.0}
-            ],
-            "MarriedFilingJointly": [
-                {"upper_bound": null, "rate": 0.0}
-            ],
-            "QualifyingSurvivingSpouse": [
-                {"upper_bound": null, "rate": 0.0}
-            ],
-            "HeadOfHousehold": [
-                {"upper_bound": null, "rate": 0.0}
-            ]
-        },
-        "2025": {
-            "Single": [
-                {"upper_bound": null, "rate": 0.0}
-            ],
-            "MarriedFilingSeparately": [
-                {"upper_bound": null, "rate": 0.0}
-            ],
-            "MarriedFilingJointly": [
-                {"upper_bound": null, "rate": 0.0}
-            ],
-            "QualifyingSurvivingSpouse": [
-                {"upper_bound": null, "rate": 0.0}
-            ],
-            "HeadOfHousehold": [
-                {"upper_bound": null, "rate": 0.0}
-            ]
+      ],
+      "QualifyingSurvivingSpouse": [
+        {
+          "rate": 0.0,
+          "upper_bound": null
         }
-    },
-
-    "GA": {
-        "2024": {
-            "Single": [
-                {"upper_bound": null, "rate": 0.0539}
-            ],
-            "MarriedFilingSeparately": [
-                {"upper_bound": null, "rate": 0.0539}
-            ],
-            "MarriedFilingJointly": [
-                {"upper_bound": null, "rate": 0.0539}
-            ],
-            "QualifyingSurvivingSpouse": [
-                {"upper_bound": null, "rate": 0.0539}
-            ],
-            "HeadOfHousehold": [
-                {"upper_bound": null, "rate": 0.0539}
-            ]
-        },
-        "2025": {
-            "Single": [
-                {"upper_bound": null, "rate": 0.0519}
-            ],
-            "MarriedFilingSeparately": [
-                {"upper_bound": null, "rate": 0.0519}
-            ],
-            "MarriedFilingJointly": [
-                {"upper_bound": null, "rate": 0.0519}
-            ],
-            "QualifyingSurvivingSpouse": [
-                {"upper_bound": null, "rate": 0.0519}
-            ],
-            "HeadOfHousehold": [
-                {"upper_bound": null, "rate": 0.0519}
-            ]
+      ],
+      "Single": [
+        {
+          "rate": 0.0,
+          "upper_bound": null
         }
-    },
-
-    "HI": {
-        "2024": {
-           "Single": [
-                {"upper_bound": 2400, "rate": 0.014},
-                {"upper_bound": 4800, "rate": 0.032},
-                {"upper_bound": 9600, "rate": 0.055},
-                {"upper_bound": 14400, "rate": 0.064},
-                {"upper_bound": 19200, "rate": 0.068},
-                {"upper_bound": 24000, "rate": 0.072},
-                {"upper_bound": 36000, "rate": 0.076},
-                {"upper_bound": 48000, "rate": 0.079},
-                {"upper_bound": 150000, "rate": 0.0825},
-                {"upper_bound": 175000, "rate": 0.09},
-                {"upper_bound": 200000, "rate": 0.10},
-                {"upper_bound": null, "rate": 0.11}
-            ],
-            "MarriedFilingSeparately": [
-                {"upper_bound": 2400, "rate": 0.014},
-                {"upper_bound": 4800, "rate": 0.032},
-                {"upper_bound": 9600, "rate": 0.055},
-                {"upper_bound": 14400, "rate": 0.064},
-                {"upper_bound": 19200, "rate": 0.068},
-                {"upper_bound": 24000, "rate": 0.072},
-                {"upper_bound": 36000, "rate": 0.076},
-                {"upper_bound": 48000, "rate": 0.079},
-                {"upper_bound": 150000, "rate": 0.0825},
-                {"upper_bound": 175000, "rate": 0.09},
-                {"upper_bound": 200000, "rate": 0.10},
-                {"upper_bound": null, "rate": 0.11}
-            ],
-            "MarriedFilingJointly": [
-                {"upper_bound": 4800, "rate": 0.014},
-                {"upper_bound": 9600, "rate": 0.032},
-                {"upper_bound": 19200, "rate": 0.055},
-                {"upper_bound": 28800, "rate": 0.064},
-                {"upper_bound": 38400, "rate": 0.068},
-                {"upper_bound": 48000, "rate": 0.072},
-                {"upper_bound": 72000, "rate": 0.076},
-                {"upper_bound": 96000, "rate": 0.079},
-                {"upper_bound": 300000, "rate": 0.0825},
-                {"upper_bound": 350000, "rate": 0.09},
-                {"upper_bound": 400000, "rate": 0.10},
-                {"upper_bound": null, "rate": 0.11}
-            ],
-            "QualifyingSurvivingSpouse": [
-                {"upper_bound": 4800, "rate": 0.014},
-                {"upper_bound": 9600, "rate": 0.032},
-                {"upper_bound": 19200, "rate": 0.055},
-                {"upper_bound": 28800, "rate": 0.064},
-                {"upper_bound": 38400, "rate": 0.068},
-                {"upper_bound": 48000, "rate": 0.072},
-                {"upper_bound": 72000, "rate": 0.076},
-                {"upper_bound": 96000, "rate": 0.079},
-                {"upper_bound": 300000, "rate": 0.0825},
-                {"upper_bound": 350000, "rate": 0.09},
-                {"upper_bound": 400000, "rate": 0.10},
-                {"upper_bound": null, "rate": 0.11}
-            ],
-            "HeadOfHousehold": [
-                {"upper_bound": 3600, "rate": 0.014},
-                {"upper_bound": 7200, "rate": 0.032},
-                {"upper_bound": 14400, "rate": 0.055},
-                {"upper_bound": 21600, "rate": 0.064},
-                {"upper_bound": 28800, "rate": 0.068},
-                {"upper_bound": 36000, "rate": 0.072},
-                {"upper_bound": 54000, "rate": 0.076},
-                {"upper_bound": 72000, "rate": 0.079},
-                {"upper_bound": 225000, "rate": 0.0825},
-                {"upper_bound": 262500, "rate": 0.09},
-                {"upper_bound": 300000, "rate": 0.10},
-                {"upper_bound": null, "rate": 0.11}
-            ]
-        },
-        "2025": {
-            "Single": [
-                {"upper_bound": 9600, "rate": 0.014},
-                {"upper_bound": 14400, "rate": 0.032},
-                {"upper_bound": 19200, "rate": 0.055},
-                {"upper_bound": 24000, "rate": 0.064},
-                {"upper_bound": 36000, "rate": 0.068},
-                {"upper_bound": 48000, "rate": 0.072},
-                {"upper_bound": 125000, "rate": 0.076},
-                {"upper_bound": 175000, "rate": 0.079},
-                {"upper_bound": 225000, "rate": 0.0825},
-                {"upper_bound": 275000, "rate": 0.09},
-                {"upper_bound": 325000, "rate": 0.10},
-                {"upper_bound": null, "rate": 0.11}
-            ],
-            "MarriedFilingSeparately": [
-                {"upper_bound": 9600, "rate": 0.014},
-                {"upper_bound": 14400, "rate": 0.032},
-                {"upper_bound": 19200, "rate": 0.055},
-                {"upper_bound": 24000, "rate": 0.064},
-                {"upper_bound": 36000, "rate": 0.068},
-                {"upper_bound": 48000, "rate": 0.072},
-                {"upper_bound": 125000, "rate": 0.076},
-                {"upper_bound": 175000, "rate": 0.079},
-                {"upper_bound": 225000, "rate": 0.0825},
-                {"upper_bound": 275000, "rate": 0.09},
-                {"upper_bound": 325000, "rate": 0.10},
-                {"upper_bound": null, "rate": 0.11}
-            ],
-            "MarriedFilingJointly": [
-                {"upper_bound": 19200, "rate": 0.014},
-                {"upper_bound": 28800, "rate": 0.032},
-                {"upper_bound": 38400, "rate": 0.055},
-                {"upper_bound": 48000, "rate": 0.064},
-                {"upper_bound": 72000, "rate": 0.068},
-                {"upper_bound": 96000, "rate": 0.072},
-                {"upper_bound": 250000, "rate": 0.076},
-                {"upper_bound": 350000, "rate": 0.079},
-                {"upper_bound": 450000, "rate": 0.0825},
-                {"upper_bound": 550000, "rate": 0.09},
-                {"upper_bound": 650000, "rate": 0.10},
-                {"upper_bound": null, "rate": 0.11}
-            ],
-            "QualifyingSurvivingSpouse": [
-                {"upper_bound": 19200, "rate": 0.014},
-                {"upper_bound": 28800, "rate": 0.032},
-                {"upper_bound": 38400, "rate": 0.055},
-                {"upper_bound": 48000, "rate": 0.064},
-                {"upper_bound": 72000, "rate": 0.068},
-                {"upper_bound": 96000, "rate": 0.072},
-                {"upper_bound": 250000, "rate": 0.076},
-                {"upper_bound": 350000, "rate": 0.079},
-                {"upper_bound": 450000, "rate": 0.0825},
-                {"upper_bound": 550000, "rate": 0.09},
-                {"upper_bound": 650000, "rate": 0.10},
-                {"upper_bound": null, "rate": 0.11}
-            ],
-            "HeadOfHousehold": [
-                {"upper_bound": 14400, "rate": 0.014},
-                {"upper_bound": 21600, "rate": 0.032},
-                {"upper_bound": 28800, "rate": 0.055},
-                {"upper_bound": 36000, "rate": 0.064},
-                {"upper_bound": 54000, "rate": 0.068},
-                {"upper_bound": 72000, "rate": 0.072},
-                {"upper_bound": 187500, "rate": 0.076},
-                {"upper_bound": 262500, "rate": 0.079},
-                {"upper_bound": 337600, "rate": 0.0825},
-                {"upper_bound": 412500, "rate": 0.09},
-                {"upper_bound": 487500, "rate": 0.10},
-                {"upper_bound": null, "rate": 0.11}
-            ]
-        }
-    },
-
-    "ID": {
-        "2024": {
-           "Single": [
-                {"upper_bound": 4673, "rate": 0.0},
-                {"upper_bound": null, "rate": 0.05695}
-            ],
-            "MarriedFilingSeparately": [
-                {"upper_bound": 4673, "rate": 0.0},
-                {"upper_bound": null, "rate": 0.05695}
-            ],
-            "MarriedFilingJointly": [
-                {"upper_bound": 9346, "rate": 0.0},
-                {"upper_bound": null, "rate": 0.05695}
-            ],
-            "QualifyingSurvivingSpouse": [
-                {"upper_bound": 9346, "rate": 0.0},
-                {"upper_bound": null, "rate": 0.05695}
-            ],
-            "HeadOfHousehold": [
-                {"upper_bound": 9346, "rate": 0.0},
-                {"upper_bound": null, "rate": 0.05695}
-            ]
-        }
-    },
-
-    "IL": {
-        "2024": {
-            "Single": [
-                {"upper_bound": null, "rate": 0.0495}
-            ],
-            "MarriedFilingSeparately": [
-                {"upper_bound": null, "rate": 0.0495}
-            ],
-            "MarriedFilingJointly": [
-                {"upper_bound": null, "rate": 0.0495}
-            ],
-            "QualifyingSurvivingSpouse": [
-                {"upper_bound": null, "rate": 0.0495}
-            ],
-            "HeadOfHousehold": [
-                {"upper_bound": null, "rate": 0.0495}
-            ]
-        },
-        "2025": {
-            "Single": [
-                {"upper_bound": null, "rate": 0.0495}
-            ],
-            "MarriedFilingSeparately": [
-                {"upper_bound": null, "rate": 0.0495}
-            ],
-            "MarriedFilingJointly": [
-                {"upper_bound": null, "rate": 0.0495}
-            ],
-            "QualifyingSurvivingSpouse": [
-                {"upper_bound": null, "rate": 0.0495}
-            ],
-            "HeadOfHousehold": [
-                {"upper_bound": null, "rate": 0.0495}
-            ]
-        }
-    },
-
-    "IN": {
-        "2024": {
-            "Single": [
-                {"upper_bound": null, "rate": 0.031}
-            ],
-            "MarriedFilingSeparately": [
-                {"upper_bound": null, "rate": 0.031}
-            ],
-            "MarriedFilingJointly": [
-                {"upper_bound": null, "rate": 0.031}
-            ],
-            "QualifyingSurvivingSpouse": [
-                {"upper_bound": null, "rate": 0.031}
-            ],
-            "HeadOfHousehold": [
-                {"upper_bound": null, "rate": 0.031}
-            ]
-        },
-        "2025": {
-            "Single": [
-                {"upper_bound": null, "rate": 0.03}
-            ],
-            "MarriedFilingSeparately": [
-                {"upper_bound": null, "rate": 0.03}
-            ],
-            "MarriedFilingJointly": [
-                {"upper_bound": null, "rate": 0.03}
-            ],
-            "QualifyingSurvivingSpouse": [
-                {"upper_bound": null, "rate": 0.03}
-            ],
-            "HeadOfHousehold": [
-                {"upper_bound": null, "rate": 0.03}
-            ]
-        }
-    },
-
-    "IA": {
-        "2024": {
-           "Single": [
-                {"upper_bound": 6210, "rate": 0.044},
-                {"upper_bound": 31050, "rate": 0.0482},
-                {"upper_bound": null, "rate": 0.057}
-            ],
-            "MarriedFilingSeparately": [
-                {"upper_bound": 6210, "rate": 0.044},
-                {"upper_bound": 31050, "rate": 0.0482},
-                {"upper_bound": null, "rate": 0.057}
-            ],
-            "MarriedFilingJointly": [
-                {"upper_bound": 12420, "rate": 0.044},
-                {"upper_bound": 62100, "rate": 0.0482},
-                {"upper_bound": null, "rate": 0.057}
-            ],
-            "QualifyingSurvivingSpouse": [
-                {"upper_bound": 12420, "rate": 0.044},
-                {"upper_bound": 62100, "rate": 0.0482},
-                {"upper_bound": null, "rate": 0.057}
-            ],
-            "HeadOfHousehold": [
-                {"upper_bound": 6210, "rate": 0.044},
-                {"upper_bound": 31050, "rate": 0.0482},
-                {"upper_bound": null, "rate": 0.057}
-            ]
-        },
-        "2025": {
-            "Single": [
-                {"upper_bound": null, "rate": 0.038}
-            ],
-            "MarriedFilingSeparately": [
-                {"upper_bound": null, "rate": 0.038}
-            ],
-            "MarriedFilingJointly": [
-                {"upper_bound": null, "rate": 0.038}
-            ],
-            "QualifyingSurvivingSpouse": [
-                {"upper_bound": null, "rate": 0.038}
-            ],
-            "HeadOfHousehold": [
-                {"upper_bound": null, "rate": 0.038}
-            ]
-        }
-    },
-
-    "KS": {
-        "2024": {
-           "Single": [
-                {"upper_bound": 23000, "rate": 0.052},
-                {"upper_bound": null, "rate": 0.0558}
-            ],
-            "MarriedFilingSeparately": [
-                {"upper_bound": 23000, "rate": 0.052},
-                {"upper_bound": null, "rate": 0.0558}
-            ],
-            "MarriedFilingJointly": [
-                {"upper_bound": 46000, "rate": 0.052},
-                {"upper_bound": null, "rate": 0.0558}
-            ],
-            "QualifyingSurvivingSpouse": [
-                {"upper_bound": 46000, "rate": 0.052},
-                {"upper_bound": null, "rate": 0.0558}
-            ],
-            "HeadOfHousehold": [
-                {"upper_bound": 23000, "rate": 0.052},
-                {"upper_bound": null, "rate": 0.0558}
-            ]
-        }
-    },
-
-    "KY": {
-        "2024": {
-            "Single": [
-                {"upper_bound": null, "rate": 0.04}
-            ],
-            "MarriedFilingSeparately": [
-                {"upper_bound": null, "rate": 0.04}
-            ],
-            "MarriedFilingJointly": [
-                {"upper_bound": null, "rate": 0.04}
-            ],
-            "QualifyingSurvivingSpouse": [
-                {"upper_bound": null, "rate": 0.04}
-            ],
-            "HeadOfHousehold": [
-                {"upper_bound": null, "rate": 0.40}
-            ]
-        },
-        "2025": {
-            "Single": [
-                {"upper_bound": null, "rate": 0.04}
-            ],
-            "MarriedFilingSeparately": [
-                {"upper_bound": null, "rate": 0.04}
-            ],
-            "MarriedFilingJointly": [
-                {"upper_bound": null, "rate": 0.04}
-            ],
-            "QualifyingSurvivingSpouse": [
-                {"upper_bound": null, "rate": 0.04}
-            ],
-            "HeadOfHousehold": [
-                {"upper_bound": null, "rate": 0.04}
-            ]
-        }
-    },
-
-    "LA": {
-        "2024": {
-           "Single": [
-                {"upper_bound": 12500, "rate": 0.0185},
-                {"upper_bound": 50000, "rate": 0.035},
-                {"upper_bound": null, "rate": 0.0425}
-            ],
-            "MarriedFilingSeparately": [
-                {"upper_bound": 12500, "rate": 0.0185},
-                {"upper_bound": 50000, "rate": 0.035},
-                {"upper_bound": null, "rate": 0.0425}
-            ],
-            "MarriedFilingJointly": [
-                {"upper_bound": 25000, "rate": 0.0185},
-                {"upper_bound": 100000, "rate": 0.035},
-                {"upper_bound": null, "rate": 0.0425}
-            ],
-            "QualifyingSurvivingSpouse": [
-                {"upper_bound": 25000, "rate": 0.0185},
-                {"upper_bound": 100000, "rate": 0.035},
-                {"upper_bound": null, "rate": 0.0425}
-            ],
-            "HeadOfHousehold": [
-                {"upper_bound": 12500, "rate": 0.0185},
-                {"upper_bound": 50000, "rate": 0.035},
-                {"upper_bound": null, "rate": 0.0425}
-            ]
-        },
-        "2025": {
-            "Single": [
-                {"upper_bound": null, "rate": 0.03}
-            ],
-            "MarriedFilingSeparately": [
-                {"upper_bound": null, "rate": 0.03}
-            ],
-            "MarriedFilingJointly": [
-                {"upper_bound": null, "rate": 0.03}
-            ],
-            "QualifyingSurvivingSpouse": [
-                {"upper_bound": null, "rate": 0.03}
-            ],
-            "HeadOfHousehold": [
-                {"upper_bound": null, "rate": 0.03}
-            ]
-        }
-    },
-
-    "ME": {
-        "2024": {
-           "Single": [
-                {"upper_bound": 26050, "rate": 0.058},
-                {"upper_bound": 61600, "rate": 0.0675},
-                {"upper_bound": null, "rate": 0.0715}
-            ],
-            "MarriedFilingSeparately": [
-                {"upper_bound": 26050, "rate": 0.058},
-                {"upper_bound": 61600, "rate": 0.0675},
-                {"upper_bound": null, "rate": 0.0715}
-            ],
-            "MarriedFilingJointly": [
-                {"upper_bound": 52100, "rate": 0.058},
-                {"upper_bound": 123250, "rate": 0.0675},
-                {"upper_bound": null, "rate": 0.0715}
-            ],
-            "QualifyingSurvivingSpouse": [
-                {"upper_bound": 52100, "rate": 0.058},
-                {"upper_bound": 123250, "rate": 0.0675},
-                {"upper_bound": null, "rate": 0.0715}
-            ],
-            "HeadOfHousehold": [
-                {"upper_bound": 39050, "rate": 0.058},
-                {"upper_bound": 92450, "rate": 0.0675},
-                {"upper_bound": null, "rate": 0.0715}
-            ]
-        },
-        "2025": {
-            "Single": [
-                {"upper_bound": 26800, "rate": 0.058},
-                {"upper_bound": 63450, "rate": 0.0675},
-                {"upper_bound": null, "rate": 0.0715}
-            ],
-            "MarriedFilingSeparately": [
-                {"upper_bound": 26800, "rate": 0.058},
-                {"upper_bound": 63450, "rate": 0.0675},
-                {"upper_bound": null, "rate": 0.0715}
-            ],
-            "MarriedFilingJointly": [
-                {"upper_bound": 53600, "rate": 0.058},
-                {"upper_bound": 126900, "rate": 0.0675},
-                {"upper_bound": null, "rate": 0.0715}
-            ],
-            "QualifyingSurvivingSpouse": [
-                {"upper_bound": 53600, "rate": 0.058},
-                {"upper_bound": 126900, "rate": 0.0675},
-                {"upper_bound": null, "rate": 0.0715}
-            ],
-            "HeadOfHousehold": [
-                {"upper_bound": 40200, "rate": 0.058},
-                {"upper_bound": 95150, "rate": 0.0675},
-                {"upper_bound": null, "rate": 0.0715}
-            ]
-        }
-    },
-
-    "MD": {
-        "2024": {
-           "Single": [
-                {"upper_bound": 1000, "rate": 0.02},
-                {"upper_bound": 2000, "rate": 0.03},
-                {"upper_bound": 3000, "rate": 0.04},
-                {"upper_bound": 100000, "rate": 0.0475},
-                {"upper_bound": 125000, "rate": 0.05},
-                {"upper_bound": 150000, "rate": 0.0525},
-                {"upper_bound": 250000, "rate": 0.055},
-                {"upper_bound": null, "rate": 0.0575}
-            ],
-            "MarriedFilingSeparately": [
-                {"upper_bound": 1000, "rate": 0.02},
-                {"upper_bound": 2000, "rate": 0.03},
-                {"upper_bound": 3000, "rate": 0.04},
-                {"upper_bound": 100000, "rate": 0.0475},
-                {"upper_bound": 125000, "rate": 0.05},
-                {"upper_bound": 150000, "rate": 0.0525},
-                {"upper_bound": 250000, "rate": 0.055},
-                {"upper_bound": null, "rate": 0.0575}
-            ],
-            "MarriedFilingJointly": [
-                {"upper_bound": 1000, "rate": 0.02},
-                {"upper_bound": 2000, "rate": 0.03},
-                {"upper_bound": 3000, "rate": 0.04},
-                {"upper_bound": 150000, "rate": 0.0475},
-                {"upper_bound": 175000, "rate": 0.05},
-                {"upper_bound": 225000, "rate": 0.0525},
-                {"upper_bound": 300000, "rate": 0.055},
-                {"upper_bound": null, "rate": 0.0575}
-            ],
-            "QualifyingSurvivingSpouse": [
-                {"upper_bound": 1000, "rate": 0.02},
-                {"upper_bound": 2000, "rate": 0.03},
-                {"upper_bound": 3000, "rate": 0.04},
-                {"upper_bound": 150000, "rate": 0.0475},
-                {"upper_bound": 175000, "rate": 0.05},
-                {"upper_bound": 225000, "rate": 0.0525},
-                {"upper_bound": 300000, "rate": 0.055},
-                {"upper_bound": null, "rate": 0.0575}
-            ],
-            "HeadOfHousehold": [
-                {"upper_bound": 1000, "rate": 0.02},
-                {"upper_bound": 2000, "rate": 0.03},
-                {"upper_bound": 3000, "rate": 0.04},
-                {"upper_bound": 150000, "rate": 0.0475},
-                {"upper_bound": 175000, "rate": 0.05},
-                {"upper_bound": 225000, "rate": 0.0525},
-                {"upper_bound": 300000, "rate": 0.055},
-                {"upper_bound": null, "rate": 0.0575}
-            ]
-        },
-        "2025": {
-            "Single": [
-                {"upper_bound": 1000, "rate": 0.02},
-                {"upper_bound": 2000, "rate": 0.03},
-                {"upper_bound": 3000, "rate": 0.04},
-                {"upper_bound": 100000, "rate": 0.0475},
-                {"upper_bound": 125000, "rate": 0.05},
-                {"upper_bound": 150000, "rate": 0.0525},
-                {"upper_bound": 250000, "rate": 0.055},
-                {"upper_bound": null, "rate": 0.0575}
-            ],
-            "MarriedFilingSeparately": [
-                {"upper_bound": 1000, "rate": 0.02},
-                {"upper_bound": 2000, "rate": 0.03},
-                {"upper_bound": 3000, "rate": 0.04},
-                {"upper_bound": 100000, "rate": 0.0475},
-                {"upper_bound": 125000, "rate": 0.05},
-                {"upper_bound": 150000, "rate": 0.0525},
-                {"upper_bound": 250000, "rate": 0.055},
-                {"upper_bound": null, "rate": 0.0575}
-            ],
-            "MarriedFilingJointly": [
-                {"upper_bound": 1000, "rate": 0.02},
-                {"upper_bound": 2000, "rate": 0.03},
-                {"upper_bound": 3000, "rate": 0.04},
-                {"upper_bound": 150000, "rate": 0.0475},
-                {"upper_bound": 175000, "rate": 0.05},
-                {"upper_bound": 225000, "rate": 0.0525},
-                {"upper_bound": 300000, "rate": 0.055},
-                {"upper_bound": null, "rate": 0.0575}
-            ],
-            "QualifyingSurvivingSpouse": [
-                {"upper_bound": 1000, "rate": 0.02},
-                {"upper_bound": 2000, "rate": 0.03},
-                {"upper_bound": 3000, "rate": 0.04},
-                {"upper_bound": 150000, "rate": 0.0475},
-                {"upper_bound": 175000, "rate": 0.05},
-                {"upper_bound": 225000, "rate": 0.0525},
-                {"upper_bound": 300000, "rate": 0.055},
-                {"upper_bound": null, "rate": 0.0575}
-            ],
-            "HeadOfHousehold": [
-                {"upper_bound": 1000, "rate": 0.02},
-                {"upper_bound": 2000, "rate": 0.03},
-                {"upper_bound": 3000, "rate": 0.04},
-                {"upper_bound": 150000, "rate": 0.0475},
-                {"upper_bound": 175000, "rate": 0.05},
-                {"upper_bound": 225000, "rate": 0.0525},
-                {"upper_bound": 300000, "rate": 0.055},
-                {"upper_bound": null, "rate": 0.0575}
-            ]
-        }
-    },
-
-    "MA": {
-        "2024": {
-           "Single": [
-                {"upper_bound": 1053750, "rate": 0.05},
-                {"upper_bound": null, "rate": 0.09}
-            ],
-            "MarriedFilingSeparately": [
-                {"upper_bound": 1053750, "rate": 0.05},
-                {"upper_bound": null, "rate": 0.09}
-            ],
-            "MarriedFilingJointly": [
-                {"upper_bound": 1053750, "rate": 0.05},
-                {"upper_bound": null, "rate": 0.09}
-            ],
-            "QualifyingSurvivingSpouse": [
-                {"upper_bound": 1053750, "rate": 0.05},
-                {"upper_bound": null, "rate": 0.09}
-            ],
-            "HeadOfHousehold": [
-                {"upper_bound": 1053750, "rate": 0.05},
-                {"upper_bound": null, "rate": 0.09}
-            ]
-        },
-        "2025": {
-            "Single": [
-                {"upper_bound": 1083150, "rate": 0.05},
-                {"upper_bound": null, "rate": 0.09}
-            ],
-            "MarriedFilingSeparately": [
-                {"upper_bound": 1083150, "rate": 0.05},
-                {"upper_bound": null, "rate": 0.09}
-            ],
-            "MarriedFilingJointly": [
-                {"upper_bound": 1083150, "rate": 0.05},
-                {"upper_bound": null, "rate": 0.09}
-            ],
-            "QualifyingSurvivingSpouse": [
-                {"upper_bound": 1083150, "rate": 0.05},
-                {"upper_bound": null, "rate": 0.09}
-            ],
-            "HeadOfHousehold": [
-                {"upper_bound": 1083150, "rate": 0.05},
-                {"upper_bound": null, "rate": 0.09}
-            ]
-        }
-    },
-
-    "MI": {
-        "2024": {
-            "Single": [
-                {"upper_bound": null, "rate": 0.0425}
-            ],
-            "MarriedFilingSeparately": [
-                {"upper_bound": null, "rate": 0.0425}
-            ],
-            "MarriedFilingJointly": [
-                {"upper_bound": null, "rate": 0.0425}
-            ],
-            "QualifyingSurvivingSpouse": [
-                {"upper_bound": null, "rate": 0.0425}
-            ],
-            "HeadOfHousehold": [
-                {"upper_bound": null, "rate": 0.0425}
-            ]
-        },
-        "2025": {
-            "Single": [
-                {"upper_bound": null, "rate": 0.0425}
-            ],
-            "MarriedFilingSeparately": [
-                {"upper_bound": null, "rate": 0.0425}
-            ],
-            "MarriedFilingJointly": [
-                {"upper_bound": null, "rate": 0.0425}
-            ],
-            "QualifyingSurvivingSpouse": [
-                {"upper_bound": null, "rate": 0.0425}
-            ],
-            "HeadOfHousehold": [
-                {"upper_bound": null, "rate": 0.0425}
-            ]
-        }
-    },
-
-    "MN": {
-        "2024": {
-           "Single": [
-                {"upper_bound": 31690, "rate": 0.0535},
-                {"upper_bound": 104090, "rate": 0.068},
-                {"upper_bound": 193240, "rate": 0.0785},
-                {"upper_bound": null, "rate": 0.0985}
-            ],
-            "MarriedFilingSeparately": [
-                {"upper_bound": 23165, "rate": 0.0535},
-                {"upper_bound": 92020, "rate": 0.068},
-                {"upper_bound": 160725, "rate": 0.0785},
-                {"upper_bound": null, "rate": 0.0985}
-            ],
-            "MarriedFilingJointly": [
-                {"upper_bound": 46330, "rate": 0.0535},
-                {"upper_bound": 184040, "rate": 0.068},
-                {"upper_bound": 321450, "rate": 0.0785},
-                {"upper_bound": null, "rate": 0.0985}
-            ],
-            "QualifyingSurvivingSpouse": [
-                {"upper_bound": 46330, "rate": 0.0535},
-                {"upper_bound": 184040, "rate": 0.068},
-                {"upper_bound": 321450, "rate": 0.0785},
-                {"upper_bound": null, "rate": 0.0985}
-            ],
-            "HeadOfHousehold": [
-                {"upper_bound": 39010, "rate": 0.0535},
-                {"upper_bound": 156760, "rate": 0.068},
-                {"upper_bound": 256880, "rate": 0.0785},
-                {"upper_bound": null, "rate": 0.0985}
-            ]
-        },
-        "2025": {
-            "Single": [
-                {"upper_bound": 32570, "rate": 0.0535},
-                {"upper_bound": 106990, "rate": 0.068},
-                {"upper_bound": 198630, "rate": 0.0785},
-                {"upper_bound": null, "rate": 0.0985}
-            ],
-            "MarriedFilingSeparately": [
-                {"upper_bound": 23810, "rate": 0.0535},
-                {"upper_bound": 94590, "rate": 0.068},
-                {"upper_bound": 165205, "rate": 0.0785},
-                {"upper_bound": null, "rate": 0.0985}
-            ],
-            "MarriedFilingJointly": [
-                {"upper_bound": 47620, "rate": 0.0535},
-                {"upper_bound": 189180, "rate": 0.068},
-                {"upper_bound": 330410, "rate": 0.0785},
-                {"upper_bound": null, "rate": 0.0985}
-            ],
-            "QualifyingSurvivingSpouse": [
-                {"upper_bound": 47620, "rate": 0.0535},
-                {"upper_bound": 189180, "rate": 0.068},
-                {"upper_bound": 330410, "rate": 0.0785},
-                {"upper_bound": null, "rate": 0.0985}
-            ],
-            "HeadOfHousehold": [
-                {"upper_bound": 40100, "rate": 0.0535},
-                {"upper_bound": 161130, "rate": 0.068},
-                {"upper_bound": 264050, "rate": 0.0785},
-                {"upper_bound": null, "rate": 0.0985}
-            ]
-        }
-    },
-
-    "MS": {
-        "2024": {
-           "Single": [
-                {"upper_bound": 10000, "rate": 0.0},
-                {"upper_bound": null, "rate": 0.047}
-            ],
-            "MarriedFilingSeparately": [
-                {"upper_bound": 10000, "rate": 0.0},
-                {"upper_bound": null, "rate": 0.047}
-            ],
-            "MarriedFilingJointly": [
-                {"upper_bound": 10000, "rate": 0.0},
-                {"upper_bound": null, "rate": 0.047}
-            ],
-            "QualifyingSurvivingSpouse": [
-                {"upper_bound": 10000, "rate": 0.0},
-                {"upper_bound": null, "rate": 0.047}
-            ],
-            "HeadOfHousehold": [
-                {"upper_bound": 10000, "rate": 0.0},
-                {"upper_bound": null, "rate": 0.047}
-            ]
-        },
-        "2025": {
-            "Single": [
-                {"upper_bound": 10000, "rate": 0.0},
-                {"upper_bound": null, "rate": 0.044}
-            ],
-            "MarriedFilingSeparately": [
-                {"upper_bound": 10000, "rate": 0.0},
-                {"upper_bound": null, "rate": 0.044}
-            ],
-            "MarriedFilingJointly": [
-                {"upper_bound": 10000, "rate": 0.0},
-                {"upper_bound": null, "rate": 0.044}
-            ],
-            "QualifyingSurvivingSpouse": [
-                {"upper_bound": 10000, "rate": 0.0},
-                {"upper_bound": null, "rate": 0.044}
-            ],
-            "HeadOfHousehold": [
-                {"upper_bound": 10000, "rate": 0.0},
-                {"upper_bound": null, "rate": 0.044}
-            ]
-        }
-    },
-
-    "MO": {
-        "2024": {
-           "Single": [
-                {"upper_bound": 1273, "rate": 0.0},
-                {"upper_bound": 2546, "rate": 0.02},
-                {"upper_bound": 3819, "rate": 0.025},
-                {"upper_bound": 5092, "rate": 0.03},
-                {"upper_bound": 6365, "rate": 0.035},
-                {"upper_bound": 7638, "rate": 0.04},
-                {"upper_bound": 8911, "rate": 0.045},
-                {"upper_bound": null, "rate": 0.048}
-            ],
-            "MarriedFilingSeparately": [
-                {"upper_bound": 1273, "rate": 0.0},
-                {"upper_bound": 2546, "rate": 0.02},
-                {"upper_bound": 3819, "rate": 0.025},
-                {"upper_bound": 5092, "rate": 0.03},
-                {"upper_bound": 6365, "rate": 0.035},
-                {"upper_bound": 7638, "rate": 0.04},
-                {"upper_bound": 8911, "rate": 0.045},
-                {"upper_bound": null, "rate": 0.048}
-            ],
-            "MarriedFilingJointly": [
-                {"upper_bound": 1273, "rate": 0.0},
-                {"upper_bound": 2546, "rate": 0.02},
-                {"upper_bound": 3819, "rate": 0.025},
-                {"upper_bound": 5092, "rate": 0.03},
-                {"upper_bound": 6365, "rate": 0.035},
-                {"upper_bound": 7638, "rate": 0.04},
-                {"upper_bound": 8911, "rate": 0.045},
-                {"upper_bound": null, "rate": 0.048}
-            ],
-            "QualifyingSurvivingSpouse": [
-                {"upper_bound": 1273, "rate": 0.0},
-                {"upper_bound": 2546, "rate": 0.02},
-                {"upper_bound": 3819, "rate": 0.025},
-                {"upper_bound": 5092, "rate": 0.03},
-                {"upper_bound": 6365, "rate": 0.035},
-                {"upper_bound": 7638, "rate": 0.04},
-                {"upper_bound": 8911, "rate": 0.045},
-                {"upper_bound": null, "rate": 0.048}
-            ],
-            "HeadOfHousehold": [
-                {"upper_bound": 1273, "rate": 0.0},
-                {"upper_bound": 2546, "rate": 0.02},
-                {"upper_bound": 3819, "rate": 0.025},
-                {"upper_bound": 5092, "rate": 0.03},
-                {"upper_bound": 6365, "rate": 0.035},
-                {"upper_bound": 7638, "rate": 0.04},
-                {"upper_bound": 8911, "rate": 0.045},
-                {"upper_bound": null, "rate": 0.048}
-            ]
-        }
-    },
-
-    "MT": {
-        "2024": {
-           "Single": [
-                {"upper_bound": 20500, "rate": 0.047},
-                {"upper_bound": null, "rate": 0.059}
-            ],
-            "MarriedFilingSeparately": [
-                {"upper_bound": 20500, "rate": 0.047},
-                {"upper_bound": null, "rate": 0.059}
-            ],
-            "MarriedFilingJointly": [
-                {"upper_bound": 41000, "rate": 0.047},
-                {"upper_bound": null, "rate": 0.059}
-            ],
-            "QualifyingSurvivingSpouse": [
-                {"upper_bound": 41000, "rate": 0.047},
-                {"upper_bound": null, "rate": 0.059}
-            ],
-            "HeadOfHousehold": [
-                {"upper_bound": 30750, "rate": 0.047},
-                {"upper_bound": null, "rate": 0.059}
-            ]
-        }
-    },
-
-    "NE": {
-        "2024": {
-           "Single": [
-                {"upper_bound": 2999, "rate": 0.0246},
-                {"upper_bound": 17999, "rate": 0.0351},
-                {"upper_bound": 28999, "rate": 0.0501},
-                {"upper_bound": null, "rate": 0.0584}
-            ],
-            "MarriedFilingSeparately": [
-                {"upper_bound": 2999, "rate": 0.0246},
-                {"upper_bound": 17999, "rate": 0.0351},
-                {"upper_bound": 28999, "rate": 0.0501},
-                {"upper_bound": null, "rate": 0.0584}
-            ],
-            "MarriedFilingJointly": [
-                {"upper_bound": 5999, "rate": 0.0246},
-                {"upper_bound": 35999, "rate": 0.0351},
-                {"upper_bound": 57999, "rate": 0.0501},
-                {"upper_bound": null, "rate": 0.0584}
-            ],
-            "QualifyingSurvivingSpouse": [
-                {"upper_bound": 5999, "rate": 0.0246},
-                {"upper_bound": 35999, "rate": 0.0351},
-                {"upper_bound": 57999, "rate": 0.0501},
-                {"upper_bound": null, "rate": 0.0584}
-            ],
-            "HeadOfHousehold": [
-                {"upper_bound": 5599, "rate": 0.0246},
-                {"upper_bound": 28799, "rate": 0.0351},
-                {"upper_bound": 42999, "rate": 0.0501},
-                {"upper_bound": null, "rate": 0.0584}
-            ]
-        },
-        "2025": {
-           "Single": [
-                {"upper_bound": 2999, "rate": 0.0246},
-                {"upper_bound": 17999, "rate": 0.0351},
-                {"upper_bound": 28999, "rate": 0.0501},
-                {"upper_bound": null, "rate": 0.052}
-            ],
-            "MarriedFilingSeparately": [
-                {"upper_bound": 2999, "rate": 0.0246},
-                {"upper_bound": 17999, "rate": 0.0351},
-                {"upper_bound": 28999, "rate": 0.0501},
-                {"upper_bound": null, "rate": 0.052}
-            ],
-            "MarriedFilingJointly": [
-                {"upper_bound": 5999, "rate": 0.0246},
-                {"upper_bound": 35999, "rate": 0.0351},
-                {"upper_bound": 57999, "rate": 0.0501},
-                {"upper_bound": null, "rate": 0.052}
-            ],
-            "QualifyingSurvivingSpouse": [
-                {"upper_bound": 5999, "rate": 0.0246},
-                {"upper_bound": 35999, "rate": 0.0351},
-                {"upper_bound": 57999, "rate": 0.0501},
-                {"upper_bound": null, "rate": 0.052}
-            ],
-            "HeadOfHousehold": [
-                {"upper_bound": 5599, "rate": 0.0246},
-                {"upper_bound": 28799, "rate": 0.0351},
-                {"upper_bound": 42999, "rate": 0.0501},
-                {"upper_bound": null, "rate": 0.052}
-            ]
-        }
-    },
-
-    "NV": {
-        "2024": {
-            "Single": [
-                {"upper_bound": null, "rate": 0.0}
-            ],
-            "MarriedFilingSeparately": [
-                {"upper_bound": null, "rate": 0.0}
-            ],
-            "MarriedFilingJointly": [
-                {"upper_bound": null, "rate": 0.0}
-            ],
-            "QualifyingSurvivingSpouse": [
-                {"upper_bound": null, "rate": 0.0}
-            ],
-            "HeadOfHousehold": [
-                {"upper_bound": null, "rate": 0.0}
-            ]
-        },
-        "2025": {
-            "Single": [
-                {"upper_bound": null, "rate": 0.0}
-            ],
-            "MarriedFilingSeparately": [
-                {"upper_bound": null, "rate": 0.0}
-            ],
-            "MarriedFilingJointly": [
-                {"upper_bound": null, "rate": 0.0}
-            ],
-            "QualifyingSurvivingSpouse": [
-                {"upper_bound": null, "rate": 0.0}
-            ],
-            "HeadOfHousehold": [
-                {"upper_bound": null, "rate": 0.0}
-            ]
-        }
-    },
-
-    "NH": {
-        "2024": {
-            "Single": [
-                {"upper_bound": null, "rate": 0.0}
-            ],
-            "MarriedFilingSeparately": [
-                {"upper_bound": null, "rate": 0.0}
-            ],
-            "MarriedFilingJointly": [
-                {"upper_bound": null, "rate": 0.0}
-            ],
-            "QualifyingSurvivingSpouse": [
-                {"upper_bound": null, "rate": 0.0}
-            ],
-            "HeadOfHousehold": [
-                {"upper_bound": null, "rate": 0.0}
-            ]
-        },
-        "2025": {
-            "Single": [
-                {"upper_bound": null, "rate": 0.0}
-            ],
-            "MarriedFilingSeparately": [
-                {"upper_bound": null, "rate": 0.0}
-            ],
-            "MarriedFilingJointly": [
-                {"upper_bound": null, "rate": 0.0}
-            ],
-            "QualifyingSurvivingSpouse": [
-                {"upper_bound": null, "rate": 0.0}
-            ],
-            "HeadOfHousehold": [
-                {"upper_bound": null, "rate": 0.0}
-            ]
-        }
-    },
-
-    "NJ": {
-        "2024": {
-           "Single": [
-                {"upper_bound": 20000, "rate": 0.014},
-                {"upper_bound": 35000, "rate": 0.0175},
-                {"upper_bound": 40000, "rate": 0.035},
-                {"upper_bound": 75000, "rate": 0.05525},
-                {"upper_bound": 500000, "rate": 0.0637},
-                {"upper_bound": 1000000, "rate": 0.0897},
-                {"upper_bound": null, "rate": 0.1075}
-            ],
-            "MarriedFilingSeparately": [
-                {"upper_bound": 20000, "rate": 0.014},
-                {"upper_bound": 35000, "rate": 0.0175},
-                {"upper_bound": 40000, "rate": 0.035},
-                {"upper_bound": 75000, "rate": 0.05525},
-                {"upper_bound": 500000, "rate": 0.0637},
-                {"upper_bound": 1000000, "rate": 0.0897},
-                {"upper_bound": null, "rate": 0.1075}
-            ],
-            "MarriedFilingJointly": [
-                {"upper_bound": 20000, "rate": 0.014},
-                {"upper_bound": 50000, "rate": 0.0175},
-                {"upper_bound": 70000, "rate": 0.035},
-                {"upper_bound": 80000, "rate": 0.05525},
-                {"upper_bound": 150000, "rate": 0.0637},
-                {"upper_bound": 1000000, "rate": 0.0897},
-                {"upper_bound": null, "rate": 0.1075}
-            ],
-            "QualifyingSurvivingSpouse": [
-                {"upper_bound": 20000, "rate": 0.014},
-                {"upper_bound": 50000, "rate": 0.0175},
-                {"upper_bound": 70000, "rate": 0.035},
-                {"upper_bound": 80000, "rate": 0.05525},
-                {"upper_bound": 150000, "rate": 0.0637},
-                {"upper_bound": 1000000, "rate": 0.0897},
-                {"upper_bound": null, "rate": 0.1075}
-            ],
-            "HeadOfHousehold": [
-                {"upper_bound": 20000, "rate": 0.014},
-                {"upper_bound": 50000, "rate": 0.0175},
-                {"upper_bound": 70000, "rate": 0.035},
-                {"upper_bound": 80000, "rate": 0.05525},
-                {"upper_bound": 150000, "rate": 0.0637},
-                {"upper_bound": 1000000, "rate": 0.0897},
-                {"upper_bound": null, "rate": 0.1075}
-            ]
-        },
-        "2025": {
-           "Single": [
-                {"upper_bound": 20000, "rate": 0.014},
-                {"upper_bound": 35000, "rate": 0.0175},
-                {"upper_bound": 40000, "rate": 0.035},
-                {"upper_bound": 75000, "rate": 0.05525},
-                {"upper_bound": 500000, "rate": 0.0637},
-                {"upper_bound": 1000000, "rate": 0.0897},
-                {"upper_bound": null, "rate": 0.1075}
-            ],
-            "MarriedFilingSeparately": [
-                {"upper_bound": 20000, "rate": 0.014},
-                {"upper_bound": 35000, "rate": 0.0175},
-                {"upper_bound": 40000, "rate": 0.035},
-                {"upper_bound": 75000, "rate": 0.05525},
-                {"upper_bound": 500000, "rate": 0.0637},
-                {"upper_bound": 1000000, "rate": 0.0897},
-                {"upper_bound": null, "rate": 0.1075}
-            ],
-            "MarriedFilingJointly": [
-                {"upper_bound": 20000, "rate": 0.014},
-                {"upper_bound": 50000, "rate": 0.0175},
-                {"upper_bound": 70000, "rate": 0.035},
-                {"upper_bound": 80000, "rate": 0.05525},
-                {"upper_bound": 150000, "rate": 0.0637},
-                {"upper_bound": 1000000, "rate": 0.0897},
-                {"upper_bound": null, "rate": 0.1075}
-            ],
-            "QualifyingSurvivingSpouse": [
-                {"upper_bound": 20000, "rate": 0.014},
-                {"upper_bound": 50000, "rate": 0.0175},
-                {"upper_bound": 70000, "rate": 0.035},
-                {"upper_bound": 80000, "rate": 0.05525},
-                {"upper_bound": 150000, "rate": 0.0637},
-                {"upper_bound": 1000000, "rate": 0.0897},
-                {"upper_bound": null, "rate": 0.1075}
-            ],
-            "HeadOfHousehold": [
-                {"upper_bound": 20000, "rate": 0.014},
-                {"upper_bound": 50000, "rate": 0.0175},
-                {"upper_bound": 70000, "rate": 0.035},
-                {"upper_bound": 80000, "rate": 0.05525},
-                {"upper_bound": 150000, "rate": 0.0637},
-                {"upper_bound": 1000000, "rate": 0.0897},
-                {"upper_bound": null, "rate": 0.1075}
-            ]
-        }
-    },
-
-    "NM": {
-        "2024": {
-           "Single": [
-                {"upper_bound": 5500, "rate": 0.017},
-                {"upper_bound": 11000, "rate": 0.032},
-                {"upper_bound": 16000, "rate": 0.047},
-                {"upper_bound": 210000, "rate": 0.049},
-                {"upper_bound": null, "rate": 0.059}
-            ],
-            "MarriedFilingSeparately": [
-                {"upper_bound": 4000, "rate": 0.017},
-                {"upper_bound": 8000, "rate": 0.032},
-                {"upper_bound": 12000, "rate": 0.047},
-                {"upper_bound": 157500, "rate": 0.049},
-                {"upper_bound": null, "rate": 0.059}
-            ],
-            "MarriedFilingJointly": [
-                {"upper_bound": 8000, "rate": 0.017},
-                {"upper_bound": 16000, "rate": 0.032},
-                {"upper_bound": 24000, "rate": 0.047},
-                {"upper_bound": 315000, "rate": 0.049},
-                {"upper_bound": null, "rate": 0.059}
-            ],
-            "QualifyingSurvivingSpouse": [
-                {"upper_bound": 8000, "rate": 0.017},
-                {"upper_bound": 16000, "rate": 0.032},
-                {"upper_bound": 24000, "rate": 0.047},
-                {"upper_bound": 315000, "rate": 0.049},
-                {"upper_bound": null, "rate": 0.059}
-            ],
-            "HeadOfHousehold": [
-                {"upper_bound": 8000, "rate": 0.017},
-                {"upper_bound": 16000, "rate": 0.032},
-                {"upper_bound": 24000, "rate": 0.047},
-                {"upper_bound": 315000, "rate": 0.049},
-                {"upper_bound": null, "rate": 0.059}
-            ]
-        }
-    },
-
-    "NY": {
-        "2024": {
-           "Single": [
-                {"upper_bound": 8500, "rate": 0.04},
-                {"upper_bound": 11700, "rate": 0.045},
-                {"upper_bound": 13900, "rate": 0.0525},
-                {"upper_bound": 80650, "rate": 0.055},
-                {"upper_bound": 215400, "rate": 0.06},
-                {"upper_bound": 1077550, "rate": 0.0685},
-                {"upper_bound": 5000000, "rate": 0.0965},
-                {"upper_bound": 25000000, "rate": 0.0103},
-                {"upper_bound": null, "rate": 0.0109}
-            ],
-            "MarriedFilingSeparately": [
-                {"upper_bound": 8500, "rate": 0.04},
-                {"upper_bound": 11700, "rate": 0.045},
-                {"upper_bound": 13900, "rate": 0.0525},
-                {"upper_bound": 80650, "rate": 0.055},
-                {"upper_bound": 215400, "rate": 0.06},
-                {"upper_bound": 1077550, "rate": 0.0685},
-                {"upper_bound": 5000000, "rate": 0.0965},
-                {"upper_bound": 25000000, "rate": 0.0103},
-                {"upper_bound": null, "rate": 0.0109}
-            ],
-            "MarriedFilingJointly": [
-                {"upper_bound": 17150, "rate": 0.04},
-                {"upper_bound": 23600, "rate": 0.045},
-                {"upper_bound": 27900, "rate": 0.0525},
-                {"upper_bound": 161550, "rate": 0.055},
-                {"upper_bound": 323200, "rate": 0.06},
-                {"upper_bound": 2155350, "rate": 0.0685},
-                {"upper_bound": 5000000, "rate": 0.0965},
-                {"upper_bound": 25000000, "rate": 0.0103},
-                {"upper_bound": null, "rate": 0.0109}
-            ],
-            "QualifyingSurvivingSpouse": [
-                {"upper_bound": 17150, "rate": 0.04},
-                {"upper_bound": 23600, "rate": 0.045},
-                {"upper_bound": 27900, "rate": 0.0525},
-                {"upper_bound": 161550, "rate": 0.055},
-                {"upper_bound": 323200, "rate": 0.06},
-                {"upper_bound": 2155350, "rate": 0.0685},
-                {"upper_bound": 5000000, "rate": 0.0965},
-                {"upper_bound": 25000000, "rate": 0.0103},
-                {"upper_bound": null, "rate": 0.0109}
-            ],
-            "HeadOfHousehold": [
-                {"upper_bound": 12800, "rate": 0.04},
-                {"upper_bound": 17650, "rate": 0.045},
-                {"upper_bound": 20900, "rate": 0.0525},
-                {"upper_bound": 107650, "rate": 0.055},
-                {"upper_bound": 269300, "rate": 0.06},
-                {"upper_bound": 1616450, "rate": 0.0685},
-                {"upper_bound": 5000000, "rate": 0.0965},
-                {"upper_bound": 25000000, "rate": 0.0103},
-                {"upper_bound": null, "rate": 0.0109}
-            ]
-        }
-    },
-
-    "NC": {
-        "2024": {
-            "Single": [
-                {"upper_bound": null, "rate": 0.045}
-            ],
-            "MarriedFilingSeparately": [
-                {"upper_bound": null, "rate": 0.045}
-            ],
-            "MarriedFilingJointly": [
-                {"upper_bound": null, "rate": 0.045}
-            ],
-            "QualifyingSurvivingSpouse": [
-                {"upper_bound": null, "rate": 0.045}
-            ],
-            "HeadOfHousehold": [
-                {"upper_bound": null, "rate": 0.045}
-            ]
-        },
-        "2025": {
-            "Single": [
-                {"upper_bound": null, "rate": 0.0425}
-            ],
-            "MarriedFilingSeparately": [
-                {"upper_bound": null, "rate": 0.0425}
-            ],
-            "MarriedFilingJointly": [
-                {"upper_bound": null, "rate": 0.0425}
-            ],
-            "QualifyingSurvivingSpouse": [
-                {"upper_bound": null, "rate": 0.0425}
-            ],
-            "HeadOfHousehold": [
-                {"upper_bound": null, "rate": 0.0425}
-            ]
-        }
-    },
-
-    "ND": {
-        "2024": {
-           "Single": [
-                {"upper_bound": 47150, "rate": 0.0},
-                {"upper_bound": 238200, "rate": 0.0195},
-                {"upper_bound": null, "rate": 0.025}
-            ],
-            "MarriedFilingSeparately": [
-                {"upper_bound": 39375, "rate": 0.0},
-                {"upper_bound": 144975, "rate": 0.0195},
-                {"upper_bound": null, "rate": 0.025}
-            ],
-            "MarriedFilingJointly": [
-                {"upper_bound": 78775, "rate": 0.0},
-                {"upper_bound": 289975, "rate": 0.0195},
-                {"upper_bound": null, "rate": 0.025}
-            ],
-            "QualifyingSurvivingSpouse": [
-                {"upper_bound": 78775, "rate": 0.0},
-                {"upper_bound": 289975, "rate": 0.0195},
-                {"upper_bound": null, "rate": 0.025}
-            ],
-            "HeadOfHousehold": [
-                {"upper_bound": 63175, "rate": 0.0},
-                {"upper_bound": 264100, "rate": 0.0195},
-                {"upper_bound": null, "rate": 0.025}
-            ]
-        },
-        "2025": {
-            "Single": [
-                {"upper_bound": 48475, "rate": 0.0},
-                {"upper_bound": 244825, "rate": 0.0195},
-                {"upper_bound": null, "rate": 0.025}
-             ],
-             "MarriedFilingSeparately": [
-                {"upper_bound": 40475, "rate": 0.0},
-                {"upper_bound": 149025, "rate": 0.0195},
-                {"upper_bound": null, "rate": 0.025}
-             ],
-             "MarriedFilingJointly": [
-                {"upper_bound": 80975, "rate": 0.0},
-                {"upper_bound": 298075, "rate": 0.0195},
-                {"upper_bound": null, "rate": 0.025}
-             ],
-             "QualifyingSurvivingSpouse": [
-                {"upper_bound": 80975, "rate": 0.0},
-                {"upper_bound": 298075, "rate": 0.0195},
-                {"upper_bound": null, "rate": 0.025}
-             ],
-             "HeadOfHousehold": [
-                {"upper_bound": 64950, "rate": 0.0},
-                {"upper_bound": 271450, "rate": 0.0195},
-                {"upper_bound": null, "rate": 0.025}
-             ]
-         }
-    },
-
-    "OH": {
-        "2024": {
-           "Single": [
-                {"upper_bound": 26050, "rate": 0.0},
-                {"upper_bound": 100000, "rate": 0.0275},
-                {"upper_bound": null, "rate": 0.035}
-            ],
-            "MarriedFilingSeparately": [
-                {"upper_bound": 26050, "rate": 0.0},
-                {"upper_bound": 100000, "rate": 0.0275},
-                {"upper_bound": null, "rate": 0.035}
-            ],
-            "MarriedFilingJointly": [
-                {"upper_bound": 26050, "rate": 0.0},
-                {"upper_bound": 100000, "rate": 0.0275},
-                {"upper_bound": null, "rate": 0.035}
-            ],
-            "QualifyingSurvivingSpouse": [
-                {"upper_bound": 26050, "rate": 0.0},
-                {"upper_bound": 100000, "rate": 0.0275},
-                {"upper_bound": null, "rate": 0.035}
-            ],
-            "HeadOfHousehold": [
-                {"upper_bound": 26050, "rate": 0.0},
-                {"upper_bound": 100000, "rate": 0.0275},
-                {"upper_bound": null, "rate": 0.035}
-            ]
-        }
-    },
-
-    "OK": {
-        "2024": {
-           "Single": [
-                {"upper_bound": 1000, "rate": 0.0025},
-                {"upper_bound": 2500, "rate": 0.0075},
-                {"upper_bound": 3750, "rate": 0.0175},
-                {"upper_bound": 4900, "rate": 0.0275},
-                {"upper_bound": 7200, "rate": 0.0375},
-                {"upper_bound": null, "rate": 0.0475}
-            ],
-            "MarriedFilingSeparately": [
-                {"upper_bound": 1000, "rate": 0.0025},
-                {"upper_bound": 2500, "rate": 0.0075},
-                {"upper_bound": 3750, "rate": 0.0175},
-                {"upper_bound": 4900, "rate": 0.0275},
-                {"upper_bound": 7200, "rate": 0.0375},
-                {"upper_bound": null, "rate": 0.0475}
-            ],
-            "MarriedFilingJointly": [
-                {"upper_bound": 2000, "rate": 0.0025},
-                {"upper_bound": 5000, "rate": 0.0075},
-                {"upper_bound": 7500, "rate": 0.0175},
-                {"upper_bound": 9800, "rate": 0.0275},
-                {"upper_bound": 14400, "rate": 0.0375},
-                {"upper_bound": null, "rate": 0.0475}
-            ],
-            "QualifyingSurvivingSpouse": [
-                {"upper_bound": 2000, "rate": 0.0025},
-                {"upper_bound": 5000, "rate": 0.0075},
-                {"upper_bound": 7500, "rate": 0.0175},
-                {"upper_bound": 9800, "rate": 0.0275},
-                {"upper_bound": 14400, "rate": 0.0375},
-                {"upper_bound": null, "rate": 0.0475}
-            ],
-            "HeadOfHousehold": [
-                {"upper_bound": 2000, "rate": 0.0025},
-                {"upper_bound": 5000, "rate": 0.0075},
-                {"upper_bound": 7500, "rate": 0.0175},
-                {"upper_bound": 9800, "rate": 0.0275},
-                {"upper_bound": 14400, "rate": 0.0375},
-                {"upper_bound": null, "rate": 0.0475}
-            ]
-        }
-    },
-
-    "OR": {
-        "2024": {
-           "Single": [
-                {"upper_bound": 50000, "rate": 0.0},
-                {"upper_bound": 125000, "rate": 0.0875},
-                {"upper_bound": null, "rate": 0.099}
-            ],
-            "MarriedFilingSeparately": [
-                {"upper_bound": 50000, "rate": 0.0},
-                {"upper_bound": 125000, "rate": 0.0875},
-                {"upper_bound": null, "rate": 0.099}
-            ],
-            "MarriedFilingJointly": [
-                {"upper_bound": 50000, "rate": 0.0},
-                {"upper_bound": 250000, "rate": 0.0875},
-                {"upper_bound": null, "rate": 0.099}
-            ],
-            "QualifyingSurvivingSpouse": [
-                {"upper_bound": 50000, "rate": 0.0},
-                {"upper_bound": 250000, "rate": 0.0875},
-                {"upper_bound": null, "rate": 0.099}
-            ],
-            "HeadOfHousehold": [
-                {"upper_bound": 50000, "rate": 0.0},
-                {"upper_bound": 250000, "rate": 0.0875},
-                {"upper_bound": null, "rate": 0.099}
-            ]
-        }
-    },
-
-    "PA": {
-        "2024": {
-            "Single": [
-                {"upper_bound": null, "rate": 0.0307}
-            ],
-            "MarriedFilingSeparately": [
-                {"upper_bound": null, "rate": 0.0307}
-            ],
-            "MarriedFilingJointly": [
-                {"upper_bound": null, "rate": 0.0307}
-            ],
-            "QualifyingSurvivingSpouse": [
-                {"upper_bound": null, "rate": 0.0307}
-            ],
-            "HeadOfHousehold": [
-                {"upper_bound": null, "rate": 0.0307}
-            ]
-        },
-        "2025": {
-            "Single": [
-                {"upper_bound": null, "rate": 0.0307}
-            ],
-            "MarriedFilingSeparately": [
-                {"upper_bound": null, "rate": 0.0307}
-            ],
-            "MarriedFilingJointly": [
-                {"upper_bound": null, "rate": 0.0307}
-            ],
-            "QualifyingSurvivingSpouse": [
-                {"upper_bound": null, "rate": 0.0307}
-            ],
-            "HeadOfHousehold": [
-                {"upper_bound": null, "rate": 0.0307}
-            ]
-        }
-    },
-
-    "RI": {
-        "2024": {
-           "Single": [
-                {"upper_bound": 77450, "rate": 0.0375},
-                {"upper_bound": 176050, "rate": 0.0475},
-                {"upper_bound": null, "rate": 0.0599}
-            ],
-            "MarriedFilingSeparately": [
-                {"upper_bound": 77450, "rate": 0.0375},
-                {"upper_bound": 176050, "rate": 0.0475},
-                {"upper_bound": null, "rate": 0.0599}
-            ],
-            "MarriedFilingJointly": [
-                {"upper_bound": 77450, "rate": 0.0375},
-                {"upper_bound": 176050, "rate": 0.0475},
-                {"upper_bound": null, "rate": 0.0599}
-            ],
-            "QualifyingSurvivingSpouse": [
-                {"upper_bound": 77450, "rate": 0.0375},
-                {"upper_bound": 176050, "rate": 0.0475},
-                {"upper_bound": null, "rate": 0.0599}
-            ],
-            "HeadOfHousehold": [
-                {"upper_bound": 77450, "rate": 0.0375},
-                {"upper_bound": 176050, "rate": 0.0475},
-                {"upper_bound": null, "rate": 0.0599}
-            ]
-        },
-        "2025": {
-            "Single": [
-                {"upper_bound": 79900, "rate": 0.0375},
-                {"upper_bound": 181650, "rate": 0.0475},
-                {"upper_bound": null, "rate": 0.0599}
-             ],
-             "MarriedFilingSeparately": [
-                {"upper_bound": 79900, "rate": 0.0375},
-                {"upper_bound": 181650, "rate": 0.0475},
-                {"upper_bound": null, "rate": 0.0599}
-             ],
-             "MarriedFilingJointly": [
-                {"upper_bound": 79900, "rate": 0.0375},
-                {"upper_bound": 181650, "rate": 0.0475},
-                {"upper_bound": null, "rate": 0.0599}
-             ],
-             "QualifyingSurvivingSpouse": [
-                {"upper_bound": 79900, "rate": 0.0375},
-                {"upper_bound": 181650, "rate": 0.0475},
-                {"upper_bound": null, "rate": 0.0599}
-             ],
-             "HeadOfHousehold": [
-                {"upper_bound": 79900, "rate": 0.0375},
-                {"upper_bound": 181650, "rate": 0.0475},
-                {"upper_bound": null, "rate": 0.0599}
-             ]
-         }
-    },
-
-    "SC": {
-        "2024": {
-           "Single": [
-                {"upper_bound": 3460, "rate": 0.0},
-                {"upper_bound": 17330, "rate": 0.03},
-                {"upper_bound": null, "rate": 0.062}
-            ],
-            "MarriedFilingSeparately": [
-                {"upper_bound": 3460, "rate": 0.0},
-                {"upper_bound": 17330, "rate": 0.03},
-                {"upper_bound": null, "rate": 0.062}
-            ],
-            "MarriedFilingJointly": [
-                {"upper_bound": 3460, "rate": 0.0},
-                {"upper_bound": 17330, "rate": 0.03},
-                {"upper_bound": null, "rate": 0.062}
-            ],
-            "QualifyingSurvivingSpouse": [
-                {"upper_bound": 3460, "rate": 0.0},
-                {"upper_bound": 17330, "rate": 0.03},
-                {"upper_bound": null, "rate": 0.062}
-            ],
-            "HeadOfHousehold": [
-                {"upper_bound": 3460, "rate": 0.0},
-                {"upper_bound": 17330, "rate": 0.03},
-                {"upper_bound": null, "rate": 0.062}
-            ]
-        }
-    },
-
-    "TX": {
-        "2024": {
-            "Single": [
-                {"upper_bound": null, "rate": 0.0}
-            ],
-            "MarriedFilingSeparately": [
-                {"upper_bound": null, "rate": 0.0}
-            ],
-            "MarriedFilingJointly": [
-                {"upper_bound": null, "rate": 0.0}
-            ],
-            "QualifyingSurvivingSpouse": [
-                {"upper_bound": null, "rate": 0.0}
-            ],
-            "HeadOfHousehold": [
-                {"upper_bound": null, "rate": 0.0}
-            ]
-        },
-        "2025": {
-            "Single": [
-                {"upper_bound": null, "rate": 0.0}
-            ],
-            "MarriedFilingSeparately": [
-                {"upper_bound": null, "rate": 0.0}
-            ],
-            "MarriedFilingJointly": [
-                {"upper_bound": null, "rate": 0.0}
-            ],
-            "QualifyingSurvivingSpouse": [
-                {"upper_bound": null, "rate": 0.0}
-            ],
-            "HeadOfHousehold": [
-                {"upper_bound": null, "rate": 0.0}
-            ]
-        }
-    },
-
-    "TN": {
-        "2024": {
-            "Single": [
-                {"upper_bound": null, "rate": 0.0}
-            ],
-            "MarriedFilingSeparately": [
-                {"upper_bound": null, "rate": 0.0}
-            ],
-            "MarriedFilingJointly": [
-                {"upper_bound": null, "rate": 0.0}
-            ],
-            "QualifyingSurvivingSpouse": [
-                {"upper_bound": null, "rate": 0.0}
-            ],
-            "HeadOfHousehold": [
-                {"upper_bound": null, "rate": 0.0}
-            ]
-        },
-        "2025": {
-            "Single": [
-                {"upper_bound": null, "rate": 0.0}
-            ],
-            "MarriedFilingSeparately": [
-                {"upper_bound": null, "rate": 0.0}
-            ],
-            "MarriedFilingJointly": [
-                {"upper_bound": null, "rate": 0.0}
-            ],
-            "QualifyingSurvivingSpouse": [
-                {"upper_bound": null, "rate": 0.0}
-            ],
-            "HeadOfHousehold": [
-                {"upper_bound": null, "rate": 0.0}
-            ]
-        }
+      ]
     }
+  },
+  "AL": {
+    "2024": {
+      "HeadOfHousehold": [
+        {
+          "rate": 0.02,
+          "upper_bound": 500
+        },
+        {
+          "rate": 0.04,
+          "upper_bound": 3000
+        },
+        {
+          "rate": 0.05,
+          "upper_bound": null
+        }
+      ],
+      "MarriedFilingJointly": [
+        {
+          "rate": 0.02,
+          "upper_bound": 1000
+        },
+        {
+          "rate": 0.04,
+          "upper_bound": 6000
+        },
+        {
+          "rate": 0.05,
+          "upper_bound": null
+        }
+      ],
+      "MarriedFilingSeparately": [
+        {
+          "rate": 0.02,
+          "upper_bound": 500
+        },
+        {
+          "rate": 0.04,
+          "upper_bound": 3000
+        },
+        {
+          "rate": 0.05,
+          "upper_bound": null
+        }
+      ],
+      "QualifyingSurvivingSpouse": [
+        {
+          "rate": 0.02,
+          "upper_bound": 1000
+        },
+        {
+          "rate": 0.04,
+          "upper_bound": 6000
+        },
+        {
+          "rate": 0.05,
+          "upper_bound": null
+        }
+      ],
+      "Single": [
+        {
+          "rate": 0.02,
+          "upper_bound": 500
+        },
+        {
+          "rate": 0.04,
+          "upper_bound": 3000
+        },
+        {
+          "rate": 0.05,
+          "upper_bound": null
+        }
+      ]
+    }
+  },
+  "AR": {
+    "2024": {
+      "HeadOfHousehold": [
+        {
+          "rate": 0.0,
+          "upper_bound": 5499
+        },
+        {
+          "rate": 0.02,
+          "upper_bound": 10899
+        },
+        {
+          "rate": 0.03,
+          "upper_bound": 15599
+        },
+        {
+          "rate": 0.034,
+          "upper_bound": 25699
+        },
+        {
+          "rate": 0.039,
+          "upper_bound": null
+        }
+      ],
+      "MarriedFilingJointly": [
+        {
+          "rate": 0.0,
+          "upper_bound": 5499
+        },
+        {
+          "rate": 0.02,
+          "upper_bound": 10899
+        },
+        {
+          "rate": 0.03,
+          "upper_bound": 15599
+        },
+        {
+          "rate": 0.034,
+          "upper_bound": 25699
+        },
+        {
+          "rate": 0.039,
+          "upper_bound": null
+        }
+      ],
+      "MarriedFilingSeparately": [
+        {
+          "rate": 0.0,
+          "upper_bound": 5499
+        },
+        {
+          "rate": 0.02,
+          "upper_bound": 10899
+        },
+        {
+          "rate": 0.03,
+          "upper_bound": 15599
+        },
+        {
+          "rate": 0.034,
+          "upper_bound": 25699
+        },
+        {
+          "rate": 0.039,
+          "upper_bound": null
+        }
+      ],
+      "QualifyingSurvivingSpouse": [
+        {
+          "rate": 0.0,
+          "upper_bound": 5499
+        },
+        {
+          "rate": 0.02,
+          "upper_bound": 10899
+        },
+        {
+          "rate": 0.03,
+          "upper_bound": 15599
+        },
+        {
+          "rate": 0.034,
+          "upper_bound": 25699
+        },
+        {
+          "rate": 0.039,
+          "upper_bound": null
+        }
+      ],
+      "Single": [
+        {
+          "rate": 0.0,
+          "upper_bound": 5499
+        },
+        {
+          "rate": 0.02,
+          "upper_bound": 10899
+        },
+        {
+          "rate": 0.03,
+          "upper_bound": 15599
+        },
+        {
+          "rate": 0.034,
+          "upper_bound": 25699
+        },
+        {
+          "rate": 0.039,
+          "upper_bound": null
+        }
+      ]
+    },
+    "2025": {
+      "HeadOfHousehold": [
+        {
+          "rate": 0.0,
+          "upper_bound": 5499
+        },
+        {
+          "rate": 0.02,
+          "upper_bound": 10899
+        },
+        {
+          "rate": 0.03,
+          "upper_bound": 15599
+        },
+        {
+          "rate": 0.034,
+          "upper_bound": 25699
+        },
+        {
+          "rate": 0.039,
+          "upper_bound": null
+        }
+      ],
+      "MarriedFilingJointly": [
+        {
+          "rate": 0.0,
+          "upper_bound": 5499
+        },
+        {
+          "rate": 0.02,
+          "upper_bound": 10899
+        },
+        {
+          "rate": 0.03,
+          "upper_bound": 15599
+        },
+        {
+          "rate": 0.034,
+          "upper_bound": 25699
+        },
+        {
+          "rate": 0.039,
+          "upper_bound": null
+        }
+      ],
+      "MarriedFilingSeparately": [
+        {
+          "rate": 0.0,
+          "upper_bound": 5499
+        },
+        {
+          "rate": 0.02,
+          "upper_bound": 10899
+        },
+        {
+          "rate": 0.03,
+          "upper_bound": 15599
+        },
+        {
+          "rate": 0.034,
+          "upper_bound": 25699
+        },
+        {
+          "rate": 0.039,
+          "upper_bound": null
+        }
+      ],
+      "QualifyingSurvivingSpouse": [
+        {
+          "rate": 0.0,
+          "upper_bound": 5499
+        },
+        {
+          "rate": 0.02,
+          "upper_bound": 10899
+        },
+        {
+          "rate": 0.03,
+          "upper_bound": 15599
+        },
+        {
+          "rate": 0.034,
+          "upper_bound": 25699
+        },
+        {
+          "rate": 0.039,
+          "upper_bound": null
+        }
+      ],
+      "Single": [
+        {
+          "rate": 0.0,
+          "upper_bound": 5499
+        },
+        {
+          "rate": 0.02,
+          "upper_bound": 10899
+        },
+        {
+          "rate": 0.03,
+          "upper_bound": 15599
+        },
+        {
+          "rate": 0.034,
+          "upper_bound": 25699
+        },
+        {
+          "rate": 0.039,
+          "upper_bound": null
+        }
+      ]
+    }
+  },
+  "AZ": {
+    "2024": {
+      "HeadOfHousehold": [
+        {
+          "rate": 0.025,
+          "upper_bound": null
+        }
+      ],
+      "MarriedFilingJointly": [
+        {
+          "rate": 0.025,
+          "upper_bound": null
+        }
+      ],
+      "MarriedFilingSeparately": [
+        {
+          "rate": 0.025,
+          "upper_bound": null
+        }
+      ],
+      "QualifyingSurvivingSpouse": [
+        {
+          "rate": 0.025,
+          "upper_bound": null
+        }
+      ],
+      "Single": [
+        {
+          "rate": 0.025,
+          "upper_bound": null
+        }
+      ]
+    },
+    "2025": {
+      "HeadOfHousehold": [
+        {
+          "rate": 0.025,
+          "upper_bound": null
+        }
+      ],
+      "MarriedFilingJointly": [
+        {
+          "rate": 0.025,
+          "upper_bound": null
+        }
+      ],
+      "MarriedFilingSeparately": [
+        {
+          "rate": 0.025,
+          "upper_bound": null
+        }
+      ],
+      "QualifyingSurvivingSpouse": [
+        {
+          "rate": 0.025,
+          "upper_bound": null
+        }
+      ],
+      "Single": [
+        {
+          "rate": 0.025,
+          "upper_bound": null
+        }
+      ]
+    }
+  },
+  "CA": {
+    "2024": {
+      "HeadOfHousehold": [
+        {
+          "rate": 0.01,
+          "upper_bound": 21527
+        },
+        {
+          "rate": 0.02,
+          "upper_bound": 51000
+        },
+        {
+          "rate": 0.04,
+          "upper_bound": 65744
+        },
+        {
+          "rate": 0.06,
+          "upper_bound": 81364
+        },
+        {
+          "rate": 0.08,
+          "upper_bound": 96107
+        },
+        {
+          "rate": 0.093,
+          "upper_bound": 490493
+        },
+        {
+          "rate": 0.103,
+          "upper_bound": 588593
+        },
+        {
+          "rate": 0.112,
+          "upper_bound": 980987
+        },
+        {
+          "rate": 0.123,
+          "upper_bound": null
+        }
+      ],
+      "MarriedFilingJointly": [
+        {
+          "rate": 0.01,
+          "upper_bound": 21512
+        },
+        {
+          "rate": 0.02,
+          "upper_bound": 50998
+        },
+        {
+          "rate": 0.04,
+          "upper_bound": 80490
+        },
+        {
+          "rate": 0.06,
+          "upper_bound": 111732
+        },
+        {
+          "rate": 0.08,
+          "upper_bound": 141212
+        },
+        {
+          "rate": 0.093,
+          "upper_bound": 721318
+        },
+        {
+          "rate": 0.103,
+          "upper_bound": 865574
+        },
+        {
+          "rate": 0.112,
+          "upper_bound": 1442628
+        },
+        {
+          "rate": 0.123,
+          "upper_bound": null
+        }
+      ],
+      "MarriedFilingSeparately": [
+        {
+          "rate": 0.01,
+          "upper_bound": 10756
+        },
+        {
+          "rate": 0.02,
+          "upper_bound": 25499
+        },
+        {
+          "rate": 0.04,
+          "upper_bound": 40245
+        },
+        {
+          "rate": 0.06,
+          "upper_bound": 55866
+        },
+        {
+          "rate": 0.08,
+          "upper_bound": 70606
+        },
+        {
+          "rate": 0.093,
+          "upper_bound": 360659
+        },
+        {
+          "rate": 0.103,
+          "upper_bound": 432787
+        },
+        {
+          "rate": 0.112,
+          "upper_bound": 721314
+        },
+        {
+          "rate": 0.123,
+          "upper_bound": null
+        }
+      ],
+      "QualifyingSurvivingSpouse": [
+        {
+          "rate": 0.01,
+          "upper_bound": 21512
+        },
+        {
+          "rate": 0.02,
+          "upper_bound": 50998
+        },
+        {
+          "rate": 0.04,
+          "upper_bound": 80490
+        },
+        {
+          "rate": 0.06,
+          "upper_bound": 111732
+        },
+        {
+          "rate": 0.08,
+          "upper_bound": 141212
+        },
+        {
+          "rate": 0.093,
+          "upper_bound": 721318
+        },
+        {
+          "rate": 0.103,
+          "upper_bound": 865574
+        },
+        {
+          "rate": 0.112,
+          "upper_bound": 1442628
+        },
+        {
+          "rate": 0.123,
+          "upper_bound": null
+        }
+      ],
+      "Single": [
+        {
+          "rate": 0.01,
+          "upper_bound": 10756
+        },
+        {
+          "rate": 0.02,
+          "upper_bound": 25499
+        },
+        {
+          "rate": 0.04,
+          "upper_bound": 40245
+        },
+        {
+          "rate": 0.06,
+          "upper_bound": 55866
+        },
+        {
+          "rate": 0.08,
+          "upper_bound": 70606
+        },
+        {
+          "rate": 0.093,
+          "upper_bound": 360659
+        },
+        {
+          "rate": 0.103,
+          "upper_bound": 432787
+        },
+        {
+          "rate": 0.112,
+          "upper_bound": 721314
+        },
+        {
+          "rate": 0.123,
+          "upper_bound": null
+        }
+      ]
+    }
+  },
+  "CO": {
+    "2024": {
+      "HeadOfHousehold": [
+        {
+          "rate": 0.0425,
+          "upper_bound": null
+        }
+      ],
+      "MarriedFilingJointly": [
+        {
+          "rate": 0.0425,
+          "upper_bound": null
+        }
+      ],
+      "MarriedFilingSeparately": [
+        {
+          "rate": 0.0425,
+          "upper_bound": null
+        }
+      ],
+      "QualifyingSurvivingSpouse": [
+        {
+          "rate": 0.0425,
+          "upper_bound": null
+        }
+      ],
+      "Single": [
+        {
+          "rate": 0.0425,
+          "upper_bound": null
+        }
+      ]
+    },
+    "2025": {
+      "HeadOfHousehold": [
+        {
+          "rate": 0.044,
+          "upper_bound": null
+        }
+      ],
+      "MarriedFilingJointly": [
+        {
+          "rate": 0.044,
+          "upper_bound": null
+        }
+      ],
+      "MarriedFilingSeparately": [
+        {
+          "rate": 0.044,
+          "upper_bound": null
+        }
+      ],
+      "QualifyingSurvivingSpouse": [
+        {
+          "rate": 0.044,
+          "upper_bound": null
+        }
+      ],
+      "Single": [
+        {
+          "rate": 0.044,
+          "upper_bound": null
+        }
+      ]
+    }
+  },
+  "CT": {
+    "2024": {
+      "HeadOfHousehold": [
+        {
+          "rate": 0.02,
+          "upper_bound": 16000
+        },
+        {
+          "rate": 0.045,
+          "upper_bound": 80000
+        },
+        {
+          "rate": 0.055,
+          "upper_bound": 160000
+        },
+        {
+          "rate": 0.06,
+          "upper_bound": 320000
+        },
+        {
+          "rate": 0.065,
+          "upper_bound": 400000
+        },
+        {
+          "rate": 0.069,
+          "upper_bound": 800000
+        },
+        {
+          "rate": 0.0699,
+          "upper_bound": null
+        }
+      ],
+      "MarriedFilingJointly": [
+        {
+          "rate": 0.02,
+          "upper_bound": 20000
+        },
+        {
+          "rate": 0.045,
+          "upper_bound": 100000
+        },
+        {
+          "rate": 0.055,
+          "upper_bound": 200000
+        },
+        {
+          "rate": 0.06,
+          "upper_bound": 400000
+        },
+        {
+          "rate": 0.065,
+          "upper_bound": 500000
+        },
+        {
+          "rate": 0.069,
+          "upper_bound": 1000000
+        },
+        {
+          "rate": 0.0699,
+          "upper_bound": null
+        }
+      ],
+      "MarriedFilingSeparately": [
+        {
+          "rate": 0.02,
+          "upper_bound": 10000
+        },
+        {
+          "rate": 0.045,
+          "upper_bound": 50000
+        },
+        {
+          "rate": 0.055,
+          "upper_bound": 100000
+        },
+        {
+          "rate": 0.06,
+          "upper_bound": 200000
+        },
+        {
+          "rate": 0.065,
+          "upper_bound": 250000
+        },
+        {
+          "rate": 0.069,
+          "upper_bound": 500000
+        },
+        {
+          "rate": 0.0699,
+          "upper_bound": null
+        }
+      ],
+      "QualifyingSurvivingSpouse": [
+        {
+          "rate": 0.02,
+          "upper_bound": 20000
+        },
+        {
+          "rate": 0.045,
+          "upper_bound": 100000
+        },
+        {
+          "rate": 0.055,
+          "upper_bound": 200000
+        },
+        {
+          "rate": 0.06,
+          "upper_bound": 400000
+        },
+        {
+          "rate": 0.065,
+          "upper_bound": 500000
+        },
+        {
+          "rate": 0.069,
+          "upper_bound": 1000000
+        },
+        {
+          "rate": 0.0699,
+          "upper_bound": null
+        }
+      ],
+      "Single": [
+        {
+          "rate": 0.02,
+          "upper_bound": 10000
+        },
+        {
+          "rate": 0.045,
+          "upper_bound": 50000
+        },
+        {
+          "rate": 0.055,
+          "upper_bound": 100000
+        },
+        {
+          "rate": 0.06,
+          "upper_bound": 200000
+        },
+        {
+          "rate": 0.065,
+          "upper_bound": 250000
+        },
+        {
+          "rate": 0.069,
+          "upper_bound": 500000
+        },
+        {
+          "rate": 0.0699,
+          "upper_bound": null
+        }
+      ]
+    },
+    "2025": {
+      "HeadOfHousehold": [
+        {
+          "rate": 0.02,
+          "upper_bound": 16000
+        },
+        {
+          "rate": 0.045,
+          "upper_bound": 80000
+        },
+        {
+          "rate": 0.055,
+          "upper_bound": 160000
+        },
+        {
+          "rate": 0.06,
+          "upper_bound": 320000
+        },
+        {
+          "rate": 0.065,
+          "upper_bound": 400000
+        },
+        {
+          "rate": 0.069,
+          "upper_bound": 800000
+        },
+        {
+          "rate": 0.0699,
+          "upper_bound": null
+        }
+      ],
+      "MarriedFilingJointly": [
+        {
+          "rate": 0.02,
+          "upper_bound": 20000
+        },
+        {
+          "rate": 0.045,
+          "upper_bound": 100000
+        },
+        {
+          "rate": 0.055,
+          "upper_bound": 200000
+        },
+        {
+          "rate": 0.06,
+          "upper_bound": 400000
+        },
+        {
+          "rate": 0.065,
+          "upper_bound": 500000
+        },
+        {
+          "rate": 0.069,
+          "upper_bound": 1000000
+        },
+        {
+          "rate": 0.0699,
+          "upper_bound": null
+        }
+      ],
+      "MarriedFilingSeparately": [
+        {
+          "rate": 0.02,
+          "upper_bound": 10000
+        },
+        {
+          "rate": 0.045,
+          "upper_bound": 50000
+        },
+        {
+          "rate": 0.055,
+          "upper_bound": 100000
+        },
+        {
+          "rate": 0.06,
+          "upper_bound": 200000
+        },
+        {
+          "rate": 0.065,
+          "upper_bound": 250000
+        },
+        {
+          "rate": 0.069,
+          "upper_bound": 500000
+        },
+        {
+          "rate": 0.0699,
+          "upper_bound": null
+        }
+      ],
+      "QualifyingSurvivingSpouse": [
+        {
+          "rate": 0.02,
+          "upper_bound": 20000
+        },
+        {
+          "rate": 0.045,
+          "upper_bound": 100000
+        },
+        {
+          "rate": 0.055,
+          "upper_bound": 200000
+        },
+        {
+          "rate": 0.06,
+          "upper_bound": 400000
+        },
+        {
+          "rate": 0.065,
+          "upper_bound": 500000
+        },
+        {
+          "rate": 0.069,
+          "upper_bound": 1000000
+        },
+        {
+          "rate": 0.0699,
+          "upper_bound": null
+        }
+      ],
+      "Single": [
+        {
+          "rate": 0.02,
+          "upper_bound": 10000
+        },
+        {
+          "rate": 0.045,
+          "upper_bound": 50000
+        },
+        {
+          "rate": 0.055,
+          "upper_bound": 100000
+        },
+        {
+          "rate": 0.06,
+          "upper_bound": 200000
+        },
+        {
+          "rate": 0.065,
+          "upper_bound": 250000
+        },
+        {
+          "rate": 0.069,
+          "upper_bound": 500000
+        },
+        {
+          "rate": 0.0699,
+          "upper_bound": null
+        }
+      ]
+    }
+  },
+  "DE": {
+    "2024": {
+      "HeadOfHousehold": [
+        {
+          "rate": 0.0,
+          "upper_bound": 2000
+        },
+        {
+          "rate": 0.022,
+          "upper_bound": 5000
+        },
+        {
+          "rate": 0.039,
+          "upper_bound": 10000
+        },
+        {
+          "rate": 0.048,
+          "upper_bound": 20000
+        },
+        {
+          "rate": 0.052,
+          "upper_bound": 25000
+        },
+        {
+          "rate": 0.0555,
+          "upper_bound": 60000
+        },
+        {
+          "rate": 0.066,
+          "upper_bound": null
+        }
+      ],
+      "MarriedFilingJointly": [
+        {
+          "rate": 0.0,
+          "upper_bound": 2000
+        },
+        {
+          "rate": 0.022,
+          "upper_bound": 5000
+        },
+        {
+          "rate": 0.039,
+          "upper_bound": 10000
+        },
+        {
+          "rate": 0.048,
+          "upper_bound": 20000
+        },
+        {
+          "rate": 0.052,
+          "upper_bound": 25000
+        },
+        {
+          "rate": 0.0555,
+          "upper_bound": 60000
+        },
+        {
+          "rate": 0.066,
+          "upper_bound": null
+        }
+      ],
+      "MarriedFilingSeparately": [
+        {
+          "rate": 0.0,
+          "upper_bound": 2000
+        },
+        {
+          "rate": 0.022,
+          "upper_bound": 5000
+        },
+        {
+          "rate": 0.039,
+          "upper_bound": 10000
+        },
+        {
+          "rate": 0.048,
+          "upper_bound": 20000
+        },
+        {
+          "rate": 0.052,
+          "upper_bound": 25000
+        },
+        {
+          "rate": 0.0555,
+          "upper_bound": 60000
+        },
+        {
+          "rate": 0.066,
+          "upper_bound": null
+        }
+      ],
+      "QualifyingSurvivingSpouse": [
+        {
+          "rate": 0.0,
+          "upper_bound": 2000
+        },
+        {
+          "rate": 0.022,
+          "upper_bound": 5000
+        },
+        {
+          "rate": 0.039,
+          "upper_bound": 10000
+        },
+        {
+          "rate": 0.048,
+          "upper_bound": 20000
+        },
+        {
+          "rate": 0.052,
+          "upper_bound": 25000
+        },
+        {
+          "rate": 0.0555,
+          "upper_bound": 60000
+        },
+        {
+          "rate": 0.066,
+          "upper_bound": null
+        }
+      ],
+      "Single": [
+        {
+          "rate": 0.0,
+          "upper_bound": 2000
+        },
+        {
+          "rate": 0.022,
+          "upper_bound": 5000
+        },
+        {
+          "rate": 0.039,
+          "upper_bound": 10000
+        },
+        {
+          "rate": 0.048,
+          "upper_bound": 20000
+        },
+        {
+          "rate": 0.052,
+          "upper_bound": 25000
+        },
+        {
+          "rate": 0.0555,
+          "upper_bound": 60000
+        },
+        {
+          "rate": 0.066,
+          "upper_bound": null
+        }
+      ]
+    },
+    "2025": {
+      "HeadOfHousehold": [
+        {
+          "rate": 0.0,
+          "upper_bound": 2000
+        },
+        {
+          "rate": 0.022,
+          "upper_bound": 5000
+        },
+        {
+          "rate": 0.039,
+          "upper_bound": 10000
+        },
+        {
+          "rate": 0.048,
+          "upper_bound": 20000
+        },
+        {
+          "rate": 0.052,
+          "upper_bound": 25000
+        },
+        {
+          "rate": 0.0555,
+          "upper_bound": 60000
+        },
+        {
+          "rate": 0.066,
+          "upper_bound": null
+        }
+      ],
+      "MarriedFilingJointly": [
+        {
+          "rate": 0.0,
+          "upper_bound": 2000
+        },
+        {
+          "rate": 0.022,
+          "upper_bound": 5000
+        },
+        {
+          "rate": 0.039,
+          "upper_bound": 10000
+        },
+        {
+          "rate": 0.048,
+          "upper_bound": 20000
+        },
+        {
+          "rate": 0.052,
+          "upper_bound": 25000
+        },
+        {
+          "rate": 0.0555,
+          "upper_bound": 60000
+        },
+        {
+          "rate": 0.066,
+          "upper_bound": null
+        }
+      ],
+      "MarriedFilingSeparately": [
+        {
+          "rate": 0.0,
+          "upper_bound": 2000
+        },
+        {
+          "rate": 0.022,
+          "upper_bound": 5000
+        },
+        {
+          "rate": 0.039,
+          "upper_bound": 10000
+        },
+        {
+          "rate": 0.048,
+          "upper_bound": 20000
+        },
+        {
+          "rate": 0.052,
+          "upper_bound": 25000
+        },
+        {
+          "rate": 0.0555,
+          "upper_bound": 60000
+        },
+        {
+          "rate": 0.066,
+          "upper_bound": null
+        }
+      ],
+      "QualifyingSurvivingSpouse": [
+        {
+          "rate": 0.0,
+          "upper_bound": 2000
+        },
+        {
+          "rate": 0.022,
+          "upper_bound": 5000
+        },
+        {
+          "rate": 0.039,
+          "upper_bound": 10000
+        },
+        {
+          "rate": 0.048,
+          "upper_bound": 20000
+        },
+        {
+          "rate": 0.052,
+          "upper_bound": 25000
+        },
+        {
+          "rate": 0.0555,
+          "upper_bound": 60000
+        },
+        {
+          "rate": 0.066,
+          "upper_bound": null
+        }
+      ],
+      "Single": [
+        {
+          "rate": 0.0,
+          "upper_bound": 2000
+        },
+        {
+          "rate": 0.022,
+          "upper_bound": 5000
+        },
+        {
+          "rate": 0.039,
+          "upper_bound": 10000
+        },
+        {
+          "rate": 0.048,
+          "upper_bound": 20000
+        },
+        {
+          "rate": 0.052,
+          "upper_bound": 25000
+        },
+        {
+          "rate": 0.0555,
+          "upper_bound": 60000
+        },
+        {
+          "rate": 0.066,
+          "upper_bound": null
+        }
+      ]
+    }
+  },
+  "FL": {
+    "2024": {
+      "HeadOfHousehold": [
+        {
+          "rate": 0.0,
+          "upper_bound": null
+        }
+      ],
+      "MarriedFilingJointly": [
+        {
+          "rate": 0.0,
+          "upper_bound": null
+        }
+      ],
+      "MarriedFilingSeparately": [
+        {
+          "rate": 0.0,
+          "upper_bound": null
+        }
+      ],
+      "QualifyingSurvivingSpouse": [
+        {
+          "rate": 0.0,
+          "upper_bound": null
+        }
+      ],
+      "Single": [
+        {
+          "rate": 0.0,
+          "upper_bound": null
+        }
+      ]
+    },
+    "2025": {
+      "HeadOfHousehold": [
+        {
+          "rate": 0.0,
+          "upper_bound": null
+        }
+      ],
+      "MarriedFilingJointly": [
+        {
+          "rate": 0.0,
+          "upper_bound": null
+        }
+      ],
+      "MarriedFilingSeparately": [
+        {
+          "rate": 0.0,
+          "upper_bound": null
+        }
+      ],
+      "QualifyingSurvivingSpouse": [
+        {
+          "rate": 0.0,
+          "upper_bound": null
+        }
+      ],
+      "Single": [
+        {
+          "rate": 0.0,
+          "upper_bound": null
+        }
+      ]
+    }
+  },
+  "GA": {
+    "2024": {
+      "HeadOfHousehold": [
+        {
+          "rate": 0.0539,
+          "upper_bound": null
+        }
+      ],
+      "MarriedFilingJointly": [
+        {
+          "rate": 0.0539,
+          "upper_bound": null
+        }
+      ],
+      "MarriedFilingSeparately": [
+        {
+          "rate": 0.0539,
+          "upper_bound": null
+        }
+      ],
+      "QualifyingSurvivingSpouse": [
+        {
+          "rate": 0.0539,
+          "upper_bound": null
+        }
+      ],
+      "Single": [
+        {
+          "rate": 0.0539,
+          "upper_bound": null
+        }
+      ]
+    },
+    "2025": {
+      "HeadOfHousehold": [
+        {
+          "rate": 0.0519,
+          "upper_bound": null
+        }
+      ],
+      "MarriedFilingJointly": [
+        {
+          "rate": 0.0519,
+          "upper_bound": null
+        }
+      ],
+      "MarriedFilingSeparately": [
+        {
+          "rate": 0.0519,
+          "upper_bound": null
+        }
+      ],
+      "QualifyingSurvivingSpouse": [
+        {
+          "rate": 0.0519,
+          "upper_bound": null
+        }
+      ],
+      "Single": [
+        {
+          "rate": 0.0519,
+          "upper_bound": null
+        }
+      ]
+    }
+  },
+  "HI": {
+    "2024": {
+      "HeadOfHousehold": [
+        {
+          "rate": 0.014,
+          "upper_bound": 3600
+        },
+        {
+          "rate": 0.032,
+          "upper_bound": 7200
+        },
+        {
+          "rate": 0.055,
+          "upper_bound": 14400
+        },
+        {
+          "rate": 0.064,
+          "upper_bound": 21600
+        },
+        {
+          "rate": 0.068,
+          "upper_bound": 28800
+        },
+        {
+          "rate": 0.072,
+          "upper_bound": 36000
+        },
+        {
+          "rate": 0.076,
+          "upper_bound": 54000
+        },
+        {
+          "rate": 0.079,
+          "upper_bound": 72000
+        },
+        {
+          "rate": 0.0825,
+          "upper_bound": 225000
+        },
+        {
+          "rate": 0.09,
+          "upper_bound": 262500
+        },
+        {
+          "rate": 0.10,
+          "upper_bound": 300000
+        },
+        {
+          "rate": 0.11,
+          "upper_bound": null
+        }
+      ],
+      "MarriedFilingJointly": [
+        {
+          "rate": 0.014,
+          "upper_bound": 4800
+        },
+        {
+          "rate": 0.032,
+          "upper_bound": 9600
+        },
+        {
+          "rate": 0.055,
+          "upper_bound": 19200
+        },
+        {
+          "rate": 0.064,
+          "upper_bound": 28800
+        },
+        {
+          "rate": 0.068,
+          "upper_bound": 38400
+        },
+        {
+          "rate": 0.072,
+          "upper_bound": 48000
+        },
+        {
+          "rate": 0.076,
+          "upper_bound": 72000
+        },
+        {
+          "rate": 0.079,
+          "upper_bound": 96000
+        },
+        {
+          "rate": 0.0825,
+          "upper_bound": 300000
+        },
+        {
+          "rate": 0.09,
+          "upper_bound": 350000
+        },
+        {
+          "rate": 0.10,
+          "upper_bound": 400000
+        },
+        {
+          "rate": 0.11,
+          "upper_bound": null
+        }
+      ],
+      "MarriedFilingSeparately": [
+        {
+          "rate": 0.014,
+          "upper_bound": 2400
+        },
+        {
+          "rate": 0.032,
+          "upper_bound": 4800
+        },
+        {
+          "rate": 0.055,
+          "upper_bound": 9600
+        },
+        {
+          "rate": 0.064,
+          "upper_bound": 14400
+        },
+        {
+          "rate": 0.068,
+          "upper_bound": 19200
+        },
+        {
+          "rate": 0.072,
+          "upper_bound": 24000
+        },
+        {
+          "rate": 0.076,
+          "upper_bound": 36000
+        },
+        {
+          "rate": 0.079,
+          "upper_bound": 48000
+        },
+        {
+          "rate": 0.0825,
+          "upper_bound": 150000
+        },
+        {
+          "rate": 0.09,
+          "upper_bound": 175000
+        },
+        {
+          "rate": 0.10,
+          "upper_bound": 200000
+        },
+        {
+          "rate": 0.11,
+          "upper_bound": null
+        }
+      ],
+      "QualifyingSurvivingSpouse": [
+        {
+          "rate": 0.014,
+          "upper_bound": 4800
+        },
+        {
+          "rate": 0.032,
+          "upper_bound": 9600
+        },
+        {
+          "rate": 0.055,
+          "upper_bound": 19200
+        },
+        {
+          "rate": 0.064,
+          "upper_bound": 28800
+        },
+        {
+          "rate": 0.068,
+          "upper_bound": 38400
+        },
+        {
+          "rate": 0.072,
+          "upper_bound": 48000
+        },
+        {
+          "rate": 0.076,
+          "upper_bound": 72000
+        },
+        {
+          "rate": 0.079,
+          "upper_bound": 96000
+        },
+        {
+          "rate": 0.0825,
+          "upper_bound": 300000
+        },
+        {
+          "rate": 0.09,
+          "upper_bound": 350000
+        },
+        {
+          "rate": 0.10,
+          "upper_bound": 400000
+        },
+        {
+          "rate": 0.11,
+          "upper_bound": null
+        }
+      ],
+      "Single": [
+        {
+          "rate": 0.014,
+          "upper_bound": 2400
+        },
+        {
+          "rate": 0.032,
+          "upper_bound": 4800
+        },
+        {
+          "rate": 0.055,
+          "upper_bound": 9600
+        },
+        {
+          "rate": 0.064,
+          "upper_bound": 14400
+        },
+        {
+          "rate": 0.068,
+          "upper_bound": 19200
+        },
+        {
+          "rate": 0.072,
+          "upper_bound": 24000
+        },
+        {
+          "rate": 0.076,
+          "upper_bound": 36000
+        },
+        {
+          "rate": 0.079,
+          "upper_bound": 48000
+        },
+        {
+          "rate": 0.0825,
+          "upper_bound": 150000
+        },
+        {
+          "rate": 0.09,
+          "upper_bound": 175000
+        },
+        {
+          "rate": 0.10,
+          "upper_bound": 200000
+        },
+        {
+          "rate": 0.11,
+          "upper_bound": null
+        }
+      ]
+    },
+    "2025": {
+      "HeadOfHousehold": [
+        {
+          "rate": 0.014,
+          "upper_bound": 14400
+        },
+        {
+          "rate": 0.032,
+          "upper_bound": 21600
+        },
+        {
+          "rate": 0.055,
+          "upper_bound": 28800
+        },
+        {
+          "rate": 0.064,
+          "upper_bound": 36000
+        },
+        {
+          "rate": 0.068,
+          "upper_bound": 54000
+        },
+        {
+          "rate": 0.072,
+          "upper_bound": 72000
+        },
+        {
+          "rate": 0.076,
+          "upper_bound": 187500
+        },
+        {
+          "rate": 0.079,
+          "upper_bound": 262500
+        },
+        {
+          "rate": 0.0825,
+          "upper_bound": 337600
+        },
+        {
+          "rate": 0.09,
+          "upper_bound": 412500
+        },
+        {
+          "rate": 0.10,
+          "upper_bound": 487500
+        },
+        {
+          "rate": 0.11,
+          "upper_bound": null
+        }
+      ],
+      "MarriedFilingJointly": [
+        {
+          "rate": 0.014,
+          "upper_bound": 19200
+        },
+        {
+          "rate": 0.032,
+          "upper_bound": 28800
+        },
+        {
+          "rate": 0.055,
+          "upper_bound": 38400
+        },
+        {
+          "rate": 0.064,
+          "upper_bound": 48000
+        },
+        {
+          "rate": 0.068,
+          "upper_bound": 72000
+        },
+        {
+          "rate": 0.072,
+          "upper_bound": 96000
+        },
+        {
+          "rate": 0.076,
+          "upper_bound": 250000
+        },
+        {
+          "rate": 0.079,
+          "upper_bound": 350000
+        },
+        {
+          "rate": 0.0825,
+          "upper_bound": 450000
+        },
+        {
+          "rate": 0.09,
+          "upper_bound": 550000
+        },
+        {
+          "rate": 0.10,
+          "upper_bound": 650000
+        },
+        {
+          "rate": 0.11,
+          "upper_bound": null
+        }
+      ],
+      "MarriedFilingSeparately": [
+        {
+          "rate": 0.014,
+          "upper_bound": 9600
+        },
+        {
+          "rate": 0.032,
+          "upper_bound": 14400
+        },
+        {
+          "rate": 0.055,
+          "upper_bound": 19200
+        },
+        {
+          "rate": 0.064,
+          "upper_bound": 24000
+        },
+        {
+          "rate": 0.068,
+          "upper_bound": 36000
+        },
+        {
+          "rate": 0.072,
+          "upper_bound": 48000
+        },
+        {
+          "rate": 0.076,
+          "upper_bound": 125000
+        },
+        {
+          "rate": 0.079,
+          "upper_bound": 175000
+        },
+        {
+          "rate": 0.0825,
+          "upper_bound": 225000
+        },
+        {
+          "rate": 0.09,
+          "upper_bound": 275000
+        },
+        {
+          "rate": 0.10,
+          "upper_bound": 325000
+        },
+        {
+          "rate": 0.11,
+          "upper_bound": null
+        }
+      ],
+      "QualifyingSurvivingSpouse": [
+        {
+          "rate": 0.014,
+          "upper_bound": 19200
+        },
+        {
+          "rate": 0.032,
+          "upper_bound": 28800
+        },
+        {
+          "rate": 0.055,
+          "upper_bound": 38400
+        },
+        {
+          "rate": 0.064,
+          "upper_bound": 48000
+        },
+        {
+          "rate": 0.068,
+          "upper_bound": 72000
+        },
+        {
+          "rate": 0.072,
+          "upper_bound": 96000
+        },
+        {
+          "rate": 0.076,
+          "upper_bound": 250000
+        },
+        {
+          "rate": 0.079,
+          "upper_bound": 350000
+        },
+        {
+          "rate": 0.0825,
+          "upper_bound": 450000
+        },
+        {
+          "rate": 0.09,
+          "upper_bound": 550000
+        },
+        {
+          "rate": 0.10,
+          "upper_bound": 650000
+        },
+        {
+          "rate": 0.11,
+          "upper_bound": null
+        }
+      ],
+      "Single": [
+        {
+          "rate": 0.014,
+          "upper_bound": 9600
+        },
+        {
+          "rate": 0.032,
+          "upper_bound": 14400
+        },
+        {
+          "rate": 0.055,
+          "upper_bound": 19200
+        },
+        {
+          "rate": 0.064,
+          "upper_bound": 24000
+        },
+        {
+          "rate": 0.068,
+          "upper_bound": 36000
+        },
+        {
+          "rate": 0.072,
+          "upper_bound": 48000
+        },
+        {
+          "rate": 0.076,
+          "upper_bound": 125000
+        },
+        {
+          "rate": 0.079,
+          "upper_bound": 175000
+        },
+        {
+          "rate": 0.0825,
+          "upper_bound": 225000
+        },
+        {
+          "rate": 0.09,
+          "upper_bound": 275000
+        },
+        {
+          "rate": 0.10,
+          "upper_bound": 325000
+        },
+        {
+          "rate": 0.11,
+          "upper_bound": null
+        }
+      ]
+    }
+  },
+  "IA": {
+    "2024": {
+      "HeadOfHousehold": [
+        {
+          "rate": 0.044,
+          "upper_bound": 6210
+        },
+        {
+          "rate": 0.0482,
+          "upper_bound": 31050
+        },
+        {
+          "rate": 0.057,
+          "upper_bound": null
+        }
+      ],
+      "MarriedFilingJointly": [
+        {
+          "rate": 0.044,
+          "upper_bound": 12420
+        },
+        {
+          "rate": 0.0482,
+          "upper_bound": 62100
+        },
+        {
+          "rate": 0.057,
+          "upper_bound": null
+        }
+      ],
+      "MarriedFilingSeparately": [
+        {
+          "rate": 0.044,
+          "upper_bound": 6210
+        },
+        {
+          "rate": 0.0482,
+          "upper_bound": 31050
+        },
+        {
+          "rate": 0.057,
+          "upper_bound": null
+        }
+      ],
+      "QualifyingSurvivingSpouse": [
+        {
+          "rate": 0.044,
+          "upper_bound": 12420
+        },
+        {
+          "rate": 0.0482,
+          "upper_bound": 62100
+        },
+        {
+          "rate": 0.057,
+          "upper_bound": null
+        }
+      ],
+      "Single": [
+        {
+          "rate": 0.044,
+          "upper_bound": 6210
+        },
+        {
+          "rate": 0.0482,
+          "upper_bound": 31050
+        },
+        {
+          "rate": 0.057,
+          "upper_bound": null
+        }
+      ]
+    },
+    "2025": {
+      "HeadOfHousehold": [
+        {
+          "rate": 0.038,
+          "upper_bound": null
+        }
+      ],
+      "MarriedFilingJointly": [
+        {
+          "rate": 0.038,
+          "upper_bound": null
+        }
+      ],
+      "MarriedFilingSeparately": [
+        {
+          "rate": 0.038,
+          "upper_bound": null
+        }
+      ],
+      "QualifyingSurvivingSpouse": [
+        {
+          "rate": 0.038,
+          "upper_bound": null
+        }
+      ],
+      "Single": [
+        {
+          "rate": 0.038,
+          "upper_bound": null
+        }
+      ]
+    }
+  },
+  "ID": {
+    "2024": {
+      "HeadOfHousehold": [
+        {
+          "rate": 0.0,
+          "upper_bound": 9346
+        },
+        {
+          "rate": 0.05695,
+          "upper_bound": null
+        }
+      ],
+      "MarriedFilingJointly": [
+        {
+          "rate": 0.0,
+          "upper_bound": 9346
+        },
+        {
+          "rate": 0.05695,
+          "upper_bound": null
+        }
+      ],
+      "MarriedFilingSeparately": [
+        {
+          "rate": 0.0,
+          "upper_bound": 4673
+        },
+        {
+          "rate": 0.05695,
+          "upper_bound": null
+        }
+      ],
+      "QualifyingSurvivingSpouse": [
+        {
+          "rate": 0.0,
+          "upper_bound": 9346
+        },
+        {
+          "rate": 0.05695,
+          "upper_bound": null
+        }
+      ],
+      "Single": [
+        {
+          "rate": 0.0,
+          "upper_bound": 4673
+        },
+        {
+          "rate": 0.05695,
+          "upper_bound": null
+        }
+      ]
+    }
+  },
+  "IL": {
+    "2024": {
+      "HeadOfHousehold": [
+        {
+          "rate": 0.0495,
+          "upper_bound": null
+        }
+      ],
+      "MarriedFilingJointly": [
+        {
+          "rate": 0.0495,
+          "upper_bound": null
+        }
+      ],
+      "MarriedFilingSeparately": [
+        {
+          "rate": 0.0495,
+          "upper_bound": null
+        }
+      ],
+      "QualifyingSurvivingSpouse": [
+        {
+          "rate": 0.0495,
+          "upper_bound": null
+        }
+      ],
+      "Single": [
+        {
+          "rate": 0.0495,
+          "upper_bound": null
+        }
+      ]
+    },
+    "2025": {
+      "HeadOfHousehold": [
+        {
+          "rate": 0.0495,
+          "upper_bound": null
+        }
+      ],
+      "MarriedFilingJointly": [
+        {
+          "rate": 0.0495,
+          "upper_bound": null
+        }
+      ],
+      "MarriedFilingSeparately": [
+        {
+          "rate": 0.0495,
+          "upper_bound": null
+        }
+      ],
+      "QualifyingSurvivingSpouse": [
+        {
+          "rate": 0.0495,
+          "upper_bound": null
+        }
+      ],
+      "Single": [
+        {
+          "rate": 0.0495,
+          "upper_bound": null
+        }
+      ]
+    }
+  },
+  "IN": {
+    "2024": {
+      "HeadOfHousehold": [
+        {
+          "rate": 0.031,
+          "upper_bound": null
+        }
+      ],
+      "MarriedFilingJointly": [
+        {
+          "rate": 0.031,
+          "upper_bound": null
+        }
+      ],
+      "MarriedFilingSeparately": [
+        {
+          "rate": 0.031,
+          "upper_bound": null
+        }
+      ],
+      "QualifyingSurvivingSpouse": [
+        {
+          "rate": 0.031,
+          "upper_bound": null
+        }
+      ],
+      "Single": [
+        {
+          "rate": 0.031,
+          "upper_bound": null
+        }
+      ]
+    },
+    "2025": {
+      "HeadOfHousehold": [
+        {
+          "rate": 0.03,
+          "upper_bound": null
+        }
+      ],
+      "MarriedFilingJointly": [
+        {
+          "rate": 0.03,
+          "upper_bound": null
+        }
+      ],
+      "MarriedFilingSeparately": [
+        {
+          "rate": 0.03,
+          "upper_bound": null
+        }
+      ],
+      "QualifyingSurvivingSpouse": [
+        {
+          "rate": 0.03,
+          "upper_bound": null
+        }
+      ],
+      "Single": [
+        {
+          "rate": 0.03,
+          "upper_bound": null
+        }
+      ]
+    }
+  },
+  "KS": {
+    "2024": {
+      "HeadOfHousehold": [
+        {
+          "rate": 0.052,
+          "upper_bound": 23000
+        },
+        {
+          "rate": 0.0558,
+          "upper_bound": null
+        }
+      ],
+      "MarriedFilingJointly": [
+        {
+          "rate": 0.052,
+          "upper_bound": 46000
+        },
+        {
+          "rate": 0.0558,
+          "upper_bound": null
+        }
+      ],
+      "MarriedFilingSeparately": [
+        {
+          "rate": 0.052,
+          "upper_bound": 23000
+        },
+        {
+          "rate": 0.0558,
+          "upper_bound": null
+        }
+      ],
+      "QualifyingSurvivingSpouse": [
+        {
+          "rate": 0.052,
+          "upper_bound": 46000
+        },
+        {
+          "rate": 0.0558,
+          "upper_bound": null
+        }
+      ],
+      "Single": [
+        {
+          "rate": 0.052,
+          "upper_bound": 23000
+        },
+        {
+          "rate": 0.0558,
+          "upper_bound": null
+        }
+      ]
+    }
+  },
+  "KY": {
+    "2024": {
+      "HeadOfHousehold": [
+        {
+          "rate": 0.40,
+          "upper_bound": null
+        }
+      ],
+      "MarriedFilingJointly": [
+        {
+          "rate": 0.04,
+          "upper_bound": null
+        }
+      ],
+      "MarriedFilingSeparately": [
+        {
+          "rate": 0.04,
+          "upper_bound": null
+        }
+      ],
+      "QualifyingSurvivingSpouse": [
+        {
+          "rate": 0.04,
+          "upper_bound": null
+        }
+      ],
+      "Single": [
+        {
+          "rate": 0.04,
+          "upper_bound": null
+        }
+      ]
+    },
+    "2025": {
+      "HeadOfHousehold": [
+        {
+          "rate": 0.04,
+          "upper_bound": null
+        }
+      ],
+      "MarriedFilingJointly": [
+        {
+          "rate": 0.04,
+          "upper_bound": null
+        }
+      ],
+      "MarriedFilingSeparately": [
+        {
+          "rate": 0.04,
+          "upper_bound": null
+        }
+      ],
+      "QualifyingSurvivingSpouse": [
+        {
+          "rate": 0.04,
+          "upper_bound": null
+        }
+      ],
+      "Single": [
+        {
+          "rate": 0.04,
+          "upper_bound": null
+        }
+      ]
+    }
+  },
+  "LA": {
+    "2024": {
+      "HeadOfHousehold": [
+        {
+          "rate": 0.0185,
+          "upper_bound": 12500
+        },
+        {
+          "rate": 0.035,
+          "upper_bound": 50000
+        },
+        {
+          "rate": 0.0425,
+          "upper_bound": null
+        }
+      ],
+      "MarriedFilingJointly": [
+        {
+          "rate": 0.0185,
+          "upper_bound": 25000
+        },
+        {
+          "rate": 0.035,
+          "upper_bound": 100000
+        },
+        {
+          "rate": 0.0425,
+          "upper_bound": null
+        }
+      ],
+      "MarriedFilingSeparately": [
+        {
+          "rate": 0.0185,
+          "upper_bound": 12500
+        },
+        {
+          "rate": 0.035,
+          "upper_bound": 50000
+        },
+        {
+          "rate": 0.0425,
+          "upper_bound": null
+        }
+      ],
+      "QualifyingSurvivingSpouse": [
+        {
+          "rate": 0.0185,
+          "upper_bound": 25000
+        },
+        {
+          "rate": 0.035,
+          "upper_bound": 100000
+        },
+        {
+          "rate": 0.0425,
+          "upper_bound": null
+        }
+      ],
+      "Single": [
+        {
+          "rate": 0.0185,
+          "upper_bound": 12500
+        },
+        {
+          "rate": 0.035,
+          "upper_bound": 50000
+        },
+        {
+          "rate": 0.0425,
+          "upper_bound": null
+        }
+      ]
+    },
+    "2025": {
+      "HeadOfHousehold": [
+        {
+          "rate": 0.03,
+          "upper_bound": null
+        }
+      ],
+      "MarriedFilingJointly": [
+        {
+          "rate": 0.03,
+          "upper_bound": null
+        }
+      ],
+      "MarriedFilingSeparately": [
+        {
+          "rate": 0.03,
+          "upper_bound": null
+        }
+      ],
+      "QualifyingSurvivingSpouse": [
+        {
+          "rate": 0.03,
+          "upper_bound": null
+        }
+      ],
+      "Single": [
+        {
+          "rate": 0.03,
+          "upper_bound": null
+        }
+      ]
+    }
+  },
+  "MA": {
+    "2024": {
+      "HeadOfHousehold": [
+        {
+          "rate": 0.05,
+          "upper_bound": 1053750
+        },
+        {
+          "rate": 0.09,
+          "upper_bound": null
+        }
+      ],
+      "MarriedFilingJointly": [
+        {
+          "rate": 0.05,
+          "upper_bound": 1053750
+        },
+        {
+          "rate": 0.09,
+          "upper_bound": null
+        }
+      ],
+      "MarriedFilingSeparately": [
+        {
+          "rate": 0.05,
+          "upper_bound": 1053750
+        },
+        {
+          "rate": 0.09,
+          "upper_bound": null
+        }
+      ],
+      "QualifyingSurvivingSpouse": [
+        {
+          "rate": 0.05,
+          "upper_bound": 1053750
+        },
+        {
+          "rate": 0.09,
+          "upper_bound": null
+        }
+      ],
+      "Single": [
+        {
+          "rate": 0.05,
+          "upper_bound": 1053750
+        },
+        {
+          "rate": 0.09,
+          "upper_bound": null
+        }
+      ]
+    },
+    "2025": {
+      "HeadOfHousehold": [
+        {
+          "rate": 0.05,
+          "upper_bound": 1083150
+        },
+        {
+          "rate": 0.09,
+          "upper_bound": null
+        }
+      ],
+      "MarriedFilingJointly": [
+        {
+          "rate": 0.05,
+          "upper_bound": 1083150
+        },
+        {
+          "rate": 0.09,
+          "upper_bound": null
+        }
+      ],
+      "MarriedFilingSeparately": [
+        {
+          "rate": 0.05,
+          "upper_bound": 1083150
+        },
+        {
+          "rate": 0.09,
+          "upper_bound": null
+        }
+      ],
+      "QualifyingSurvivingSpouse": [
+        {
+          "rate": 0.05,
+          "upper_bound": 1083150
+        },
+        {
+          "rate": 0.09,
+          "upper_bound": null
+        }
+      ],
+      "Single": [
+        {
+          "rate": 0.05,
+          "upper_bound": 1083150
+        },
+        {
+          "rate": 0.09,
+          "upper_bound": null
+        }
+      ]
+    }
+  },
+  "MD": {
+    "2024": {
+      "HeadOfHousehold": [
+        {
+          "rate": 0.02,
+          "upper_bound": 1000
+        },
+        {
+          "rate": 0.03,
+          "upper_bound": 2000
+        },
+        {
+          "rate": 0.04,
+          "upper_bound": 3000
+        },
+        {
+          "rate": 0.0475,
+          "upper_bound": 150000
+        },
+        {
+          "rate": 0.05,
+          "upper_bound": 175000
+        },
+        {
+          "rate": 0.0525,
+          "upper_bound": 225000
+        },
+        {
+          "rate": 0.055,
+          "upper_bound": 300000
+        },
+        {
+          "rate": 0.0575,
+          "upper_bound": null
+        }
+      ],
+      "MarriedFilingJointly": [
+        {
+          "rate": 0.02,
+          "upper_bound": 1000
+        },
+        {
+          "rate": 0.03,
+          "upper_bound": 2000
+        },
+        {
+          "rate": 0.04,
+          "upper_bound": 3000
+        },
+        {
+          "rate": 0.0475,
+          "upper_bound": 150000
+        },
+        {
+          "rate": 0.05,
+          "upper_bound": 175000
+        },
+        {
+          "rate": 0.0525,
+          "upper_bound": 225000
+        },
+        {
+          "rate": 0.055,
+          "upper_bound": 300000
+        },
+        {
+          "rate": 0.0575,
+          "upper_bound": null
+        }
+      ],
+      "MarriedFilingSeparately": [
+        {
+          "rate": 0.02,
+          "upper_bound": 1000
+        },
+        {
+          "rate": 0.03,
+          "upper_bound": 2000
+        },
+        {
+          "rate": 0.04,
+          "upper_bound": 3000
+        },
+        {
+          "rate": 0.0475,
+          "upper_bound": 100000
+        },
+        {
+          "rate": 0.05,
+          "upper_bound": 125000
+        },
+        {
+          "rate": 0.0525,
+          "upper_bound": 150000
+        },
+        {
+          "rate": 0.055,
+          "upper_bound": 250000
+        },
+        {
+          "rate": 0.0575,
+          "upper_bound": null
+        }
+      ],
+      "QualifyingSurvivingSpouse": [
+        {
+          "rate": 0.02,
+          "upper_bound": 1000
+        },
+        {
+          "rate": 0.03,
+          "upper_bound": 2000
+        },
+        {
+          "rate": 0.04,
+          "upper_bound": 3000
+        },
+        {
+          "rate": 0.0475,
+          "upper_bound": 150000
+        },
+        {
+          "rate": 0.05,
+          "upper_bound": 175000
+        },
+        {
+          "rate": 0.0525,
+          "upper_bound": 225000
+        },
+        {
+          "rate": 0.055,
+          "upper_bound": 300000
+        },
+        {
+          "rate": 0.0575,
+          "upper_bound": null
+        }
+      ],
+      "Single": [
+        {
+          "rate": 0.02,
+          "upper_bound": 1000
+        },
+        {
+          "rate": 0.03,
+          "upper_bound": 2000
+        },
+        {
+          "rate": 0.04,
+          "upper_bound": 3000
+        },
+        {
+          "rate": 0.0475,
+          "upper_bound": 100000
+        },
+        {
+          "rate": 0.05,
+          "upper_bound": 125000
+        },
+        {
+          "rate": 0.0525,
+          "upper_bound": 150000
+        },
+        {
+          "rate": 0.055,
+          "upper_bound": 250000
+        },
+        {
+          "rate": 0.0575,
+          "upper_bound": null
+        }
+      ]
+    },
+    "2025": {
+      "HeadOfHousehold": [
+        {
+          "rate": 0.02,
+          "upper_bound": 1000
+        },
+        {
+          "rate": 0.03,
+          "upper_bound": 2000
+        },
+        {
+          "rate": 0.04,
+          "upper_bound": 3000
+        },
+        {
+          "rate": 0.0475,
+          "upper_bound": 150000
+        },
+        {
+          "rate": 0.05,
+          "upper_bound": 175000
+        },
+        {
+          "rate": 0.0525,
+          "upper_bound": 225000
+        },
+        {
+          "rate": 0.055,
+          "upper_bound": 300000
+        },
+        {
+          "rate": 0.0575,
+          "upper_bound": null
+        }
+      ],
+      "MarriedFilingJointly": [
+        {
+          "rate": 0.02,
+          "upper_bound": 1000
+        },
+        {
+          "rate": 0.03,
+          "upper_bound": 2000
+        },
+        {
+          "rate": 0.04,
+          "upper_bound": 3000
+        },
+        {
+          "rate": 0.0475,
+          "upper_bound": 150000
+        },
+        {
+          "rate": 0.05,
+          "upper_bound": 175000
+        },
+        {
+          "rate": 0.0525,
+          "upper_bound": 225000
+        },
+        {
+          "rate": 0.055,
+          "upper_bound": 300000
+        },
+        {
+          "rate": 0.0575,
+          "upper_bound": null
+        }
+      ],
+      "MarriedFilingSeparately": [
+        {
+          "rate": 0.02,
+          "upper_bound": 1000
+        },
+        {
+          "rate": 0.03,
+          "upper_bound": 2000
+        },
+        {
+          "rate": 0.04,
+          "upper_bound": 3000
+        },
+        {
+          "rate": 0.0475,
+          "upper_bound": 100000
+        },
+        {
+          "rate": 0.05,
+          "upper_bound": 125000
+        },
+        {
+          "rate": 0.0525,
+          "upper_bound": 150000
+        },
+        {
+          "rate": 0.055,
+          "upper_bound": 250000
+        },
+        {
+          "rate": 0.0575,
+          "upper_bound": null
+        }
+      ],
+      "QualifyingSurvivingSpouse": [
+        {
+          "rate": 0.02,
+          "upper_bound": 1000
+        },
+        {
+          "rate": 0.03,
+          "upper_bound": 2000
+        },
+        {
+          "rate": 0.04,
+          "upper_bound": 3000
+        },
+        {
+          "rate": 0.0475,
+          "upper_bound": 150000
+        },
+        {
+          "rate": 0.05,
+          "upper_bound": 175000
+        },
+        {
+          "rate": 0.0525,
+          "upper_bound": 225000
+        },
+        {
+          "rate": 0.055,
+          "upper_bound": 300000
+        },
+        {
+          "rate": 0.0575,
+          "upper_bound": null
+        }
+      ],
+      "Single": [
+        {
+          "rate": 0.02,
+          "upper_bound": 1000
+        },
+        {
+          "rate": 0.03,
+          "upper_bound": 2000
+        },
+        {
+          "rate": 0.04,
+          "upper_bound": 3000
+        },
+        {
+          "rate": 0.0475,
+          "upper_bound": 100000
+        },
+        {
+          "rate": 0.05,
+          "upper_bound": 125000
+        },
+        {
+          "rate": 0.0525,
+          "upper_bound": 150000
+        },
+        {
+          "rate": 0.055,
+          "upper_bound": 250000
+        },
+        {
+          "rate": 0.0575,
+          "upper_bound": null
+        }
+      ]
+    }
+  },
+  "ME": {
+    "2024": {
+      "HeadOfHousehold": [
+        {
+          "rate": 0.058,
+          "upper_bound": 39050
+        },
+        {
+          "rate": 0.0675,
+          "upper_bound": 92450
+        },
+        {
+          "rate": 0.0715,
+          "upper_bound": null
+        }
+      ],
+      "MarriedFilingJointly": [
+        {
+          "rate": 0.058,
+          "upper_bound": 52100
+        },
+        {
+          "rate": 0.0675,
+          "upper_bound": 123250
+        },
+        {
+          "rate": 0.0715,
+          "upper_bound": null
+        }
+      ],
+      "MarriedFilingSeparately": [
+        {
+          "rate": 0.058,
+          "upper_bound": 26050
+        },
+        {
+          "rate": 0.0675,
+          "upper_bound": 61600
+        },
+        {
+          "rate": 0.0715,
+          "upper_bound": null
+        }
+      ],
+      "QualifyingSurvivingSpouse": [
+        {
+          "rate": 0.058,
+          "upper_bound": 52100
+        },
+        {
+          "rate": 0.0675,
+          "upper_bound": 123250
+        },
+        {
+          "rate": 0.0715,
+          "upper_bound": null
+        }
+      ],
+      "Single": [
+        {
+          "rate": 0.058,
+          "upper_bound": 26050
+        },
+        {
+          "rate": 0.0675,
+          "upper_bound": 61600
+        },
+        {
+          "rate": 0.0715,
+          "upper_bound": null
+        }
+      ]
+    },
+    "2025": {
+      "HeadOfHousehold": [
+        {
+          "rate": 0.058,
+          "upper_bound": 40200
+        },
+        {
+          "rate": 0.0675,
+          "upper_bound": 95150
+        },
+        {
+          "rate": 0.0715,
+          "upper_bound": null
+        }
+      ],
+      "MarriedFilingJointly": [
+        {
+          "rate": 0.058,
+          "upper_bound": 53600
+        },
+        {
+          "rate": 0.0675,
+          "upper_bound": 126900
+        },
+        {
+          "rate": 0.0715,
+          "upper_bound": null
+        }
+      ],
+      "MarriedFilingSeparately": [
+        {
+          "rate": 0.058,
+          "upper_bound": 26800
+        },
+        {
+          "rate": 0.0675,
+          "upper_bound": 63450
+        },
+        {
+          "rate": 0.0715,
+          "upper_bound": null
+        }
+      ],
+      "QualifyingSurvivingSpouse": [
+        {
+          "rate": 0.058,
+          "upper_bound": 53600
+        },
+        {
+          "rate": 0.0675,
+          "upper_bound": 126900
+        },
+        {
+          "rate": 0.0715,
+          "upper_bound": null
+        }
+      ],
+      "Single": [
+        {
+          "rate": 0.058,
+          "upper_bound": 26800
+        },
+        {
+          "rate": 0.0675,
+          "upper_bound": 63450
+        },
+        {
+          "rate": 0.0715,
+          "upper_bound": null
+        }
+      ]
+    }
+  },
+  "MI": {
+    "2024": {
+      "HeadOfHousehold": [
+        {
+          "rate": 0.0425,
+          "upper_bound": null
+        }
+      ],
+      "MarriedFilingJointly": [
+        {
+          "rate": 0.0425,
+          "upper_bound": null
+        }
+      ],
+      "MarriedFilingSeparately": [
+        {
+          "rate": 0.0425,
+          "upper_bound": null
+        }
+      ],
+      "QualifyingSurvivingSpouse": [
+        {
+          "rate": 0.0425,
+          "upper_bound": null
+        }
+      ],
+      "Single": [
+        {
+          "rate": 0.0425,
+          "upper_bound": null
+        }
+      ]
+    },
+    "2025": {
+      "HeadOfHousehold": [
+        {
+          "rate": 0.0425,
+          "upper_bound": null
+        }
+      ],
+      "MarriedFilingJointly": [
+        {
+          "rate": 0.0425,
+          "upper_bound": null
+        }
+      ],
+      "MarriedFilingSeparately": [
+        {
+          "rate": 0.0425,
+          "upper_bound": null
+        }
+      ],
+      "QualifyingSurvivingSpouse": [
+        {
+          "rate": 0.0425,
+          "upper_bound": null
+        }
+      ],
+      "Single": [
+        {
+          "rate": 0.0425,
+          "upper_bound": null
+        }
+      ]
+    }
+  },
+  "MN": {
+    "2024": {
+      "HeadOfHousehold": [
+        {
+          "rate": 0.0535,
+          "upper_bound": 39010
+        },
+        {
+          "rate": 0.068,
+          "upper_bound": 156760
+        },
+        {
+          "rate": 0.0785,
+          "upper_bound": 256880
+        },
+        {
+          "rate": 0.0985,
+          "upper_bound": null
+        }
+      ],
+      "MarriedFilingJointly": [
+        {
+          "rate": 0.0535,
+          "upper_bound": 46330
+        },
+        {
+          "rate": 0.068,
+          "upper_bound": 184040
+        },
+        {
+          "rate": 0.0785,
+          "upper_bound": 321450
+        },
+        {
+          "rate": 0.0985,
+          "upper_bound": null
+        }
+      ],
+      "MarriedFilingSeparately": [
+        {
+          "rate": 0.0535,
+          "upper_bound": 23165
+        },
+        {
+          "rate": 0.068,
+          "upper_bound": 92020
+        },
+        {
+          "rate": 0.0785,
+          "upper_bound": 160725
+        },
+        {
+          "rate": 0.0985,
+          "upper_bound": null
+        }
+      ],
+      "QualifyingSurvivingSpouse": [
+        {
+          "rate": 0.0535,
+          "upper_bound": 46330
+        },
+        {
+          "rate": 0.068,
+          "upper_bound": 184040
+        },
+        {
+          "rate": 0.0785,
+          "upper_bound": 321450
+        },
+        {
+          "rate": 0.0985,
+          "upper_bound": null
+        }
+      ],
+      "Single": [
+        {
+          "rate": 0.0535,
+          "upper_bound": 31690
+        },
+        {
+          "rate": 0.068,
+          "upper_bound": 104090
+        },
+        {
+          "rate": 0.0785,
+          "upper_bound": 193240
+        },
+        {
+          "rate": 0.0985,
+          "upper_bound": null
+        }
+      ]
+    },
+    "2025": {
+      "HeadOfHousehold": [
+        {
+          "rate": 0.0535,
+          "upper_bound": 40100
+        },
+        {
+          "rate": 0.068,
+          "upper_bound": 161130
+        },
+        {
+          "rate": 0.0785,
+          "upper_bound": 264050
+        },
+        {
+          "rate": 0.0985,
+          "upper_bound": null
+        }
+      ],
+      "MarriedFilingJointly": [
+        {
+          "rate": 0.0535,
+          "upper_bound": 47620
+        },
+        {
+          "rate": 0.068,
+          "upper_bound": 189180
+        },
+        {
+          "rate": 0.0785,
+          "upper_bound": 330410
+        },
+        {
+          "rate": 0.0985,
+          "upper_bound": null
+        }
+      ],
+      "MarriedFilingSeparately": [
+        {
+          "rate": 0.0535,
+          "upper_bound": 23810
+        },
+        {
+          "rate": 0.068,
+          "upper_bound": 94590
+        },
+        {
+          "rate": 0.0785,
+          "upper_bound": 165205
+        },
+        {
+          "rate": 0.0985,
+          "upper_bound": null
+        }
+      ],
+      "QualifyingSurvivingSpouse": [
+        {
+          "rate": 0.0535,
+          "upper_bound": 47620
+        },
+        {
+          "rate": 0.068,
+          "upper_bound": 189180
+        },
+        {
+          "rate": 0.0785,
+          "upper_bound": 330410
+        },
+        {
+          "rate": 0.0985,
+          "upper_bound": null
+        }
+      ],
+      "Single": [
+        {
+          "rate": 0.0535,
+          "upper_bound": 32570
+        },
+        {
+          "rate": 0.068,
+          "upper_bound": 106990
+        },
+        {
+          "rate": 0.0785,
+          "upper_bound": 198630
+        },
+        {
+          "rate": 0.0985,
+          "upper_bound": null
+        }
+      ]
+    }
+  },
+  "MO": {
+    "2024": {
+      "HeadOfHousehold": [
+        {
+          "rate": 0.0,
+          "upper_bound": 1273
+        },
+        {
+          "rate": 0.02,
+          "upper_bound": 2546
+        },
+        {
+          "rate": 0.025,
+          "upper_bound": 3819
+        },
+        {
+          "rate": 0.03,
+          "upper_bound": 5092
+        },
+        {
+          "rate": 0.035,
+          "upper_bound": 6365
+        },
+        {
+          "rate": 0.04,
+          "upper_bound": 7638
+        },
+        {
+          "rate": 0.045,
+          "upper_bound": 8911
+        },
+        {
+          "rate": 0.048,
+          "upper_bound": null
+        }
+      ],
+      "MarriedFilingJointly": [
+        {
+          "rate": 0.0,
+          "upper_bound": 1273
+        },
+        {
+          "rate": 0.02,
+          "upper_bound": 2546
+        },
+        {
+          "rate": 0.025,
+          "upper_bound": 3819
+        },
+        {
+          "rate": 0.03,
+          "upper_bound": 5092
+        },
+        {
+          "rate": 0.035,
+          "upper_bound": 6365
+        },
+        {
+          "rate": 0.04,
+          "upper_bound": 7638
+        },
+        {
+          "rate": 0.045,
+          "upper_bound": 8911
+        },
+        {
+          "rate": 0.048,
+          "upper_bound": null
+        }
+      ],
+      "MarriedFilingSeparately": [
+        {
+          "rate": 0.0,
+          "upper_bound": 1273
+        },
+        {
+          "rate": 0.02,
+          "upper_bound": 2546
+        },
+        {
+          "rate": 0.025,
+          "upper_bound": 3819
+        },
+        {
+          "rate": 0.03,
+          "upper_bound": 5092
+        },
+        {
+          "rate": 0.035,
+          "upper_bound": 6365
+        },
+        {
+          "rate": 0.04,
+          "upper_bound": 7638
+        },
+        {
+          "rate": 0.045,
+          "upper_bound": 8911
+        },
+        {
+          "rate": 0.048,
+          "upper_bound": null
+        }
+      ],
+      "QualifyingSurvivingSpouse": [
+        {
+          "rate": 0.0,
+          "upper_bound": 1273
+        },
+        {
+          "rate": 0.02,
+          "upper_bound": 2546
+        },
+        {
+          "rate": 0.025,
+          "upper_bound": 3819
+        },
+        {
+          "rate": 0.03,
+          "upper_bound": 5092
+        },
+        {
+          "rate": 0.035,
+          "upper_bound": 6365
+        },
+        {
+          "rate": 0.04,
+          "upper_bound": 7638
+        },
+        {
+          "rate": 0.045,
+          "upper_bound": 8911
+        },
+        {
+          "rate": 0.048,
+          "upper_bound": null
+        }
+      ],
+      "Single": [
+        {
+          "rate": 0.0,
+          "upper_bound": 1273
+        },
+        {
+          "rate": 0.02,
+          "upper_bound": 2546
+        },
+        {
+          "rate": 0.025,
+          "upper_bound": 3819
+        },
+        {
+          "rate": 0.03,
+          "upper_bound": 5092
+        },
+        {
+          "rate": 0.035,
+          "upper_bound": 6365
+        },
+        {
+          "rate": 0.04,
+          "upper_bound": 7638
+        },
+        {
+          "rate": 0.045,
+          "upper_bound": 8911
+        },
+        {
+          "rate": 0.048,
+          "upper_bound": null
+        }
+      ]
+    }
+  },
+  "MS": {
+    "2024": {
+      "HeadOfHousehold": [
+        {
+          "rate": 0.0,
+          "upper_bound": 10000
+        },
+        {
+          "rate": 0.047,
+          "upper_bound": null
+        }
+      ],
+      "MarriedFilingJointly": [
+        {
+          "rate": 0.0,
+          "upper_bound": 10000
+        },
+        {
+          "rate": 0.047,
+          "upper_bound": null
+        }
+      ],
+      "MarriedFilingSeparately": [
+        {
+          "rate": 0.0,
+          "upper_bound": 10000
+        },
+        {
+          "rate": 0.047,
+          "upper_bound": null
+        }
+      ],
+      "QualifyingSurvivingSpouse": [
+        {
+          "rate": 0.0,
+          "upper_bound": 10000
+        },
+        {
+          "rate": 0.047,
+          "upper_bound": null
+        }
+      ],
+      "Single": [
+        {
+          "rate": 0.0,
+          "upper_bound": 10000
+        },
+        {
+          "rate": 0.047,
+          "upper_bound": null
+        }
+      ]
+    },
+    "2025": {
+      "HeadOfHousehold": [
+        {
+          "rate": 0.0,
+          "upper_bound": 10000
+        },
+        {
+          "rate": 0.044,
+          "upper_bound": null
+        }
+      ],
+      "MarriedFilingJointly": [
+        {
+          "rate": 0.0,
+          "upper_bound": 10000
+        },
+        {
+          "rate": 0.044,
+          "upper_bound": null
+        }
+      ],
+      "MarriedFilingSeparately": [
+        {
+          "rate": 0.0,
+          "upper_bound": 10000
+        },
+        {
+          "rate": 0.044,
+          "upper_bound": null
+        }
+      ],
+      "QualifyingSurvivingSpouse": [
+        {
+          "rate": 0.0,
+          "upper_bound": 10000
+        },
+        {
+          "rate": 0.044,
+          "upper_bound": null
+        }
+      ],
+      "Single": [
+        {
+          "rate": 0.0,
+          "upper_bound": 10000
+        },
+        {
+          "rate": 0.044,
+          "upper_bound": null
+        }
+      ]
+    }
+  },
+  "MT": {
+    "2024": {
+      "HeadOfHousehold": [
+        {
+          "rate": 0.047,
+          "upper_bound": 30750
+        },
+        {
+          "rate": 0.059,
+          "upper_bound": null
+        }
+      ],
+      "MarriedFilingJointly": [
+        {
+          "rate": 0.047,
+          "upper_bound": 41000
+        },
+        {
+          "rate": 0.059,
+          "upper_bound": null
+        }
+      ],
+      "MarriedFilingSeparately": [
+        {
+          "rate": 0.047,
+          "upper_bound": 20500
+        },
+        {
+          "rate": 0.059,
+          "upper_bound": null
+        }
+      ],
+      "QualifyingSurvivingSpouse": [
+        {
+          "rate": 0.047,
+          "upper_bound": 41000
+        },
+        {
+          "rate": 0.059,
+          "upper_bound": null
+        }
+      ],
+      "Single": [
+        {
+          "rate": 0.047,
+          "upper_bound": 20500
+        },
+        {
+          "rate": 0.059,
+          "upper_bound": null
+        }
+      ]
+    }
+  },
+  "NC": {
+    "2024": {
+      "HeadOfHousehold": [
+        {
+          "rate": 0.045,
+          "upper_bound": null
+        }
+      ],
+      "MarriedFilingJointly": [
+        {
+          "rate": 0.045,
+          "upper_bound": null
+        }
+      ],
+      "MarriedFilingSeparately": [
+        {
+          "rate": 0.045,
+          "upper_bound": null
+        }
+      ],
+      "QualifyingSurvivingSpouse": [
+        {
+          "rate": 0.045,
+          "upper_bound": null
+        }
+      ],
+      "Single": [
+        {
+          "rate": 0.045,
+          "upper_bound": null
+        }
+      ]
+    },
+    "2025": {
+      "HeadOfHousehold": [
+        {
+          "rate": 0.0425,
+          "upper_bound": null
+        }
+      ],
+      "MarriedFilingJointly": [
+        {
+          "rate": 0.0425,
+          "upper_bound": null
+        }
+      ],
+      "MarriedFilingSeparately": [
+        {
+          "rate": 0.0425,
+          "upper_bound": null
+        }
+      ],
+      "QualifyingSurvivingSpouse": [
+        {
+          "rate": 0.0425,
+          "upper_bound": null
+        }
+      ],
+      "Single": [
+        {
+          "rate": 0.0425,
+          "upper_bound": null
+        }
+      ]
+    }
+  },
+  "ND": {
+    "2024": {
+      "HeadOfHousehold": [
+        {
+          "rate": 0.0,
+          "upper_bound": 63175
+        },
+        {
+          "rate": 0.0195,
+          "upper_bound": 264100
+        },
+        {
+          "rate": 0.025,
+          "upper_bound": null
+        }
+      ],
+      "MarriedFilingJointly": [
+        {
+          "rate": 0.0,
+          "upper_bound": 78775
+        },
+        {
+          "rate": 0.0195,
+          "upper_bound": 289975
+        },
+        {
+          "rate": 0.025,
+          "upper_bound": null
+        }
+      ],
+      "MarriedFilingSeparately": [
+        {
+          "rate": 0.0,
+          "upper_bound": 39375
+        },
+        {
+          "rate": 0.0195,
+          "upper_bound": 144975
+        },
+        {
+          "rate": 0.025,
+          "upper_bound": null
+        }
+      ],
+      "QualifyingSurvivingSpouse": [
+        {
+          "rate": 0.0,
+          "upper_bound": 78775
+        },
+        {
+          "rate": 0.0195,
+          "upper_bound": 289975
+        },
+        {
+          "rate": 0.025,
+          "upper_bound": null
+        }
+      ],
+      "Single": [
+        {
+          "rate": 0.0,
+          "upper_bound": 47150
+        },
+        {
+          "rate": 0.0195,
+          "upper_bound": 238200
+        },
+        {
+          "rate": 0.025,
+          "upper_bound": null
+        }
+      ]
+    },
+    "2025": {
+      "HeadOfHousehold": [
+        {
+          "rate": 0.0,
+          "upper_bound": 64950
+        },
+        {
+          "rate": 0.0195,
+          "upper_bound": 271450
+        },
+        {
+          "rate": 0.025,
+          "upper_bound": null
+        }
+      ],
+      "MarriedFilingJointly": [
+        {
+          "rate": 0.0,
+          "upper_bound": 80975
+        },
+        {
+          "rate": 0.0195,
+          "upper_bound": 298075
+        },
+        {
+          "rate": 0.025,
+          "upper_bound": null
+        }
+      ],
+      "MarriedFilingSeparately": [
+        {
+          "rate": 0.0,
+          "upper_bound": 40475
+        },
+        {
+          "rate": 0.0195,
+          "upper_bound": 149025
+        },
+        {
+          "rate": 0.025,
+          "upper_bound": null
+        }
+      ],
+      "QualifyingSurvivingSpouse": [
+        {
+          "rate": 0.0,
+          "upper_bound": 80975
+        },
+        {
+          "rate": 0.0195,
+          "upper_bound": 298075
+        },
+        {
+          "rate": 0.025,
+          "upper_bound": null
+        }
+      ],
+      "Single": [
+        {
+          "rate": 0.0,
+          "upper_bound": 48475
+        },
+        {
+          "rate": 0.0195,
+          "upper_bound": 244825
+        },
+        {
+          "rate": 0.025,
+          "upper_bound": null
+        }
+      ]
+    }
+  },
+  "NE": {
+    "2024": {
+      "HeadOfHousehold": [
+        {
+          "rate": 0.0246,
+          "upper_bound": 5599
+        },
+        {
+          "rate": 0.0351,
+          "upper_bound": 28799
+        },
+        {
+          "rate": 0.0501,
+          "upper_bound": 42999
+        },
+        {
+          "rate": 0.0584,
+          "upper_bound": null
+        }
+      ],
+      "MarriedFilingJointly": [
+        {
+          "rate": 0.0246,
+          "upper_bound": 5999
+        },
+        {
+          "rate": 0.0351,
+          "upper_bound": 35999
+        },
+        {
+          "rate": 0.0501,
+          "upper_bound": 57999
+        },
+        {
+          "rate": 0.0584,
+          "upper_bound": null
+        }
+      ],
+      "MarriedFilingSeparately": [
+        {
+          "rate": 0.0246,
+          "upper_bound": 2999
+        },
+        {
+          "rate": 0.0351,
+          "upper_bound": 17999
+        },
+        {
+          "rate": 0.0501,
+          "upper_bound": 28999
+        },
+        {
+          "rate": 0.0584,
+          "upper_bound": null
+        }
+      ],
+      "QualifyingSurvivingSpouse": [
+        {
+          "rate": 0.0246,
+          "upper_bound": 5999
+        },
+        {
+          "rate": 0.0351,
+          "upper_bound": 35999
+        },
+        {
+          "rate": 0.0501,
+          "upper_bound": 57999
+        },
+        {
+          "rate": 0.0584,
+          "upper_bound": null
+        }
+      ],
+      "Single": [
+        {
+          "rate": 0.0246,
+          "upper_bound": 2999
+        },
+        {
+          "rate": 0.0351,
+          "upper_bound": 17999
+        },
+        {
+          "rate": 0.0501,
+          "upper_bound": 28999
+        },
+        {
+          "rate": 0.0584,
+          "upper_bound": null
+        }
+      ]
+    },
+    "2025": {
+      "HeadOfHousehold": [
+        {
+          "rate": 0.0246,
+          "upper_bound": 5599
+        },
+        {
+          "rate": 0.0351,
+          "upper_bound": 28799
+        },
+        {
+          "rate": 0.0501,
+          "upper_bound": 42999
+        },
+        {
+          "rate": 0.052,
+          "upper_bound": null
+        }
+      ],
+      "MarriedFilingJointly": [
+        {
+          "rate": 0.0246,
+          "upper_bound": 5999
+        },
+        {
+          "rate": 0.0351,
+          "upper_bound": 35999
+        },
+        {
+          "rate": 0.0501,
+          "upper_bound": 57999
+        },
+        {
+          "rate": 0.052,
+          "upper_bound": null
+        }
+      ],
+      "MarriedFilingSeparately": [
+        {
+          "rate": 0.0246,
+          "upper_bound": 2999
+        },
+        {
+          "rate": 0.0351,
+          "upper_bound": 17999
+        },
+        {
+          "rate": 0.0501,
+          "upper_bound": 28999
+        },
+        {
+          "rate": 0.052,
+          "upper_bound": null
+        }
+      ],
+      "QualifyingSurvivingSpouse": [
+        {
+          "rate": 0.0246,
+          "upper_bound": 5999
+        },
+        {
+          "rate": 0.0351,
+          "upper_bound": 35999
+        },
+        {
+          "rate": 0.0501,
+          "upper_bound": 57999
+        },
+        {
+          "rate": 0.052,
+          "upper_bound": null
+        }
+      ],
+      "Single": [
+        {
+          "rate": 0.0246,
+          "upper_bound": 2999
+        },
+        {
+          "rate": 0.0351,
+          "upper_bound": 17999
+        },
+        {
+          "rate": 0.0501,
+          "upper_bound": 28999
+        },
+        {
+          "rate": 0.052,
+          "upper_bound": null
+        }
+      ]
+    }
+  },
+  "NH": {
+    "2024": {
+      "HeadOfHousehold": [
+        {
+          "rate": 0.0,
+          "upper_bound": null
+        }
+      ],
+      "MarriedFilingJointly": [
+        {
+          "rate": 0.0,
+          "upper_bound": null
+        }
+      ],
+      "MarriedFilingSeparately": [
+        {
+          "rate": 0.0,
+          "upper_bound": null
+        }
+      ],
+      "QualifyingSurvivingSpouse": [
+        {
+          "rate": 0.0,
+          "upper_bound": null
+        }
+      ],
+      "Single": [
+        {
+          "rate": 0.0,
+          "upper_bound": null
+        }
+      ]
+    },
+    "2025": {
+      "HeadOfHousehold": [
+        {
+          "rate": 0.0,
+          "upper_bound": null
+        }
+      ],
+      "MarriedFilingJointly": [
+        {
+          "rate": 0.0,
+          "upper_bound": null
+        }
+      ],
+      "MarriedFilingSeparately": [
+        {
+          "rate": 0.0,
+          "upper_bound": null
+        }
+      ],
+      "QualifyingSurvivingSpouse": [
+        {
+          "rate": 0.0,
+          "upper_bound": null
+        }
+      ],
+      "Single": [
+        {
+          "rate": 0.0,
+          "upper_bound": null
+        }
+      ]
+    }
+  },
+  "NJ": {
+    "2024": {
+      "HeadOfHousehold": [
+        {
+          "rate": 0.014,
+          "upper_bound": 20000
+        },
+        {
+          "rate": 0.0175,
+          "upper_bound": 50000
+        },
+        {
+          "rate": 0.035,
+          "upper_bound": 70000
+        },
+        {
+          "rate": 0.05525,
+          "upper_bound": 80000
+        },
+        {
+          "rate": 0.0637,
+          "upper_bound": 150000
+        },
+        {
+          "rate": 0.0897,
+          "upper_bound": 1000000
+        },
+        {
+          "rate": 0.1075,
+          "upper_bound": null
+        }
+      ],
+      "MarriedFilingJointly": [
+        {
+          "rate": 0.014,
+          "upper_bound": 20000
+        },
+        {
+          "rate": 0.0175,
+          "upper_bound": 50000
+        },
+        {
+          "rate": 0.035,
+          "upper_bound": 70000
+        },
+        {
+          "rate": 0.05525,
+          "upper_bound": 80000
+        },
+        {
+          "rate": 0.0637,
+          "upper_bound": 150000
+        },
+        {
+          "rate": 0.0897,
+          "upper_bound": 1000000
+        },
+        {
+          "rate": 0.1075,
+          "upper_bound": null
+        }
+      ],
+      "MarriedFilingSeparately": [
+        {
+          "rate": 0.014,
+          "upper_bound": 20000
+        },
+        {
+          "rate": 0.0175,
+          "upper_bound": 35000
+        },
+        {
+          "rate": 0.035,
+          "upper_bound": 40000
+        },
+        {
+          "rate": 0.05525,
+          "upper_bound": 75000
+        },
+        {
+          "rate": 0.0637,
+          "upper_bound": 500000
+        },
+        {
+          "rate": 0.0897,
+          "upper_bound": 1000000
+        },
+        {
+          "rate": 0.1075,
+          "upper_bound": null
+        }
+      ],
+      "QualifyingSurvivingSpouse": [
+        {
+          "rate": 0.014,
+          "upper_bound": 20000
+        },
+        {
+          "rate": 0.0175,
+          "upper_bound": 50000
+        },
+        {
+          "rate": 0.035,
+          "upper_bound": 70000
+        },
+        {
+          "rate": 0.05525,
+          "upper_bound": 80000
+        },
+        {
+          "rate": 0.0637,
+          "upper_bound": 150000
+        },
+        {
+          "rate": 0.0897,
+          "upper_bound": 1000000
+        },
+        {
+          "rate": 0.1075,
+          "upper_bound": null
+        }
+      ],
+      "Single": [
+        {
+          "rate": 0.014,
+          "upper_bound": 20000
+        },
+        {
+          "rate": 0.0175,
+          "upper_bound": 35000
+        },
+        {
+          "rate": 0.035,
+          "upper_bound": 40000
+        },
+        {
+          "rate": 0.05525,
+          "upper_bound": 75000
+        },
+        {
+          "rate": 0.0637,
+          "upper_bound": 500000
+        },
+        {
+          "rate": 0.0897,
+          "upper_bound": 1000000
+        },
+        {
+          "rate": 0.1075,
+          "upper_bound": null
+        }
+      ]
+    },
+    "2025": {
+      "HeadOfHousehold": [
+        {
+          "rate": 0.014,
+          "upper_bound": 20000
+        },
+        {
+          "rate": 0.0175,
+          "upper_bound": 50000
+        },
+        {
+          "rate": 0.035,
+          "upper_bound": 70000
+        },
+        {
+          "rate": 0.05525,
+          "upper_bound": 80000
+        },
+        {
+          "rate": 0.0637,
+          "upper_bound": 150000
+        },
+        {
+          "rate": 0.0897,
+          "upper_bound": 1000000
+        },
+        {
+          "rate": 0.1075,
+          "upper_bound": null
+        }
+      ],
+      "MarriedFilingJointly": [
+        {
+          "rate": 0.014,
+          "upper_bound": 20000
+        },
+        {
+          "rate": 0.0175,
+          "upper_bound": 50000
+        },
+        {
+          "rate": 0.035,
+          "upper_bound": 70000
+        },
+        {
+          "rate": 0.05525,
+          "upper_bound": 80000
+        },
+        {
+          "rate": 0.0637,
+          "upper_bound": 150000
+        },
+        {
+          "rate": 0.0897,
+          "upper_bound": 1000000
+        },
+        {
+          "rate": 0.1075,
+          "upper_bound": null
+        }
+      ],
+      "MarriedFilingSeparately": [
+        {
+          "rate": 0.014,
+          "upper_bound": 20000
+        },
+        {
+          "rate": 0.0175,
+          "upper_bound": 35000
+        },
+        {
+          "rate": 0.035,
+          "upper_bound": 40000
+        },
+        {
+          "rate": 0.05525,
+          "upper_bound": 75000
+        },
+        {
+          "rate": 0.0637,
+          "upper_bound": 500000
+        },
+        {
+          "rate": 0.0897,
+          "upper_bound": 1000000
+        },
+        {
+          "rate": 0.1075,
+          "upper_bound": null
+        }
+      ],
+      "QualifyingSurvivingSpouse": [
+        {
+          "rate": 0.014,
+          "upper_bound": 20000
+        },
+        {
+          "rate": 0.0175,
+          "upper_bound": 50000
+        },
+        {
+          "rate": 0.035,
+          "upper_bound": 70000
+        },
+        {
+          "rate": 0.05525,
+          "upper_bound": 80000
+        },
+        {
+          "rate": 0.0637,
+          "upper_bound": 150000
+        },
+        {
+          "rate": 0.0897,
+          "upper_bound": 1000000
+        },
+        {
+          "rate": 0.1075,
+          "upper_bound": null
+        }
+      ],
+      "Single": [
+        {
+          "rate": 0.014,
+          "upper_bound": 20000
+        },
+        {
+          "rate": 0.0175,
+          "upper_bound": 35000
+        },
+        {
+          "rate": 0.035,
+          "upper_bound": 40000
+        },
+        {
+          "rate": 0.05525,
+          "upper_bound": 75000
+        },
+        {
+          "rate": 0.0637,
+          "upper_bound": 500000
+        },
+        {
+          "rate": 0.0897,
+          "upper_bound": 1000000
+        },
+        {
+          "rate": 0.1075,
+          "upper_bound": null
+        }
+      ]
+    }
+  },
+  "NM": {
+    "2024": {
+      "HeadOfHousehold": [
+        {
+          "rate": 0.017,
+          "upper_bound": 8000
+        },
+        {
+          "rate": 0.032,
+          "upper_bound": 16000
+        },
+        {
+          "rate": 0.047,
+          "upper_bound": 24000
+        },
+        {
+          "rate": 0.049,
+          "upper_bound": 315000
+        },
+        {
+          "rate": 0.059,
+          "upper_bound": null
+        }
+      ],
+      "MarriedFilingJointly": [
+        {
+          "rate": 0.017,
+          "upper_bound": 8000
+        },
+        {
+          "rate": 0.032,
+          "upper_bound": 16000
+        },
+        {
+          "rate": 0.047,
+          "upper_bound": 24000
+        },
+        {
+          "rate": 0.049,
+          "upper_bound": 315000
+        },
+        {
+          "rate": 0.059,
+          "upper_bound": null
+        }
+      ],
+      "MarriedFilingSeparately": [
+        {
+          "rate": 0.017,
+          "upper_bound": 4000
+        },
+        {
+          "rate": 0.032,
+          "upper_bound": 8000
+        },
+        {
+          "rate": 0.047,
+          "upper_bound": 12000
+        },
+        {
+          "rate": 0.049,
+          "upper_bound": 157500
+        },
+        {
+          "rate": 0.059,
+          "upper_bound": null
+        }
+      ],
+      "QualifyingSurvivingSpouse": [
+        {
+          "rate": 0.017,
+          "upper_bound": 8000
+        },
+        {
+          "rate": 0.032,
+          "upper_bound": 16000
+        },
+        {
+          "rate": 0.047,
+          "upper_bound": 24000
+        },
+        {
+          "rate": 0.049,
+          "upper_bound": 315000
+        },
+        {
+          "rate": 0.059,
+          "upper_bound": null
+        }
+      ],
+      "Single": [
+        {
+          "rate": 0.017,
+          "upper_bound": 5500
+        },
+        {
+          "rate": 0.032,
+          "upper_bound": 11000
+        },
+        {
+          "rate": 0.047,
+          "upper_bound": 16000
+        },
+        {
+          "rate": 0.049,
+          "upper_bound": 210000
+        },
+        {
+          "rate": 0.059,
+          "upper_bound": null
+        }
+      ]
+    }
+  },
+  "NV": {
+    "2024": {
+      "HeadOfHousehold": [
+        {
+          "rate": 0.0,
+          "upper_bound": null
+        }
+      ],
+      "MarriedFilingJointly": [
+        {
+          "rate": 0.0,
+          "upper_bound": null
+        }
+      ],
+      "MarriedFilingSeparately": [
+        {
+          "rate": 0.0,
+          "upper_bound": null
+        }
+      ],
+      "QualifyingSurvivingSpouse": [
+        {
+          "rate": 0.0,
+          "upper_bound": null
+        }
+      ],
+      "Single": [
+        {
+          "rate": 0.0,
+          "upper_bound": null
+        }
+      ]
+    },
+    "2025": {
+      "HeadOfHousehold": [
+        {
+          "rate": 0.0,
+          "upper_bound": null
+        }
+      ],
+      "MarriedFilingJointly": [
+        {
+          "rate": 0.0,
+          "upper_bound": null
+        }
+      ],
+      "MarriedFilingSeparately": [
+        {
+          "rate": 0.0,
+          "upper_bound": null
+        }
+      ],
+      "QualifyingSurvivingSpouse": [
+        {
+          "rate": 0.0,
+          "upper_bound": null
+        }
+      ],
+      "Single": [
+        {
+          "rate": 0.0,
+          "upper_bound": null
+        }
+      ]
+    }
+  },
+  "NY": {
+    "2024": {
+      "HeadOfHousehold": [
+        {
+          "rate": 0.04,
+          "upper_bound": 12800
+        },
+        {
+          "rate": 0.045,
+          "upper_bound": 17650
+        },
+        {
+          "rate": 0.0525,
+          "upper_bound": 20900
+        },
+        {
+          "rate": 0.055,
+          "upper_bound": 107650
+        },
+        {
+          "rate": 0.06,
+          "upper_bound": 269300
+        },
+        {
+          "rate": 0.0685,
+          "upper_bound": 1616450
+        },
+        {
+          "rate": 0.0965,
+          "upper_bound": 5000000
+        },
+        {
+          "rate": 0.0103,
+          "upper_bound": 25000000
+        },
+        {
+          "rate": 0.0109,
+          "upper_bound": null
+        }
+      ],
+      "MarriedFilingJointly": [
+        {
+          "rate": 0.04,
+          "upper_bound": 17150
+        },
+        {
+          "rate": 0.045,
+          "upper_bound": 23600
+        },
+        {
+          "rate": 0.0525,
+          "upper_bound": 27900
+        },
+        {
+          "rate": 0.055,
+          "upper_bound": 161550
+        },
+        {
+          "rate": 0.06,
+          "upper_bound": 323200
+        },
+        {
+          "rate": 0.0685,
+          "upper_bound": 2155350
+        },
+        {
+          "rate": 0.0965,
+          "upper_bound": 5000000
+        },
+        {
+          "rate": 0.0103,
+          "upper_bound": 25000000
+        },
+        {
+          "rate": 0.0109,
+          "upper_bound": null
+        }
+      ],
+      "MarriedFilingSeparately": [
+        {
+          "rate": 0.04,
+          "upper_bound": 8500
+        },
+        {
+          "rate": 0.045,
+          "upper_bound": 11700
+        },
+        {
+          "rate": 0.0525,
+          "upper_bound": 13900
+        },
+        {
+          "rate": 0.055,
+          "upper_bound": 80650
+        },
+        {
+          "rate": 0.06,
+          "upper_bound": 215400
+        },
+        {
+          "rate": 0.0685,
+          "upper_bound": 1077550
+        },
+        {
+          "rate": 0.0965,
+          "upper_bound": 5000000
+        },
+        {
+          "rate": 0.0103,
+          "upper_bound": 25000000
+        },
+        {
+          "rate": 0.0109,
+          "upper_bound": null
+        }
+      ],
+      "QualifyingSurvivingSpouse": [
+        {
+          "rate": 0.04,
+          "upper_bound": 17150
+        },
+        {
+          "rate": 0.045,
+          "upper_bound": 23600
+        },
+        {
+          "rate": 0.0525,
+          "upper_bound": 27900
+        },
+        {
+          "rate": 0.055,
+          "upper_bound": 161550
+        },
+        {
+          "rate": 0.06,
+          "upper_bound": 323200
+        },
+        {
+          "rate": 0.0685,
+          "upper_bound": 2155350
+        },
+        {
+          "rate": 0.0965,
+          "upper_bound": 5000000
+        },
+        {
+          "rate": 0.0103,
+          "upper_bound": 25000000
+        },
+        {
+          "rate": 0.0109,
+          "upper_bound": null
+        }
+      ],
+      "Single": [
+        {
+          "rate": 0.04,
+          "upper_bound": 8500
+        },
+        {
+          "rate": 0.045,
+          "upper_bound": 11700
+        },
+        {
+          "rate": 0.0525,
+          "upper_bound": 13900
+        },
+        {
+          "rate": 0.055,
+          "upper_bound": 80650
+        },
+        {
+          "rate": 0.06,
+          "upper_bound": 215400
+        },
+        {
+          "rate": 0.0685,
+          "upper_bound": 1077550
+        },
+        {
+          "rate": 0.0965,
+          "upper_bound": 5000000
+        },
+        {
+          "rate": 0.0103,
+          "upper_bound": 25000000
+        },
+        {
+          "rate": 0.0109,
+          "upper_bound": null
+        }
+      ]
+    }
+  },
+  "OH": {
+    "2024": {
+      "HeadOfHousehold": [
+        {
+          "rate": 0.0,
+          "upper_bound": 26050
+        },
+        {
+          "rate": 0.0275,
+          "upper_bound": 100000
+        },
+        {
+          "rate": 0.035,
+          "upper_bound": null
+        }
+      ],
+      "MarriedFilingJointly": [
+        {
+          "rate": 0.0,
+          "upper_bound": 26050
+        },
+        {
+          "rate": 0.0275,
+          "upper_bound": 100000
+        },
+        {
+          "rate": 0.035,
+          "upper_bound": null
+        }
+      ],
+      "MarriedFilingSeparately": [
+        {
+          "rate": 0.0,
+          "upper_bound": 26050
+        },
+        {
+          "rate": 0.0275,
+          "upper_bound": 100000
+        },
+        {
+          "rate": 0.035,
+          "upper_bound": null
+        }
+      ],
+      "QualifyingSurvivingSpouse": [
+        {
+          "rate": 0.0,
+          "upper_bound": 26050
+        },
+        {
+          "rate": 0.0275,
+          "upper_bound": 100000
+        },
+        {
+          "rate": 0.035,
+          "upper_bound": null
+        }
+      ],
+      "Single": [
+        {
+          "rate": 0.0,
+          "upper_bound": 26050
+        },
+        {
+          "rate": 0.0275,
+          "upper_bound": 100000
+        },
+        {
+          "rate": 0.035,
+          "upper_bound": null
+        }
+      ]
+    }
+  },
+  "OK": {
+    "2024": {
+      "HeadOfHousehold": [
+        {
+          "rate": 0.0025,
+          "upper_bound": 2000
+        },
+        {
+          "rate": 0.0075,
+          "upper_bound": 5000
+        },
+        {
+          "rate": 0.0175,
+          "upper_bound": 7500
+        },
+        {
+          "rate": 0.0275,
+          "upper_bound": 9800
+        },
+        {
+          "rate": 0.0375,
+          "upper_bound": 14400
+        },
+        {
+          "rate": 0.0475,
+          "upper_bound": null
+        }
+      ],
+      "MarriedFilingJointly": [
+        {
+          "rate": 0.0025,
+          "upper_bound": 2000
+        },
+        {
+          "rate": 0.0075,
+          "upper_bound": 5000
+        },
+        {
+          "rate": 0.0175,
+          "upper_bound": 7500
+        },
+        {
+          "rate": 0.0275,
+          "upper_bound": 9800
+        },
+        {
+          "rate": 0.0375,
+          "upper_bound": 14400
+        },
+        {
+          "rate": 0.0475,
+          "upper_bound": null
+        }
+      ],
+      "MarriedFilingSeparately": [
+        {
+          "rate": 0.0025,
+          "upper_bound": 1000
+        },
+        {
+          "rate": 0.0075,
+          "upper_bound": 2500
+        },
+        {
+          "rate": 0.0175,
+          "upper_bound": 3750
+        },
+        {
+          "rate": 0.0275,
+          "upper_bound": 4900
+        },
+        {
+          "rate": 0.0375,
+          "upper_bound": 7200
+        },
+        {
+          "rate": 0.0475,
+          "upper_bound": null
+        }
+      ],
+      "QualifyingSurvivingSpouse": [
+        {
+          "rate": 0.0025,
+          "upper_bound": 2000
+        },
+        {
+          "rate": 0.0075,
+          "upper_bound": 5000
+        },
+        {
+          "rate": 0.0175,
+          "upper_bound": 7500
+        },
+        {
+          "rate": 0.0275,
+          "upper_bound": 9800
+        },
+        {
+          "rate": 0.0375,
+          "upper_bound": 14400
+        },
+        {
+          "rate": 0.0475,
+          "upper_bound": null
+        }
+      ],
+      "Single": [
+        {
+          "rate": 0.0025,
+          "upper_bound": 1000
+        },
+        {
+          "rate": 0.0075,
+          "upper_bound": 2500
+        },
+        {
+          "rate": 0.0175,
+          "upper_bound": 3750
+        },
+        {
+          "rate": 0.0275,
+          "upper_bound": 4900
+        },
+        {
+          "rate": 0.0375,
+          "upper_bound": 7200
+        },
+        {
+          "rate": 0.0475,
+          "upper_bound": null
+        }
+      ]
+    }
+  },
+  "OR": {
+    "2024": {
+      "HeadOfHousehold": [
+        {
+          "rate": 0.0475,
+          "upper_bound": 8600
+        },
+        {
+          "rate": 0.0675,
+          "upper_bound": 21500
+        },
+        {
+          "rate": 0.0875,
+          "upper_bound": 250000
+        },
+        {
+          "rate": 0.099,
+          "upper_bound": null
+        }
+      ],
+      "MarriedFilingJointly": [
+        {
+          "rate": 0.0475,
+          "upper_bound": 8600
+        },
+        {
+          "rate": 0.0675,
+          "upper_bound": 21500
+        },
+        {
+          "rate": 0.0875,
+          "upper_bound": 250000
+        },
+        {
+          "rate": 0.099,
+          "upper_bound": null
+        }
+      ],
+      "MarriedFilingSeparately": [
+        {
+          "rate": 0.0475,
+          "upper_bound": 4300
+        },
+        {
+          "rate": 0.0675,
+          "upper_bound": 10750
+        },
+        {
+          "rate": 0.0875,
+          "upper_bound": 125000
+        },
+        {
+          "rate": 0.099,
+          "upper_bound": null
+        }
+      ],
+      "QualifyingSurvivingSpouse": [
+        {
+          "rate": 0.0475,
+          "upper_bound": 8600
+        },
+        {
+          "rate": 0.0675,
+          "upper_bound": 21500
+        },
+        {
+          "rate": 0.0875,
+          "upper_bound": 250000
+        },
+        {
+          "rate": 0.099,
+          "upper_bound": null
+        }
+      ],
+      "Single": [
+        {
+          "rate": 0.0475,
+          "upper_bound": 4300
+        },
+        {
+          "rate": 0.0675,
+          "upper_bound": 10750
+        },
+        {
+          "rate": 0.0875,
+          "upper_bound": 125000
+        },
+        {
+          "rate": 0.099,
+          "upper_bound": null
+        }
+      ]
+    }
+  },
+  "PA": {
+    "2024": {
+      "HeadOfHousehold": [
+        {
+          "rate": 0.0307,
+          "upper_bound": null
+        }
+      ],
+      "MarriedFilingJointly": [
+        {
+          "rate": 0.0307,
+          "upper_bound": null
+        }
+      ],
+      "MarriedFilingSeparately": [
+        {
+          "rate": 0.0307,
+          "upper_bound": null
+        }
+      ],
+      "QualifyingSurvivingSpouse": [
+        {
+          "rate": 0.0307,
+          "upper_bound": null
+        }
+      ],
+      "Single": [
+        {
+          "rate": 0.0307,
+          "upper_bound": null
+        }
+      ]
+    },
+    "2025": {
+      "HeadOfHousehold": [
+        {
+          "rate": 0.0307,
+          "upper_bound": null
+        }
+      ],
+      "MarriedFilingJointly": [
+        {
+          "rate": 0.0307,
+          "upper_bound": null
+        }
+      ],
+      "MarriedFilingSeparately": [
+        {
+          "rate": 0.0307,
+          "upper_bound": null
+        }
+      ],
+      "QualifyingSurvivingSpouse": [
+        {
+          "rate": 0.0307,
+          "upper_bound": null
+        }
+      ],
+      "Single": [
+        {
+          "rate": 0.0307,
+          "upper_bound": null
+        }
+      ]
+    }
+  },
+  "RI": {
+    "2024": {
+      "HeadOfHousehold": [
+        {
+          "rate": 0.0375,
+          "upper_bound": 77450
+        },
+        {
+          "rate": 0.0475,
+          "upper_bound": 176050
+        },
+        {
+          "rate": 0.0599,
+          "upper_bound": null
+        }
+      ],
+      "MarriedFilingJointly": [
+        {
+          "rate": 0.0375,
+          "upper_bound": 77450
+        },
+        {
+          "rate": 0.0475,
+          "upper_bound": 176050
+        },
+        {
+          "rate": 0.0599,
+          "upper_bound": null
+        }
+      ],
+      "MarriedFilingSeparately": [
+        {
+          "rate": 0.0375,
+          "upper_bound": 77450
+        },
+        {
+          "rate": 0.0475,
+          "upper_bound": 176050
+        },
+        {
+          "rate": 0.0599,
+          "upper_bound": null
+        }
+      ],
+      "QualifyingSurvivingSpouse": [
+        {
+          "rate": 0.0375,
+          "upper_bound": 77450
+        },
+        {
+          "rate": 0.0475,
+          "upper_bound": 176050
+        },
+        {
+          "rate": 0.0599,
+          "upper_bound": null
+        }
+      ],
+      "Single": [
+        {
+          "rate": 0.0375,
+          "upper_bound": 77450
+        },
+        {
+          "rate": 0.0475,
+          "upper_bound": 176050
+        },
+        {
+          "rate": 0.0599,
+          "upper_bound": null
+        }
+      ]
+    },
+    "2025": {
+      "HeadOfHousehold": [
+        {
+          "rate": 0.0375,
+          "upper_bound": 79900
+        },
+        {
+          "rate": 0.0475,
+          "upper_bound": 181650
+        },
+        {
+          "rate": 0.0599,
+          "upper_bound": null
+        }
+      ],
+      "MarriedFilingJointly": [
+        {
+          "rate": 0.0375,
+          "upper_bound": 79900
+        },
+        {
+          "rate": 0.0475,
+          "upper_bound": 181650
+        },
+        {
+          "rate": 0.0599,
+          "upper_bound": null
+        }
+      ],
+      "MarriedFilingSeparately": [
+        {
+          "rate": 0.0375,
+          "upper_bound": 79900
+        },
+        {
+          "rate": 0.0475,
+          "upper_bound": 181650
+        },
+        {
+          "rate": 0.0599,
+          "upper_bound": null
+        }
+      ],
+      "QualifyingSurvivingSpouse": [
+        {
+          "rate": 0.0375,
+          "upper_bound": 79900
+        },
+        {
+          "rate": 0.0475,
+          "upper_bound": 181650
+        },
+        {
+          "rate": 0.0599,
+          "upper_bound": null
+        }
+      ],
+      "Single": [
+        {
+          "rate": 0.0375,
+          "upper_bound": 79900
+        },
+        {
+          "rate": 0.0475,
+          "upper_bound": 181650
+        },
+        {
+          "rate": 0.0599,
+          "upper_bound": null
+        }
+      ]
+    }
+  },
+  "SC": {
+    "2024": {
+      "HeadOfHousehold": [
+        {
+          "rate": 0.0,
+          "upper_bound": 3460
+        },
+        {
+          "rate": 0.03,
+          "upper_bound": 17330
+        },
+        {
+          "rate": 0.062,
+          "upper_bound": null
+        }
+      ],
+      "MarriedFilingJointly": [
+        {
+          "rate": 0.0,
+          "upper_bound": 3460
+        },
+        {
+          "rate": 0.03,
+          "upper_bound": 17330
+        },
+        {
+          "rate": 0.062,
+          "upper_bound": null
+        }
+      ],
+      "MarriedFilingSeparately": [
+        {
+          "rate": 0.0,
+          "upper_bound": 3460
+        },
+        {
+          "rate": 0.03,
+          "upper_bound": 17330
+        },
+        {
+          "rate": 0.062,
+          "upper_bound": null
+        }
+      ],
+      "QualifyingSurvivingSpouse": [
+        {
+          "rate": 0.0,
+          "upper_bound": 3460
+        },
+        {
+          "rate": 0.03,
+          "upper_bound": 17330
+        },
+        {
+          "rate": 0.062,
+          "upper_bound": null
+        }
+      ],
+      "Single": [
+        {
+          "rate": 0.0,
+          "upper_bound": 3460
+        },
+        {
+          "rate": 0.03,
+          "upper_bound": 17330
+        },
+        {
+          "rate": 0.062,
+          "upper_bound": null
+        }
+      ]
+    }
+  },
+
+  "SD": {
+    "2024": {
+      "HeadOfHousehold": [
+        {
+          "rate": 0.0,
+          "upper_bound": null
+        }
+      ],
+      "MarriedFilingJointly": [
+        {
+          "rate": 0.0,
+          "upper_bound": null
+        }
+      ],
+      "MarriedFilingSeparately": [
+        {
+          "rate": 0.0,
+          "upper_bound": null
+        }
+      ],
+      "QualifyingSurvivingSpouse": [
+        {
+          "rate": 0.0,
+          "upper_bound": null
+        }
+      ],
+      "Single": [
+        {
+          "rate": 0.0,
+          "upper_bound": null
+        }
+      ]
+    },
+    "2025": {
+      "HeadOfHousehold": [
+        {
+          "rate": 0.0,
+          "upper_bound": null
+        }
+      ],
+      "MarriedFilingJointly": [
+        {
+          "rate": 0.0,
+          "upper_bound": null
+        }
+      ],
+      "MarriedFilingSeparately": [
+        {
+          "rate": 0.0,
+          "upper_bound": null
+        }
+      ],
+      "QualifyingSurvivingSpouse": [
+        {
+          "rate": 0.0,
+          "upper_bound": null
+        }
+      ],
+      "Single": [
+        {
+          "rate": 0.0,
+          "upper_bound": null
+        }
+      ]
+    }
+  },
+
+  "TN": {
+    "2024": {
+      "HeadOfHousehold": [
+        {
+          "rate": 0.0,
+          "upper_bound": null
+        }
+      ],
+      "MarriedFilingJointly": [
+        {
+          "rate": 0.0,
+          "upper_bound": null
+        }
+      ],
+      "MarriedFilingSeparately": [
+        {
+          "rate": 0.0,
+          "upper_bound": null
+        }
+      ],
+      "QualifyingSurvivingSpouse": [
+        {
+          "rate": 0.0,
+          "upper_bound": null
+        }
+      ],
+      "Single": [
+        {
+          "rate": 0.0,
+          "upper_bound": null
+        }
+      ]
+    },
+    "2025": {
+      "HeadOfHousehold": [
+        {
+          "rate": 0.0,
+          "upper_bound": null
+        }
+      ],
+      "MarriedFilingJointly": [
+        {
+          "rate": 0.0,
+          "upper_bound": null
+        }
+      ],
+      "MarriedFilingSeparately": [
+        {
+          "rate": 0.0,
+          "upper_bound": null
+        }
+      ],
+      "QualifyingSurvivingSpouse": [
+        {
+          "rate": 0.0,
+          "upper_bound": null
+        }
+      ],
+      "Single": [
+        {
+          "rate": 0.0,
+          "upper_bound": null
+        }
+      ]
+    }
+  },
+  "TX": {
+    "2024": {
+      "HeadOfHousehold": [
+        {
+          "rate": 0.0,
+          "upper_bound": null
+        }
+      ],
+      "MarriedFilingJointly": [
+        {
+          "rate": 0.0,
+          "upper_bound": null
+        }
+      ],
+      "MarriedFilingSeparately": [
+        {
+          "rate": 0.0,
+          "upper_bound": null
+        }
+      ],
+      "QualifyingSurvivingSpouse": [
+        {
+          "rate": 0.0,
+          "upper_bound": null
+        }
+      ],
+      "Single": [
+        {
+          "rate": 0.0,
+          "upper_bound": null
+        }
+      ]
+    },
+    "2025": {
+      "HeadOfHousehold": [
+        {
+          "rate": 0.0,
+          "upper_bound": null
+        }
+      ],
+      "MarriedFilingJointly": [
+        {
+          "rate": 0.0,
+          "upper_bound": null
+        }
+      ],
+      "MarriedFilingSeparately": [
+        {
+          "rate": 0.0,
+          "upper_bound": null
+        }
+      ],
+      "QualifyingSurvivingSpouse": [
+        {
+          "rate": 0.0,
+          "upper_bound": null
+        }
+      ],
+      "Single": [
+        {
+          "rate": 0.0,
+          "upper_bound": null
+        }
+      ]
+    }
+  },
+  "UT": {
+    "2024": {
+      "HeadOfHousehold": [
+        {
+          "rate": 0.0455,
+          "upper_bound": null
+        }
+      ],
+      "MarriedFilingJointly": [
+        {
+          "rate": 0.0455,
+          "upper_bound": null
+        }
+      ],
+      "MarriedFilingSeparately": [
+        {
+          "rate": 0.0455,
+          "upper_bound": null
+        }
+      ],
+      "QualifyingSurvivingSpouse": [
+        {
+          "rate": 0.0455,
+          "upper_bound": null
+        }
+      ],
+      "Single": [
+        {
+          "rate": 0.0455,
+          "upper_bound": null
+        }
+      ]
+    },
+    "2025": {
+      "HeadOfHousehold": [
+        {
+          "rate": 0.045,
+          "upper_bound": null
+        }
+      ],
+      "MarriedFilingJointly": [
+        {
+          "rate": 0.045,
+          "upper_bound": null
+        }
+      ],
+      "MarriedFilingSeparately": [
+        {
+          "rate": 0.045,
+          "upper_bound": null
+        }
+      ],
+      "QualifyingSurvivingSpouse": [
+        {
+          "rate": 0.045,
+          "upper_bound": null
+        }
+      ],
+      "Single": [
+        {
+          "rate": 0.045,
+          "upper_bound": null
+        }
+      ]
+    }
+  },
+  "VT": {
+    "2024": {
+      "HeadOfHousehold": [
+        {
+          "rate": 0.0335,
+          "upper_bound": 75000
+        },
+        {
+          "rate": 0.066,
+          "upper_bound": 165700
+        },
+        {
+          "rate": 0.076,
+          "upper_bound": 268300
+        },
+        {
+          "rate": 0.0875,
+          "upper_bound": null
+        }
+      ],
+      "MarriedFilingJointly": [
+        {
+          "rate": 0.0335,
+          "upper_bound": 79950
+        },
+        {
+          "rate": 0.066,
+          "upper_bound": 193300
+        },
+        {
+          "rate": 0.076,
+          "upper_bound": 294600
+        },
+        {
+          "rate": 0.0875,
+          "upper_bound": null
+        }
+      ],
+      "MarriedFilingSeparately": [
+        {
+          "rate": 0.0335,
+          "upper_bound": 75000
+        },
+        {
+          "rate": 0.066,
+          "upper_bound": 96650
+        },
+        {
+          "rate": 0.076,
+          "upper_bound": 147300
+        },
+        {
+          "rate": 0.0875,
+          "upper_bound": null
+        }
+      ],
+      "QualifyingSurvivingSpouse": [
+        {
+          "rate": 0.0335,
+          "upper_bound": 79950
+        },
+        {
+          "rate": 0.066,
+          "upper_bound": 193300
+        },
+        {
+          "rate": 0.076,
+          "upper_bound": 294600
+        },
+        {
+          "rate": 0.0875,
+          "upper_bound": null
+        }
+      ],
+      "Single": [
+        {
+          "rate": 0.0335,
+          "upper_bound": 75000
+        },
+        {
+          "rate": 0.066,
+          "upper_bound": 116000
+        },
+        {
+          "rate": 0.076,
+          "upper_bound": 242000
+        },
+        {
+          "rate": 0.0875,
+          "upper_bound": null
+        }
+      ]
+    }
+  }
 }
