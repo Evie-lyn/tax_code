@@ -113,11 +113,11 @@ fn generate_deductions (cargo_manifest_dir: &Path,) -> Result <(), Box<dyn std::
     Ok(())
 }
 
-fn generate_get_tax_brackets_impl(
+fn generate_get_tax_brackets(
     cargo_manifest_dir: &Path,
 ) -> Result<(), Box<dyn std::error::Error>> {
     let tax_json_input_path = cargo_manifest_dir.join("src").join("Bracket.json");
-    let generated_get_tax_output_path = cargo_manifest_dir.join("src").join("get_tax_brackets_impl.rs"); 
+    let generated_get_tax_output_path = cargo_manifest_dir.join("src").join("get_tax_brackets.rs"); 
 
     println!("cargo:rerun-if-changed={}", tax_json_input_path.display());
 
@@ -225,7 +225,7 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
 
     generate_tax_brackets(cargo_manifest_path)?;
     generate_deductions(cargo_manifest_path)?;
-    generate_get_tax_brackets_impl (cargo_manifest_path)?;
+    generate_get_tax_brackets (cargo_manifest_path)?;
 
     Ok(())
 }

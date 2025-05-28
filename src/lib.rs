@@ -2,7 +2,7 @@ pub mod tax_bracket;
 pub mod deductions;  
 pub mod income_based_deduction; 
 pub mod brackets;
-pub mod get_tax_brackets_impl;
+pub mod get_tax_brackets;
 
 use crate::tax_bracket::TaxBrackets;
 
@@ -32,7 +32,7 @@ pub fn calculate_income_tax(
     println!("DEBUG: Deduction Amount: ${:.2}", deduction_amount);
     println!("DEBUG: Taxable Income after deduction: ${:.2}", taxable_income);
 
-    let brackets = crate::get_tax_brackets_impl::get_tax_brackets(state, year, &filing_status);
+    let brackets = crate::get_tax_brackets::get_tax_brackets(state, year, &filing_status);
     TaxBrackets::new(brackets).taxes(taxable_income)
 }
 

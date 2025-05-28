@@ -5,37 +5,133 @@ use crate::FilingStatus;
 
 use crate::Deduction;
 
-pub fn ia_married_filing_jointly_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
-    Deduction { standard_deduction: 29200.0 }
+pub fn ri_head_of_household_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
+    Deduction { standard_deduction: 15850.0 }
 }
-pub fn ia_head_of_household_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
+pub fn ri_single_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
+    Deduction { standard_deduction: 10550.0 }
+}
+pub fn ri_married_filing_separately_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
+    Deduction { standard_deduction: 10550.0 }
+}
+pub fn ri_married_filing_jointly_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
+    Deduction { standard_deduction: 21150.0 }
+}
+pub fn ri_qualifying_surviving_spouse_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
+    Deduction { standard_deduction: 21150.0 }
+}
+pub fn ri_qualifying_surviving_spouse_deduction_2025(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
+    Deduction { standard_deduction: 21800.0 }
+}
+pub fn ri_head_of_household_deduction_2025(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
+    Deduction { standard_deduction: 16350.0 }
+}
+pub fn ri_single_deduction_2025(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
+    Deduction { standard_deduction: 10900.0 }
+}
+pub fn ri_married_filing_jointly_deduction_2025(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
+    Deduction { standard_deduction: 21800.0 }
+}
+pub fn ri_married_filing_separately_deduction_2025(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
+    Deduction { standard_deduction: 10900.0 }
+}
+pub fn de_qualifying_surviving_spouse_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
+    Deduction { standard_deduction: 5700.0 }
+}
+pub fn de_single_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
+    Deduction { standard_deduction: 5700.0 }
+}
+pub fn de_married_filing_separately_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
+    Deduction { standard_deduction: 5700.0 }
+}
+pub fn de_head_of_household_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
+    Deduction { standard_deduction: 5700.0 }
+}
+pub fn de_married_filing_jointly_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
+    Deduction { standard_deduction: 11400.0 }
+}
+pub fn mo_head_of_household_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
     Deduction { standard_deduction: 21900.0 }
 }
-pub fn ia_qualifying_surviving_spouse_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
+pub fn mo_married_filing_separately_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
+    Deduction { standard_deduction: 14600.0 }
+}
+pub fn mo_single_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
+    Deduction { standard_deduction: 14600.0 }
+}
+pub fn mo_married_filing_jointly_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
     Deduction { standard_deduction: 29200.0 }
 }
-pub fn ia_single_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
-    Deduction { standard_deduction: 14600.0 }
+pub fn mo_qualifying_surviving_spouse_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
+    Deduction { standard_deduction: 29200.0 }
 }
-pub fn ia_married_filing_separately_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
-    Deduction { standard_deduction: 14600.0 }
+pub fn ia_head_of_household_deduction_2025(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
+    Deduction { standard_deduction: 22500.0 }
 }
 pub fn ia_married_filing_separately_deduction_2025(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
+    Deduction { standard_deduction: 15000.0 }
+}
+pub fn ia_single_deduction_2025(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
     Deduction { standard_deduction: 15000.0 }
 }
 pub fn ia_married_filing_jointly_deduction_2025(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
     Deduction { standard_deduction: 30000.0 }
 }
-pub fn ia_head_of_household_deduction_2025(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
-    Deduction { standard_deduction: 22500.0 }
-}
 pub fn ia_qualifying_surviving_spouse_deduction_2025(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
     Deduction { standard_deduction: 30000.0 }
 }
-pub fn ia_single_deduction_2025(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
-    Deduction { standard_deduction: 15000.0 }
+pub fn ia_head_of_household_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
+    Deduction { standard_deduction: 21900.0 }
+}
+pub fn ia_single_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
+    Deduction { standard_deduction: 14600.0 }
+}
+pub fn ia_married_filing_jointly_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
+    Deduction { standard_deduction: 29200.0 }
+}
+pub fn ia_married_filing_separately_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
+    Deduction { standard_deduction: 14600.0 }
+}
+pub fn ia_qualifying_surviving_spouse_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
+    Deduction { standard_deduction: 29200.0 }
+}
+pub fn in_married_filing_jointly_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
+    Deduction { standard_deduction: 0.0 }
+}
+pub fn in_single_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
+    Deduction { standard_deduction: 0.0 }
+}
+pub fn in_head_of_household_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
+    Deduction { standard_deduction: 0.0 }
+}
+pub fn in_married_filing_separately_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
+    Deduction { standard_deduction: 0.0 }
+}
+pub fn in_qualifying_surviving_spouse_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
+    Deduction { standard_deduction: 0.0 }
+}
+pub fn fl_married_filing_separately_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
+    Deduction { standard_deduction: 0.0 }
+}
+pub fn fl_head_of_household_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
+    Deduction { standard_deduction: 0.0 }
+}
+pub fn fl_married_filing_jointly_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
+    Deduction { standard_deduction: 0.0 }
+}
+pub fn fl_qualifying_surviving_spouse_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
+    Deduction { standard_deduction: 0.0 }
+}
+pub fn fl_single_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
+    Deduction { standard_deduction: 0.0 }
+}
+pub fn ct_qualifying_surviving_spouse_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
+    Deduction { standard_deduction: 0.0 }
 }
 pub fn ct_head_of_household_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
+    Deduction { standard_deduction: 0.0 }
+}
+pub fn ct_married_filing_separately_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
     Deduction { standard_deduction: 0.0 }
 }
 pub fn ct_single_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
@@ -44,16 +140,40 @@ pub fn ct_single_deduction_2024(_income: f64, _filing_status_value: &FilingStatu
 pub fn ct_married_filing_jointly_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
     Deduction { standard_deduction: 0.0 }
 }
-pub fn ct_married_filing_separately_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
+pub fn nh_married_filing_separately_deduction_2025(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
     Deduction { standard_deduction: 0.0 }
 }
-pub fn ct_qualifying_surviving_spouse_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
+pub fn nh_single_deduction_2025(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
     Deduction { standard_deduction: 0.0 }
 }
-pub fn la_qualifying_surviving_spouse_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
-    Deduction { standard_deduction: 9000.0 }
+pub fn nh_qualifying_surviving_spouse_deduction_2025(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
+    Deduction { standard_deduction: 0.0 }
+}
+pub fn nh_married_filing_jointly_deduction_2025(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
+    Deduction { standard_deduction: 0.0 }
+}
+pub fn nh_head_of_household_deduction_2025(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
+    Deduction { standard_deduction: 0.0 }
+}
+pub fn nh_single_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
+    Deduction { standard_deduction: 0.0 }
+}
+pub fn nh_married_filing_separately_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
+    Deduction { standard_deduction: 0.0 }
+}
+pub fn nh_qualifying_surviving_spouse_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
+    Deduction { standard_deduction: 0.0 }
+}
+pub fn nh_married_filing_jointly_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
+    Deduction { standard_deduction: 0.0 }
+}
+pub fn nh_head_of_household_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
+    Deduction { standard_deduction: 0.0 }
 }
 pub fn la_head_of_household_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
+    Deduction { standard_deduction: 9000.0 }
+}
+pub fn la_qualifying_surviving_spouse_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
     Deduction { standard_deduction: 9000.0 }
 }
 pub fn la_married_filing_jointly_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
@@ -71,614 +191,14 @@ pub fn la_married_filing_separately_deduction_2025(_income: f64, _filing_status_
 pub fn la_single_deduction_2025(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
     Deduction { standard_deduction: 12500.0 }
 }
-pub fn la_married_filing_jointly_deduction_2025(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
+pub fn la_qualifying_surviving_spouse_deduction_2025(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
     Deduction { standard_deduction: 25000.0 }
 }
 pub fn la_head_of_household_deduction_2025(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
     Deduction { standard_deduction: 25000.0 }
 }
-pub fn la_qualifying_surviving_spouse_deduction_2025(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
+pub fn la_married_filing_jointly_deduction_2025(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
     Deduction { standard_deduction: 25000.0 }
-}
-pub fn hi_married_filing_separately_deduction_2025(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
-    Deduction { standard_deduction: 4400.0 }
-}
-pub fn hi_married_filing_jointly_deduction_2025(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
-    Deduction { standard_deduction: 8800.0 }
-}
-pub fn hi_single_deduction_2025(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
-    Deduction { standard_deduction: 4400.0 }
-}
-pub fn hi_qualifying_surviving_spouse_deduction_2025(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
-    Deduction { standard_deduction: 8800.0 }
-}
-pub fn hi_head_of_household_deduction_2025(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
-    Deduction { standard_deduction: 6424.0 }
-}
-pub fn hi_married_filing_separately_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
-    Deduction { standard_deduction: 4400.0 }
-}
-pub fn hi_single_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
-    Deduction { standard_deduction: 4400.0 }
-}
-pub fn hi_qualifying_surviving_spouse_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
-    Deduction { standard_deduction: 8800.0 }
-}
-pub fn hi_head_of_household_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
-    Deduction { standard_deduction: 6424.0 }
-}
-pub fn hi_married_filing_jointly_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
-    Deduction { standard_deduction: 8800.0 }
-}
-pub fn ok_married_filing_separately_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
-    Deduction { standard_deduction: 6350.0 }
-}
-pub fn ok_head_of_household_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
-    Deduction { standard_deduction: 9350.0 }
-}
-pub fn ok_single_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
-    Deduction { standard_deduction: 6350.0 }
-}
-pub fn ok_qualifying_surviving_spouse_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
-    Deduction { standard_deduction: 12700.0 }
-}
-pub fn ok_married_filing_jointly_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
-    Deduction { standard_deduction: 12700.0 }
-}
-pub fn nv_single_deduction_2025(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
-    Deduction { standard_deduction: 0.0 }
-}
-pub fn nv_head_of_household_deduction_2025(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
-    Deduction { standard_deduction: 0.0 }
-}
-pub fn nv_qualifying_surviving_spouse_deduction_2025(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
-    Deduction { standard_deduction: 0.0 }
-}
-pub fn nv_married_filing_separately_deduction_2025(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
-    Deduction { standard_deduction: 0.0 }
-}
-pub fn nv_married_filing_jointly_deduction_2025(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
-    Deduction { standard_deduction: 0.0 }
-}
-pub fn nv_married_filing_separately_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
-    Deduction { standard_deduction: 0.0 }
-}
-pub fn nv_married_filing_jointly_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
-    Deduction { standard_deduction: 0.0 }
-}
-pub fn nv_head_of_household_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
-    Deduction { standard_deduction: 0.0 }
-}
-pub fn nv_single_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
-    Deduction { standard_deduction: 0.0 }
-}
-pub fn nv_qualifying_surviving_spouse_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
-    Deduction { standard_deduction: 0.0 }
-}
-pub fn ga_married_filing_separately_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
-    Deduction { standard_deduction: 12000.0 }
-}
-pub fn ga_single_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
-    Deduction { standard_deduction: 12000.0 }
-}
-pub fn ga_head_of_household_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
-    Deduction { standard_deduction: 12000.0 }
-}
-pub fn ga_qualifying_surviving_spouse_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
-    Deduction { standard_deduction: 12000.0 }
-}
-pub fn ga_married_filing_jointly_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
-    Deduction { standard_deduction: 24000.0 }
-}
-pub fn ny_head_of_household_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
-    Deduction { standard_deduction: 11200.0 }
-}
-pub fn ny_married_filing_jointly_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
-    Deduction { standard_deduction: 16050.0 }
-}
-pub fn ny_married_filing_separately_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
-    Deduction { standard_deduction: 8000.0 }
-}
-pub fn ny_qualifying_surviving_spouse_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
-    Deduction { standard_deduction: 16050.0 }
-}
-pub fn ny_single_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
-    Deduction { standard_deduction: 8000.0 }
-}
-pub fn nm_qualifying_surviving_spouse_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
-    Deduction { standard_deduction: 29200.0 }
-}
-pub fn nm_single_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
-    Deduction { standard_deduction: 14600.0 }
-}
-pub fn nm_married_filing_separately_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
-    Deduction { standard_deduction: 14600.0 }
-}
-pub fn nm_head_of_household_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
-    Deduction { standard_deduction: 21900.0 }
-}
-pub fn nm_married_filing_jointly_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
-    Deduction { standard_deduction: 29200.0 }
-}
-pub fn nm_married_filing_jointly_deduction_2025(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
-    Deduction { standard_deduction: 30000.0 }
-}
-pub fn nm_married_filing_separately_deduction_2025(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
-    Deduction { standard_deduction: 15000.0 }
-}
-pub fn nm_qualifying_surviving_spouse_deduction_2025(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
-    Deduction { standard_deduction: 30000.0 }
-}
-pub fn nm_single_deduction_2025(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
-    Deduction { standard_deduction: 15000.0 }
-}
-pub fn nm_head_of_household_deduction_2025(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
-    Deduction { standard_deduction: 22500.0 }
-}
-pub fn ca_married_filing_jointly_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
-    Deduction { standard_deduction: 11080.0 }
-}
-pub fn ca_married_filing_separately_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
-    Deduction { standard_deduction: 5540.0 }
-}
-pub fn ca_single_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
-    Deduction { standard_deduction: 5540.0 }
-}
-pub fn ca_qualifying_surviving_spouse_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
-    Deduction { standard_deduction: 11080.0 }
-}
-pub fn ca_head_of_household_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
-    Deduction { standard_deduction: 11080.0 }
-}
-pub fn mt_married_filing_jointly_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
-    Deduction { standard_deduction: 29200.0 }
-}
-pub fn mt_qualifying_surviving_spouse_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
-    Deduction { standard_deduction: 29200.0 }
-}
-pub fn mt_single_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
-    Deduction { standard_deduction: 14600.0 }
-}
-pub fn mt_head_of_household_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
-    Deduction { standard_deduction: 21900.0 }
-}
-pub fn mt_married_filing_separately_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
-    Deduction { standard_deduction: 14600.0 }
-}
-pub fn mt_head_of_household_deduction_2025(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
-    Deduction { standard_deduction: 22500.0 }
-}
-pub fn mt_married_filing_jointly_deduction_2025(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
-    Deduction { standard_deduction: 30000.0 }
-}
-pub fn mt_qualifying_surviving_spouse_deduction_2025(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
-    Deduction { standard_deduction: 30000.0 }
-}
-pub fn mt_married_filing_separately_deduction_2025(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
-    Deduction { standard_deduction: 15000.0 }
-}
-pub fn mt_single_deduction_2025(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
-    Deduction { standard_deduction: 15000.0 }
-}
-pub fn ks_married_filing_jointly_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
-    Deduction { standard_deduction: 8240.0 }
-}
-pub fn ks_head_of_household_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
-    Deduction { standard_deduction: 6180.0 }
-}
-pub fn ks_qualifying_surviving_spouse_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
-    Deduction { standard_deduction: 8240.0 }
-}
-pub fn ks_single_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
-    Deduction { standard_deduction: 3605.0 }
-}
-pub fn ks_married_filing_separately_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
-    Deduction { standard_deduction: 4120.0 }
-}
-pub fn ne_head_of_household_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
-    Deduction { standard_deduction: 12250.0 }
-}
-pub fn ne_qualifying_surviving_spouse_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
-    Deduction { standard_deduction: 16700.0 }
-}
-pub fn ne_married_filing_separately_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
-    Deduction { standard_deduction: 8350.0 }
-}
-pub fn ne_married_filing_jointly_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
-    Deduction { standard_deduction: 16700.0 }
-}
-pub fn ne_single_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
-    Deduction { standard_deduction: 8350.0 }
-}
-pub fn nd_single_deduction_2025(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
-    Deduction { standard_deduction: 15000.0 }
-}
-pub fn nd_married_filing_jointly_deduction_2025(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
-    Deduction { standard_deduction: 30000.0 }
-}
-pub fn nd_married_filing_separately_deduction_2025(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
-    Deduction { standard_deduction: 15000.0 }
-}
-pub fn nd_qualifying_surviving_spouse_deduction_2025(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
-    Deduction { standard_deduction: 30000.0 }
-}
-pub fn nd_head_of_household_deduction_2025(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
-    Deduction { standard_deduction: 22500.0 }
-}
-pub fn nd_qualifying_surviving_spouse_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
-    Deduction { standard_deduction: 29200.0 }
-}
-pub fn nd_married_filing_separately_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
-    Deduction { standard_deduction: 14600.0 }
-}
-pub fn nd_married_filing_jointly_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
-    Deduction { standard_deduction: 29200.0 }
-}
-pub fn nd_head_of_household_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
-    Deduction { standard_deduction: 21900.0 }
-}
-pub fn nd_single_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
-    Deduction { standard_deduction: 14600.0 }
-}
-pub fn ms_qualifying_surviving_spouse_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
-    Deduction { standard_deduction: 4600.0 }
-}
-pub fn ms_married_filing_jointly_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
-    Deduction { standard_deduction: 4600.0 }
-}
-pub fn ms_head_of_household_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
-    Deduction { standard_deduction: 3400.0 }
-}
-pub fn ms_single_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
-    Deduction { standard_deduction: 2300.0 }
-}
-pub fn ms_married_filing_separately_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
-    Deduction { standard_deduction: 2300.0 }
-}
-pub fn ms_qualifying_surviving_spouse_deduction_2025(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
-    Deduction { standard_deduction: 29900.0 }
-}
-pub fn ms_single_deduction_2025(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
-    Deduction { standard_deduction: 2300.0 }
-}
-pub fn ms_married_filing_separately_deduction_2025(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
-    Deduction { standard_deduction: 14950.0 }
-}
-pub fn ms_married_filing_jointly_deduction_2025(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
-    Deduction { standard_deduction: 29900.0 }
-}
-pub fn ms_head_of_household_deduction_2025(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
-    Deduction { standard_deduction: 22500.0 }
-}
-pub fn me_head_of_household_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
-    Deduction { standard_deduction: 21900.0 }
-}
-pub fn me_single_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
-    Deduction { standard_deduction: 14600.0 }
-}
-pub fn me_qualifying_surviving_spouse_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
-    Deduction { standard_deduction: 29200.0 }
-}
-pub fn me_married_filing_jointly_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
-    Deduction { standard_deduction: 29200.0 }
-}
-pub fn me_married_filing_separately_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
-    Deduction { standard_deduction: 14600.0 }
-}
-pub fn me_married_filing_jointly_deduction_2025(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
-    Deduction { standard_deduction: 30000.0 }
-}
-pub fn me_qualifying_surviving_spouse_deduction_2025(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
-    Deduction { standard_deduction: 30000.0 }
-}
-pub fn me_head_of_household_deduction_2025(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
-    Deduction { standard_deduction: 22500.0 }
-}
-pub fn me_single_deduction_2025(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
-    Deduction { standard_deduction: 15000.0 }
-}
-pub fn me_married_filing_separately_deduction_2025(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
-    Deduction { standard_deduction: 15000.0 }
-}
-pub fn nj_qualifying_surviving_spouse_deduction_2025(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
-    Deduction { standard_deduction: 0.0 }
-}
-pub fn nj_head_of_household_deduction_2025(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
-    Deduction { standard_deduction: 0.0 }
-}
-pub fn nj_single_deduction_2025(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
-    Deduction { standard_deduction: 0.0 }
-}
-pub fn nj_married_filing_separately_deduction_2025(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
-    Deduction { standard_deduction: 0.0 }
-}
-pub fn nj_married_filing_jointly_deduction_2025(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
-    Deduction { standard_deduction: 0.0 }
-}
-pub fn nj_married_filing_separately_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
-    Deduction { standard_deduction: 0.0 }
-}
-pub fn nj_single_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
-    Deduction { standard_deduction: 0.0 }
-}
-pub fn nj_married_filing_jointly_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
-    Deduction { standard_deduction: 0.0 }
-}
-pub fn nj_qualifying_surviving_spouse_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
-    Deduction { standard_deduction: 0.0 }
-}
-pub fn nj_head_of_household_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
-    Deduction { standard_deduction: 0.0 }
-}
-pub fn co_qualifying_surviving_spouse_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
-    Deduction { standard_deduction: 0.0 }
-}
-pub fn co_single_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
-    Deduction { standard_deduction: 0.0 }
-}
-pub fn co_head_of_household_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
-    Deduction { standard_deduction: 0.0 }
-}
-pub fn co_married_filing_jointly_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
-    Deduction { standard_deduction: 0.0 }
-}
-pub fn co_married_filing_separately_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
-    Deduction { standard_deduction: 0.0 }
-}
-pub fn md_single_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
-    Deduction { standard_deduction: 2700.0 }
-}
-pub fn md_head_of_household_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
-    Deduction { standard_deduction: 5450.0 }
-}
-pub fn md_qualifying_surviving_spouse_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
-    Deduction { standard_deduction: 5450.0 }
-}
-pub fn md_married_filing_jointly_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
-    Deduction { standard_deduction: 5450.0 }
-}
-pub fn md_married_filing_separately_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
-    Deduction { standard_deduction: 2700.0 }
-}
-pub fn nc_single_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
-    Deduction { standard_deduction: 12750.0 }
-}
-pub fn nc_married_filing_jointly_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
-    Deduction { standard_deduction: 25500.0 }
-}
-pub fn nc_qualifying_surviving_spouse_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
-    Deduction { standard_deduction: 25500.0 }
-}
-pub fn nc_head_of_household_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
-    Deduction { standard_deduction: 19125.0 }
-}
-pub fn nc_married_filing_separately_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
-    Deduction { standard_deduction: 12750.0 }
-}
-pub fn nc_married_filing_jointly_deduction_2025(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
-    Deduction { standard_deduction: 25500.0 }
-}
-pub fn nc_head_of_household_deduction_2025(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
-    Deduction { standard_deduction: 19125.0 }
-}
-pub fn nc_single_deduction_2025(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
-    Deduction { standard_deduction: 12750.0 }
-}
-pub fn nc_married_filing_separately_deduction_2025(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
-    Deduction { standard_deduction: 12750.0 }
-}
-pub fn nc_qualifying_surviving_spouse_deduction_2025(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
-    Deduction { standard_deduction: 25500.0 }
-}
-pub fn mi_qualifying_surviving_spouse_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
-    Deduction { standard_deduction: 0.0 }
-}
-pub fn mi_single_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
-    Deduction { standard_deduction: 0.0 }
-}
-pub fn mi_married_filing_jointly_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
-    Deduction { standard_deduction: 0.0 }
-}
-pub fn mi_married_filing_separately_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
-    Deduction { standard_deduction: 0.0 }
-}
-pub fn mi_head_of_household_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
-    Deduction { standard_deduction: 0.0 }
-}
-pub fn mi_married_filing_separately_deduction_2025(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
-    Deduction { standard_deduction: 0.0 }
-}
-pub fn mi_single_deduction_2025(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
-    Deduction { standard_deduction: 0.0 }
-}
-pub fn mi_head_of_household_deduction_2025(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
-    Deduction { standard_deduction: 0.0 }
-}
-pub fn mi_married_filing_jointly_deduction_2025(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
-    Deduction { standard_deduction: 0.0 }
-}
-pub fn mi_qualifying_surviving_spouse_deduction_2025(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
-    Deduction { standard_deduction: 0.0 }
-}
-pub fn az_married_filing_jointly_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
-    Deduction { standard_deduction: 29200.0 }
-}
-pub fn az_head_of_household_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
-    Deduction { standard_deduction: 21900.0 }
-}
-pub fn az_married_filing_separately_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
-    Deduction { standard_deduction: 14600.0 }
-}
-pub fn az_single_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
-    Deduction { standard_deduction: 14600.0 }
-}
-pub fn az_qualifying_surviving_spouse_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
-    Deduction { standard_deduction: 29200.0 }
-}
-pub fn de_head_of_household_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
-    Deduction { standard_deduction: 5700.0 }
-}
-pub fn de_married_filing_jointly_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
-    Deduction { standard_deduction: 11400.0 }
-}
-pub fn de_single_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
-    Deduction { standard_deduction: 5700.0 }
-}
-pub fn de_married_filing_separately_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
-    Deduction { standard_deduction: 5700.0 }
-}
-pub fn de_qualifying_surviving_spouse_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
-    Deduction { standard_deduction: 5700.0 }
-}
-pub fn oh_single_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
-    Deduction { standard_deduction: 0.0 }
-}
-pub fn oh_married_filing_separately_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
-    Deduction { standard_deduction: 0.0 }
-}
-pub fn oh_qualifying_surviving_spouse_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
-    Deduction { standard_deduction: 0.0 }
-}
-pub fn oh_married_filing_jointly_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
-    Deduction { standard_deduction: 0.0 }
-}
-pub fn oh_head_of_household_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
-    Deduction { standard_deduction: 0.0 }
-}
-pub fn oh_married_filing_jointly_deduction_2025(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
-    Deduction { standard_deduction: 0.0 }
-}
-pub fn oh_head_of_household_deduction_2025(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
-    Deduction { standard_deduction: 0.0 }
-}
-pub fn oh_single_deduction_2025(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
-    Deduction { standard_deduction: 0.0 }
-}
-pub fn oh_married_filing_separately_deduction_2025(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
-    Deduction { standard_deduction: 0.0 }
-}
-pub fn oh_qualifying_surviving_spouse_deduction_2025(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
-    Deduction { standard_deduction: 0.0 }
-}
-pub fn pa_head_of_household_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
-    Deduction { standard_deduction: 0.0 }
-}
-pub fn pa_married_filing_jointly_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
-    Deduction { standard_deduction: 0.0 }
-}
-pub fn pa_married_filing_separately_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
-    Deduction { standard_deduction: 0.0 }
-}
-pub fn pa_qualifying_surviving_spouse_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
-    Deduction { standard_deduction: 0.0 }
-}
-pub fn pa_single_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
-    Deduction { standard_deduction: 0.0 }
-}
-pub fn pa_married_filing_separately_deduction_2025(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
-    Deduction { standard_deduction: 0.0 }
-}
-pub fn pa_single_deduction_2025(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
-    Deduction { standard_deduction: 0.0 }
-}
-pub fn pa_married_filing_jointly_deduction_2025(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
-    Deduction { standard_deduction: 0.0 }
-}
-pub fn pa_qualifying_surviving_spouse_deduction_2025(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
-    Deduction { standard_deduction: 0.0 }
-}
-pub fn pa_head_of_household_deduction_2025(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
-    Deduction { standard_deduction: 0.0 }
-}
-pub fn in_married_filing_jointly_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
-    Deduction { standard_deduction: 0.0 }
-}
-pub fn in_married_filing_separately_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
-    Deduction { standard_deduction: 0.0 }
-}
-pub fn in_head_of_household_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
-    Deduction { standard_deduction: 0.0 }
-}
-pub fn in_single_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
-    Deduction { standard_deduction: 0.0 }
-}
-pub fn in_qualifying_surviving_spouse_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
-    Deduction { standard_deduction: 0.0 }
-}
-pub fn mn_single_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
-    Deduction { standard_deduction: 14575.0 }
-}
-pub fn mn_married_filing_separately_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
-    Deduction { standard_deduction: 14575.0 }
-}
-pub fn mn_married_filing_jointly_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
-    Deduction { standard_deduction: 29150.0 }
-}
-pub fn mn_qualifying_surviving_spouse_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
-    Deduction { standard_deduction: 29150.0 }
-}
-pub fn mn_head_of_household_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
-    Deduction { standard_deduction: 21900.0 }
-}
-pub fn mn_single_deduction_2025(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
-    Deduction { standard_deduction: 14950.0 }
-}
-pub fn mn_married_filing_jointly_deduction_2025(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
-    Deduction { standard_deduction: 29900.0 }
-}
-pub fn mn_married_filing_separately_deduction_2025(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
-    Deduction { standard_deduction: 14950.0 }
-}
-pub fn mn_qualifying_surviving_spouse_deduction_2025(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
-    Deduction { standard_deduction: 29900.0 }
-}
-pub fn mn_head_of_household_deduction_2025(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
-    Deduction { standard_deduction: 22500.0 }
-}
-pub fn mo_head_of_household_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
-    Deduction { standard_deduction: 21900.0 }
-}
-pub fn mo_married_filing_separately_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
-    Deduction { standard_deduction: 14600.0 }
-}
-pub fn mo_single_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
-    Deduction { standard_deduction: 14600.0 }
-}
-pub fn mo_married_filing_jointly_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
-    Deduction { standard_deduction: 29200.0 }
-}
-pub fn mo_qualifying_surviving_spouse_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
-    Deduction { standard_deduction: 29200.0 }
-}
-pub fn ri_married_filing_separately_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
-    Deduction { standard_deduction: 10550.0 }
-}
-pub fn ri_head_of_household_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
-    Deduction { standard_deduction: 15850.0 }
-}
-pub fn ri_single_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
-    Deduction { standard_deduction: 10550.0 }
-}
-pub fn ri_married_filing_jointly_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
-    Deduction { standard_deduction: 21150.0 }
-}
-pub fn ri_qualifying_surviving_spouse_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
-    Deduction { standard_deduction: 21150.0 }
-}
-pub fn ri_married_filing_jointly_deduction_2025(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
-    Deduction { standard_deduction: 21800.0 }
-}
-pub fn ri_head_of_household_deduction_2025(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
-    Deduction { standard_deduction: 16350.0 }
-}
-pub fn ri_single_deduction_2025(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
-    Deduction { standard_deduction: 10900.0 }
-}
-pub fn ri_qualifying_surviving_spouse_deduction_2025(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
-    Deduction { standard_deduction: 21800.0 }
-}
-pub fn ri_married_filing_separately_deduction_2025(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
-    Deduction { standard_deduction: 10900.0 }
 }
 pub fn ky_head_of_household_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
     Deduction { standard_deduction: 3160.0 }
@@ -695,40 +215,235 @@ pub fn ky_married_filing_jointly_deduction_2024(_income: f64, _filing_status_val
 pub fn ky_married_filing_separately_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
     Deduction { standard_deduction: 3160.0 }
 }
-pub fn ky_single_deduction_2025(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
+pub fn ky_married_filing_separately_deduction_2025(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
     Deduction { standard_deduction: 3270.0 }
 }
 pub fn ky_qualifying_surviving_spouse_deduction_2025(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
     Deduction { standard_deduction: 3270.0 }
 }
-pub fn ky_married_filing_jointly_deduction_2025(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
+pub fn ky_single_deduction_2025(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
     Deduction { standard_deduction: 3270.0 }
 }
-pub fn ky_married_filing_separately_deduction_2025(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
+pub fn ky_married_filing_jointly_deduction_2025(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
     Deduction { standard_deduction: 3270.0 }
 }
 pub fn ky_head_of_household_deduction_2025(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
     Deduction { standard_deduction: 3270.0 }
 }
-pub fn ma_head_of_household_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
+pub fn md_single_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
+    Deduction { standard_deduction: 2700.0 }
+}
+pub fn md_head_of_household_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
+    Deduction { standard_deduction: 5450.0 }
+}
+pub fn md_married_filing_jointly_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
+    Deduction { standard_deduction: 5450.0 }
+}
+pub fn md_married_filing_separately_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
+    Deduction { standard_deduction: 2700.0 }
+}
+pub fn md_qualifying_surviving_spouse_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
+    Deduction { standard_deduction: 5450.0 }
+}
+pub fn or_married_filing_separately_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
+    Deduction { standard_deduction: 2745.0 }
+}
+pub fn or_single_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
+    Deduction { standard_deduction: 2745.0 }
+}
+pub fn or_qualifying_surviving_spouse_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
+    Deduction { standard_deduction: 5495.0 }
+}
+pub fn or_head_of_household_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
+    Deduction { standard_deduction: 4420.0 }
+}
+pub fn or_married_filing_jointly_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
+    Deduction { standard_deduction: 5495.0 }
+}
+pub fn or_married_filing_jointly_deduction_2025(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
+    Deduction { standard_deduction: 5670.0 }
+}
+pub fn or_single_deduction_2025(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
+    Deduction { standard_deduction: 2835.0 }
+}
+pub fn or_married_filing_separately_deduction_2025(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
+    Deduction { standard_deduction: 2835.0 }
+}
+pub fn or_head_of_household_deduction_2025(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
+    Deduction { standard_deduction: 4500.0 }
+}
+pub fn or_qualifying_surviving_spouse_deduction_2025(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
+    Deduction { standard_deduction: 5670.0 }
+}
+pub fn ne_single_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
+    Deduction { standard_deduction: 8350.0 }
+}
+pub fn ne_married_filing_jointly_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
+    Deduction { standard_deduction: 16700.0 }
+}
+pub fn ne_qualifying_surviving_spouse_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
+    Deduction { standard_deduction: 16700.0 }
+}
+pub fn ne_head_of_household_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
+    Deduction { standard_deduction: 12250.0 }
+}
+pub fn ne_married_filing_separately_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
+    Deduction { standard_deduction: 8350.0 }
+}
+pub fn ok_married_filing_jointly_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
+    Deduction { standard_deduction: 12700.0 }
+}
+pub fn ok_qualifying_surviving_spouse_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
+    Deduction { standard_deduction: 12700.0 }
+}
+pub fn ok_married_filing_separately_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
+    Deduction { standard_deduction: 6350.0 }
+}
+pub fn ok_head_of_household_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
+    Deduction { standard_deduction: 9350.0 }
+}
+pub fn ok_single_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
+    Deduction { standard_deduction: 6350.0 }
+}
+pub fn nv_single_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
     Deduction { standard_deduction: 0.0 }
 }
-pub fn ma_qualifying_surviving_spouse_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
+pub fn nv_married_filing_jointly_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
     Deduction { standard_deduction: 0.0 }
 }
-pub fn ma_single_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
+pub fn nv_married_filing_separately_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
     Deduction { standard_deduction: 0.0 }
 }
-pub fn ma_married_filing_separately_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
+pub fn nv_qualifying_surviving_spouse_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
     Deduction { standard_deduction: 0.0 }
 }
-pub fn ma_married_filing_jointly_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
+pub fn nv_head_of_household_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
+    Deduction { standard_deduction: 0.0 }
+}
+pub fn nv_single_deduction_2025(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
+    Deduction { standard_deduction: 0.0 }
+}
+pub fn nv_married_filing_separately_deduction_2025(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
+    Deduction { standard_deduction: 0.0 }
+}
+pub fn nv_married_filing_jointly_deduction_2025(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
+    Deduction { standard_deduction: 0.0 }
+}
+pub fn nv_head_of_household_deduction_2025(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
+    Deduction { standard_deduction: 0.0 }
+}
+pub fn nv_qualifying_surviving_spouse_deduction_2025(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
+    Deduction { standard_deduction: 0.0 }
+}
+pub fn id_head_of_household_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
+    Deduction { standard_deduction: 21900.0 }
+}
+pub fn id_married_filing_jointly_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
+    Deduction { standard_deduction: 29200.0 }
+}
+pub fn id_single_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
+    Deduction { standard_deduction: 14600.0 }
+}
+pub fn id_married_filing_separately_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
+    Deduction { standard_deduction: 14600.0 }
+}
+pub fn id_qualifying_surviving_spouse_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
+    Deduction { standard_deduction: 29200.0 }
+}
+pub fn id_head_of_household_deduction_2025(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
+    Deduction { standard_deduction: 22500.0 }
+}
+pub fn id_qualifying_surviving_spouse_deduction_2025(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
+    Deduction { standard_deduction: 30000.0 }
+}
+pub fn id_married_filing_jointly_deduction_2025(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
+    Deduction { standard_deduction: 30000.0 }
+}
+pub fn id_single_deduction_2025(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
+    Deduction { standard_deduction: 15000.0 }
+}
+pub fn id_married_filing_separately_deduction_2025(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
+    Deduction { standard_deduction: 15000.0 }
+}
+pub fn nj_single_deduction_2025(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
+    Deduction { standard_deduction: 0.0 }
+}
+pub fn nj_qualifying_surviving_spouse_deduction_2025(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
+    Deduction { standard_deduction: 0.0 }
+}
+pub fn nj_head_of_household_deduction_2025(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
+    Deduction { standard_deduction: 0.0 }
+}
+pub fn nj_married_filing_jointly_deduction_2025(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
+    Deduction { standard_deduction: 0.0 }
+}
+pub fn nj_married_filing_separately_deduction_2025(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
+    Deduction { standard_deduction: 0.0 }
+}
+pub fn nj_married_filing_separately_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
+    Deduction { standard_deduction: 0.0 }
+}
+pub fn nj_qualifying_surviving_spouse_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
+    Deduction { standard_deduction: 0.0 }
+}
+pub fn nj_married_filing_jointly_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
+    Deduction { standard_deduction: 0.0 }
+}
+pub fn nj_head_of_household_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
+    Deduction { standard_deduction: 0.0 }
+}
+pub fn nj_single_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
+    Deduction { standard_deduction: 0.0 }
+}
+pub fn ms_qualifying_surviving_spouse_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
+    Deduction { standard_deduction: 4600.0 }
+}
+pub fn ms_married_filing_separately_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
+    Deduction { standard_deduction: 2300.0 }
+}
+pub fn ms_single_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
+    Deduction { standard_deduction: 2300.0 }
+}
+pub fn ms_married_filing_jointly_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
+    Deduction { standard_deduction: 4600.0 }
+}
+pub fn ms_head_of_household_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
+    Deduction { standard_deduction: 3400.0 }
+}
+pub fn ms_single_deduction_2025(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
+    Deduction { standard_deduction: 2300.0 }
+}
+pub fn ms_qualifying_surviving_spouse_deduction_2025(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
+    Deduction { standard_deduction: 29900.0 }
+}
+pub fn ms_head_of_household_deduction_2025(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
+    Deduction { standard_deduction: 22500.0 }
+}
+pub fn ms_married_filing_jointly_deduction_2025(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
+    Deduction { standard_deduction: 29900.0 }
+}
+pub fn ms_married_filing_separately_deduction_2025(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
+    Deduction { standard_deduction: 14950.0 }
+}
+pub fn ks_married_filing_separately_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
+    Deduction { standard_deduction: 4120.0 }
+}
+pub fn ks_qualifying_surviving_spouse_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
+    Deduction { standard_deduction: 8240.0 }
+}
+pub fn ks_married_filing_jointly_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
+    Deduction { standard_deduction: 8240.0 }
+}
+pub fn ks_single_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
+    Deduction { standard_deduction: 3605.0 }
+}
+pub fn ks_head_of_household_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
+    Deduction { standard_deduction: 6180.0 }
+}
+pub fn ma_head_of_household_deduction_2025(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
     Deduction { standard_deduction: 0.0 }
 }
 pub fn ma_married_filing_jointly_deduction_2025(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
-    Deduction { standard_deduction: 0.0 }
-}
-pub fn ma_married_filing_separately_deduction_2025(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
     Deduction { standard_deduction: 0.0 }
 }
 pub fn ma_qualifying_surviving_spouse_deduction_2025(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
@@ -737,164 +452,143 @@ pub fn ma_qualifying_surviving_spouse_deduction_2025(_income: f64, _filing_statu
 pub fn ma_single_deduction_2025(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
     Deduction { standard_deduction: 0.0 }
 }
-pub fn ma_head_of_household_deduction_2025(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
+pub fn ma_married_filing_separately_deduction_2025(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
     Deduction { standard_deduction: 0.0 }
 }
-pub fn fl_married_filing_separately_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
+pub fn ma_qualifying_surviving_spouse_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
     Deduction { standard_deduction: 0.0 }
 }
-pub fn fl_married_filing_jointly_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
+pub fn ma_married_filing_jointly_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
     Deduction { standard_deduction: 0.0 }
 }
-pub fn fl_single_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
+pub fn ma_head_of_household_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
     Deduction { standard_deduction: 0.0 }
 }
-pub fn fl_qualifying_surviving_spouse_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
+pub fn ma_married_filing_separately_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
     Deduction { standard_deduction: 0.0 }
 }
-pub fn fl_head_of_household_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
+pub fn ma_single_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
     Deduction { standard_deduction: 0.0 }
 }
-pub fn or_head_of_household_deduction_2025(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
-    Deduction { standard_deduction: 4500.0 }
-}
-pub fn or_single_deduction_2025(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
-    Deduction { standard_deduction: 2835.0 }
-}
-pub fn or_qualifying_surviving_spouse_deduction_2025(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
-    Deduction { standard_deduction: 5670.0 }
-}
-pub fn or_married_filing_jointly_deduction_2025(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
-    Deduction { standard_deduction: 5670.0 }
-}
-pub fn or_married_filing_separately_deduction_2025(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
-    Deduction { standard_deduction: 2835.0 }
-}
-pub fn or_head_of_household_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
-    Deduction { standard_deduction: 4420.0 }
-}
-pub fn or_married_filing_jointly_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
-    Deduction { standard_deduction: 5495.0 }
-}
-pub fn or_single_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
-    Deduction { standard_deduction: 2745.0 }
-}
-pub fn or_qualifying_surviving_spouse_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
-    Deduction { standard_deduction: 5495.0 }
-}
-pub fn or_married_filing_separately_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
-    Deduction { standard_deduction: 2745.0 }
-}
-pub fn nh_single_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
+pub fn oh_single_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
     Deduction { standard_deduction: 0.0 }
 }
-pub fn nh_married_filing_separately_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
+pub fn oh_married_filing_separately_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
     Deduction { standard_deduction: 0.0 }
 }
-pub fn nh_qualifying_surviving_spouse_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
+pub fn oh_head_of_household_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
     Deduction { standard_deduction: 0.0 }
 }
-pub fn nh_head_of_household_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
+pub fn oh_married_filing_jointly_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
     Deduction { standard_deduction: 0.0 }
 }
-pub fn nh_married_filing_jointly_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
+pub fn oh_qualifying_surviving_spouse_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
     Deduction { standard_deduction: 0.0 }
 }
-pub fn nh_married_filing_separately_deduction_2025(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
+pub fn oh_qualifying_surviving_spouse_deduction_2025(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
     Deduction { standard_deduction: 0.0 }
 }
-pub fn nh_head_of_household_deduction_2025(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
+pub fn oh_married_filing_jointly_deduction_2025(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
     Deduction { standard_deduction: 0.0 }
 }
-pub fn nh_single_deduction_2025(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
+pub fn oh_married_filing_separately_deduction_2025(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
     Deduction { standard_deduction: 0.0 }
 }
-pub fn nh_married_filing_jointly_deduction_2025(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
+pub fn oh_head_of_household_deduction_2025(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
     Deduction { standard_deduction: 0.0 }
 }
-pub fn nh_qualifying_surviving_spouse_deduction_2025(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
+pub fn oh_single_deduction_2025(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
     Deduction { standard_deduction: 0.0 }
 }
-pub fn ar_head_of_household_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
-    Deduction { standard_deduction: 2340.0 }
+pub fn nc_married_filing_jointly_deduction_2025(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
+    Deduction { standard_deduction: 25500.0 }
 }
-pub fn ar_married_filing_separately_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
-    Deduction { standard_deduction: 2340.0 }
+pub fn nc_head_of_household_deduction_2025(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
+    Deduction { standard_deduction: 19125.0 }
 }
-pub fn ar_single_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
-    Deduction { standard_deduction: 2340.0 }
+pub fn nc_qualifying_surviving_spouse_deduction_2025(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
+    Deduction { standard_deduction: 25500.0 }
 }
-pub fn ar_married_filing_jointly_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
-    Deduction { standard_deduction: 4680.0 }
+pub fn nc_single_deduction_2025(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
+    Deduction { standard_deduction: 12750.0 }
 }
-pub fn ar_qualifying_surviving_spouse_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
-    Deduction { standard_deduction: 2340.0 }
+pub fn nc_married_filing_separately_deduction_2025(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
+    Deduction { standard_deduction: 12750.0 }
 }
-pub fn id_head_of_household_deduction_2025(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
-    Deduction { standard_deduction: 22500.0 }
+pub fn nc_married_filing_separately_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
+    Deduction { standard_deduction: 12750.0 }
 }
-pub fn id_married_filing_separately_deduction_2025(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
-    Deduction { standard_deduction: 15000.0 }
+pub fn nc_qualifying_surviving_spouse_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
+    Deduction { standard_deduction: 25500.0 }
 }
-pub fn id_single_deduction_2025(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
-    Deduction { standard_deduction: 15000.0 }
+pub fn nc_married_filing_jointly_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
+    Deduction { standard_deduction: 25500.0 }
 }
-pub fn id_married_filing_jointly_deduction_2025(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
-    Deduction { standard_deduction: 30000.0 }
+pub fn nc_single_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
+    Deduction { standard_deduction: 12750.0 }
 }
-pub fn id_qualifying_surviving_spouse_deduction_2025(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
-    Deduction { standard_deduction: 30000.0 }
+pub fn nc_head_of_household_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
+    Deduction { standard_deduction: 19125.0 }
 }
-pub fn id_single_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
+pub fn ca_married_filing_separately_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
+    Deduction { standard_deduction: 5540.0 }
+}
+pub fn ca_married_filing_jointly_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
+    Deduction { standard_deduction: 11080.0 }
+}
+pub fn ca_qualifying_surviving_spouse_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
+    Deduction { standard_deduction: 11080.0 }
+}
+pub fn ca_single_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
+    Deduction { standard_deduction: 5540.0 }
+}
+pub fn ca_head_of_household_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
+    Deduction { standard_deduction: 11080.0 }
+}
+pub fn az_married_filing_separately_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
     Deduction { standard_deduction: 14600.0 }
 }
-pub fn id_married_filing_separately_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
-    Deduction { standard_deduction: 14600.0 }
-}
-pub fn id_married_filing_jointly_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
+pub fn az_married_filing_jointly_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
     Deduction { standard_deduction: 29200.0 }
 }
-pub fn id_qualifying_surviving_spouse_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
-    Deduction { standard_deduction: 29200.0 }
-}
-pub fn id_head_of_household_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
+pub fn az_head_of_household_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
     Deduction { standard_deduction: 21900.0 }
 }
-pub fn il_married_filing_jointly_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
-    Deduction { standard_deduction: 0.0 }
+pub fn az_single_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
+    Deduction { standard_deduction: 14600.0 }
 }
-pub fn il_single_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
-    Deduction { standard_deduction: 0.0 }
+pub fn az_qualifying_surviving_spouse_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
+    Deduction { standard_deduction: 29200.0 }
 }
-pub fn il_qualifying_surviving_spouse_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
-    Deduction { standard_deduction: 0.0 }
+pub fn mt_single_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
+    Deduction { standard_deduction: 14600.0 }
 }
-pub fn il_married_filing_separately_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
-    Deduction { standard_deduction: 0.0 }
+pub fn mt_head_of_household_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
+    Deduction { standard_deduction: 21900.0 }
 }
-pub fn il_head_of_household_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
-    Deduction { standard_deduction: 0.0 }
+pub fn mt_married_filing_separately_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
+    Deduction { standard_deduction: 14600.0 }
 }
-pub fn sc_single_deduction_2025(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
-    Deduction { standard_deduction: 15000.0 }
+pub fn mt_married_filing_jointly_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
+    Deduction { standard_deduction: 29200.0 }
 }
-pub fn sc_qualifying_surviving_spouse_deduction_2025(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
-    Deduction { standard_deduction: 30000.0 }
+pub fn mt_qualifying_surviving_spouse_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
+    Deduction { standard_deduction: 29200.0 }
 }
-pub fn sc_head_of_household_deduction_2025(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
+pub fn mt_head_of_household_deduction_2025(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
     Deduction { standard_deduction: 22500.0 }
 }
-pub fn sc_married_filing_separately_deduction_2025(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
+pub fn mt_single_deduction_2025(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
     Deduction { standard_deduction: 15000.0 }
 }
-pub fn sc_married_filing_jointly_deduction_2025(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
+pub fn mt_married_filing_separately_deduction_2025(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
+    Deduction { standard_deduction: 15000.0 }
+}
+pub fn mt_married_filing_jointly_deduction_2025(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
     Deduction { standard_deduction: 30000.0 }
 }
-pub fn sc_married_filing_separately_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
-    Deduction { standard_deduction: 14600.0 }
-}
-pub fn sc_single_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
-    Deduction { standard_deduction: 14600.0 }
+pub fn mt_qualifying_surviving_spouse_deduction_2025(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
+    Deduction { standard_deduction: 30000.0 }
 }
 pub fn sc_qualifying_surviving_spouse_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
     Deduction { standard_deduction: 29200.0 }
@@ -905,13 +599,91 @@ pub fn sc_head_of_household_deduction_2024(_income: f64, _filing_status_value: &
 pub fn sc_married_filing_jointly_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
     Deduction { standard_deduction: 29200.0 }
 }
+pub fn sc_single_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
+    Deduction { standard_deduction: 14600.0 }
+}
+pub fn sc_married_filing_separately_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
+    Deduction { standard_deduction: 14600.0 }
+}
+pub fn sc_married_filing_jointly_deduction_2025(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
+    Deduction { standard_deduction: 30000.0 }
+}
+pub fn sc_head_of_household_deduction_2025(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
+    Deduction { standard_deduction: 22500.0 }
+}
+pub fn sc_single_deduction_2025(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
+    Deduction { standard_deduction: 15000.0 }
+}
+pub fn sc_married_filing_separately_deduction_2025(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
+    Deduction { standard_deduction: 15000.0 }
+}
+pub fn sc_qualifying_surviving_spouse_deduction_2025(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
+    Deduction { standard_deduction: 30000.0 }
+}
+pub fn mn_head_of_household_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
+    Deduction { standard_deduction: 21900.0 }
+}
+pub fn mn_married_filing_separately_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
+    Deduction { standard_deduction: 14575.0 }
+}
+pub fn mn_single_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
+    Deduction { standard_deduction: 14575.0 }
+}
+pub fn mn_married_filing_jointly_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
+    Deduction { standard_deduction: 29150.0 }
+}
+pub fn mn_qualifying_surviving_spouse_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
+    Deduction { standard_deduction: 29150.0 }
+}
+pub fn mn_head_of_household_deduction_2025(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
+    Deduction { standard_deduction: 22500.0 }
+}
+pub fn mn_single_deduction_2025(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
+    Deduction { standard_deduction: 14950.0 }
+}
+pub fn mn_qualifying_surviving_spouse_deduction_2025(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
+    Deduction { standard_deduction: 29900.0 }
+}
+pub fn mn_married_filing_jointly_deduction_2025(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
+    Deduction { standard_deduction: 29900.0 }
+}
+pub fn mn_married_filing_separately_deduction_2025(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
+    Deduction { standard_deduction: 14950.0 }
+}
+pub fn ar_married_filing_separately_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
+    Deduction { standard_deduction: 2340.0 }
+}
+pub fn ar_married_filing_jointly_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
+    Deduction { standard_deduction: 4680.0 }
+}
+pub fn ar_single_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
+    Deduction { standard_deduction: 2340.0 }
+}
+pub fn ar_qualifying_surviving_spouse_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
+    Deduction { standard_deduction: 2340.0 }
+}
+pub fn ar_head_of_household_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
+    Deduction { standard_deduction: 2340.0 }
+}
+pub fn ny_single_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
+    Deduction { standard_deduction: 8000.0 }
+}
+pub fn ny_married_filing_separately_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
+    Deduction { standard_deduction: 8000.0 }
+}
+pub fn ny_qualifying_surviving_spouse_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
+    Deduction { standard_deduction: 16050.0 }
+}
+pub fn ny_married_filing_jointly_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
+    Deduction { standard_deduction: 16050.0 }
+}
+pub fn ny_head_of_household_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
+    Deduction { standard_deduction: 11200.0 }
+}
 pub fn ak_married_filing_separately_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
     Deduction { standard_deduction: 0.0 }
 }
 pub fn ak_qualifying_surviving_spouse_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
-    Deduction { standard_deduction: 0.0 }
-}
-pub fn ak_single_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
     Deduction { standard_deduction: 0.0 }
 }
 pub fn ak_married_filing_jointly_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
@@ -919,4 +691,232 @@ pub fn ak_married_filing_jointly_deduction_2024(_income: f64, _filing_status_val
 }
 pub fn ak_head_of_household_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
     Deduction { standard_deduction: 0.0 }
+}
+pub fn ak_single_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
+    Deduction { standard_deduction: 0.0 }
+}
+pub fn pa_married_filing_jointly_deduction_2025(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
+    Deduction { standard_deduction: 0.0 }
+}
+pub fn pa_qualifying_surviving_spouse_deduction_2025(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
+    Deduction { standard_deduction: 0.0 }
+}
+pub fn pa_married_filing_separately_deduction_2025(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
+    Deduction { standard_deduction: 0.0 }
+}
+pub fn pa_head_of_household_deduction_2025(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
+    Deduction { standard_deduction: 0.0 }
+}
+pub fn pa_single_deduction_2025(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
+    Deduction { standard_deduction: 0.0 }
+}
+pub fn pa_married_filing_separately_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
+    Deduction { standard_deduction: 0.0 }
+}
+pub fn pa_single_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
+    Deduction { standard_deduction: 0.0 }
+}
+pub fn pa_married_filing_jointly_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
+    Deduction { standard_deduction: 0.0 }
+}
+pub fn pa_head_of_household_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
+    Deduction { standard_deduction: 0.0 }
+}
+pub fn pa_qualifying_surviving_spouse_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
+    Deduction { standard_deduction: 0.0 }
+}
+pub fn hi_married_filing_separately_deduction_2025(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
+    Deduction { standard_deduction: 4400.0 }
+}
+pub fn hi_head_of_household_deduction_2025(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
+    Deduction { standard_deduction: 6424.0 }
+}
+pub fn hi_qualifying_surviving_spouse_deduction_2025(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
+    Deduction { standard_deduction: 8800.0 }
+}
+pub fn hi_single_deduction_2025(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
+    Deduction { standard_deduction: 4400.0 }
+}
+pub fn hi_married_filing_jointly_deduction_2025(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
+    Deduction { standard_deduction: 8800.0 }
+}
+pub fn hi_married_filing_jointly_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
+    Deduction { standard_deduction: 8800.0 }
+}
+pub fn hi_qualifying_surviving_spouse_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
+    Deduction { standard_deduction: 8800.0 }
+}
+pub fn hi_single_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
+    Deduction { standard_deduction: 4400.0 }
+}
+pub fn hi_married_filing_separately_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
+    Deduction { standard_deduction: 4400.0 }
+}
+pub fn hi_head_of_household_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
+    Deduction { standard_deduction: 6424.0 }
+}
+pub fn il_married_filing_separately_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
+    Deduction { standard_deduction: 0.0 }
+}
+pub fn il_married_filing_jointly_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
+    Deduction { standard_deduction: 0.0 }
+}
+pub fn il_single_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
+    Deduction { standard_deduction: 0.0 }
+}
+pub fn il_qualifying_surviving_spouse_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
+    Deduction { standard_deduction: 0.0 }
+}
+pub fn il_head_of_household_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
+    Deduction { standard_deduction: 0.0 }
+}
+pub fn ga_qualifying_surviving_spouse_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
+    Deduction { standard_deduction: 12000.0 }
+}
+pub fn ga_married_filing_jointly_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
+    Deduction { standard_deduction: 24000.0 }
+}
+pub fn ga_single_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
+    Deduction { standard_deduction: 12000.0 }
+}
+pub fn ga_head_of_household_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
+    Deduction { standard_deduction: 12000.0 }
+}
+pub fn ga_married_filing_separately_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
+    Deduction { standard_deduction: 12000.0 }
+}
+pub fn mi_married_filing_separately_deduction_2025(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
+    Deduction { standard_deduction: 0.0 }
+}
+pub fn mi_single_deduction_2025(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
+    Deduction { standard_deduction: 0.0 }
+}
+pub fn mi_married_filing_jointly_deduction_2025(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
+    Deduction { standard_deduction: 0.0 }
+}
+pub fn mi_qualifying_surviving_spouse_deduction_2025(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
+    Deduction { standard_deduction: 0.0 }
+}
+pub fn mi_head_of_household_deduction_2025(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
+    Deduction { standard_deduction: 0.0 }
+}
+pub fn mi_qualifying_surviving_spouse_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
+    Deduction { standard_deduction: 0.0 }
+}
+pub fn mi_head_of_household_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
+    Deduction { standard_deduction: 0.0 }
+}
+pub fn mi_single_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
+    Deduction { standard_deduction: 0.0 }
+}
+pub fn mi_married_filing_separately_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
+    Deduction { standard_deduction: 0.0 }
+}
+pub fn mi_married_filing_jointly_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
+    Deduction { standard_deduction: 0.0 }
+}
+pub fn co_single_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
+    Deduction { standard_deduction: 0.0 }
+}
+pub fn co_married_filing_separately_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
+    Deduction { standard_deduction: 0.0 }
+}
+pub fn co_married_filing_jointly_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
+    Deduction { standard_deduction: 0.0 }
+}
+pub fn co_qualifying_surviving_spouse_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
+    Deduction { standard_deduction: 0.0 }
+}
+pub fn co_head_of_household_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
+    Deduction { standard_deduction: 0.0 }
+}
+pub fn nm_married_filing_jointly_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
+    Deduction { standard_deduction: 29200.0 }
+}
+pub fn nm_married_filing_separately_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
+    Deduction { standard_deduction: 14600.0 }
+}
+pub fn nm_qualifying_surviving_spouse_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
+    Deduction { standard_deduction: 29200.0 }
+}
+pub fn nm_head_of_household_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
+    Deduction { standard_deduction: 21900.0 }
+}
+pub fn nm_single_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
+    Deduction { standard_deduction: 14600.0 }
+}
+pub fn nm_head_of_household_deduction_2025(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
+    Deduction { standard_deduction: 22500.0 }
+}
+pub fn nm_single_deduction_2025(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
+    Deduction { standard_deduction: 15000.0 }
+}
+pub fn nm_married_filing_jointly_deduction_2025(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
+    Deduction { standard_deduction: 30000.0 }
+}
+pub fn nm_married_filing_separately_deduction_2025(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
+    Deduction { standard_deduction: 15000.0 }
+}
+pub fn nm_qualifying_surviving_spouse_deduction_2025(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
+    Deduction { standard_deduction: 30000.0 }
+}
+pub fn nd_head_of_household_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
+    Deduction { standard_deduction: 21900.0 }
+}
+pub fn nd_married_filing_jointly_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
+    Deduction { standard_deduction: 29200.0 }
+}
+pub fn nd_qualifying_surviving_spouse_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
+    Deduction { standard_deduction: 29200.0 }
+}
+pub fn nd_married_filing_separately_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
+    Deduction { standard_deduction: 14600.0 }
+}
+pub fn nd_single_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
+    Deduction { standard_deduction: 14600.0 }
+}
+pub fn nd_single_deduction_2025(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
+    Deduction { standard_deduction: 15000.0 }
+}
+pub fn nd_head_of_household_deduction_2025(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
+    Deduction { standard_deduction: 22500.0 }
+}
+pub fn nd_married_filing_jointly_deduction_2025(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
+    Deduction { standard_deduction: 30000.0 }
+}
+pub fn nd_qualifying_surviving_spouse_deduction_2025(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
+    Deduction { standard_deduction: 30000.0 }
+}
+pub fn nd_married_filing_separately_deduction_2025(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
+    Deduction { standard_deduction: 15000.0 }
+}
+pub fn me_single_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
+    Deduction { standard_deduction: 14600.0 }
+}
+pub fn me_qualifying_surviving_spouse_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
+    Deduction { standard_deduction: 29200.0 }
+}
+pub fn me_married_filing_jointly_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
+    Deduction { standard_deduction: 29200.0 }
+}
+pub fn me_head_of_household_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
+    Deduction { standard_deduction: 21900.0 }
+}
+pub fn me_married_filing_separately_deduction_2024(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
+    Deduction { standard_deduction: 14600.0 }
+}
+pub fn me_qualifying_surviving_spouse_deduction_2025(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
+    Deduction { standard_deduction: 30000.0 }
+}
+pub fn me_single_deduction_2025(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
+    Deduction { standard_deduction: 15000.0 }
+}
+pub fn me_head_of_household_deduction_2025(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
+    Deduction { standard_deduction: 22500.0 }
+}
+pub fn me_married_filing_separately_deduction_2025(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
+    Deduction { standard_deduction: 15000.0 }
+}
+pub fn me_married_filing_jointly_deduction_2025(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {
+    Deduction { standard_deduction: 30000.0 }
 }
