@@ -1,4 +1,5 @@
 use std::collections::HashMap;
+use std::collections::HashSet;
 use std::env;
 use std::fs;
 use std::path::Path;
@@ -11,9 +12,21 @@ struct JsonBracket {
     rate: f64,
 }
 type JsonTaxData = HashMap<String, HashMap<String, HashMap<String, Vec<JsonBracket>>>>;
+
+#[derive(Debug, Deserialize, Clone)] 
+pub struct StepBracket {
+    pub bracket_start: f64,
+    pub bracket_end: f64,
+    pub bracket_size: f64,
+    pub deduction_start: f64,
+    pub deduction_end: f64,
+}
+
+type JsonStepDeductionData = HashMap<String, HashMap<String, HashMap<String, StepBracket>>>; 
+
 type FilingStatusDeductions = HashMap<String, f64>;
 type YearDeductions = HashMap<String, FilingStatusDeductions>;
-type JsonDeductionsData = HashMap<String, YearDeductions>;
+type JsonDeductionsData = HashMap<String, YearDeductions>; 
 
 // For tax brackets
 fn generate_tax_brackets ( cargo_manifest_dir: &Path,) -> Result<(), Box<dyn std::error::Error>> {
@@ -35,9 +48,24 @@ fn generate_tax_brackets ( cargo_manifest_dir: &Path,) -> Result<(), Box<dyn std
     tax_data_output.push_str("#[derive(Debug, Clone, Copy)]\n");
     tax_data_output.push_str("pub struct Bracket(pub f64, pub f64); // upper_boundary, tax_rate\n\n");
 
-    for (state_code, state_data) in parsed_tax_data {
-        for (year, year_data) in state_data {
-            for (filing_status, brackets) in year_data {
+    let mut sorted_states: Vec<&String> = parsed_tax_data.keys().collect();
+    sorted_states.sort_unstable();
+
+    for state_code in sorted_states {
+        let state_data = parsed_tax_data.get(state_code).unwrap(); 
+
+        let mut sorted_years: Vec<&String> = state_data.keys().collect();
+        sorted_years.sort_unstable(); 
+
+        for year in sorted_years {
+            let year_data = state_data.get(year).unwrap(); 
+
+            let mut sorted_filing_statuses: Vec<&String> = year_data.keys().collect();
+            sorted_filing_statuses.sort_unstable();
+
+            for filing_status in sorted_filing_statuses {
+                let brackets = year_data.get(filing_status).unwrap(); 
+
                 let snake_case_filing_status = AsSnakeCase(filing_status.as_str()).to_string();
                 let func_name = format!("{}_{}_tax_{}",
                     state_code.to_lowercase(),
@@ -88,9 +116,29 @@ fn generate_deductions (cargo_manifest_dir: &Path,) -> Result <(), Box<dyn std::
     deductions_output.push_str("use crate::Deduction;\n\n");
 
 
-    for (state_code, state_data) in parsed_deductions_data {
-        for (year, year_data) in state_data {
-            for (filing_status,_amount) in year_data {
+    let mut sorted_states: Vec<&String> = parsed_deductions_data.keys().collect();
+    sorted_states.sort_unstable();
+
+    for state_code in sorted_states {
+        if state_code.to_lowercase() == "al" {
+            continue; 
+        }
+
+        let state_data = parsed_deductions_data.get(state_code).unwrap();
+
+        let mut sorted_years: Vec<&String> = state_data.keys().collect();
+        sorted_years.sort_unstable_by_key(|y| y.parse::<i32>().unwrap_or_default());
+
+        for year in sorted_years {
+            let year_data = state_data.get(year).unwrap();
+
+            let mut sorted_filing_statuses: Vec<&String> = year_data.keys().collect();
+            sorted_filing_statuses.sort_unstable();
+
+            for filing_status in sorted_filing_statuses {
+                let amount = year_data.get(filing_status).unwrap();
+
+
                 let snake_case_filing_status = AsSnakeCase(filing_status.as_str()).to_string();
                 let func_name = format!("{}_{}_deduction_{}",
                     state_code.to_lowercase(),
@@ -101,7 +149,7 @@ fn generate_deductions (cargo_manifest_dir: &Path,) -> Result <(), Box<dyn std::
                     "pub fn {}(_income: f64, _filing_status_value: &FilingStatus) -> Deduction {{\n",
                     func_name
                 ));
-                deductions_output.push_str(&format!("    Deduction {{ standard_deduction: {:.1} }}\n}}\n", _amount));
+                deductions_output.push_str(&format!("    Deduction {{ standard_deduction: {:.1} }}\n}}\n", amount));
             }
         }
     }
@@ -140,15 +188,28 @@ fn generate_get_tax_brackets(
     impl_output.push_str("    let state_lower = state.to_lowercase();\n");
     impl_output.push_str("    match state_lower.as_str() {\n");
 
-    for (state_code, state_data) in &parsed_tax_data {
-        impl_output.push_str(&format!("        \"{}\" => match year {{\n", state_code.to_lowercase()));
-        let mut years_in_state: Vec<i32> = state_data.keys().filter_map(|s| s.parse().ok()).collect();
-        years_in_state.sort_unstable(); 
-        let latest_year = years_in_state.last().cloned();
+    let mut sorted_states: Vec<&String> = parsed_tax_data.keys().collect();
+    sorted_states.sort_unstable();
 
-        for (year, year_data) in state_data {
+    for state_code in sorted_states { 
+        let state_data = parsed_tax_data.get(state_code).unwrap();
+        impl_output.push_str(&format!("        \"{}\" => match year {{\n", state_code.to_lowercase()));
+
+        let mut years_in_state_str: Vec<&String> = state_data.keys().collect();
+        years_in_state_str.sort_unstable_by_key(|y| y.parse::<i32>().unwrap_or_default()); 
+
+        let latest_year = years_in_state_str.last().map(|s| s.parse::<i32>().unwrap_or_default());
+
+        for year_str in years_in_state_str { 
+            let year = year_str.parse::<i32>().unwrap(); 
+            let year_data = state_data.get(year_str).unwrap();
             impl_output.push_str(&format!("            {} => match filing_status {{\n", year));
-            for (filing_status, brackets) in year_data {
+
+            let mut sorted_filing_statuses: Vec<&String> = year_data.keys().collect();
+            sorted_filing_statuses.sort_unstable();
+
+            for filing_status in sorted_filing_statuses { 
+                let brackets = year_data.get(filing_status).unwrap();
                 let filing_status_variant = format!("FilingStatus::{}", filing_status);
 
                 impl_output.push_str(&format!(
@@ -216,6 +277,143 @@ fn generate_get_tax_brackets(
     Ok(())
 }
 
+fn generate_get_deductions(
+    cargo_manifest_dir: &Path,
+) -> Result<(), Box<dyn std::error::Error>> {
+    let deductions_json_input_path = cargo_manifest_dir.join("src").join("deductions.json");
+    let generated_get_deductions_output_path = cargo_manifest_dir.join("src").join("get_deductions.rs");
+
+    println!("cargo:rerun-if-changed={}", deductions_json_input_path.display());
+    println!("cargo:rerun-if-changed={}", cargo_manifest_dir.join("src").join("step_deduction.json").display());
+
+    eprintln!("DEBUG: Reading deductions JSON for impl from: {:?}", deductions_json_input_path.display());
+    let deductions_json_content = fs::read_to_string(&deductions_json_input_path)
+        .map_err(|e| format!("Failed to read deductions JSON from {}: {}", deductions_json_input_path.display(), e))?;
+
+    let parsed_deductions_data: JsonDeductionsData = serde_json::from_str(&deductions_json_content)
+        .map_err(|e| format!("Failed to parse deductions JSON from {}: {}", deductions_json_input_path.display(), e))?;
+
+    let step_deduction_json_path = cargo_manifest_dir.join("src").join("step_deduction.json");
+    let step_json_content = fs::read_to_string(&step_deduction_json_path)
+        .map_err(|e| format!("Failed to read step deductions JSON from {}: {}", step_deduction_json_path.display(), e))?;
+    let parsed_step_data: JsonStepDeductionData = serde_json::from_str(&step_json_content)
+        .map_err(|e| format!("Failed to parse step deductions JSON from {}: {}", step_deduction_json_path.display(), e))?;
+
+    let mut impl_output = String::new();
+    impl_output.push_str("// This file is automatically generated by build.rs\n");
+    impl_output.push_str("// Do not edit this file directly. Changes will be overwritten.\n\n");
+    impl_output.push_str("use crate::FilingStatus;\n");
+    impl_output.push_str("use crate::Deduction;\n");
+    impl_output.push_str("use crate::income_based_deduction;\n\n"); 
+
+    impl_output.push_str("/// Provides standard deductions for a given state, year, and filing status.\n");
+    impl_output.push_str("/// This function is generated by build.rs.\n");
+    impl_output.push_str("pub fn get_deductions(state: &str, year: i32, filing_status: &FilingStatus, income: f64) -> Deduction {\n");
+    impl_output.push_str("    let state_lower = state.to_lowercase();\n");
+    impl_output.push_str("    match state_lower.as_str() {\n");
+   
+    let mut unique_states: HashSet<String> = HashSet::new();
+    for state_code in parsed_deductions_data.keys() {
+        unique_states.insert(state_code.to_lowercase());
+    }
+    unique_states.insert("al".to_string());
+
+    let mut all_states: Vec<String> = unique_states.into_iter().collect();
+    all_states.sort_unstable(); 
+
+    for state_code in &all_states {
+        impl_output.push_str(&format!("        \"{}\" => match year {{\n", state_code));
+
+        if state_code.as_str() == "al" { 
+            let al_data = parsed_step_data.get("AL").expect(&format!("State 'AL' data not found in step_deduction.json but was expected. Ensure 'AL' key exists at the top level."));
+            let mut years_to_process: Vec<&String> = al_data.keys().collect();
+            years_to_process.sort_unstable_by_key(|y| y.parse::<i32>().unwrap_or_default());
+
+            let latest_al_year = years_to_process.last().map(|s| s.parse::<i32>().unwrap_or_default());
+
+            for year_str in years_to_process {
+                let year = year_str.parse::<i32>().unwrap();
+                let func_name = format!("income_based_deduction::al_standard_deduction_{}", year);
+                impl_output.push_str(&format!("            {} => {}(income, filing_status),\n", year, func_name));
+            }
+
+            if let Some(latest_year_val) = latest_al_year {
+                impl_output.push_str(&format!(
+                    "            _ => {{\n                eprintln!(\"Year {{}} not supported for {{}}. Defaulting to latest ({{}}) deduction.\", year, state_lower, {});\n",
+                    latest_year_val
+                ));
+                let func_name = format!("income_based_deduction::al_standard_deduction_{}", latest_year_val);
+                impl_output.push_str(&format!("                {}(income, filing_status)\n", func_name));
+                impl_output.push_str("            }\n"); 
+            } else {
+                impl_output.push_str(&format!("            _ => {{\n                eprintln!(\"No specific years found for AL. Defaulting to 0 deduction.\");\n", ));                impl_output.push_str("                Deduction { standard_deduction: 0.0 }\n");
+                impl_output.push_str("            }\n");
+            }
+            impl_output.push_str("        },\n"); 
+        } else {
+            let state_data = parsed_deductions_data.get(&state_code.to_uppercase()).expect(&format!("State '{}' not found in deductions.json but was expected.", state_code));
+            
+            let mut years_in_state_str: Vec<&String> = state_data.keys().collect();
+            years_in_state_str.sort_unstable_by_key(|y| y.parse::<i32>().unwrap_or_default());
+
+            let latest_year = years_in_state_str.last().map(|s| s.parse::<i32>().unwrap_or_default());
+
+            for year_str in years_in_state_str {
+                let year = year_str.parse::<i32>().unwrap();
+                let year_data = state_data.get(year_str).unwrap();
+                impl_output.push_str(&format!("            {} => match *filing_status {{\n", year));
+
+                let mut sorted_filing_statuses: Vec<&String> = year_data.keys().collect();
+                sorted_filing_statuses.sort_unstable();
+
+                for filing_status in sorted_filing_statuses {
+                    let amount = year_data.get(filing_status).unwrap(); 
+                    let filing_status_variant = format!("FilingStatus::{}", filing_status);
+                    impl_output.push_str(&format!(
+                        "                {} => Deduction {{ standard_deduction: {:.1} }},\n", 
+                        filing_status_variant,
+                        amount 
+                    ));
+                }
+                impl_output.push_str("            }\n"); 
+            }
+
+            if let Some(latest_year_val) = latest_year {
+                impl_output.push_str(&format!(
+                    "            _ => {{\n                eprintln!(\"Year {{}} not supported for {{}}. Defaulting to standard deduction for Single filing status.\", year, state_lower);\n"
+                ));
+                if let Some(latest_year_data) = parsed_deductions_data.get(&state_code.to_uppercase()).and_then(|s_data| s_data.get(&latest_year_val.to_string())) {
+                    if let Some(&single_deduction_amount) = latest_year_data.get("Single") {
+                        impl_output.push_str(&format!("                Deduction {{ standard_deduction: {:.1} }}\n", single_deduction_amount));
+                    } else {
+                        impl_output.push_str("                Deduction { standard_deduction: 0.0 }\n");
+                    }
+                } else {
+                    impl_output.push_str("                Deduction { standard_deduction: 0.0 }\n");
+                }
+                impl_output.push_str("            }\n");
+            } else {
+                impl_output.push_str(&format!("            _ => {{\n                eprintln!(\"No year data found for {{}}. Defaulting to 0 deduction.\", state_lower);\n", ));                impl_output.push_str("                Deduction { standard_deduction: 0.0 }\n");
+                impl_output.push_str("            }\n");
+            }
+            impl_output.push_str("        },\n"); 
+        }
+    }
+
+    impl_output.push_str("        _ => {\n");
+    impl_output.push_str("            eprintln!(\"Error: State '{}' is not currently supported for deductions. Defaulting to 0 deduction.\", state);\n");
+    impl_output.push_str("            Deduction { standard_deduction: 0.0 }\n");
+    impl_output.push_str("        }\n");
+    impl_output.push_str("    }\n"); 
+    impl_output.push_str("}\n");
+
+    fs::write(&generated_get_deductions_output_path, impl_output)
+        .map_err(|e| format!("Failed to write to {}: {}", generated_get_deductions_output_path.display(), e))?;
+    eprintln!("DEBUG: Successfully wrote get_deductions implementation to: {:?}", generated_get_deductions_output_path.display());
+
+    Ok(())
+}
+
 fn main() -> Result<(), Box<dyn std::error::Error>> {
     let cargo_manifest_dir = env::var("CARGO_MANIFEST_DIR")?;
     let cargo_manifest_path = Path::new(&cargo_manifest_dir);
@@ -226,6 +424,8 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
     generate_tax_brackets(cargo_manifest_path)?;
     generate_deductions(cargo_manifest_path)?;
     generate_get_tax_brackets (cargo_manifest_path)?;
+    generate_get_deductions(cargo_manifest_path)?;
+
 
     Ok(())
 }
