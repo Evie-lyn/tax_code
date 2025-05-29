@@ -547,6 +547,22 @@
       "Single": 15000.0
     }
   },
+  "VA": {
+    "2024": {
+      "HeadOfHousehold": 8500.0,
+      "MarriedFilingJointly": 17000.0,
+      "MarriedFilingSeparately": 8500.0,
+      "QualifyingSurvivingSpouse": 17000.0,
+      "Single": 8500.0
+    },
+    "2025": {
+      "HeadOfHousehold": 8000.0,
+      "MarriedFilingJointly": 16000.0,
+      "MarriedFilingSeparately": 8000.0,
+      "QualifyingSurvivingSpouse": 16000.0,
+      "Single": 8000.0
+    }
+  },
   "VT": {
     "2024": {
       "HeadOfHousehold": 11100.0,
@@ -554,6 +570,54 @@
       "MarriedFilingSeparately": 7400.0,
       "QualifyingSurvivingSpouse": 14850.0,
       "Single": 7400.0
+    }
+  },
+  "WA": {
+    "2024": {
+      "HeadOfHousehold": 21900.0,
+      "MarriedFilingJointly": 29200.0,
+      "MarriedFilingSeparately": 14600.0,
+      "QualifyingSurvivingSpouse": 29200.0,
+      "Single": 14600.0
+    },
+    "2025": {
+      "HeadOfHousehold": 22500.0,
+      "MarriedFilingJointly": 30000.0,
+      "MarriedFilingSeparately": 15000.0,
+      "QualifyingSurvivingSpouse": 30000.0,
+      "Single": 15000.0
+    }
+  },
+  "WV": {
+    "2024": {
+      "HeadOfHousehold": 0.0,
+      "MarriedFilingJointly": 0.0,
+      "MarriedFilingSeparately": 0.0,
+      "QualifyingSurvivingSpouse": 0.0,
+      "Single": 0.0
+    },
+    "2025": {
+      "HeadOfHousehold": 0.0,
+      "MarriedFilingJointly": 0.0,
+      "MarriedFilingSeparately": 0.0,
+      "QualifyingSurvivingSpouse": 0.0,
+      "Single": 0.0
+    }
+  },
+  "WY": {
+    "2024": {
+      "HeadOfHousehold": 0.0,
+      "MarriedFilingJointly": 0.0,
+      "MarriedFilingSeparately": 0.0,
+      "QualifyingSurvivingSpouse": 0.0,
+      "Single": 0.0
+    },
+    "2025": {
+      "HeadOfHousehold": 0.0,
+      "MarriedFilingJointly": 0.0,
+      "MarriedFilingSeparately": 0.0,
+      "QualifyingSurvivingSpouse": 0.0,
+      "Single": 0.0
     }
   }
 }

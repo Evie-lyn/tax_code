@@ -3064,6 +3064,51 @@ pub fn ut_single_tax_2025() -> Vec<Bracket> {
     ]
 }
 
+pub fn va_head_of_household_tax_2024() -> Vec<Bracket> {
+    vec![
+        Bracket(3000.0, 0.0),
+        Bracket(5000.0, 0.0),
+        Bracket(17000.0, 0.1),
+        Bracket(f64::INFINITY, 0.1),
+    ]
+}
+
+pub fn va_married_filing_jointly_tax_2024() -> Vec<Bracket> {
+    vec![
+        Bracket(3000.0, 0.0),
+        Bracket(5000.0, 0.0),
+        Bracket(17000.0, 0.1),
+        Bracket(f64::INFINITY, 0.1),
+    ]
+}
+
+pub fn va_married_filing_separately_tax_2024() -> Vec<Bracket> {
+    vec![
+        Bracket(3000.0, 0.0),
+        Bracket(5000.0, 0.0),
+        Bracket(17000.0, 0.1),
+        Bracket(f64::INFINITY, 0.1),
+    ]
+}
+
+pub fn va_qualifying_surviving_spouse_tax_2024() -> Vec<Bracket> {
+    vec![
+        Bracket(3000.0, 0.0),
+        Bracket(5000.0, 0.0),
+        Bracket(17000.0, 0.1),
+        Bracket(f64::INFINITY, 0.1),
+    ]
+}
+
+pub fn va_single_tax_2024() -> Vec<Bracket> {
+    vec![
+        Bracket(3000.0, 0.0),
+        Bracket(5000.0, 0.0),
+        Bracket(17000.0, 0.1),
+        Bracket(f64::INFINITY, 0.1),
+    ]
+}
+
 pub fn vt_head_of_household_tax_2024() -> Vec<Bracket> {
     vec![
         Bracket(75000.0, 0.0),
@@ -3106,6 +3151,271 @@ pub fn vt_single_tax_2024() -> Vec<Bracket> {
         Bracket(116000.0, 0.1),
         Bracket(242000.0, 0.1),
         Bracket(f64::INFINITY, 0.1),
+    ]
+}
+
+pub fn wa_head_of_household_tax_2024() -> Vec<Bracket> {
+    vec![
+        Bracket(f64::INFINITY, 0.0),
+    ]
+}
+
+pub fn wa_married_filing_jointly_tax_2024() -> Vec<Bracket> {
+    vec![
+        Bracket(f64::INFINITY, 0.0),
+    ]
+}
+
+pub fn wa_married_filing_separately_tax_2024() -> Vec<Bracket> {
+    vec![
+        Bracket(f64::INFINITY, 0.0),
+    ]
+}
+
+pub fn wa_qualifying_surviving_spouse_tax_2024() -> Vec<Bracket> {
+    vec![
+        Bracket(f64::INFINITY, 0.0),
+    ]
+}
+
+pub fn wa_single_tax_2024() -> Vec<Bracket> {
+    vec![
+        Bracket(f64::INFINITY, 0.0),
+    ]
+}
+
+pub fn wa_head_of_household_tax_2025() -> Vec<Bracket> {
+    vec![
+        Bracket(f64::INFINITY, 0.0),
+    ]
+}
+
+pub fn wa_married_filing_jointly_tax_2025() -> Vec<Bracket> {
+    vec![
+        Bracket(f64::INFINITY, 0.0),
+    ]
+}
+
+pub fn wa_married_filing_separately_tax_2025() -> Vec<Bracket> {
+    vec![
+        Bracket(f64::INFINITY, 0.0),
+    ]
+}
+
+pub fn wa_qualifying_surviving_spouse_tax_2025() -> Vec<Bracket> {
+    vec![
+        Bracket(f64::INFINITY, 0.0),
+    ]
+}
+
+pub fn wa_single_tax_2025() -> Vec<Bracket> {
+    vec![
+        Bracket(f64::INFINITY, 0.0),
+    ]
+}
+
+pub fn wi_head_of_household_tax_2024() -> Vec<Bracket> {
+    vec![
+        Bracket(14320.0, 0.0),
+        Bracket(28640.0, 0.0),
+        Bracket(315310.0, 0.1),
+        Bracket(f64::INFINITY, 0.1),
+    ]
+}
+
+pub fn wi_married_filing_jointly_tax_2024() -> Vec<Bracket> {
+    vec![
+        Bracket(19090.0, 0.0),
+        Bracket(38190.0, 0.0),
+        Bracket(420420.0, 0.1),
+        Bracket(f64::INFINITY, 0.1),
+    ]
+}
+
+pub fn wi_married_filing_separately_tax_2024() -> Vec<Bracket> {
+    vec![
+        Bracket(9550.0, 0.0),
+        Bracket(19090.0, 0.0),
+        Bracket(210210.0, 0.1),
+        Bracket(f64::INFINITY, 0.1),
+    ]
+}
+
+pub fn wi_qualifying_surviving_spouse_tax_2024() -> Vec<Bracket> {
+    vec![
+        Bracket(19090.0, 0.0),
+        Bracket(38190.0, 0.0),
+        Bracket(420420.0, 0.1),
+        Bracket(f64::INFINITY, 0.1),
+    ]
+}
+
+pub fn wi_single_tax_2024() -> Vec<Bracket> {
+    vec![
+        Bracket(14320.0, 0.0),
+        Bracket(28640.0, 0.0),
+        Bracket(315310.0, 0.1),
+        Bracket(f64::INFINITY, 0.1),
+    ]
+}
+
+pub fn wv_head_of_household_tax_2024() -> Vec<Bracket> {
+    vec![
+        Bracket(10000.0, 0.0),
+        Bracket(25000.0, 0.0),
+        Bracket(40000.0, 0.0),
+        Bracket(60000.0, 0.0),
+        Bracket(f64::INFINITY, 0.1),
+    ]
+}
+
+pub fn wv_married_filing_jointly_tax_2024() -> Vec<Bracket> {
+    vec![
+        Bracket(10000.0, 0.0),
+        Bracket(25000.0, 0.0),
+        Bracket(40000.0, 0.0),
+        Bracket(60000.0, 0.0),
+        Bracket(f64::INFINITY, 0.1),
+    ]
+}
+
+pub fn wv_married_filing_separately_tax_2024() -> Vec<Bracket> {
+    vec![
+        Bracket(5000.0, 0.0),
+        Bracket(12500.0, 0.0),
+        Bracket(20000.0, 0.0),
+        Bracket(30000.0, 0.0),
+        Bracket(f64::INFINITY, 0.1),
+    ]
+}
+
+pub fn wv_qualifying_surviving_spouse_tax_2024() -> Vec<Bracket> {
+    vec![
+        Bracket(10000.0, 0.0),
+        Bracket(25000.0, 0.0),
+        Bracket(40000.0, 0.0),
+        Bracket(60000.0, 0.0),
+        Bracket(f64::INFINITY, 0.1),
+    ]
+}
+
+pub fn wv_single_tax_2024() -> Vec<Bracket> {
+    vec![
+        Bracket(5000.0, 0.0),
+        Bracket(12500.0, 0.0),
+        Bracket(20000.0, 0.0),
+        Bracket(30000.0, 0.0),
+        Bracket(f64::INFINITY, 0.1),
+    ]
+}
+
+pub fn wv_head_of_household_tax_2025() -> Vec<Bracket> {
+    vec![
+        Bracket(10000.0, 0.0),
+        Bracket(25000.0, 0.0),
+        Bracket(40000.0, 0.0),
+        Bracket(60000.0, 0.0),
+        Bracket(f64::INFINITY, 0.0),
+    ]
+}
+
+pub fn wv_married_filing_jointly_tax_2025() -> Vec<Bracket> {
+    vec![
+        Bracket(10000.0, 0.0),
+        Bracket(25000.0, 0.0),
+        Bracket(40000.0, 0.0),
+        Bracket(60000.0, 0.0),
+        Bracket(f64::INFINITY, 0.0),
+    ]
+}
+
+pub fn wv_married_filing_separately_tax_2025() -> Vec<Bracket> {
+    vec![
+        Bracket(5000.0, 0.0),
+        Bracket(12500.0, 0.0),
+        Bracket(20000.0, 0.0),
+        Bracket(30000.0, 0.0),
+        Bracket(f64::INFINITY, 0.0),
+    ]
+}
+
+pub fn wv_qualifying_surviving_spouse_tax_2025() -> Vec<Bracket> {
+    vec![
+        Bracket(10000.0, 0.0),
+        Bracket(25000.0, 0.0),
+        Bracket(40000.0, 0.0),
+        Bracket(60000.0, 0.0),
+        Bracket(f64::INFINITY, 0.0),
+    ]
+}
+
+pub fn wv_single_tax_2025() -> Vec<Bracket> {
+    vec![
+        Bracket(5000.0, 0.0),
+        Bracket(12500.0, 0.0),
+        Bracket(20000.0, 0.0),
+        Bracket(30000.0, 0.0),
+        Bracket(f64::INFINITY, 0.0),
+    ]
+}
+
+pub fn wy_head_of_household_tax_2024() -> Vec<Bracket> {
+    vec![
+        Bracket(f64::INFINITY, 0.0),
+    ]
+}
+
+pub fn wy_married_filing_jointly_tax_2024() -> Vec<Bracket> {
+    vec![
+        Bracket(f64::INFINITY, 0.0),
+    ]
+}
+
+pub fn wy_married_filing_separately_tax_2024() -> Vec<Bracket> {
+    vec![
+        Bracket(f64::INFINITY, 0.0),
+    ]
+}
+
+pub fn wy_qualifying_surviving_spouse_tax_2024() -> Vec<Bracket> {
+    vec![
+        Bracket(f64::INFINITY, 0.0),
+    ]
+}
+
+pub fn wy_single_tax_2024() -> Vec<Bracket> {
+    vec![
+        Bracket(f64::INFINITY, 0.0),
+    ]
+}
+
+pub fn wy_head_of_household_tax_2025() -> Vec<Bracket> {
+    vec![
+        Bracket(f64::INFINITY, 0.0),
+    ]
+}
+
+pub fn wy_married_filing_jointly_tax_2025() -> Vec<Bracket> {
+    vec![
+        Bracket(f64::INFINITY, 0.0),
+    ]
+}
+
+pub fn wy_married_filing_separately_tax_2025() -> Vec<Bracket> {
+    vec![
+        Bracket(f64::INFINITY, 0.0),
+    ]
+}
+
+pub fn wy_qualifying_surviving_spouse_tax_2025() -> Vec<Bracket> {
+    vec![
+        Bracket(f64::INFINITY, 0.0),
+    ]
+}
+
+pub fn wy_single_tax_2025() -> Vec<Bracket> {
+    vec![
+        Bracket(f64::INFINITY, 0.0),
     ]
 }
 

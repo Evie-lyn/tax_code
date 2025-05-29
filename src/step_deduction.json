@@ -37,5 +37,44 @@
           "deduction_end": 2635.0
         }
       }
+    },
+    "WI": {
+      "2024": {
+        "Single": {
+          "bracket_start": 19000.0,
+          "bracket_end": 129499.0,
+          "bracket_size": 500.0,
+          "deduction_start": 13208.0,
+          "deduction_end": 8.0
+        },
+        "MarriedFilingSeparately": {
+          "bracket_start": 13000.0,
+          "bracket_end": 71999.0,
+          "bracket_size": 500.0,
+          "deduction_start": 11592.0,
+          "deduction_end": 22.0
+        },
+        "MarriedFilingJointly": {
+          "bracket_start": 27500.0,
+          "bracket_end": 151343.0,
+          "bracket_size": 500.0,
+          "deduction_start": 24445.0,
+          "deduction_end": 34.0
+        },
+        "QualifyingSurvivingSpouse": {
+          "bracket_start": 27500.0,
+          "bracket_end": 151343.0,
+          "bracket_size": 500.0,
+          "deduction_start": 24445.0,
+          "deduction_end": 34.0
+        },
+        "HeadOfHousehold": {
+          "bracket_start": 19000.0,
+          "bracket_end": 129499.0,
+          "bracket_size": 500.0,
+          "deduction_start": 17049.0,
+          "deduction_end": 8.0
+        }
+      }
     }
   }
