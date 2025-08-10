@@ -1,0 +1,18 @@
+{
+    "MS":{
+        "2024": {
+            "HeadOfHousehold": 8000,
+            "MarriedFilingJointly": 12000.0,
+            "MarriedFilingSeparately": 6000,
+            "QualifyingSurvivingSpouse": 12000,
+            "Single": 6000
+        },
+        "2025": {
+            "HeadOfHousehold": 8000,
+            "MarriedFilingJointly": 12000.0,
+            "MarriedFilingSeparately": 6000,
+            "QualifyingSurvivingSpouse": 12000,
+            "Single": 6000
+        }
+    }
+}

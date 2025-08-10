@@ -71,15 +71,22 @@ pub fn get_deductions(state: &str, year: i32, filing_status: &FilingStatus, inco
         },
         "co" => match year {
             2024 => match *filing_status {
-                FilingStatus::HeadOfHousehold => Deduction { standard_deduction: 0.0 },
-                FilingStatus::MarriedFilingJointly => Deduction { standard_deduction: 0.0 },
-                FilingStatus::MarriedFilingSeparately => Deduction { standard_deduction: 0.0 },
-                FilingStatus::QualifyingSurvivingSpouse => Deduction { standard_deduction: 0.0 },
-                FilingStatus::Single => Deduction { standard_deduction: 0.0 },
+                FilingStatus::HeadOfHousehold => Deduction { standard_deduction: 21900.0 },
+                FilingStatus::MarriedFilingJointly => Deduction { standard_deduction: 29200.0 },
+                FilingStatus::MarriedFilingSeparately => Deduction { standard_deduction: 14600.0 },
+                FilingStatus::QualifyingSurvivingSpouse => Deduction { standard_deduction: 29200.0 },
+                FilingStatus::Single => Deduction { standard_deduction: 14600.0 },
+            }
+            2025 => match *filing_status {
+                FilingStatus::HeadOfHousehold => Deduction { standard_deduction: 22500.0 },
+                FilingStatus::MarriedFilingJointly => Deduction { standard_deduction: 30000.0 },
+                FilingStatus::MarriedFilingSeparately => Deduction { standard_deduction: 15000.0 },
+                FilingStatus::QualifyingSurvivingSpouse => Deduction { standard_deduction: 30000.0 },
+                FilingStatus::Single => Deduction { standard_deduction: 15000.0 },
             }
             _ => {
                 eprintln!("Year {} not supported for {}. Defaulting to standard deduction for Single filing status.", year, state_lower);
-                Deduction { standard_deduction: 0.0 }
+                Deduction { standard_deduction: 15000.0 }
             }
         },
         "ct" => match year {
@@ -97,15 +104,15 @@ pub fn get_deductions(state: &str, year: i32, filing_status: &FilingStatus, inco
         },
         "de" => match year {
             2024 => match *filing_status {
-                FilingStatus::HeadOfHousehold => Deduction { standard_deduction: 5700.0 },
-                FilingStatus::MarriedFilingJointly => Deduction { standard_deduction: 11400.0 },
-                FilingStatus::MarriedFilingSeparately => Deduction { standard_deduction: 5700.0 },
-                FilingStatus::QualifyingSurvivingSpouse => Deduction { standard_deduction: 5700.0 },
-                FilingStatus::Single => Deduction { standard_deduction: 5700.0 },
+                FilingStatus::HeadOfHousehold => Deduction { standard_deduction: 3250.0 },
+                FilingStatus::MarriedFilingJointly => Deduction { standard_deduction: 6500.0 },
+                FilingStatus::MarriedFilingSeparately => Deduction { standard_deduction: 3250.0 },
+                FilingStatus::QualifyingSurvivingSpouse => Deduction { standard_deduction: 3250.0 },
+                FilingStatus::Single => Deduction { standard_deduction: 3250.0 },
             }
             _ => {
                 eprintln!("Year {} not supported for {}. Defaulting to standard deduction for Single filing status.", year, state_lower);
-                Deduction { standard_deduction: 5700.0 }
+                Deduction { standard_deduction: 3250.0 }
             }
         },
         "fl" => match year {
@@ -388,10 +395,10 @@ pub fn get_deductions(state: &str, year: i32, filing_status: &FilingStatus, inco
                 FilingStatus::Single => Deduction { standard_deduction: 2300.0 },
             }
             2025 => match *filing_status {
-                FilingStatus::HeadOfHousehold => Deduction { standard_deduction: 22500.0 },
-                FilingStatus::MarriedFilingJointly => Deduction { standard_deduction: 29900.0 },
-                FilingStatus::MarriedFilingSeparately => Deduction { standard_deduction: 14950.0 },
-                FilingStatus::QualifyingSurvivingSpouse => Deduction { standard_deduction: 29900.0 },
+                FilingStatus::HeadOfHousehold => Deduction { standard_deduction: 3400.0 },
+                FilingStatus::MarriedFilingJointly => Deduction { standard_deduction: 4600.0 },
+                FilingStatus::MarriedFilingSeparately => Deduction { standard_deduction: 2300.0 },
+                FilingStatus::QualifyingSurvivingSpouse => Deduction { standard_deduction: 4600.0 },
                 FilingStatus::Single => Deduction { standard_deduction: 2300.0 },
             }
             _ => {
