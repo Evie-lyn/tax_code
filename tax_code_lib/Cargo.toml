@@ -1,0 +1,17 @@
+[package]
+name = "tax_code"
+version = "0.1.2"
+edition = "2024"
+description = "A code for calculating 2025 income tax"
+license = "MIT OR Apache-2.0"
+repository = "https://github.com/Evie-lyn/tax_code"
+readme = "README.md"
+
+[dependencies]
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+
+[build-dependencies]
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+heck = "0.4" 
