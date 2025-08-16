@@ -790,6 +790,13 @@ pub fn get_deductions(state: &str, year: i32, filing_status: &FilingStatus, inco
                 Deduction { standard_deduction: 15000.0 }
             }
         },
+        "wi" => match year {
+            2024 => income_based_deduction::wi_standard_deduction_2024(income, filing_status),
+            _ => {
+                eprintln!("Year {} not supported for {}. Defaulting to latest ({}) deduction.", year, state_lower, 2024);
+                income_based_deduction::wi_standard_deduction_2024(income, filing_status)
+            }
+        },
         "wv" => match year {
             2024 => match *filing_status {
                 FilingStatus::HeadOfHousehold => Deduction { standard_deduction: 0.0 },

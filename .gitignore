@@ -2,3 +2,6 @@
 /tax_code_demo/target/
 /tax_code_lib/target/
 /tax_code_lib/src/generated_tax_data.rs
+/tax_code_lib/src/get_deductions.rs
+/tax_code_lib/src/get_tax_brackets.rs
+/tax_code_lib/src/income_based_deduction.rs

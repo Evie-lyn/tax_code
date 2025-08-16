@@ -316,7 +316,14 @@ fn generate_get_deductions(
     for state_code in parsed_deductions_data.keys() {
         unique_states.insert(state_code.to_lowercase());
     }
-    unique_states.insert("al".to_string());
+    let mut states_with_step_deductions: HashSet<String> = HashSet::new();
+    // Add states with step deductions
+    for state_code in parsed_step_data.keys() {
+        unique_states.insert(state_code.to_lowercase());
+        states_with_step_deductions.insert(state_code.to_lowercase());
+    }
+
+
 
     let mut all_states: Vec<String> = unique_states.into_iter().collect();
     all_states.sort_unstable(); 
@@ -324,29 +331,29 @@ fn generate_get_deductions(
     for state_code in &all_states {
         impl_output.push_str(&format!("        \"{}\" => match year {{\n", state_code));
 
-        if state_code.as_str() == "al" { 
-            let al_data = parsed_step_data.get("AL").expect(&format!("State 'AL' data not found in step_deduction.json but was expected. Ensure 'AL' key exists at the top level."));
-            let mut years_to_process: Vec<&String> = al_data.keys().collect();
+        if states_with_step_deductions.contains(state_code) { 
+            let data = parsed_step_data.get(state_code.to_uppercase().as_str()).expect(&format!("State '{}' data not found in step_deduction.json but was expected. Ensure '{}' key exists at the top level.", state_code, state_code));
+            let mut years_to_process: Vec<&String> = data.keys().collect();
             years_to_process.sort_unstable_by_key(|y| y.parse::<i32>().unwrap_or_default());
 
-            let latest_al_year = years_to_process.last().map(|s| s.parse::<i32>().unwrap_or_default());
+            let latest_year = years_to_process.last().map(|s| s.parse::<i32>().unwrap_or_default());
 
             for year_str in years_to_process {
                 let year = year_str.parse::<i32>().unwrap();
-                let func_name = format!("income_based_deduction::al_standard_deduction_{}", year);
+                let func_name = format!("income_based_deduction::{}_standard_deduction_{}", state_code, year);
                 impl_output.push_str(&format!("            {} => {}(income, filing_status),\n", year, func_name));
             }
 
-            if let Some(latest_year_val) = latest_al_year {
+            if let Some(latest_year_val) = latest_year {
                 impl_output.push_str(&format!(
                     "            _ => {{\n                eprintln!(\"Year {{}} not supported for {{}}. Defaulting to latest ({{}}) deduction.\", year, state_lower, {});\n",
                     latest_year_val
                 ));
-                let func_name = format!("income_based_deduction::al_standard_deduction_{}", latest_year_val);
+                let func_name = format!("income_based_deduction::{}_standard_deduction_{}", state_code, latest_year_val);
                 impl_output.push_str(&format!("                {}(income, filing_status)\n", func_name));
                 impl_output.push_str("            }\n"); 
             } else {
-                impl_output.push_str(&format!("            _ => {{\n                eprintln!(\"No specific years found for AL. Defaulting to 0 deduction.\");\n", ));                impl_output.push_str("                Deduction { standard_deduction: 0.0 }\n");
+                impl_output.push_str(&format!("            _ => {{\n                eprintln!(\"No specific years found for {}. Defaulting to 0 deduction.\");\n", state_code));                impl_output.push_str("                Deduction { standard_deduction: 0.0 }\n");
                 impl_output.push_str("            }\n");
             }
             impl_output.push_str("        },\n"); 
