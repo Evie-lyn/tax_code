@@ -1,0 +1,193 @@
+{
+    "CO": {
+        "2024": {
+            "64": 
+                {
+                    "Single": [
+                        {
+                            "rate": 0.0,
+                            "upper_bound": 25000.0
+                        },
+                        {
+                            "rate": 1.0,
+                            "upper_bound": null,
+                            "deduction": 20000.0
+                        }
+                    ],
+                    "MarriedFilingJointly": [
+                        {
+                            "rate": 0.0,
+                            "upper_bound": 25000.0
+                        },
+                        {
+                            "rate": 0.5,
+                            "upper_bound": 34000.0,
+                            "deduction": 20000.0
+                        }
+                    ]
+                },
+            "65": [
+                {
+                    "Single": [
+                        {
+                            "rate": 0.0,
+                            "upper_bound": null
+                        }
+                    ],
+                    "MarriedFilingJointly": [
+                        {
+                            "rate": 0.0,
+                            "upper_bound": null
+                        }
+                    ]
+                }
+            ]
+        }
+    },
+    "CT": {
+        "2024": {
+            "Single": [
+                {
+                    "rate": 0.0,
+                    "upper_bound": 75000.0
+                },
+                {
+                    "rate": 0.25,
+                    "upper_bound": null
+                }
+            ],
+            "MarriedFilingJointly": [
+                {
+                    "rate": 0.0,
+                    "upper_bound": 100000.0
+                },
+                {
+                    "rate": 0.25,
+                    "upper_bound": null
+                }
+            ]
+        }
+    },
+    "MT":  {
+        "2024": {
+            "Single": "federal",
+            "MarriedFilingJointly": "federal"
+        },
+        "2025": {
+            "Single": "federal",
+            "MarriedFilingJointly": "federal"
+        }
+    },
+    "NM": {
+        "2024": {
+            "Single": [
+                {
+                    "rate": 0.0,
+                    "upper_bound": 100000.0
+                },
+                {
+                    "rate": 1.0,
+                    "upper_bound": null
+                }
+            ],
+            "MarriedFilingJointly": [
+                {
+                    "rate": 0.0,
+                    "upper_bound": 150000.0
+                },
+                {
+                    "rate": 1.0,
+                    "upper_bound": null
+                }
+            ]
+        }
+    },
+    "RI": {
+        "2024": {
+           "66": {
+            "Single": [
+                {
+                    "rate": 1.0,
+                    "upper_bound": null
+                }
+            ],
+            "MarriedFilingJointly": [
+                {
+                    "rate": 1.0,
+                    "upper_bound": null
+                }
+            ]
+           },
+           "67": {
+            "Single": [
+                {
+                    "rate": 0.0,
+                    "upper_bound": 104000.0
+                },
+                {
+                    "rate": 1.0,
+                    "upper_bound": null
+                }
+            ],
+            "MarriedFilingJointly": [
+                {
+                    "rate": 0.0,
+                    "upper_bound": 130250.0
+                },
+                {
+                    "rate": 1.0,
+                    "upper_bound": null
+                }
+            ]
+           }
+        }
+    },
+    "UT": {
+        "2025":{
+            "Single": [
+                {
+                    "rate": 0.0,
+                    "upper_bound": 54000.0
+                },
+                {
+                    "rate": 1.0,
+                    "upper_bound": null
+                }
+            ],
+            "MarriedFilingJointly": [
+                {
+                    "rate": 0.0,
+                    "upper_bound": 90000.0
+                },
+                {
+                    "rate": 1.0,
+                    "upper_bound": null
+                }
+            ]
+        }
+    },
+    "VT": {
+        "2025": {
+            "Single": [
+                {
+                    "rate": 0.0,
+                    "upper_bound": 50000.0
+                },
+                {
+                    "rate": 1.0,
+                    "upper_bound": null
+                }
+            ],
+            "MarriedFilingJointly": [
+                {
+                    "rate": 0.0,
+                    "upper_bound": 65000.0
+                },
+                {
+                    "rate": 1.0,
+                    "upper_bound": null
+                }
+            ]
+        }
+    }
+}

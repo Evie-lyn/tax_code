@@ -24,6 +24,7 @@ pub enum FilingStatus {
 pub fn calculate_income_tax( // for income tax
     state: &str,
     income: f64,
+    capital_gains: f64,
     filing_status: FilingStatus,
     year: i32,
 ) -> f64 {
