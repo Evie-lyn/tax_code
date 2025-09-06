@@ -12,6 +12,8 @@ struct Args{
     filing_status: String, // Filing status: single, married filing jointly, married filing separately, qualifying surviving spouse, head of household
     #[clap(short, long)]
     year: i32,
+    #[clap(long, default_value_t = 40)]
+    age: i32,
 }
 
 // To run input 'cargo run -- --state "CA" --income 50000 --year 2024 --filing-status "single"'
@@ -32,6 +34,10 @@ fn main() {
             FilingStatus::Single
         }
     };
-   let taxes = calculate_income_tax(&args.state, args.income, filing_status_enum, args.year);
-   println!("Income Tax: ${:.2}", taxes)
+   let taxes = calculate_income_tax(&args.state, args.income, 20000.0, 20000.0, filing_status_enum, args.year, args.age);
+   println!("Federal income tax: ${:.2}", taxes.federal_income_tax);
+   println!("Federal capital gains tax: ${:.2}", taxes.federal_capital_gains_tax);
+   println!("State income tax: ${:.2}", taxes.state_income_tax);
+   println!("State capital gains tax: ${:.2}", taxes.state_capital_gains_tax);
+   println!("Taxable Social Security (state): ${:.2}", taxes.social_security_tax);
 }
