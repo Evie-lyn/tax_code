@@ -10,6 +10,7 @@ pub mod federal_capital_gains_tax;
 pub mod federal_income_tax;
 pub mod get_tax_brackets_class;
 pub mod federal_fica_taxes;
+pub mod state_exemptions;
 
 use crate::{capital_gains::CapitalGainsResult, tax_bracket::TaxBrackets};
 
@@ -59,6 +60,7 @@ pub struct TaxCalculator {
     federal_capital_gains: crate::federal_capital_gains_tax::FederalCapitalGainsCalculator,
     federal_fica: crate::federal_fica_taxes::FederalFicaCalculator,
     social_security: crate::social_security_calculator::SocialSecurityTaxCalculator,
+    state_exemptions: crate::state_exemptions::StateExemptionsCalculator,
 }
 
 impl TaxCalculator {
@@ -70,6 +72,7 @@ impl TaxCalculator {
         let federal_capital_gains = crate::federal_capital_gains_tax::FederalCapitalGainsCalculator::load()?;
         let federal_fica = crate::federal_fica_taxes::FederalFicaCalculator::new();
         let social_security = crate::social_security_calculator::SocialSecurityTaxCalculator::load()?;
+        let state_exemptions = crate::state_exemptions::StateExemptionsCalculator::load()?;
 
         Ok(Self {
             federal_income_tax,
@@ -78,6 +81,7 @@ impl TaxCalculator {
             federal_capital_gains,
             federal_fica,
             social_security,
+            state_exemptions,
         })
     }
 
@@ -93,7 +97,8 @@ impl TaxCalculator {
         age: i32,
     ) -> Taxes {
         let state_deduction_amount = crate::get_deductions::get_deductions(state, year, &filing_status, income).standard_deduction;
-        let state_taxable_income = (income - state_deduction_amount).max(0.0);
+        let state_exemption_amount = self.state_exemptions.get_exemption(state, year, &filing_status);
+        let state_taxable_income = (income - state_deduction_amount - state_exemption_amount).max(0.0);
 
         let state_taxable_social_security = self.social_security.get_taxable_social_security(state, year, age, &filing_status, income + capital_gains, social_security_income);
         let federal_taxable_social_security = self.social_security.get_taxable_social_security("US", year, age, &filing_status, income + capital_gains, social_security_income);
