@@ -1,5 +1,5 @@
-use clap:: Parser;
-use tax_code::{calculate_income_tax, FilingStatus, TaxResult};
+use clap::Parser;
+use tax_code::{TaxCalculator, FilingStatus, TaxResult};
 
 #[derive(Parser, Debug)]
 #[command(author, version, about, long_about = None)]
@@ -54,7 +54,17 @@ fn main() {
         }
     };
 
-    let tax_result = calculate_income_tax(
+    // Create the tax calculator instance (loads all calculators once)
+    let tax_calculator = match TaxCalculator::new() {
+        Ok(calculator) => calculator,
+        Err(e) => {
+            eprintln!("Error initializing tax calculator: {}", e);
+            return;
+        }
+    };
+
+    // Use the pre-loaded calculator
+    let tax_result = tax_calculator.calculate_income_tax(
         &args.state, 
         args.income, 
         args.secondary_income,
