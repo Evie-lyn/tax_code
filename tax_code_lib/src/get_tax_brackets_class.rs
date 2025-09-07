@@ -4,7 +4,7 @@ use serde::Deserialize;
 use crate::FilingStatus;
 use crate::brackets::Bracket;
 
-const TAX_BRACKETS_JSON: &str = include_str!("Bracket.json");
+const TAX_BRACKETS_JSON: &str = include_str!("states_brackets.json");
 const YEARLY_LIMIT_INCREASE_RATE: f64 = 0.02; // 2.0%
 
 #[derive(Debug, Deserialize, Clone)]
@@ -23,7 +23,7 @@ pub struct StateIncomeTaxBrackets {
 impl StateIncomeTaxBrackets {
     pub fn load() -> Result<Self, String> {
         let parsed: StateYearStatusBrackets = serde_json::from_str(TAX_BRACKETS_JSON)
-            .map_err(|e| format!("Failed to parse Bracket.json: {}", e))?;
+            .map_err(|e| format!("Failed to parse states_brackets.json: {}", e))?;
 
         // Normalize years to i32 for easier math and store by state uppercase
         let mut data: HashMap<String, HashMap<i32, HashMap<String, Vec<JsonBracket>>>> = HashMap::new();

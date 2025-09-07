@@ -30,7 +30,7 @@ type JsonDeductionsData = HashMap<String, YearDeductions>;
 
 // For tax brackets
 fn generate_tax_brackets ( cargo_manifest_dir: &Path,) -> Result<(), Box<dyn std::error::Error>> {
-    let tax_json_input_path = cargo_manifest_dir.join("src").join("Bracket.json");
+    let tax_json_input_path = cargo_manifest_dir.join("src").join("states_brackets.json");
     let generated_tax_output_path = cargo_manifest_dir.join("src").join("brackets.rs");
 
     println!("cargo:rerun-if-changed={}", tax_json_input_path.display());
@@ -97,7 +97,7 @@ fn generate_tax_brackets ( cargo_manifest_dir: &Path,) -> Result<(), Box<dyn std
 }
 
 fn generate_deductions (cargo_manifest_dir: &Path,) -> Result <(), Box<dyn std::error::Error>> {
-    let deductions_json_input_path = cargo_manifest_dir.join("src").join("deductions.json");
+    let deductions_json_input_path = cargo_manifest_dir.join("src").join("states_deductions.json");
     let generated_deductions_output_path = cargo_manifest_dir.join("src").join("deductions.rs");
 
     println!("cargo:rerun-if-changed={}", deductions_json_input_path.display());
@@ -164,7 +164,7 @@ fn generate_deductions (cargo_manifest_dir: &Path,) -> Result <(), Box<dyn std::
 fn generate_get_tax_brackets(
     cargo_manifest_dir: &Path,
 ) -> Result<(), Box<dyn std::error::Error>> {
-    let tax_json_input_path = cargo_manifest_dir.join("src").join("Bracket.json");
+    let tax_json_input_path = cargo_manifest_dir.join("src").join("states_brackets.json");
     let generated_get_tax_output_path = cargo_manifest_dir.join("src").join("get_tax_brackets.rs"); 
 
     println!("cargo:rerun-if-changed={}", tax_json_input_path.display());
@@ -280,7 +280,7 @@ fn generate_get_tax_brackets(
 fn generate_get_deductions(
     cargo_manifest_dir: &Path,
 ) -> Result<(), Box<dyn std::error::Error>> {
-    let deductions_json_input_path = cargo_manifest_dir.join("src").join("deductions.json");
+    let deductions_json_input_path = cargo_manifest_dir.join("src").join("states_deductions.json");
     let generated_get_deductions_output_path = cargo_manifest_dir.join("src").join("get_deductions.rs");
 
     println!("cargo:rerun-if-changed={}", deductions_json_input_path.display());
@@ -358,7 +358,7 @@ fn generate_get_deductions(
             }
             impl_output.push_str("        },\n"); 
         } else {
-            let state_data = parsed_deductions_data.get(&state_code.to_uppercase()).expect(&format!("State '{}' not found in deductions.json but was expected.", state_code));
+            let state_data = parsed_deductions_data.get(&state_code.to_uppercase()).expect(&format!("State '{}' not found in states_deductions.json but was expected.", state_code));
             
             let mut years_in_state_str: Vec<&String> = state_data.keys().collect();
             years_in_state_str.sort_unstable_by_key(|y| y.parse::<i32>().unwrap_or_default());
