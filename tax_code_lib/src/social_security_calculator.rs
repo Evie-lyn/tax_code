@@ -2,7 +2,7 @@ use std::collections::HashMap;
 use serde::Deserialize;
 use crate::FilingStatus;
 
-const FEDERAL_SS_JSON: &str = include_str!("taxable_social_security.json");
+const FEDERAL_SS_JSON: &str = include_str!("federal_taxable_social_security.json");
 const STATE_SS_JSON: &str = include_str!("states_social_security_taxes.json");
 const YEARLY_LIMIT_INCREASE_RATE: f64 = 0.02; // 2.0%
 
@@ -52,7 +52,7 @@ impl SocialSecurityTaxCalculator {
     pub fn load() -> Result<Self, String> {
         // Load federal data
         let federal_parsed: FederalData = serde_json::from_str(FEDERAL_SS_JSON)
-            .map_err(|e| format!("Failed to parse taxable_social_security.json: {}", e))?;
+            .map_err(|e| format!("Failed to parse federal_taxable_social_security.json: {}", e))?;
 
         let mut federal_data = HashMap::new();
         for (year_str, filing_status_map) in federal_parsed.into_iter() {
