@@ -3,7 +3,7 @@ use serde::Deserialize;
 use crate::FilingStatus;
 
 const FEDERAL_SS_JSON: &str = include_str!("taxable_social_security.json");
-const STATE_SS_JSON: &str = include_str!("social_security_taxes.json");
+const STATE_SS_JSON: &str = include_str!("states_social_security_taxes.json");
 const YEARLY_LIMIT_INCREASE_RATE: f64 = 0.02; // 2.0%
 
 #[derive(Debug, Deserialize, Clone)]
@@ -63,7 +63,7 @@ impl SocialSecurityTaxCalculator {
 
         // Load state data  
         let state_parsed: StateRawData = serde_json::from_str(STATE_SS_JSON)
-            .map_err(|e| format!("Failed to parse social_security_taxes.json: {}", e))?;
+            .map_err(|e| format!("Failed to parse states_social_security_taxes.json: {}", e))?;
 
         let mut state_data = HashMap::new();
         for (state, years_map) in state_parsed.into_iter() {
