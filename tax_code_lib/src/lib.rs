@@ -134,6 +134,16 @@ impl TaxCalculator {
                 (0.0, test_income)
             };
 
+            let ss_income = if filing_status == FilingStatus::MarriedFilingJointly {
+                primary_ss_income + secondary_ss_income
+            } else {
+                if is_primary_expense {
+                    primary_ss_income
+                } else {
+                    secondary_ss_income
+                }
+            };
+
             // Calculate taxes with the test income
             let tax_result = self.calculate_income_tax(
                 primary_state,
@@ -178,7 +188,7 @@ impl TaxCalculator {
             };
 
             // Calculate remaining balance after taxes and expenses
-            let balance = test_income - total_tax - expenses;
+            let balance = test_income + ss_income - total_tax - expenses;
             
             if balance < 0.0 {
                 // Need more income
@@ -242,7 +252,7 @@ impl TaxCalculator {
 
         let state_income_tax = TaxBrackets::new(state_brackets).taxes(state_taxable_income);
         let federal_income_tax = self.federal_income_tax.calculate(year, &filing_status, federal_taxable_income);
-        let fica_tax = if skip_fica {0.0} else {self.federal_fica.calculate(income, &filing_status)};
+        let fica_tax = if skip_fica {0.0} else {self.federal_fica.calculate(income)};
 
         Taxes {
             federal_income_tax,
@@ -358,6 +368,18 @@ impl TaxCalculator {
                 })
             }
         }
+    }
+
+    /// Calculate FICA taxes for individual incomes
+    pub fn calculate_fica_taxes(
+        &self,
+        primary_income: f64,
+        secondary_income: f64,
+        filing_status: FilingStatus,
+    ) -> (f64, f64) {
+        let primary_fica_tax = self.federal_fica.calculate(primary_income);
+        let secondary_fica_tax = self.federal_fica.calculate(secondary_income);
+        (primary_fica_tax, secondary_fica_tax)
     }
 }
 

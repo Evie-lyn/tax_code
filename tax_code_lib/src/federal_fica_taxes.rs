@@ -43,7 +43,7 @@ impl FederalFicaCalculator {
         FederalFicaCalculator { fica_brackets }
     }
 
-    pub fn calculate(&self, earned_income: f64, _filing_status: &FilingStatus) -> f64 {
+    pub fn calculate(&self, earned_income: f64) -> f64 {
         self.calculate_tax_from_brackets(earned_income, &self.fica_brackets.table)
     }
 
