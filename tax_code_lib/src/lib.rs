@@ -85,6 +85,115 @@ impl TaxCalculator {
         })
     }
 
+    /// Calculate how much W2 income is needed to cover expenses after taxes
+    /// Uses binary search to find the required gross income
+    /// Only considers W2 income - assumes no capital gains or social security income
+    pub fn w2_cost_to_cover(
+        &self,
+        primary_state: &str,
+        secondary_state: &str,
+        expenses: f64,
+        is_primary_expense: bool,
+        filing_status: FilingStatus,
+        year: i32,
+        primary_age: i32,
+        secondary_age: i32,
+    ) -> (f64, TaxResult) {
+        if expenses == 0.0 {
+            let tax_result = self.calculate_income_tax(
+                primary_state,
+                secondary_state,
+                0.0,
+                0.0,
+                0.0, // no capital gains
+                0.0, // no capital gains
+                0.0, // no social security income
+                0.0, // no social security income
+                filing_status,
+                year,
+                primary_age,
+                secondary_age,
+            );
+            return (0.0, tax_result);
+        }
+
+        let mut low = 0.0;
+        let mut high = 20.0 * expenses; // Start with 20x expenses as upper bound
+        let tolerance = 20.0; // Within $20 is acceptable
+        
+        loop {
+            let test_income = (low + high) / 2.0;
+            
+            // Set up incomes based on which partner the expense belongs to
+            let (primary_income, secondary_income) = if is_primary_expense {
+                (test_income, 0.0)
+            } else {
+                (0.0, test_income)
+            };
+
+            // Calculate taxes with the test income
+            let tax_result = self.calculate_income_tax(
+                primary_state,
+                secondary_state,
+                primary_income,
+                secondary_income,
+                0.0, // no capital gains
+                0.0, // no capital gains
+                0.0, // no social security income
+                0.0, // no social security income
+                filing_status,
+                year,
+                primary_age,
+                secondary_age,
+            );
+
+            // Calculate total taxes
+            let total_tax = match &tax_result {
+                TaxResult::Joint(taxes) => {
+                    taxes.federal_income_tax +
+                    taxes.federal_capital_gains_tax +
+                    taxes.state_income_tax +
+                    taxes.state_capital_gains_tax +
+                    taxes.fica_tax
+                }
+                TaxResult::Separate(separate_taxes) => {
+                    let primary_total = separate_taxes.primary.federal_income_tax +
+                        separate_taxes.primary.federal_capital_gains_tax +
+                        separate_taxes.primary.state_income_tax +
+                        separate_taxes.primary.state_capital_gains_tax +
+                        separate_taxes.primary.fica_tax;
+                    
+                    let secondary_total = separate_taxes.secondary.federal_income_tax +
+                        separate_taxes.secondary.federal_capital_gains_tax +
+                        separate_taxes.secondary.state_income_tax +
+                        separate_taxes.secondary.state_capital_gains_tax +
+                        separate_taxes.secondary.fica_tax;
+                    
+                    primary_total + secondary_total
+                }
+            };
+
+            // Calculate remaining balance after taxes and expenses
+            let balance = test_income - total_tax - expenses;
+            
+            if balance < 0.0 {
+                // Need more income
+                low = test_income;
+            } else if balance > tolerance {
+                // Have too much, can reduce income
+                high = test_income;
+            } else {
+                // Found acceptable solution
+                return (test_income, tax_result);
+            }
+
+            // Prevent infinite loop if bounds get too close
+            if high - low < 0.01 {
+                return (high, tax_result);
+            }
+        }
+    }
+
     /// Calculate taxes for an individual using pre-loaded calculators
     pub fn calculate_individual_taxes(
         &self,
@@ -143,7 +252,8 @@ impl TaxCalculator {
     /// Calculate income tax using pre-loaded calculators
     pub fn calculate_income_tax(
         &self,
-        state: &str,
+        primary_state: &str,
+        secondary_state: &str,
         primary_income: f64,
         secondary_income: f64,
         primary_capital_gains: f64,
@@ -162,9 +272,10 @@ impl TaxCalculator {
                 let combined_capital_gains = primary_capital_gains + secondary_capital_gains;
                 let combined_social_security = primary_social_security_income + secondary_social_security_income;
                 
-                // Use primary age for joint calculations (could be adjusted based on requirements)
+                // For joint filing, use primary state for combined calculation
+                // Note: In practice, joint filers typically need to file in their state of residence
                 let joint_taxes = self.calculate_individual_taxes(
-                    state,
+                    primary_state,
                     combined_income,
                     combined_capital_gains,
                     combined_social_security,
@@ -183,9 +294,9 @@ impl TaxCalculator {
                 })
             }
             FilingStatus::MarriedFilingSeparately => {
-                // Calculate taxes separately for each spouse
+                // Calculate taxes separately for each spouse using their respective states
                 let primary_taxes = self.calculate_individual_taxes(
-                    state,
+                    primary_state,
                     primary_income,
                     primary_capital_gains,
                     primary_social_security_income,
@@ -195,7 +306,7 @@ impl TaxCalculator {
                 );
 
                 let secondary_taxes = self.calculate_individual_taxes(
-                    state,
+                    secondary_state,
                     secondary_income,
                     secondary_capital_gains,
                     secondary_social_security_income,
@@ -211,9 +322,9 @@ impl TaxCalculator {
             }
             _ => {
                 // For single, head of household, or qualifying surviving spouse
-                // Only calculate for primary taxpayer
+                // Only calculate for primary taxpayer using primary state
                 let primary_taxes = self.calculate_individual_taxes(
-                    state,
+                    primary_state,
                     primary_income,
                     primary_capital_gains,
                     primary_social_security_income,
@@ -244,7 +355,8 @@ impl TaxCalculator {
 // Use TaxCalculator::new().unwrap().calculate_income_tax() instead
 #[deprecated(note = "Use TaxCalculator::new().unwrap().calculate_income_tax() instead")]
 pub fn calculate_income_tax(
-    state: &str,
+    primary_state: &str,
+    secondary_state: &str,
     primary_income: f64,
     secondary_income: f64,
     primary_capital_gains: f64,
@@ -258,7 +370,8 @@ pub fn calculate_income_tax(
 ) -> TaxResult {
     let calculator = TaxCalculator::new().expect("Failed to initialize tax calculator");
     calculator.calculate_income_tax(
-        state,
+        primary_state,
+        secondary_state,
         primary_income,
         secondary_income,
         primary_capital_gains,
@@ -270,4 +383,116 @@ pub fn calculate_income_tax(
         primary_age,
         secondary_age,
     )
+}
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn test_w2_cost_to_cover() {
+        let calculator = TaxCalculator::new().expect("Failed to create tax calculator");
+        
+        // Test with primary partner expenses
+        let expenses = 50000.0;
+        let (required_income, tax_result) = calculator.w2_cost_to_cover(
+            "CA", // primary state
+            "WA", // secondary state (different state to test functionality)
+            expenses,
+            true, // is_primary_expense
+            FilingStatus::Single,
+            2024,
+            35, // primary_age
+            35, // secondary_age
+        );
+
+        // Verify that the required income minus taxes equals approximately the expenses
+        let total_tax = match tax_result {
+            TaxResult::Joint(taxes) => {
+                taxes.federal_income_tax +
+                taxes.federal_capital_gains_tax +
+                taxes.state_income_tax +
+                taxes.state_capital_gains_tax +
+                taxes.fica_tax
+            }
+            TaxResult::Separate(separate_taxes) => {
+                separate_taxes.primary.federal_income_tax +
+                separate_taxes.primary.federal_capital_gains_tax +
+                separate_taxes.primary.state_income_tax +
+                separate_taxes.primary.state_capital_gains_tax +
+                separate_taxes.primary.fica_tax
+            }
+        };
+
+        let net_income = required_income - total_tax;
+        
+        // Should be within $20 tolerance of the target expenses
+        assert!((net_income - expenses).abs() <= 20.0, 
+            "Net income {} should be within $20 of expenses {}", net_income, expenses);
+        
+        // Required income should be greater than expenses (since we need to pay taxes)
+        assert!(required_income > expenses, 
+            "Required income {} should be greater than expenses {}", required_income, expenses);
+    }
+
+    #[test]
+    fn test_w2_cost_to_cover_zero_expenses() {
+        let calculator = TaxCalculator::new().expect("Failed to create tax calculator");
+        
+        let (required_income, _) = calculator.w2_cost_to_cover(
+            "CA", // primary state
+            "WA", // secondary state
+            0.0, // zero expenses
+            true,
+            FilingStatus::Single,
+            2024,
+            35,
+            35,
+        );
+
+        assert_eq!(required_income, 0.0, "Zero expenses should require zero income");
+    }
+
+    #[test]
+    fn test_separate_states_married_filing_separately() {
+        let calculator = TaxCalculator::new().expect("Failed to create tax calculator");
+        
+        // Test with married filing separately where partners live in different states
+        let expenses = 30000.0;
+        let (required_income, tax_result) = calculator.w2_cost_to_cover(
+            "CA", // primary state (high tax state)
+            "WA", // secondary state (no income tax state)
+            expenses,
+            false, // secondary partner's expense (living in WA)
+            FilingStatus::MarriedFilingSeparately,
+            2024,
+            35,
+            35,
+        );
+
+        // Verify tax calculation worked and we get separate tax results
+        match tax_result {
+            TaxResult::Separate(separate_taxes) => {
+                // Primary should have no income/taxes since is_primary_expense is false
+                assert_eq!(separate_taxes.primary.state_income_tax, 0.0, 
+                    "Primary partner should have no state income tax with zero income");
+                
+                // Secondary should have some income and federal taxes but no state taxes (WA has no income tax)
+                assert_eq!(separate_taxes.secondary.state_income_tax, 0.0, 
+                    "Secondary partner in WA should have no state income tax");
+                assert!(separate_taxes.secondary.federal_income_tax > 0.0 || 
+                       separate_taxes.secondary.fica_tax > 0.0, 
+                    "Secondary partner should have some federal taxes");
+            }
+            TaxResult::Joint(_) => {
+                panic!("Expected separate tax results for MarriedFilingSeparately");
+            }
+        }
+
+        // Verify the income calculation is reasonable
+        assert!(required_income > expenses, 
+            "Required income should be greater than expenses due to taxes");
+        assert!(required_income < expenses * 2.0, 
+            "Required income should be reasonable (less than 2x expenses)");
+    }
 }
