@@ -178,7 +178,9 @@ impl SocialSecurityTaxCalculator {
         
         // Check if this is a state we handle
         let Some(state_years) = self.state_data.get(&state_key) else {
-            eprintln!("Error: State '{}' is not currently supported for social security taxation or may not tax social security.", state);
+            if cfg!(debug_assertions) {
+                eprintln!("Error: State '{}' is not currently supported for social security taxation or may not tax social security.", state);
+            }
             return 0.0;
         };
 
