@@ -1,4 +1,5 @@
 [workspace]
+resolver = "2"
 members = [
   "tax_code_lib",
   "tax_code_demo",

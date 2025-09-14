@@ -24,7 +24,7 @@ static STEP_DEDUCTION_DATA: OnceLock<StepDeductionData> = OnceLock::new();
 
 fn load_step_deduction_data() -> &'static StepDeductionData {
     STEP_DEDUCTION_DATA.get_or_init(|| {
-        let path = "src/step_deduction.json"; 
+        let path = "src/states_step_deduction.json"; 
         let content = fs::read_to_string(path)
             .expect(&format!("Failed to read {}. Make sure it's in the project root or correct path.", path));
         serde_json::from_str(&content)

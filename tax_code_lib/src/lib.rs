@@ -92,6 +92,8 @@ impl TaxCalculator {
         &self,
         primary_state: &str,
         secondary_state: &str,
+        primary_ss_income: f64,
+        secondary_ss_income: f64,
         expenses: f64,
         is_primary_expense: bool,
         filing_status: FilingStatus,
@@ -107,8 +109,8 @@ impl TaxCalculator {
                 0.0,
                 0.0, // no capital gains
                 0.0, // no capital gains
-                0.0, // no social security income
-                0.0, // no social security income
+                primary_ss_income,
+                secondary_ss_income,
                 filing_status,
                 year,
                 primary_age,
@@ -140,8 +142,8 @@ impl TaxCalculator {
                 secondary_income,
                 0.0, // no capital gains
                 0.0, // no capital gains
-                0.0, // no social security income
-                0.0, // no social security income
+                primary_ss_income,
+                secondary_ss_income,
                 filing_status,
                 year,
                 primary_age,
@@ -407,6 +409,8 @@ mod tests {
         let (required_income, tax_result) = calculator.w2_cost_to_cover(
             "CA", // primary state
             "WA", // secondary state (different state to test functionality)
+            0.0,
+            0.0,
             expenses,
             true, // is_primary_expense
             FilingStatus::Single,
@@ -451,6 +455,8 @@ mod tests {
         let (required_income, _) = calculator.w2_cost_to_cover(
             "CA", // primary state
             "WA", // secondary state
+            0.0,
+            0.0,
             0.0, // zero expenses
             true,
             FilingStatus::Single,
@@ -471,6 +477,8 @@ mod tests {
         let (required_income, tax_result) = calculator.w2_cost_to_cover(
             "CA", // primary state (high tax state)
             "WA", // secondary state (no income tax state)
+            0.0,
+            0.0,
             expenses,
             false, // secondary partner's expense (living in WA)
             FilingStatus::MarriedFilingSeparately,
