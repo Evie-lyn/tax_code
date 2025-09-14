@@ -65,7 +65,8 @@ fn main() {
 
     // Use the pre-loaded calculator
     let tax_result = tax_calculator.calculate_income_tax(
-        &args.state, 
+        &args.state,
+        &args.state,
         args.income, 
         args.secondary_income,
         args.capital_gains,
@@ -75,7 +76,8 @@ fn main() {
         filing_status_enum, 
         args.year, 
         args.age,
-        args.secondary_age
+        args.secondary_age,
+        false,
     );
 
     match tax_result {

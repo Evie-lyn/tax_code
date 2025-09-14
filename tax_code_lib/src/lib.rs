@@ -113,6 +113,7 @@ impl TaxCalculator {
                 year,
                 primary_age,
                 secondary_age,
+                true,
             );
             return (0.0, tax_result);
         }
@@ -145,6 +146,7 @@ impl TaxCalculator {
                 year,
                 primary_age,
                 secondary_age,
+                true,
             );
 
             // Calculate total taxes
@@ -202,6 +204,7 @@ impl TaxCalculator {
         capital_gains: f64,
         social_security_income: f64,
         filing_status: FilingStatus,
+        skip_fica: bool,
         year: i32,
         age: i32,
     ) -> Taxes {
@@ -237,7 +240,7 @@ impl TaxCalculator {
 
         let state_income_tax = TaxBrackets::new(state_brackets).taxes(state_taxable_income);
         let federal_income_tax = self.federal_income_tax.calculate(year, &filing_status, federal_taxable_income);
-        let fica_tax = self.federal_fica.calculate(income, &filing_status);
+        let fica_tax = if skip_fica {0.0} else {self.federal_fica.calculate(income, &filing_status)};
 
         Taxes {
             federal_income_tax,
@@ -264,6 +267,7 @@ impl TaxCalculator {
         year: i32,
         primary_age: i32,
         secondary_age: i32,
+        skip_fica: bool,
     ) -> TaxResult {
         match filing_status {
             FilingStatus::MarriedFilingJointly => {
@@ -280,6 +284,7 @@ impl TaxCalculator {
                     combined_capital_gains,
                     combined_social_security,
                     filing_status,
+                    skip_fica,
                     year,
                     primary_age,
                 );
@@ -301,6 +306,7 @@ impl TaxCalculator {
                     primary_capital_gains,
                     primary_social_security_income,
                     filing_status,
+                    skip_fica,
                     year,
                     primary_age,
                 );
@@ -311,6 +317,7 @@ impl TaxCalculator {
                     secondary_capital_gains,
                     secondary_social_security_income,
                     filing_status,
+                    skip_fica,
                     year,
                     secondary_age,
                 );
@@ -329,6 +336,7 @@ impl TaxCalculator {
                     primary_capital_gains,
                     primary_social_security_income,
                     filing_status,
+                    skip_fica,
                     year,
                     primary_age,
                 );
@@ -382,6 +390,7 @@ pub fn calculate_income_tax(
         year,
         primary_age,
         secondary_age,
+        false,
     )
 }
 
