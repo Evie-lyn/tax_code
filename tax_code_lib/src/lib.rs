@@ -1,9 +1,7 @@
 pub mod tax_bracket; 
-pub mod deductions;  
-pub mod income_based_deduction; 
+ 
 pub mod brackets;
-pub mod get_tax_brackets;
-pub mod get_deductions;
+pub mod get_deductions_class;
 pub mod social_security_calculator;
 pub mod capital_gains;
 pub mod federal_capital_gains_tax;
@@ -11,6 +9,7 @@ pub mod federal_income_tax;
 pub mod get_tax_brackets_class;
 pub mod federal_fica_taxes;
 pub mod state_exemptions;
+pub mod income_based_deduction;
 
 use crate::{capital_gains::CapitalGainsResult, tax_bracket::TaxBrackets};
 
@@ -56,6 +55,7 @@ pub enum TaxResult {
 pub struct TaxCalculator {
     federal_income_tax: crate::federal_income_tax::FederalIncomeTaxCalculator,
     state_brackets: crate::get_tax_brackets_class::StateIncomeTaxBrackets,
+    state_deductions: crate::get_deductions_class::StateDeductions,
     capital_gains: crate::capital_gains::CapitalGainsCalculator,
     federal_capital_gains: crate::federal_capital_gains_tax::FederalCapitalGainsCalculator,
     federal_fica: crate::federal_fica_taxes::FederalFicaCalculator,
@@ -68,6 +68,7 @@ impl TaxCalculator {
     pub fn new() -> Result<Self, String> {
         let federal_income_tax = crate::federal_income_tax::FederalIncomeTaxCalculator::load()?;
         let state_brackets = crate::get_tax_brackets_class::StateIncomeTaxBrackets::load()?;
+        let state_deductions = crate::get_deductions_class::StateDeductions::load()?;
         let capital_gains = crate::capital_gains::CapitalGainsCalculator::load()?;
         let federal_capital_gains = crate::federal_capital_gains_tax::FederalCapitalGainsCalculator::load()?;
         let federal_fica = crate::federal_fica_taxes::FederalFicaCalculator::new();
@@ -77,6 +78,7 @@ impl TaxCalculator {
         Ok(Self {
             federal_income_tax,
             state_brackets,
+            state_deductions,
             capital_gains,
             federal_capital_gains,
             federal_fica,
@@ -220,7 +222,7 @@ impl TaxCalculator {
         year: i32,
         age: i32,
     ) -> Taxes {
-        let state_deduction_amount = crate::get_deductions::get_deductions(state, year, &filing_status, income).standard_deduction;
+        let state_deduction_amount = self.state_deductions.get(state, year, &filing_status, income).standard_deduction;
         println!("state_deduction_amount: {}", state_deduction_amount);
         let state_exemption_amount = self.state_exemptions.calc_state_exemptions(state, year, &filing_status);
         println!("state_exemption_amount: {}", state_exemption_amount);
