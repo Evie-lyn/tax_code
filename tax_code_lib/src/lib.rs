@@ -221,7 +221,8 @@ impl TaxCalculator {
         age: i32,
     ) -> Taxes {
         let state_deduction_amount = crate::get_deductions::get_deductions(state, year, &filing_status, income).standard_deduction;
-        let state_exemption_amount = self.state_exemptions.get_exemption(state, year, &filing_status);
+        println!("state_deduction_amount: {}", state_deduction_amount);
+        let state_exemption_amount = self.state_exemptions.calc_state_exemptions(state, year, &filing_status);
         let state_taxable_income = (income - state_deduction_amount - state_exemption_amount).max(0.0);
 
         let state_taxable_social_security = self.social_security.get_taxable_social_security(state, year, age, &filing_status, income + capital_gains, social_security_income);
@@ -250,6 +251,7 @@ impl TaxCalculator {
         let state_taxable_income = (state_taxable_income + state_taxable_social_security + state_gains_to_be_taxed).max(0.0);
         let federal_taxable_income = (income + federal_taxable_social_security + federal_gains_to_be_taxed).max(0.0);
 
+        println!("state_taxable_income: {}", state_taxable_income);
         let state_income_tax = TaxBrackets::new(state_brackets).taxes(state_taxable_income);
         let federal_income_tax = self.federal_income_tax.calculate(year, &filing_status, federal_taxable_income);
         let fica_tax = if skip_fica {0.0} else {self.federal_fica.calculate(income)};
@@ -375,7 +377,7 @@ impl TaxCalculator {
         &self,
         primary_income: f64,
         secondary_income: f64,
-        filing_status: FilingStatus,
+        _filing_status: FilingStatus,
     ) -> (f64, f64) {
         let primary_fica_tax = self.federal_fica.calculate(primary_income);
         let secondary_fica_tax = self.federal_fica.calculate(secondary_income);
