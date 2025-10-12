@@ -4149,16 +4149,20 @@
           "upper_bound": 50000
         },
         {
-          "rate": 0.035,
+          "rate": 0.0245,
           "upper_bound": 70000
         },
         {
-          "rate": 0.05525,
+          "rate": 0.035,
           "upper_bound": 80000
         },
         {
-          "rate": 0.0637,
+          "rate": 0.05525,
           "upper_bound": 150000
+        },
+        {
+          "rate": 0.0637,
+          "upper_bound": 500000
         },
         {
           "rate": 0.0897,
@@ -4301,16 +4305,20 @@
           "upper_bound": 50000
         },
         {
-          "rate": 0.035,
+          "rate": 0.0245,
           "upper_bound": 70000
         },
         {
-          "rate": 0.05525,
+          "rate": 0.035,
           "upper_bound": 80000
         },
         {
-          "rate": 0.0637,
+          "rate": 0.05525,
           "upper_bound": 150000
+        },
+        {
+          "rate": 0.0637,
+          "upper_bound": 500000
         },
         {
           "rate": 0.0897,

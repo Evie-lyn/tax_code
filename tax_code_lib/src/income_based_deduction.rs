@@ -2,7 +2,6 @@ use crate::FilingStatus;
 use crate::Deduction;
 use serde::{Deserialize, Serialize}; 
 use std::collections::HashMap; 
-use std::fs; 
 use std::sync::OnceLock; 
 
 #[derive(Debug, Clone, Copy, Serialize, Deserialize)]
@@ -24,11 +23,9 @@ static STEP_DEDUCTION_DATA: OnceLock<StepDeductionData> = OnceLock::new();
 
 fn load_step_deduction_data() -> &'static StepDeductionData {
     STEP_DEDUCTION_DATA.get_or_init(|| {
-        let path = "src/states_step_deduction.json"; 
-        let content = fs::read_to_string(path)
-            .expect(&format!("Failed to read {}. Make sure it's in the project root or correct path.", path));
-        serde_json::from_str(&content)
-            .expect(&format!("Failed to parse JSON from {}. Check its format.", path))
+        let content = include_str!("states_step_deduction.json");
+        serde_json::from_str(content)
+            .expect("Failed to parse JSON from states_step_deduction.json. Check its format.")
     })
 }
 

@@ -223,6 +223,7 @@ impl TaxCalculator {
         let state_deduction_amount = crate::get_deductions::get_deductions(state, year, &filing_status, income).standard_deduction;
         println!("state_deduction_amount: {}", state_deduction_amount);
         let state_exemption_amount = self.state_exemptions.calc_state_exemptions(state, year, &filing_status);
+        println!("state_exemption_amount: {}", state_exemption_amount);
         let state_taxable_income = (income - state_deduction_amount - state_exemption_amount).max(0.0);
 
         let state_taxable_social_security = self.social_security.get_taxable_social_security(state, year, age, &filing_status, income + capital_gains, social_security_income);

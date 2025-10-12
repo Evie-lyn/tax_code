@@ -2221,8 +2221,9 @@ pub fn nj_married_filing_jointly_tax_2024() -> Vec<Bracket> {
         Bracket(20000.0, 0.0),
         Bracket(50000.0, 0.0),
         Bracket(70000.0, 0.0),
-        Bracket(80000.0, 0.1),
+        Bracket(80000.0, 0.0),
         Bracket(150000.0, 0.1),
+        Bracket(500000.0, 0.1),
         Bracket(1000000.0, 0.1),
         Bracket(f64::INFINITY, 0.1),
     ]
@@ -2281,8 +2282,9 @@ pub fn nj_married_filing_jointly_tax_2025() -> Vec<Bracket> {
         Bracket(20000.0, 0.0),
         Bracket(50000.0, 0.0),
         Bracket(70000.0, 0.0),
-        Bracket(80000.0, 0.1),
+        Bracket(80000.0, 0.0),
         Bracket(150000.0, 0.1),
+        Bracket(500000.0, 0.1),
         Bracket(1000000.0, 0.1),
         Bracket(f64::INFINITY, 0.1),
     ]
