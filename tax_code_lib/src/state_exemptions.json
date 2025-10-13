@@ -14,5 +14,21 @@
             "QualifyingSurvivingSpouse": 12000,
             "Single": 6000
         }
+    },
+    "VT":{
+        "2024": {
+            "HeadOfHousehold": 5100,
+            "MarriedFilingJointly": 10200,
+            "MarriedFilingSeparately": 5100,
+            "QualifyingSurvivingSpouse": 10200,
+            "Single": 5100
+        },
+        "2025": {
+            "HeadOfHousehold": 5100,
+            "MarriedFilingJointly": 10200,
+            "MarriedFilingSeparately": 5100,
+            "QualifyingSurvivingSpouse": 10200,
+            "Single": 5100
+        }
     }
 }

@@ -6,35 +6,45 @@
           "bracket_end": 35499.0,
           "bracket_size": 500.0,
           "deduction_start": 2975.0,
-          "deduction_end": 2525.0
+          "deduction_end": 2525.0,
+          "fixed_deduction_below": 3000.0,
+          "fixed_deduction_above": 2500.0
         },
         "MarriedFilingSeparately": {
           "bracket_start": 13000.0,
           "bracket_end": 17749.0,
           "bracket_size": 250.0,
           "deduction_start": 4162.0,
-          "deduction_end": 2578.0
+          "deduction_end": 2578.0,
+          "fixed_deduction_below": 4250.0,
+          "fixed_deduction_above": 2500.0
         },
         "MarriedFilingJointly": {
           "bracket_start": 26000.0,
           "bracket_end": 35499.0,
           "bracket_size": 500.0,
           "deduction_start": 8325.0,
-          "deduction_end": 5175.0
+          "deduction_end": 5175.0,
+          "fixed_deduction_below": 8500.0,
+          "fixed_deduction_above": 5000.0
         },
         "QualifyingSurvivingSpouse": {
           "bracket_start": 26000.0,
           "bracket_end": 35499.0,
           "bracket_size": 500.0,
           "deduction_start": 8325.0,
-          "deduction_end": 5175.0
+          "deduction_end": 5175.0,
+          "fixed_deduction_below": 8500.0,
+          "fixed_deduction_above": 5000.0
         },
         "HeadOfHousehold": {
           "bracket_start": 26000.0,
           "bracket_end": 35499.0,
           "bracket_size": 500.0,
           "deduction_start": 5065.0,
-          "deduction_end": 2635.0
+          "deduction_end": 2635.0,
+          "fixed_deduction_below": 5200.0,
+          "fixed_deduction_above": 2500.0
         }
       }
     },
@@ -45,35 +55,45 @@
           "bracket_end": 129499.0,
           "bracket_size": 500.0,
           "deduction_start": 13208.0,
-          "deduction_end": 8.0
+          "deduction_end": 8.0,
+          "fixed_deduction_below": 13230.0,
+          "fixed_deduction_above": 0.0
         },
         "MarriedFilingSeparately": {
           "bracket_start": 13000.0,
           "bracket_end": 71999.0,
           "bracket_size": 500.0,
           "deduction_start": 11592.0,
-          "deduction_end": 22.0
+          "deduction_end": 22.0,
+          "fixed_deduction_below": 11630.0,
+          "fixed_deduction_above": 0.0
         },
         "MarriedFilingJointly": {
           "bracket_start": 27500.0,
           "bracket_end": 151343.0,
           "bracket_size": 500.0,
           "deduction_start": 24445.0,
-          "deduction_end": 34.0
+          "deduction_end": 34.0,
+          "fixed_deduction_below": 24490.0,
+          "fixed_deduction_above": 0.0
         },
         "QualifyingSurvivingSpouse": {
           "bracket_start": 27500.0,
           "bracket_end": 151343.0,
           "bracket_size": 500.0,
           "deduction_start": 24445.0,
-          "deduction_end": 34.0
+          "deduction_end": 34.0,
+          "fixed_deduction_below": 24490.0,
+          "fixed_deduction_above": 0.0
         },
         "HeadOfHousehold": {
           "bracket_start": 19000.0,
           "bracket_end": 129499.0,
           "bracket_size": 500.0,
           "deduction_start": 17049.0,
-          "deduction_end": 8.0
+          "deduction_end": 8.0,
+          "fixed_deduction_below": 17090.0,
+          "fixed_deduction_above": 0.0
         }
       }
     }

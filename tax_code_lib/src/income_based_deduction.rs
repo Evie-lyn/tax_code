@@ -11,6 +11,8 @@ pub struct StepBracket {
     pub bracket_size: f64,
     pub deduction_start: f64,
     pub deduction_end: f64,
+    pub fixed_deduction_below: f64,
+    pub fixed_deduction_above: f64,
 }
 
 #[derive(Debug, Deserialize)]
@@ -19,14 +21,77 @@ struct StepDeductionData {
     states: HashMap<String, HashMap<String, HashMap<String, StepBracket>>>,
 }
 
+/// A reusable class for calculating income-based deductions using step brackets
+/// The data is loaded once from states_step_deduction.json and cached for reuse
+pub struct StepDeductionCalculator {
+    data: &'static StepDeductionData,
+}
+
 static STEP_DEDUCTION_DATA: OnceLock<StepDeductionData> = OnceLock::new();
 
-fn load_step_deduction_data() -> &'static StepDeductionData {
-    STEP_DEDUCTION_DATA.get_or_init(|| {
-        let content = include_str!("states_step_deduction.json");
-        serde_json::from_str(content)
-            .expect("Failed to parse JSON from states_step_deduction.json. Check its format.")
-    })
+impl StepDeductionCalculator {
+    /// Creates a new StepDeductionCalculator instance
+    /// The JSON data is loaded once and cached globally
+    pub fn new() -> Self {
+        let data = STEP_DEDUCTION_DATA.get_or_init(|| {
+            let content = include_str!("states_step_deduction.json");
+            serde_json::from_str(content)
+                .expect("Failed to parse JSON from states_step_deduction.json. Check its format.")
+        });
+        
+        Self { data }
+    }
+
+    /// Gets the step bracket for a specific state, year, and filing status
+    pub fn get_step_bracket(&self, state: &str, year: &str, filing_status: &FilingStatus) -> Option<&StepBracket> {
+        let filing_status_str = self.filing_status_to_string(filing_status);
+        
+        self.data.states
+            .get(state)?
+            .get(year)?
+            .get(filing_status_str)
+    }
+
+    /// Converts FilingStatus enum to the string representation used in JSON
+    fn filing_status_to_string(&self, filing_status: &FilingStatus) -> &str {
+        match filing_status {
+            FilingStatus::Single => "Single",
+            FilingStatus::MarriedFilingSeparately => "MarriedFilingSeparately",
+            FilingStatus::MarriedFilingJointly => "MarriedFilingJointly",
+            FilingStatus::QualifyingSurvivingSpouse => "QualifyingSurvivingSpouse",
+            FilingStatus::HeadOfHousehold => "HeadOfHousehold",
+        }
+    }
+
+    /// Calculates the deduction based on income and step bracket
+    pub fn calculate_step_deduction(&self, income: f64, step_bracket: &StepBracket) -> f64 {
+        calculate_step_deduction(income, step_bracket)
+    }
+
+    /// Generic method to calculate standard deduction for any state/year
+    /// Returns None if the state/year combination is not found
+    pub fn calculate_deduction(&self, state: &str, year: &str, income: f64, filing_status: &FilingStatus) -> Option<Deduction> {
+        let step_bracket = self.get_step_bracket(state, year, filing_status)?;
+        
+        // Check if income is below the step bracket range
+        if income < step_bracket.bracket_start {
+            return Some(Deduction { standard_deduction: step_bracket.fixed_deduction_below });
+        }
+        
+        // Check if income is above the step bracket range
+        if income > step_bracket.bracket_end {
+            return Some(Deduction { standard_deduction: step_bracket.fixed_deduction_above });
+        }
+        
+        // Income is within the step bracket range - calculate stepped deduction
+        Some(Deduction { standard_deduction: self.calculate_step_deduction(income, step_bracket) })
+    }
+}
+
+impl Default for StepDeductionCalculator {
+    fn default() -> Self {
+        Self::new()
+    }
 }
 
 
@@ -51,138 +116,44 @@ pub fn calculate_step_deduction(income: f64, step_bracket: &StepBracket) -> f64 
 
 //Following Alabama 2024 Standard Deduction Chart
 pub fn al_standard_deduction_2024(income: f64, filing_status: &FilingStatus) -> Deduction {
-    let data = load_step_deduction_data();
-
-    let filing_status_str = match filing_status {
-        FilingStatus::Single => "Single",
-        FilingStatus::MarriedFilingSeparately => "MarriedFilingSeparately",
-        FilingStatus::MarriedFilingJointly => "MarriedFilingJointly",
-        FilingStatus::QualifyingSurvivingSpouse => "QualifyingSurvivingSpouse",
-        FilingStatus::HeadOfHousehold => "HeadOfHousehold",
-    };
-
-    // For Alabama Standard Deduction
-    if let Some(state_data) = data.states.get("AL") {
-        if let Some(year_data) = state_data.get("2024") {
-            if let Some(step_bracket) = year_data.get(filing_status_str) {
-
-                return match filing_status { 
-                    FilingStatus::Single => {
-                        if income <= 25999.0 {
-                            Deduction { standard_deduction: 3000.0 }
-                        } else if income >= 35500.0 {
-                            Deduction { standard_deduction: 2500.0 }
-                        } else {
-                            Deduction { standard_deduction: calculate_step_deduction(income, step_bracket) }
-                        }
-                    },
-                    FilingStatus::MarriedFilingSeparately => {
-                        if income <= 12999.0 {
-                            Deduction { standard_deduction: 4250.0 }
-                        } else if income >= 17750.0 {
-                            Deduction { standard_deduction: 2500.0 }
-                        } else {
-                            Deduction { standard_deduction: calculate_step_deduction(income, step_bracket) }
-                        }
-                    },
-                    FilingStatus::MarriedFilingJointly | FilingStatus::QualifyingSurvivingSpouse => {
-                        if income <= 25999.0 {
-                            Deduction { standard_deduction: 8500.0 }
-                        } else if income >= 35500.0 {
-                            Deduction { standard_deduction: 5000.0 }
-                        } else {
-                            Deduction { standard_deduction: calculate_step_deduction(income, step_bracket) }
-                        }
-                    },
-                    FilingStatus::HeadOfHousehold => {
-                        if income <= 25999.0 {
-                            Deduction { standard_deduction: 5200.0 }
-                        } else if income >= 35500.0 {
-                            Deduction { standard_deduction: 2500.0 }
-                        } else {
-                            Deduction { standard_deduction: calculate_step_deduction(income, step_bracket) }
-                        }
-                    },
-                }; 
-            } else {
-                eprintln!("Error: StepBracket data not found for filing status {} in AL 2024.", filing_status_str);
-                return Deduction { standard_deduction: 0.0 }; 
-            }
+    let calculator = StepDeductionCalculator::new();
+    
+    if let Some(step_bracket) = calculator.get_step_bracket("AL", "2024", filing_status) {
+        // Use bracket bounds and fixed deduction values from JSON
+        if income < step_bracket.bracket_start {
+            // Below the step bracket range - use fixed deduction from JSON
+            Deduction { standard_deduction: step_bracket.fixed_deduction_below }
+        } else if income > step_bracket.bracket_end {
+            // Above the step bracket range - use fixed deduction from JSON
+            Deduction { standard_deduction: step_bracket.fixed_deduction_above }
         } else {
-            eprintln!("Error: Year 2024 data not found for AL in step_deduction.json.");
-            return Deduction { standard_deduction: 0.0 }; 
+            // Within the step bracket range - calculate stepped deduction
+            Deduction { standard_deduction: calculator.calculate_step_deduction(income, step_bracket) }
         }
     } else {
-        eprintln!("Error: State AL data not found in step_deduction.json.");
+        eprintln!("Error: StepBracket data not found for filing status in AL 2024.");
         return Deduction { standard_deduction: 0.0 }; 
     }
 }
 
 //Following Wisconsin 2024 Standard Deduction Chart
 pub fn wi_standard_deduction_2024(income: f64, filing_status: &FilingStatus) -> Deduction {
-    let data = load_step_deduction_data();
-
-    let filing_status_str = match filing_status {
-        FilingStatus::Single => "Single",
-        FilingStatus::MarriedFilingSeparately => "MarriedFilingSeparately",
-        FilingStatus::MarriedFilingJointly => "MarriedFilingJointly",
-        FilingStatus::QualifyingSurvivingSpouse => "QualifyingSurvivingSpouse",
-        FilingStatus::HeadOfHousehold => "HeadOfHousehold",
-    };
-
-    // For Wisconsin Standard Deduction
-    if let Some(state_data) = data.states.get("WI") {
-        if let Some(year_data) = state_data.get("2024") {
-            if let Some(step_bracket) = year_data.get(filing_status_str) {
-
-                return match filing_status { 
-                    FilingStatus::Single => {
-                        if income <= 18999.0 {
-                            Deduction { standard_deduction: 13230.0 }
-                        } else if income >= 129500.0 {
-                            Deduction { standard_deduction: 0.0 }
-                        } else {
-                            Deduction { standard_deduction: calculate_step_deduction(income, step_bracket) }
-                        }
-                    },
-                    FilingStatus::MarriedFilingSeparately => {
-                        if income <= 12999.0 {
-                            Deduction { standard_deduction: 11630.0 }
-                        } else if income >= 72000.0 {
-                            Deduction { standard_deduction: 0.0 }
-                        } else {
-                            Deduction { standard_deduction: calculate_step_deduction(income, step_bracket) }
-                        }
-                    },
-                    FilingStatus::MarriedFilingJointly | FilingStatus::QualifyingSurvivingSpouse => {
-                        if income <= 27499.0 {
-                            Deduction { standard_deduction: 24490.0 }
-                        } else if income >= 151344.0 {
-                            Deduction { standard_deduction: 0.0 }
-                        } else {
-                            Deduction { standard_deduction: calculate_step_deduction(income, step_bracket) }
-                        }
-                    },
-                    FilingStatus::HeadOfHousehold => {
-                        if income <= 18999.0 {
-                            Deduction { standard_deduction: 17090.0 }
-                        } else if income >= 129500.0 {
-                            Deduction { standard_deduction: 0.0 }
-                        } else {
-                            Deduction { standard_deduction: calculate_step_deduction(income, step_bracket) }
-                        }
-                    },
-                }; 
-            } else {
-                eprintln!("Error: StepBracket data not found for filing status {} in WI 2024.", filing_status_str);
-                return Deduction { standard_deduction: 0.0 }; 
-            }
+    let calculator = StepDeductionCalculator::new();
+    
+    if let Some(step_bracket) = calculator.get_step_bracket("WI", "2024", filing_status) {
+        // Use bracket bounds and fixed deduction values from JSON
+        if income < step_bracket.bracket_start {
+            // Below the step bracket range - use fixed deduction from JSON
+            Deduction { standard_deduction: step_bracket.fixed_deduction_below }
+        } else if income > step_bracket.bracket_end {
+            // Above the step bracket range - use fixed deduction from JSON
+            Deduction { standard_deduction: step_bracket.fixed_deduction_above }
         } else {
-            eprintln!("Error: Year 2024 data not found for WI in step_deduction.json.");
-            return Deduction { standard_deduction: 0.0 }; 
+            // Within the step bracket range - calculate stepped deduction
+            Deduction { standard_deduction: calculator.calculate_step_deduction(income, step_bracket) }
         }
     } else {
-        eprintln!("Error: State WI data not found in step_deduction.json.");
+        eprintln!("Error: StepBracket data not found for filing status in WI 2024.");
         return Deduction { standard_deduction: 0.0 }; 
     }
 }
